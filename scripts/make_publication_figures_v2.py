@@ -249,7 +249,7 @@ def figure2(root: Path) -> None:
         2, 2, figure=fig,
         height_ratios=[1, 0.8],
         wspace=0.38, hspace=0.50,
-        left=0.14, right=0.95, top=0.94, bottom=0.08,
+        left=0.18, right=0.95, top=0.94, bottom=0.08,
     )
 
     # ── Panel A: paired dot-line for Δ spatial coherence ─────────────────
@@ -375,7 +375,7 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
         gate = str(row.get("overall_gate_status", ""))
         badge_color = OI["bluish_green"] if gate == "pass" else OI["vermillion"]
         # gate pass/fail badge: positioned below the y-axis label on the left
-        ax.text(-0.02, i + 0.3, gate.upper(), transform=ax.get_yaxis_transform(),
+        ax.text(-0.12, i + 0.3, gate.upper(), transform=ax.get_yaxis_transform(),
                 fontsize=5, fontweight="bold", color=badge_color,
                 ha="right", va="center",
                 bbox=dict(boxstyle="round,pad=0.15", fc="white", ec=badge_color,

@@ -193,7 +193,7 @@ def make_s1_domain_marker_heatmap(root: Path) -> Path:
     ax.set_xticklabels([str(d) for d in dom_list], fontsize=7)
     ax.set_xlabel("BayesSpace domain", fontsize=8)
     ax.set_title(
-        f"S1 Fig. Representative domain marker expression (z-scored)\n{dataset_id} {sample_id}, K={k_val}",
+        f"Representative domain marker expression (z-scored)\n{dataset_id} {sample_id}, K={k_val}",
         fontsize=9,
     )
 
@@ -406,9 +406,9 @@ def make_s2_workflow_schematic(root: Path) -> None:
             ha="center", va="top", fontsize=10, fontweight="bold", color=DARK)
 
     fig.subplots_adjust(left=0.01, right=0.99, top=0.96, bottom=0.06)
-    _save(fig, root, "figureS2")
-    print("Wrote plots/publication/png/figureS2.png")
-    print("Wrote plots/publication/pdf/figureS2.pdf")
+    _save(fig, root, "figure5")
+    print("Wrote plots/publication/png/figure5.png")
+    print("Wrote plots/publication/pdf/figure5.pdf")
 
 
 def make_s3_instability_case_study(root: Path) -> None:
@@ -507,11 +507,13 @@ def make_s3_instability_case_study(root: Path) -> None:
     colour_map = {lab: palette[(i) % len(palette)] for i, lab in enumerate(sorted(label_set))}
 
     fig = plt.figure(figsize=(7.5, 6.2), facecolor=WHITE)
-    gs = fig.add_gridspec(2, 4, height_ratios=[1.0, 0.9], wspace=0.05, hspace=0.18)
+    outer = fig.add_gridspec(2, 1, height_ratios=[1.0, 0.9], hspace=0.18)
+    gs_top = outer[0].subgridspec(1, 4, wspace=0.05)
+    gs_bot = outer[1].subgridspec(1, 5, width_ratios=[1.0, 0.055, 0.10, 1.0, 0.055], wspace=0.10)
 
     # top row: 4 seeds
     for i, seed in enumerate(show_seeds):
-        ax = fig.add_subplot(gs[0, i])
+        ax = fig.add_subplot(gs_top[0, i])
         sub = df[df["seed"] == seed].copy()
         sub = sub.sort_values("barcode")
         barcodes = sub["barcode"].astype(str).to_numpy()
@@ -541,30 +543,35 @@ def make_s3_instability_case_study(root: Path) -> None:
             spine.set_visible(False)
         return sc
 
-    ax_epi = fig.add_subplot(gs[1, 0:2])
+    ax_epi = fig.add_subplot(gs_bot[0, 0])
     sc1 = _marker_panel(ax_epi, ref["expr_epithelial"], f"{epi_name} (logcounts)")
-    cb1 = fig.colorbar(sc1, ax=ax_epi, fraction=0.046, pad=0.02)
-    cb1.ax.tick_params(labelsize=7)
+    cax1 = fig.add_subplot(gs_bot[0, 1])
+    cb1 = fig.colorbar(sc1, cax=cax1)
+    cb1.ax.tick_params(labelsize=7, pad=2)
+    cb1.outline.set_linewidth(0.8)
 
-    ax_str = fig.add_subplot(gs[1, 2:4])
+    ax_str = fig.add_subplot(gs_bot[0, 3])
     sc2 = _marker_panel(ax_str, ref["expr_stromal"], f"{str_name} (logcounts)")
-    cb2 = fig.colorbar(sc2, ax=ax_str, fraction=0.046, pad=0.02)
-    cb2.ax.tick_params(labelsize=7)
+    cax2 = fig.add_subplot(gs_bot[0, 4])
+    cb2 = fig.colorbar(sc2, cax=cax2)
+    cb2.ax.tick_params(labelsize=7, pad=2)
+    cb2.outline.set_linewidth(0.8)
 
-    title = f"S3: Instability case study (BayesSpace) — {dataset_id}/{sample_id}, K={k}"
+    title = f"Instability case study (BayesSpace) — {dataset_id}/{sample_id}, K={k}"
     subtitle = f"Multi-seed stability: median ARI={ari_med:.3f} (IQR={ari_iqr:.3f}); labels aligned to seed={ref_seed} for visualization"
     fig.suptitle(title, y=0.98, fontsize=10, fontweight="bold", color=DARK)
     fig.text(0.5, 0.945, textwrap.fill(subtitle, width=95), ha="center", va="top", fontsize=7.5, color=GREY)
 
     fig.subplots_adjust(left=0.03, right=0.985, top=0.90, bottom=0.05)
-    _save(fig, root, "figureS3")
-    print("Wrote plots/publication/png/figureS3.png")
-    print("Wrote plots/publication/pdf/figureS3.pdf")
+    _save(fig, root, "figureS2")
+    print("Wrote plots/publication/png/figureS2.png")
+    print("Wrote plots/publication/pdf/figureS2.pdf")
 
 
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
+    # Figure 5 (main text) is generated from the workflow schematic.
     make_s2_workflow_schematic(root)
     make_s3_instability_case_study(root)
     return 0
