@@ -63,10 +63,6 @@ GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_
 GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.516852			stage3b-full-replication
 GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.612256			stage3b-full-replication
 GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.515206			stage3b-full-replication
-GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.661895			smoke-test
-GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.576343			smoke-test
-GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.667048			smoke-test
-GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.577107			smoke-test
 GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.920052			stage3a-full-replication-m2
 GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.889898			stage3a-full-replication-m2
 GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.888595			stage3a-full-replication-m2
@@ -85,3 +81,133 @@ GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence
 GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.963764			stage3b-full-replication-m2
 GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.959253			stage3b-full-replication-m2
 GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.938932			stage3b-full-replication-m2
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.661895			
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.576343			
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.667048			
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.577107			
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.967888			
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.957486			
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.810419			
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.738037			
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.810756			
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.737498			
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.969875			
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.95498			
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.792544			
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.723407			
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.793105			
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.724857			
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.970203			
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.95355			
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.648755			
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.590532			
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.648853			
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.592191			
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.972279			
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.967692			
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.725726			
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.677312			
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.725726			
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.678024			
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.976171			
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.96566			
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.725556			
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.66399			
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.725627			
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.663532			
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.974923			
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.969428			
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.801162			
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.732644			
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.800481			
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.73278			
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.978265			
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.965877			
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.865352			
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.754661			
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.865773			
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.754241			
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.979444			
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.967981			
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.867295			
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.759275			
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.86777			
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.758837			
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.981157			
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.968266			
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.868017			
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.689694			
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.868266			
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.689375			
+GSE267401	GSM8265211_CTC21P	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.977434			
+GSE267401	GSM8265211_CTC21P	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.966738			
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.670657			
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.670271			
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.671559			
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.670915			
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.992877			
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.977429			
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.700439			
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.727089			
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.702186			
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.729374			
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.991714			
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.986339			
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.612431			
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.516852			
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.612256			
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.515206			
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.982447			
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.97134			
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.920052			
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.889898			
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.888595			
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.880776			
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.944142			
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.920773			
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.958658			
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.941006			
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.944457			
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.908341			
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.954584			
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.935252			
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.960264			
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.934732			
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.983696			
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.963764			
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.959253			
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.938932			
+GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.832331			
+GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.869865			
+GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.832331			
+GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.763451			
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.864187			
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.783443			
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.792608			
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.748276			
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.886692			
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.794609			
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.868792			
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.821794			
+GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.869865			
+GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.755757			
+GSE267401	GSM8265212_CTC21M	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.722322			
+GSE267401	GSM8265212_CTC21M	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.755385			
+GSE267401	GSM8265213_CTC17P	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.813491			
+GSE267401	GSM8265213_CTC17P	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.822628			
+GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.621943			
+GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.603672			
+GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.909318			
+GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.911545			
+GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.847697			
+GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.805029			
+GSE311294	GSM9322958_TR11_16184	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.834126			
+GSE311294	GSM9322958_TR11_16184	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.818699			
+GSE311294	GSM9322959_TR11_18105	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.874739			
+GSE311294	GSM9322959_TR11_18105	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.833628			
+GSE267401	GSM8265211_CTC21P	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.900711			
+GSE267401	GSM8265211_CTC21P	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.85963			
+GSE267401	GSM8265212_CTC21M	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.838182			
+GSE267401	GSM8265212_CTC21M	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.81147			
+GSE267401	GSM8265213_CTC17P	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.873533			
+GSE267401	GSM8265213_CTC17P	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.860141			

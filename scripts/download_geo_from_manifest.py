@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Download and unpack GEO RAW tar files declared in docs/DATA_MANIFEST.tsv."""
+"""Download and unpack GEO RAW tar files declared in a public data manifest."""
 
 from __future__ import annotations
 
@@ -76,6 +76,9 @@ def main() -> int:
     args = parser.parse_args()
 
     manifest_path = pathlib.Path(args.manifest)
+    if not manifest_path.exists() and str(args.manifest) == "docs/DATA_MANIFEST.tsv":
+        # Backward-compatible fallback for legacy working trees.
+        manifest_path = pathlib.Path("data/manifest.tsv")
     output_root = pathlib.Path(args.output_dir)
     row = read_manifest_row(manifest_path, args.dataset_id)
 

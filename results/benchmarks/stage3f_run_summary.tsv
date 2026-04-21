@@ -1,0 +1,4 @@
+stage3f	GSE311294	full-replication-m5	999	5	0	4,6	11,23	2026-04-21T07:37:20Z	2026-04-21T08:33:24Z	failed	stage3a-full-replication-m5;m5_rows_added=0
+stage3f	GSE311294	full-replication-m5	999	5	0	4,6	11,23	2026-04-21T08:34:22Z	2026-04-21T08:53:54Z	failed	stage3a-full-replication-m5;m5_rows_added=0
+stage3f	GSE311294	full-replication-m5	999	5	5	4,6	11,23	2026-04-21T08:55:02Z	2026-04-21T09:00:25Z	success	stage3a-full-replication-m5;m5_rows_added=6
+stage3f	GSE267401	full-replication-m5	999	4	4	4,6	11,23	2026-04-21T09:00:25Z	2026-04-21T09:06:22Z	success	stage3b-full-replication-m5;m5_rows_added=6

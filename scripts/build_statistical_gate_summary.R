@@ -28,12 +28,27 @@ num_cols <- c(
 )
 for (col in intersect(num_cols, names(x))) x[[col]] <- suppressWarnings(as.numeric(x[[col]]))
 
-bayes <- subset(x, method_id == "BayesSpace" & grepl("^rigor-backfill-", notes))
+dedupe_max_seed_count <- function(df, key_cols) {
+  if (nrow(df) == 0) return(df)
+  # Prefer rows with the largest seed_count; break ties by keeping the later row order.
+  df[["..row_index"]] <- seq_len(nrow(df))
+  df <- df[order(df[["seed_count"]], df[["..row_index"]], decreasing = TRUE), , drop = FALSE]
+  # Keep the first row per key after sorting.
+  key <- do.call(paste, c(df[key_cols], sep = "\t"))
+  df <- df[!duplicated(key), , drop = FALSE]
+  df[["..row_index"]] <- NULL
+  df
+}
+
+bayes <- subset(x, method_id == "BayesSpace" & grepl("^rigor-backfill", notes))
+bayes <- dedupe_max_seed_count(bayes, c("dataset_id", "sample_id", "K"))
+
 base <- subset(
   x,
-  method_id %in% c("M0_expr_kmeans", "M1_spatial_concat_kmeans", "M2_spatial_ward") &
+  method_id %in% c("M0_expr_kmeans", "M1_spatial_concat_kmeans", "M2_spatial_ward", "M3_spatial_leiden", "M4_spagcn", "M5_stagate") &
     grepl("^stage3[ab]-full-replication", notes)
 )
+base <- dedupe_max_seed_count(base, c("dataset_id", "sample_id", "method_id", "K"))
 
 if (nrow(bayes) == 0) stop("No BayesSpace rigor rows found")
 if (nrow(base) == 0) stop("No baseline rows found")
@@ -123,18 +138,34 @@ calc_c1_row <- function(baseline_method_id, metric_id, bayes_metric_df, base_met
   )
 }
 
+# Primary family: a modern, strong baseline (to avoid strawman comparisons).
+# Treat BayesSpace vs STAGATE (M5) as the primary C1 domain-quality endpoints.
 c1_primary_rows <- list(
+  calc_c1_row("M5_stagate", "spatial_coherence_median", bayes_sp, base_sp),
+  calc_c1_row("M5_stagate", "marker_coherence_median", bayes_mk, base_mk)
+)
+
+# Secondary family: minimal baselines for calibration (reported, but not used to
+# upgrade/claim primary superiority over modern methods).
+c1_secondary_rows <- list(
   calc_c1_row("M0_expr_kmeans", "spatial_coherence_median", bayes_sp, base_sp),
   calc_c1_row("M0_expr_kmeans", "marker_coherence_median", bayes_mk, base_mk),
   calc_c1_row("M1_spatial_concat_kmeans", "spatial_coherence_median", bayes_sp, base_sp),
   calc_c1_row("M1_spatial_concat_kmeans", "marker_coherence_median", bayes_mk, base_mk)
 )
+for (i in seq_along(c1_secondary_rows)) c1_secondary_rows[[i]]$alpha_family <- "F1_secondary"
 
+# Extension family (exploratory additional baselines; reported as context only).
 c1_ext_rows <- list(
   calc_c1_row("M2_spatial_ward", "spatial_coherence_median", bayes_sp, base_sp),
-  calc_c1_row("M2_spatial_ward", "marker_coherence_median", bayes_mk, base_mk)
+  calc_c1_row("M2_spatial_ward", "marker_coherence_median", bayes_mk, base_mk),
+  calc_c1_row("M3_spatial_leiden", "spatial_coherence_median", bayes_sp, base_sp),
+  calc_c1_row("M3_spatial_leiden", "marker_coherence_median", bayes_mk, base_mk),
+  calc_c1_row("M4_spagcn", "spatial_coherence_median", bayes_sp, base_sp),
+  calc_c1_row("M4_spagcn", "marker_coherence_median", bayes_mk, base_mk)
 )
 
+# FDR: primary family only (2 endpoints).
 c1_primary_pvals <- sapply(c1_primary_rows, function(r) r$pvalue)
 c1_primary_fdr <- p.adjust(c1_primary_pvals, method = "BH")
 
@@ -148,25 +179,52 @@ for (i in seq_along(c1_primary_rows)) {
   c1_primary_rows[[i]]$support_tier <- if (pass) "supported" else if (isTRUE(c1_primary_rows[[i]]$effect_size_pass) && isTRUE(c1_primary_rows[[i]]$direction_consistency_pass)) "suggestive" else "not supported"
 }
 
-# Extension family (exploratory additional baseline; reported but not used to upgrade the primary C1 claims).
-if (length(c1_ext_rows) > 0) {
-  for (i in seq_along(c1_ext_rows)) {
-    c1_ext_rows[[i]]$alpha_family <- "F1_ext"
-  }
-  c1_ext_pvals <- sapply(c1_ext_rows, function(r) r$pvalue)
-  c1_ext_fdr <- p.adjust(c1_ext_pvals, method = "BH")
-  for (i in seq_along(c1_ext_rows)) {
-    c1_ext_rows[[i]]$fdr <- c1_ext_fdr[[i]]
-    pass <- is.finite(c1_ext_rows[[i]]$fdr) && c1_ext_rows[[i]]$fdr < 0.05 &&
-      isTRUE(c1_ext_rows[[i]]$effect_size_pass) &&
-      isTRUE(c1_ext_rows[[i]]$direction_consistency_pass) &&
-      isTRUE(c1_ext_rows[[i]]$stability_gate_pass)
-    c1_ext_rows[[i]]$overall_gate_status <- if (pass) "pass" else "fail"
-    c1_ext_rows[[i]]$support_tier <- if (pass) "supported" else if (isTRUE(c1_ext_rows[[i]]$effect_size_pass) && isTRUE(c1_ext_rows[[i]]$direction_consistency_pass)) "suggestive" else "not supported"
+# FDR: secondary family (4 endpoints).
+if (length(c1_secondary_rows) > 0) {
+  pvals <- sapply(c1_secondary_rows, function(r) r$pvalue)
+  fdrs <- p.adjust(pvals, method = "BH")
+  for (i in seq_along(c1_secondary_rows)) {
+    c1_secondary_rows[[i]]$fdr <- fdrs[[i]]
+    pass <- is.finite(c1_secondary_rows[[i]]$fdr) && c1_secondary_rows[[i]]$fdr < 0.05 &&
+      isTRUE(c1_secondary_rows[[i]]$effect_size_pass) &&
+      isTRUE(c1_secondary_rows[[i]]$direction_consistency_pass) &&
+      isTRUE(c1_secondary_rows[[i]]$stability_gate_pass)
+    c1_secondary_rows[[i]]$overall_gate_status <- if (pass) "pass" else "fail"
+    c1_secondary_rows[[i]]$support_tier <- if (pass) "supported" else if (isTRUE(c1_secondary_rows[[i]]$effect_size_pass) && isTRUE(c1_secondary_rows[[i]]$direction_consistency_pass)) "suggestive" else "not supported"
   }
 }
 
-c1_rows <- c(c1_primary_rows, c1_ext_rows)
+if (length(c1_ext_rows) > 0) {
+  for (i in seq_along(c1_ext_rows)) {
+    # Separate exploratory families to avoid mixing different baseline classes.
+    if (grepl("_ward", c1_ext_rows[[i]]$comparison_id)) {
+      c1_ext_rows[[i]]$alpha_family <- "F1_ext"
+    } else if (grepl("_leiden", c1_ext_rows[[i]]$comparison_id)) {
+      c1_ext_rows[[i]]$alpha_family <- "F1_ext2"
+    } else if (grepl("_spagcn", c1_ext_rows[[i]]$comparison_id)) {
+      c1_ext_rows[[i]]$alpha_family <- "F1_ext3"
+    } else {
+      c1_ext_rows[[i]]$alpha_family <- "F1_ext3"
+    }
+  }
+  for (fam in unique(sapply(c1_ext_rows, function(r) r$alpha_family))) {
+    idx <- which(sapply(c1_ext_rows, function(r) r$alpha_family) == fam)
+    pvals <- sapply(c1_ext_rows[idx], function(r) r$pvalue)
+    fdrs <- p.adjust(pvals, method = "BH")
+    for (j in seq_along(idx)) {
+      i <- idx[[j]]
+      c1_ext_rows[[i]]$fdr <- fdrs[[j]]
+      pass <- is.finite(c1_ext_rows[[i]]$fdr) && c1_ext_rows[[i]]$fdr < 0.05 &&
+        isTRUE(c1_ext_rows[[i]]$effect_size_pass) &&
+        isTRUE(c1_ext_rows[[i]]$direction_consistency_pass) &&
+        isTRUE(c1_ext_rows[[i]]$stability_gate_pass)
+      c1_ext_rows[[i]]$overall_gate_status <- if (pass) "pass" else "fail"
+      c1_ext_rows[[i]]$support_tier <- if (pass) "supported" else if (isTRUE(c1_ext_rows[[i]]$effect_size_pass) && isTRUE(c1_ext_rows[[i]]$direction_consistency_pass)) "suggestive" else "not supported"
+    }
+  }
+}
+
+c1_rows <- c(c1_primary_rows, c1_secondary_rows, c1_ext_rows)
 
 # C2: stability gate
 c2_ari <- bayes$stability_ari_median
@@ -269,4 +327,3 @@ for (col in logic_cols) out[[col]] <- ifelse(is.na(out[[col]]), NA, ifelse(as.lo
 
 write.table(out, file = output_tsv, sep = "\t", quote = FALSE, row.names = FALSE, na = "NA")
 cat(sprintf("Wrote %d rows to %s\n", nrow(out), output_tsv))
-

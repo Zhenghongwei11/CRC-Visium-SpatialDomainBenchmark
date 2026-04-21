@@ -1,7 +1,7 @@
 # Statistical decision rules (predeclared; PLOS ONE rigor)
 
 ## Scope
-This rulebook defines prespecified decision criteria for the CRC spatial-domain benchmark project and should be locked before confirmatory analyses intended to support formal claims.
+This rulebook defines claim-eligibility gates for the CRC spatial-domain benchmark project and must be locked before claim-upgrading analyses.
 
 ## Claims covered
 - `C1_domain_quality`
@@ -58,14 +58,6 @@ Any change to thresholds, families, or decision logic after this lock requires:
 1) timestamped amendment note in this file,
 2) rationale for change,
 3) full rerun/re-evaluation of affected comparisons.
-
-## Reporting and rounding (to avoid text–table drift)
-When reporting numbers in the manuscript, figure captions, or supplementary text, authors SHOULD copy values directly from the locked tables referenced in `docs/FIGURE_PROVENANCE.tsv` (especially `results/benchmarks/statistical_gate_summary.tsv`) rather than retyping or recomputing them in spreadsheets. If rounding is required for readability, apply a consistent rule:
-- Report *p* and *q* values to 3 decimal places.
-- Report effect sizes and confidence interval bounds to 3 decimal places.
-- Report runtimes in seconds to 1 decimal place (or in minutes to 2 decimals) and keep the unit explicit.
-
-The intent is to ensure that any reader can reconcile reported numbers with the anchored tables without ambiguity.
 
 ## Amendment log
 - 2026-02-12: Clarified that claim-gated BayesSpace comparisons currently use the BayesSpace-compatible cohorts with flat matrix inputs (no change to thresholds/tests/families).

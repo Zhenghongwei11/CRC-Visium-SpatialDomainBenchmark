@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import csv
+import itertools
 import os
 import re
 from collections import defaultdict
@@ -12,6 +13,7 @@ from typing import Any, Iterable
 
 
 RE_INT = re.compile(r"(-?\d+)")
+RE_STAGE3_BASELINE = re.compile(r"^stage3[ab]-full-replication")
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:
@@ -57,6 +59,12 @@ def count_extracted_samples(dataset_root: Path) -> int:
     return 0
 
 
+def read_tsv_header(path: Path) -> list[str]:
+    with path.open("r", encoding="utf-8", newline="") as handle:
+        line = handle.readline().rstrip("\n")
+    return line.split("\t") if line else []
+
+
 @dataclass(frozen=True)
 class MethodKey:
     dataset_id: str
@@ -82,6 +90,7 @@ def main() -> int:
         raise FileNotFoundError(gate_summary_path)
 
     dataset_landscape = read_tsv(dataset_landscape_path)
+    method_benchmark_header = read_tsv_header(method_benchmark_path)
     method_benchmark = read_tsv(method_benchmark_path)
     gate_summary = read_tsv(gate_summary_path)
 
@@ -216,8 +225,63 @@ def main() -> int:
     # -------------------------
     # results/replication/* (lightweight tables)
     # -------------------------
+    baseline_methods = {
+        "M0_expr_kmeans",
+        "M1_spatial_concat_kmeans",
+        "M2_spatial_ward",
+        "M3_spatial_leiden",
+        "M4_spagcn",
+        "M5_stagate",
+    }
+
+    # Lock the benchmark table to the rows used for claims/figures:
+    # - BayesSpace: rigor-backfill rows only (dedup by max seed_count per sample×K)
+    # - Baselines: stage-3a/3b full-replication rows (including -m2/-m4 variants; same prefix)
+    locked_candidates: list[tuple[int, dict[str, str]]] = []
+    for idx, row in enumerate(method_benchmark):
+        mid = (row.get("method_id") or "").strip()
+        note = (row.get("notes") or "").strip()
+        if mid == "BayesSpace" and note.startswith("rigor-backfill"):
+            locked_candidates.append((idx, row))
+            continue
+        if mid in baseline_methods and RE_STAGE3_BASELINE.match(note):
+            locked_candidates.append((idx, row))
+
+    def seed_count(row: dict[str, str]) -> int:
+        try:
+            return int(float(row.get("seed_count") or "0"))
+        except Exception:
+            return 0
+
+    locked_by_key: dict[MethodKey, tuple[int, int, dict[str, str]]] = {}
+    for idx, row in locked_candidates:
+        key = MethodKey(
+            dataset_id=(row.get("dataset_id") or "").strip(),
+            sample_id=(row.get("sample_id") or "").strip(),
+            method_id=(row.get("method_id") or "").strip(),
+            K=(row.get("K") or "").strip(),
+        )
+        if not key.dataset_id or not key.sample_id or not key.method_id or not key.K:
+            continue
+        sc = seed_count(row)
+        prev = locked_by_key.get(key)
+        if prev is None:
+            locked_by_key[key] = (sc, idx, row)
+            continue
+        prev_sc, prev_idx, _ = prev
+        if sc > prev_sc or (sc == prev_sc and idx > prev_idx):
+            locked_by_key[key] = (sc, idx, row)
+
+    locked_rows = [r for _, __, r in sorted(locked_by_key.values(), key=lambda t: t[1])]
+    if method_benchmark_header:
+        write_tsv(
+            results_dir / "benchmarks" / "method_benchmark_locked.tsv",
+            locked_rows,
+            fieldnames=method_benchmark_header,
+        )
+
     index: dict[MethodKey, dict[str, str]] = {}
-    for row in method_benchmark:
+    for row in locked_rows:
         key = MethodKey(
             dataset_id=row.get("dataset_id", ""),
             sample_id=row.get("sample_id", ""),
@@ -232,7 +296,7 @@ def main() -> int:
     deltas: list[dict[str, Any]] = []
     for k in bayespace_keys:
         bs = index[k]
-        for baseline in ["M0_expr_kmeans", "M1_spatial_concat_kmeans", "M2_spatial_ward"]:
+        for baseline in sorted(baseline_methods):
             base_key = MethodKey(k.dataset_id, k.sample_id, baseline, k.K)
             if base_key not in index:
                 continue
@@ -309,7 +373,7 @@ def main() -> int:
 
     # Simple per-dataset/method/K median summaries (for replication overview)
     grouped: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
-    for row in method_benchmark:
+    for row in locked_rows:
         ds = row.get("dataset_id", "")
         mid = row.get("method_id", "")
         kval = row.get("K", "")
@@ -366,6 +430,190 @@ def main() -> int:
             "failure_rate_median_of_samples",
         ],
     )
+
+    # -------------------------
+    # results/figures/figS3_instability_case_study_summary.tsv
+    # -------------------------
+    case_tsv = results_dir / "figures" / "figS3_instability_case_study.tsv"
+    if case_tsv.exists():
+        case_rows_all = read_tsv(case_tsv)
+        case_rows = [
+            row
+            for row in case_rows_all
+            if (row.get("notes") or "").strip() == "figS3-bayesspace-instability-case-study"
+        ]
+        if case_rows:
+            def to_int(value: str) -> int:
+                return int(float(str(value).strip()))
+
+            seeds = sorted({to_int(r.get("seed", "0")) for r in case_rows if (r.get("seed") or "").strip()})
+            ref_seed = min(seeds) if seeds else 0
+
+            ref_labels: dict[str, int] = {}
+            ref_expr: dict[str, dict[str, float]] = {}
+            for row in case_rows:
+                if to_int(row.get("seed", "0")) != ref_seed:
+                    continue
+                barcode = (row.get("barcode") or "").strip()
+                if not barcode:
+                    continue
+                ref_labels[barcode] = to_int(row.get("domain_label", "0"))
+                def fnum(v: str) -> float:
+                    try:
+                        return float(v)
+                    except Exception:
+                        return float("nan")
+                ref_expr[barcode] = {
+                    "expr_epithelial": fnum(row.get("expr_epithelial", "")),
+                    "expr_stromal": fnum(row.get("expr_stromal", "")),
+                    "expr_immune": fnum(row.get("expr_immune", "")),
+                }
+
+            n_spots = len(ref_labels)
+            if n_spots:
+                first = case_rows[0]
+                dataset_id = (first.get("dataset_id") or "").strip()
+                sample_id = (first.get("sample_id") or "").strip()
+                method_id = (first.get("method_id") or "").strip()
+                K = to_int(first.get("K", "0"))
+                label_set = sorted({to_int(r.get("domain_label", "0")) for r in case_rows if (r.get("domain_label") or "").strip()})
+                if K and len(label_set) != K:
+                    label_set = list(range(1, K + 1))
+
+                unstable: set[str] = set()
+                diff_rates: list[float] = []
+
+                for seed in seeds:
+                    if seed == ref_seed:
+                        continue
+                    seed_rows = [r for r in case_rows if to_int(r.get("seed", "0")) == seed]
+                    # contingency[current_label][ref_label] = count
+                    contingency: dict[int, dict[int, int]] = defaultdict(lambda: defaultdict(int))
+                    by_barcode: dict[str, int] = {}
+                    for row in seed_rows:
+                        barcode = (row.get("barcode") or "").strip()
+                        if not barcode or barcode not in ref_labels:
+                            continue
+                        cur = to_int(row.get("domain_label", "0"))
+                        by_barcode[barcode] = cur
+                        contingency[cur][ref_labels[barcode]] += 1
+
+                    best_mapping: dict[int, int] | None = None
+                    best_score = -1
+                    for perm in itertools.permutations(label_set):
+                        mapping = dict(zip(label_set, perm))
+                        score = 0
+                        for cur in label_set:
+                            mapped = mapping[cur]
+                            score += contingency.get(cur, {}).get(mapped, 0)
+                        if score > best_score:
+                            best_score = score
+                            best_mapping = mapping
+
+                    if not best_mapping:
+                        continue
+
+                    mismatches = 0
+                    for barcode, cur in by_barcode.items():
+                        aligned = best_mapping.get(cur, cur)
+                        if aligned != ref_labels[barcode]:
+                            unstable.add(barcode)
+                            mismatches += 1
+                    diff_rates.append(mismatches / n_spots)
+
+                stable = set(ref_labels.keys()) - unstable
+                def collect(values: dict[str, dict[str, float]], keys: set[str], col: str) -> list[float]:
+                    out: list[float] = []
+                    for k in keys:
+                        v = values.get(k, {}).get(col)
+                        if v is None:
+                            continue
+                        if v != v:  # NaN
+                            continue
+                        out.append(float(v))
+                    return out
+
+                stable_epi = collect(ref_expr, stable, "expr_epithelial")
+                unstable_epi = collect(ref_expr, unstable, "expr_epithelial")
+                stable_stroma = collect(ref_expr, stable, "expr_stromal")
+                unstable_stroma = collect(ref_expr, unstable, "expr_stromal")
+                stable_imm = collect(ref_expr, stable, "expr_immune")
+                unstable_imm = collect(ref_expr, unstable, "expr_immune")
+
+                def collect_total(values: dict[str, dict[str, float]], keys: set[str]) -> list[float]:
+                    out: list[float] = []
+                    for k in keys:
+                        row = values.get(k)
+                        if not row:
+                            continue
+                        a = row.get("expr_epithelial")
+                        b = row.get("expr_stromal")
+                        c = row.get("expr_immune")
+                        if a is None or b is None or c is None:
+                            continue
+                        if a != a or b != b or c != c:  # NaN
+                            continue
+                        out.append(float(a + b + c))
+                    return out
+
+                stable_total = collect_total(ref_expr, stable)
+                unstable_total = collect_total(ref_expr, unstable)
+
+                summary_row = {
+                    "dataset_id": dataset_id,
+                    "sample_id": sample_id,
+                    "method_id": method_id,
+                    "K": K,
+                    "seeds": ",".join(str(s) for s in seeds),
+                    "reference_seed": ref_seed,
+                    "n_spots": n_spots,
+                    "n_switch_spots_any_vs_ref": len(unstable),
+                    "switch_rate_any_vs_ref": (len(unstable) / n_spots) if n_spots else "",
+                    "mean_diff_rate_vs_ref_across_seeds": (sum(diff_rates) / len(diff_rates)) if diff_rates else "",
+                    "marker_epithelial_name": (first.get("marker_epithelial_name") or "").strip(),
+                    "marker_stromal_name": (first.get("marker_stromal_name") or "").strip(),
+                    "marker_immune_name": (first.get("marker_immune_name") or "").strip(),
+                    "n_stable_spots": len(stable),
+                    "n_unstable_spots": len(unstable),
+                    "median_expr_epithelial_stable": median(stable_epi) if stable_epi else "",
+                    "median_expr_epithelial_unstable": median(unstable_epi) if unstable_epi else "",
+                    "median_expr_stromal_stable": median(stable_stroma) if stable_stroma else "",
+                    "median_expr_stromal_unstable": median(unstable_stroma) if unstable_stroma else "",
+                    "median_expr_immune_stable": median(stable_imm) if stable_imm else "",
+                    "median_expr_immune_unstable": median(unstable_imm) if unstable_imm else "",
+                    "median_total_marker_signal_stable": median(stable_total) if stable_total else "",
+                    "median_total_marker_signal_unstable": median(unstable_total) if unstable_total else "",
+                }
+
+                write_tsv(
+                    results_dir / "figures" / "figS3_instability_case_study_summary.tsv",
+                    [summary_row],
+                    fieldnames=[
+                        "dataset_id",
+                        "sample_id",
+                        "method_id",
+                        "K",
+                        "seeds",
+                        "reference_seed",
+                        "n_spots",
+                        "n_switch_spots_any_vs_ref",
+                        "switch_rate_any_vs_ref",
+                        "mean_diff_rate_vs_ref_across_seeds",
+                        "marker_epithelial_name",
+                        "marker_stromal_name",
+                        "marker_immune_name",
+                        "n_stable_spots",
+                        "n_unstable_spots",
+                        "median_expr_epithelial_stable",
+                        "median_expr_epithelial_unstable",
+                        "median_expr_stromal_stable",
+                        "median_expr_stromal_unstable",
+                        "median_expr_immune_stable",
+                        "median_expr_immune_unstable",
+                        "median_total_marker_signal_stable",
+                        "median_total_marker_signal_unstable",
+                    ],
+                )
 
     return 0
 

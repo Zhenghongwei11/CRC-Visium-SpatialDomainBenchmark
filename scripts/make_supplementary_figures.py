@@ -320,10 +320,13 @@ def make_s2_workflow_schematic(root: Path) -> None:
         [("M0", "expression-only k-means", MID),
          ("M1", "PC + scaled-coord k-means", MID),
          ("M2", "spatially constrained Ward", MID),
+         ("M3", "spatial graph Leiden", MID),
+         ("M4", "SpaGCN baseline", MID),
+         ("M5", "STAGATE baseline", MID),
          ("BayesSpace", "Bayesian / Potts prior", DARK)],
         [("Fig. 1\u20134", "main results", MID),
-         ("S1\u2013S2", "supplementary figures", MID),
-         ("S1\u2013S8", "supporting data tables", MID),
+         ("S1\u2013S3", "supplementary figures", MID),
+         ("S1\u2013S11", "supporting data tables", MID),
          ("GitHub repo", "+ review bundle", MID),
          ("Checksum", "manifest", MID)],
     ]
@@ -332,8 +335,12 @@ def make_s2_workflow_schematic(root: Path) -> None:
         mid_x = x0 + ci * (chev_w + chev_gap) + chev_w / 2
         ax.plot([mid_x, mid_x], [chev_y - 0.02, panel_top],
                 color=LIGHT_LN, lw=0.5, ls=":", zorder=1)
+        row_step = 0.26
+        if ci == 2:
+            # Methods column lists more items; tighten spacing slightly.
+            row_step = 0.22
         for ri, (bpfx, desc, clr) in enumerate(col_items):
-            bullet(cx, panel_top - 0.06 - ri * 0.26,
+            bullet(cx, panel_top - 0.06 - ri * row_step,
                    "", color=clr, bold_prefix=bpfx, desc=desc)
 
     # ══ BOTTOM: separator + two panels ══
@@ -404,10 +411,162 @@ def make_s2_workflow_schematic(root: Path) -> None:
     print("Wrote plots/publication/pdf/figureS2.pdf")
 
 
+def make_s3_instability_case_study(root: Path) -> None:
+    import textwrap
+
+    src = root / "results" / "figures" / "figS3_instability_case_study.tsv"
+    if not src.exists():
+        raise FileNotFoundError(
+            "Missing figS3 input table. Generate it with:\n"
+            "  Rscript scripts/build_figS3_instability_case_study.R"
+        )
+
+    df = pd.read_csv(src, sep="\t")
+    if df.empty:
+        raise RuntimeError("figS3 table is empty")
+
+    dataset_id = str(df["dataset_id"].iloc[0])
+    sample_id = str(df["sample_id"].iloc[0])
+    k = int(df["K"].iloc[0])
+    ari_med = float(df["stability_ari_median"].iloc[0])
+    ari_iqr = float(df["stability_ari_iqr"].iloc[0])
+
+    seeds_all = sorted(df["seed"].unique().tolist())
+    show_seeds = [seeds_all[0], seeds_all[1], seeds_all[len(seeds_all)//2], seeds_all[-1]]
+
+    # Marker names are repeated per row by the builder.
+    epi_name = str(df["marker_epithelial_name"].iloc[0])
+    str_name = str(df["marker_stromal_name"].iloc[0])
+
+    # Build label alignment to the first seed so colours stay comparable.
+    ref_seed = show_seeds[0]
+    ref = df[df["seed"] == ref_seed].copy()
+    if ref.empty:
+        raise RuntimeError("Reference seed rows missing")
+
+    ref_labels = ref["domain_label"].astype(int).to_numpy()
+    ref_barcode = ref["barcode"].astype(str).to_numpy()
+    ref_map = {b: int(l) for b, l in zip(ref_barcode, ref_labels)}
+    label_set = sorted(set(ref_labels.tolist()))
+
+    def _align_labels(barcodes: np.ndarray, labels: np.ndarray) -> np.ndarray:
+        # Align to reference labels by maximum overlap (Hungarian if available).
+        obs = np.array([ref_map.get(b, -1) for b in barcodes], dtype=int)
+        keep = obs >= 0
+        if keep.sum() == 0:
+            return labels
+        obs = obs[keep]
+        lab = labels[keep]
+
+        ref_ids = sorted(set(obs.tolist()))
+        lab_ids = sorted(set(lab.tolist()))
+        # Build overlap matrix (negative for minimization).
+        M = np.zeros((len(ref_ids), len(lab_ids)), dtype=int)
+        for i, r in enumerate(ref_ids):
+            for j, c in enumerate(lab_ids):
+                M[i, j] = np.sum((obs == r) & (lab == c))
+        # Solve assignment
+        mapping = {}
+        try:
+            from scipy.optimize import linear_sum_assignment  # type: ignore
+
+            rr, cc = linear_sum_assignment(-M)
+            for i, j in zip(rr, cc):
+                mapping[lab_ids[j]] = ref_ids[i]
+        except Exception:
+            # Greedy fallback
+            used_ref = set()
+            used_lab = set()
+            pairs = []
+            for i, r in enumerate(ref_ids):
+                for j, c in enumerate(lab_ids):
+                    pairs.append((M[i, j], r, c))
+            for _, r, c in sorted(pairs, reverse=True):
+                if r in used_ref or c in used_lab:
+                    continue
+                mapping[c] = r
+                used_ref.add(r)
+                used_lab.add(c)
+
+        aligned = labels.copy()
+        for c, r in mapping.items():
+            aligned[labels == c] = r
+        return aligned
+
+    # ── style ──
+    BLUE = "#3B7DD8"
+    DARK = "#1E293B"
+    GREY = "#6B7280"
+    LIGHT = "#E5E7EB"
+    WHITE = "#FFFFFF"
+
+    palette = [
+        "#4477AA", "#EE6677", "#228833", "#CCBB44",
+        "#66CCEE", "#AA3377", "#BBBBBB", "#000000",
+    ]
+    colour_map = {lab: palette[(i) % len(palette)] for i, lab in enumerate(sorted(label_set))}
+
+    fig = plt.figure(figsize=(7.5, 6.2), facecolor=WHITE)
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.0, 0.9], wspace=0.05, hspace=0.18)
+
+    # top row: 4 seeds
+    for i, seed in enumerate(show_seeds):
+        ax = fig.add_subplot(gs[0, i])
+        sub = df[df["seed"] == seed].copy()
+        sub = sub.sort_values("barcode")
+        barcodes = sub["barcode"].astype(str).to_numpy()
+        labels = sub["domain_label"].astype(int).to_numpy()
+        labels = _align_labels(barcodes, labels)
+        xs = sub["x"].to_numpy()
+        ys = sub["y"].to_numpy()
+        colors = [colour_map.get(int(l), GREY) for l in labels]
+        ax.scatter(xs, ys, s=2.0, c=colors, linewidths=0, alpha=0.95)
+        ax.set_title(f"seed={seed}", fontsize=8, color=DARK)
+        ax.set_xticks([])
+        ax.set_yticks([])
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+
+    # bottom row: epithelial/stromal marker expression (reference seed coords)
+    def _marker_panel(ax, values, title):
+        xs = ref["x"].to_numpy()
+        ys = ref["y"].to_numpy()
+        v = np.asarray(values, dtype=float)
+        vmax = np.quantile(v, 0.99)
+        sc = ax.scatter(xs, ys, s=2.2, c=v, cmap="viridis", vmin=0, vmax=vmax, linewidths=0)
+        ax.set_title(title, fontsize=8, color=DARK)
+        ax.set_xticks([])
+        ax.set_yticks([])
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+        return sc
+
+    ax_epi = fig.add_subplot(gs[1, 0:2])
+    sc1 = _marker_panel(ax_epi, ref["expr_epithelial"], f"{epi_name} (logcounts)")
+    cb1 = fig.colorbar(sc1, ax=ax_epi, fraction=0.046, pad=0.02)
+    cb1.ax.tick_params(labelsize=7)
+
+    ax_str = fig.add_subplot(gs[1, 2:4])
+    sc2 = _marker_panel(ax_str, ref["expr_stromal"], f"{str_name} (logcounts)")
+    cb2 = fig.colorbar(sc2, ax=ax_str, fraction=0.046, pad=0.02)
+    cb2.ax.tick_params(labelsize=7)
+
+    title = f"S3: Instability case study (BayesSpace) — {dataset_id}/{sample_id}, K={k}"
+    subtitle = f"Multi-seed stability: median ARI={ari_med:.3f} (IQR={ari_iqr:.3f}); labels aligned to seed={ref_seed} for visualization"
+    fig.suptitle(title, y=0.98, fontsize=10, fontweight="bold", color=DARK)
+    fig.text(0.5, 0.945, textwrap.fill(subtitle, width=95), ha="center", va="top", fontsize=7.5, color=GREY)
+
+    fig.subplots_adjust(left=0.03, right=0.985, top=0.90, bottom=0.05)
+    _save(fig, root, "figureS3")
+    print("Wrote plots/publication/png/figureS3.png")
+    print("Wrote plots/publication/pdf/figureS3.pdf")
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
     make_s2_workflow_schematic(root)
+    make_s3_instability_case_study(root)
     return 0
 
 

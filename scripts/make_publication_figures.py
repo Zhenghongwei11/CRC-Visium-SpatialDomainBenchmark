@@ -156,6 +156,7 @@ def fig2(repo_root: Path) -> None:
     for baseline, marker, color in [
         ("M0_expr_kmeans", "o", OKABE_ITO["gray"]),
         ("M1_spatial_concat_kmeans", "s", OKABE_ITO["vermillion"]),
+        ("M2_spatial_ward", "^", OKABE_ITO["bluish_green"]),
     ]:
         sub = deltas[deltas["baseline_method_id"] == baseline].copy()
         ax_a.scatter(
@@ -178,6 +179,7 @@ def fig2(repo_root: Path) -> None:
     for baseline, marker, color in [
         ("M0_expr_kmeans", "o", OKABE_ITO["gray"]),
         ("M1_spatial_concat_kmeans", "s", OKABE_ITO["vermillion"]),
+        ("M2_spatial_ward", "^", OKABE_ITO["bluish_green"]),
     ]:
         sub = deltas[deltas["baseline_method_id"] == baseline].copy()
         ax_b.scatter(
@@ -281,7 +283,14 @@ def fig4(repo_root: Path) -> None:
 
     # Panel A: runtime distributions (baseline from runtime_memory; BayesSpace from method_benchmark)
     bayes = mb[mb["method_id"] == "BayesSpace"].copy()
-    bayes_fast = bayes[bayes["notes"].astype(str).str.contains("rigor-backfill", na=False)]
+    bayes_fast = bayes[bayes["notes"].astype(str).str.contains("rigor-backfill", na=False)].copy()
+    if not bayes_fast.empty and "seed_count" in bayes_fast.columns:
+        # Prefer the most rigorous/updated row per sample×K (typically the largest seed_count).
+        bayes_fast = (
+            bayes_fast.sort_values(["dataset_id", "sample_id", "K", "seed_count"])
+            .drop_duplicates(subset=["dataset_id", "sample_id", "K"], keep="last")
+            .copy()
+        )
     bayes_other = bayes[~bayes.index.isin(bayes_fast.index)]
 
     baseline_rt = rt[rt["method_id"].isin(["M0_expr_kmeans", "M1_spatial_concat_kmeans"])].copy()

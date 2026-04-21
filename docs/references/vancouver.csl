@@ -357,9 +357,9 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography et-al-min="7" et-al-use-first="6" second-field-align="flush">
+  <bibliography et-al-min="7" et-al-use-first="6">
     <layout>
-      <text variable="citation-number" suffix="."/>
+      <text variable="citation-number" suffix=". "/>
       <group delimiter=". " suffix=". ">
         <text macro="author"/>
         <text macro="title"/>

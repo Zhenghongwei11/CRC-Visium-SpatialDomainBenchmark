@@ -1,6 +1,8 @@
 id,doi,notes
 gill2024_crc_cms_st,10.1038/s41698-023-00488-4,CRC spatial transcriptomics study (npj Precision Oncology)
 pelka2021_crc_scRNA,10.1016/j.cell.2021.08.003,Spatially organized multicellular immune hubs in human colorectal cancer (Cell)
+qi2022_fap_spp1_crc,10.1038/s41467-022-29366-6,Single-cell and spatial analysis reveal interaction of FAP+ fibroblasts and SPP1+ macrophages in CRC (Nat Commun)
+feng2024_tumor_stroma_boundary_crc,10.1038/s41467-024-54710-3,Tumor-stroma boundary organization and immune response in CRC (Nat Commun)
 seferbekova2022_spatial_cancer_evo,10.1038/s41576-022-00553-x,Spatial biology of cancer evolution (Nat Rev Genet)
 staahl2016_spatial,10.1126/science.aaf2403,Spatial transcriptomics (foundational)
 rodriques2019_slideseq,10.1126/science.aaw1219,Slide-seq (high-resolution sST)
@@ -31,6 +33,8 @@ hu2021_sparkx,10.1186/s13059-021-02404-0,SPARK-X (Genome Biology)
 lloyd1982_kmeans,10.1109/TIT.1982.1056489,Least squares quantization (Lloyd algorithm; k-means)
 sklearn_zenodo,10.5281/zenodo.17880109,scikit-learn software archive (Zenodo)
 blondel2008_louvain,10.1088/1742-5468/2008/10/P10008,Louvain community detection
+traag2019_leiden,10.1038/s41598-019-41695-z,Leiden algorithm (well-connected communities; Sci Rep)
+lugli2017_itbcc_tumor_budding,10.1038/modpathol.2017.46,ITBCC 2016 tumor budding reporting consensus (Modern Pathology)
 zhou2024_gb_benchmark,10.1186/s13059-024-03361-0,Genome Biology ST benchmark (clustering/alignment/integration)
 yuan2024_spatial_clustering_benchmark,10.1038/s41592-024-02215-8,Nature Methods spatial clustering benchmark (Yuan et al.)
 tian2019_sc_benchmark,10.1038/s41592-019-0425-8,Single-cell pipeline benchmark (Nat Methods)

@@ -1,7 +1,7 @@
 dataset_id	intended_role	modality	sample_size_declared	samples_on_disk	format_hint	samples_in_method_benchmark	methods_covered	bayesspace_samples_covered	bayesspace_rows	notes
-GSE267401	Primary (local pilot)	Visium (human CRC; FFPE; CytAssist)	4	4	mtx	4	BayesSpace,M0_expr_kmeans,M1_spatial_concat_kmeans,M2_spatial_ward	3	16	RAW.tar Content-Length 376023040 bytes
-GSE311294	Replication (local)	Visium (human CRC)	5	5	mtx	5	BayesSpace,M0_expr_kmeans,M1_spatial_concat_kmeans,M2_spatial_ward	3	13	RAW.tar Content-Length 194928640 bytes
-GSE285505	Replication (local)	Visium (human CRC)	4	4	h5	4	M0_expr_kmeans,M1_spatial_concat_kmeans	0	0	RAW.tar Content-Length 69109760 bytes
+GSE267401	Primary (local pilot)	Visium (human CRC; FFPE; CytAssist)	4	4	mtx	4	BayesSpace,M0_expr_kmeans,M1_spatial_concat_kmeans,M2_spatial_ward,M3_spatial_leiden,M4_spagcn,M5_stagate	3	22	RAW.tar Content-Length 376023040 bytes
+GSE311294	Replication (local)	Visium (human CRC)	5	5	mtx	5	BayesSpace,M0_expr_kmeans,M1_spatial_concat_kmeans,M2_spatial_ward,M3_spatial_leiden,M4_spagcn,M5_stagate	3	19	RAW.tar Content-Length 194928640 bytes
+GSE285505	Replication (local)	Visium (human CRC)	4	4	h5	4	M0_expr_kmeans,M1_spatial_concat_kmeans,M3_spatial_leiden	0	0	RAW.tar Content-Length 69109760 bytes
 GSE283052	Replication extension (local/cloud)	Visium (human CRC tumor tissues)	12	0	unknown	0		0	0	RAW.tar Content-Length 700508160 bytes
 GSE284061	Small sanity check / dev dataset	Visium (human CRC)	1	0	unknown	0		0	0	RAW.tar Content-Length 71403520 bytes
 GSE217414	Optional external replication	Visium (CRC metastasis context)	4	0	unknown	0		0	0	RAW.tar Content-Length 118589440 bytes

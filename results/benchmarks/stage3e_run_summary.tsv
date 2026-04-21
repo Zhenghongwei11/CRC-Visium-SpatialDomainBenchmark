@@ -1,0 +1,6 @@
+stage3e	GSE311294	full-replication-m4	999	5	5	4	11,23	2026-04-21T04:39:06Z	2026-04-21T04:39:45Z	success	stage3a-full-replication-m4
+stage3e	GSE267401	full-replication-m4	999	4	4	4	11,23	2026-04-21T04:39:45Z	2026-04-21T04:40:32Z	success	stage3b-full-replication-m4
+stage3e	GSE311294	full-replication-m4	999	5	5	4	11,23	2026-04-21T04:47:33Z	2026-04-21T04:48:17Z	success	stage3a-full-replication-m4;m4_rows_added=1
+stage3e	GSE267401	full-replication-m4	999	4	4	4	11,23	2026-04-21T04:48:17Z	2026-04-21T04:49:19Z	success	stage3b-full-replication-m4;m4_rows_added=1
+stage3e	GSE311294	full-replication-m4	999	5	5	4,6	11,23	2026-04-21T04:49:58Z	2026-04-21T04:53:52Z	success	stage3a-full-replication-m4;m4_rows_added=10
+stage3e	GSE267401	full-replication-m4	999	4	4	4,6	11,23	2026-04-21T04:53:52Z	2026-04-21T04:57:24Z	success	stage3b-full-replication-m4;m4_rows_added=8

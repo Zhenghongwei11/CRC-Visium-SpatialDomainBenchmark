@@ -4,4 +4,5 @@ scipy
 scikit-learn
 psutil
 h5py
-matplotlib
+python-igraph
+leidenalg

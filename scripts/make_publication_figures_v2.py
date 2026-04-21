@@ -53,6 +53,9 @@ METHOD_COLOR = {
     "M0_expr_kmeans":            OI["gray"],
     "M1_spatial_concat_kmeans":  OI["vermillion"],
     "M2_spatial_ward":           OI["bluish_green"],
+    "M3_spatial_leiden":         OI["reddish_purple"],
+    "M4_spagcn":                 OI["orange"],
+    "M5_stagate":                OI["sky_blue"],
 }
 
 METHOD_LABEL = {
@@ -60,6 +63,9 @@ METHOD_LABEL = {
     "M0_expr_kmeans":            "Expr-only k-means",
     "M1_spatial_concat_kmeans":  "Spatial k-means",
     "M2_spatial_ward":           "Spatial Ward",
+    "M3_spatial_leiden":         "Spatial Leiden",
+    "M4_spagcn":                 "SpaGCN",
+    "M5_stagate":                "STAGATE",
 }
 
 # Short sample labels for readability
@@ -235,7 +241,10 @@ def figure2(root: Path) -> None:
     gates  = pd.read_csv(root / "results" / "benchmarks" /
                          "statistical_gate_summary.tsv", sep="\t")
 
-    fig = plt.figure(figsize=(7.2, 7.5))
+    # PLOS ONE max width is 7.5 in (2250 px at 300 dpi). Because we use
+    # savefig.bbox='tight', the rendered pixel width can exceed fig.width*dpi.
+    # Keep Fig 2 slightly narrower to stay within the pixel constraint.
+    fig = plt.figure(figsize=(6.25, 7.5))
     gs = gridspec.GridSpec(
         2, 2, figure=fig,
         height_ratios=[1, 0.8],
@@ -247,20 +256,20 @@ def figure2(root: Path) -> None:
     ax_a = fig.add_subplot(gs[0, 0])
     _plot_paired_delta_panel(ax_a, deltas, "delta_spatial_coherence",
                             "Δ Spatial coherence\n(BayesSpace − baseline)")
-    _panel_label(ax_a, "A")
+    _panel_label(ax_a, "A", x=0.01, y=1.02)
 
     # ── Panel B: paired dot-line for Δ marker coherence ──────────────────
     ax_b = fig.add_subplot(gs[0, 1])
     _plot_paired_delta_panel(ax_b, deltas, "delta_marker_coherence",
                             "Δ Marker coherence\n(BayesSpace − baseline)")
-    _panel_label(ax_b, "B")
+    _panel_label(ax_b, "B", x=0.01, y=1.02)
 
     # ── Panel C: forest-plot – claim-level effect sizes + CI ─────────────
     ax_c = fig.add_subplot(gs[1, :])
     c1 = gates[gates["claim_id"] == "C1_domain_quality"].copy()
     _plot_forest(ax_c, c1, null_value=0,
-                 title="Pre-specified effect-size gates (paired median Δ, 95 % CI)")
-    _panel_label(ax_c, "C", x=-0.06)
+                 title="Pre-specified effect-size gates (paired median Δ, 95% CI)")
+    _panel_label(ax_c, "C", x=0.01, y=1.02)
 
     _save(fig, root, "figure2")
 
@@ -275,6 +284,9 @@ def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
         ("M0_expr_kmeans",            "o", OI["gray"]),
         ("M1_spatial_concat_kmeans",  "D", OI["vermillion"]),  # diamond
         ("M2_spatial_ward",           "^", OI["bluish_green"]),
+        ("M3_spatial_leiden",         "P", OI["reddish_purple"]),  # plus-filled
+        ("M4_spagcn",                 "s", OI["orange"]),  # square
+        ("M5_stagate",                "X", OI["sky_blue"]),
     ]:
         sub = deltas[deltas["baseline_method_id"] == baseline].copy()
         ys = [y_map[s] for s in sub["sample_id"]]
@@ -339,7 +351,7 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
         label_txt = f"{metric}"
         ax.text(hi + 0.015, i + 0.05, f"Δ = {est:.3f}  [{lo:.3f}, {hi:.3f}]",
                 fontsize=6, va="center", color=OI["dark_gray"])
-        ax.text(hi + 0.015, i - 0.25, f"q = {q:.4f}",
+        ax.text(hi + 0.015, i - 0.25, f"adjusted q = {q:.4f}",
                 fontsize=5.5, va="center", color=OI["blue"],
                 fontstyle="italic")
 
@@ -353,7 +365,7 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
         base   = METHOD_LABEL.get(base, base.replace("_", " "))
         y_labels.append(f"{metric}\nvs {base}")
     ax.set_yticklabels(y_labels, fontsize=6.5, linespacing=1.1)
-    ax.set_xlabel("Paired median Δ (bootstrap 95 % CI)", fontsize=7.5)
+    ax.set_xlabel("Paired median Δ (bootstrap 95% CI)", fontsize=7.5)
     ax.set_title(title, fontsize=8, pad=6)
     ax.invert_yaxis()
     _add_fine_grid(ax, axis="x")
@@ -459,7 +471,7 @@ def figure3(root: Path) -> None:
               ha="center", va="bottom")
     # annotation
     ax_b.text(est, -0.25,
-              f"median ARI = {est:.3f}\n[{lo:.3f}, {hi:.3f}]\nq = {q:.4f}",
+              f"median ARI = {est:.3f}\n[{lo:.3f}, {hi:.3f}]\nadjusted q = {q:.4f}",
               fontsize=6, ha="center", va="top", color=OI["dark_gray"],
               linespacing=1.3)
 
@@ -473,7 +485,7 @@ def figure3(root: Path) -> None:
 
     ax_b.set_yticks([0])
     ax_b.set_yticklabels(["Median ARI\n(across sample×K)"], fontsize=6.5)
-    ax_b.set_xlabel("Bootstrap 95 % CI", fontsize=7.5)
+    ax_b.set_xlabel("Bootstrap 95% CI", fontsize=7.5)
     ax_b.set_title("Claim-level stability gate", fontsize=8, pad=6)
     ax_b.set_ylim(-0.6, 0.6)
     _add_fine_grid(ax_b, axis="x")
@@ -487,7 +499,10 @@ def figure3(root: Path) -> None:
 # ═══════════════════════════════════════════════════════════════════════════════
 def figure4(root: Path) -> None:
     rt    = pd.read_csv(root / "results" / "benchmarks" / "runtime_memory.tsv", sep="\t")
-    mb    = pd.read_csv(root / "results" / "benchmarks" / "method_benchmark.tsv", sep="\t")
+    mb_path = root / "results" / "benchmarks" / "method_benchmark_locked.tsv"
+    if not mb_path.exists():
+        mb_path = root / "results" / "benchmarks" / "method_benchmark.tsv"
+    mb = pd.read_csv(mb_path, sep="\t")
     gates = pd.read_csv(root / "results" / "benchmarks" /
                         "statistical_gate_summary.tsv", sep="\t")
     c3 = gates[gates["claim_id"] == "C3_compute_feasibility"].iloc[0]
@@ -511,6 +526,10 @@ def figure4(root: Path) -> None:
          OI["vermillion"]),
         ("Spatial\nWard",        rt[rt["method_id"] == "M2_spatial_ward"]["wall_time_sec"].values,
          OI["bluish_green"]),
+        ("Spatial\nLeiden",      rt[rt["method_id"] == "M3_spatial_leiden"]["wall_time_sec"].values,
+         OI["reddish_purple"]),
+        ("SpaGCN",               rt[rt["method_id"] == "M4_spagcn"]["wall_time_sec"].values,
+         OI["orange"]),
         ("BayesSpace",           mb[mb["method_id"] == "BayesSpace"]["wall_time_sec_median"].values,
          OI["blue"]),
     ]
@@ -570,7 +589,7 @@ def figure4(root: Path) -> None:
               ha="center", va="bottom")
 
     ax_b.text(est, -0.25,
-              f"median = {est:.1f} s\n[{lo:.1f}, {hi:.1f}]\nscope-limited",
+              f"median = {est:.1f} s\n[{lo:.1f}, {hi:.1f}]\nlocal hardware",
               fontsize=6, ha="center", va="top", color=OI["dark_gray"],
               linespacing=1.3)
 
@@ -584,8 +603,8 @@ def figure4(root: Path) -> None:
 
     ax_b.set_yticks([0])
     ax_b.set_yticklabels(["Median runtime\n(BayesSpace)"], fontsize=6.5)
-    ax_b.set_xlabel("Bootstrap 95 % CI (seconds)", fontsize=7.5)
-    ax_b.set_title("Compute-feasibility gate (scope-limited)", fontsize=8, pad=6)
+    ax_b.set_xlabel("Bootstrap 95% CI (seconds)", fontsize=7.5)
+    ax_b.set_title("Compute feasibility gate (local hardware)", fontsize=8, pad=6)
     ax_b.set_ylim(-0.6, 0.6)
     _add_fine_grid(ax_b, axis="x")
     _panel_label(ax_b, "B")

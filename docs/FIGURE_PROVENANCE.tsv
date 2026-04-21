@@ -12,3 +12,4 @@ Fig4	Fig4A	scripts/make_publication_figures_v2.py	results/benchmarks/runtime_mem
 Fig4	Fig4B	scripts/make_publication_figures_v2.py	results/benchmarks/statistical_gate_summary.tsv	Scope-limited compute gate summary (median runtime with CI).
 FigS1	FigS1A	scripts/make_supplementary_figures.py	results/figures/figS1_domain_marker_heatmap.tsv;results/figures/fig1_domain_maps.tsv	Representative marker expression heatmap for the Figure 1 BayesSpace example.
 FigS2	FigS2A	scripts/make_supplementary_figures.py	docs/STATISTICAL_DECISION_RULES.md;results/dataset_summary.tsv;results/benchmarks/statistical_gate_summary.tsv	Workflow schematic summarizing cohort selection, preprocessing, domain calling, prespecified gates, and reporting artifacts.
+FigS3	FigS3A	scripts/make_supplementary_figures.py	results/figures/figS3_instability_case_study.tsv	Instability case study: spot-level BayesSpace labels across multiple seeds with marker overlays for an unstable sample×K unit.

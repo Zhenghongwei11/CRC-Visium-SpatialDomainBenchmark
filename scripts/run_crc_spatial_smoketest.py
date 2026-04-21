@@ -5,9 +5,13 @@ from __future__ import annotations
 
 import argparse
 import csv
+import contextlib
 import gzip
+import io
 import itertools
+import math
 import pathlib
+import random
 import time
 from datetime import datetime, timezone
 from typing import TypedDict
@@ -256,15 +260,295 @@ def marker_separation_score(x: np.ndarray, labels: np.ndarray) -> float:
     return float(np.median(scores)) if scores else float("nan")
 
 
+def _require_leiden() -> tuple[object, object]:
+    try:
+        import igraph as ig  # type: ignore
+        import leidenalg as la  # type: ignore
+    except Exception as exc:  # pragma: no cover - dependency probe
+        raise RuntimeError(
+            "Leiden baseline requested but dependencies are missing. "
+            "Install `python-igraph` and `leidenalg` (see scripts/requirements_smoketest.txt)."
+        ) from exc
+    return ig, la
+
+
+def _require_spagcn() -> tuple[object, object, object]:
+    try:
+        import torch  # type: ignore
+        from spagcn_minimal import SpaGCNMinimal, SpaGCNMinimalConfig  # type: ignore
+    except Exception as exc:  # pragma: no cover - dependency probe
+        raise RuntimeError(
+            "SpaGCN baseline requested but dependencies are missing. "
+            "Install the torch stack in an isolated environment (see scripts/requirements_spagcn.txt)."
+        ) from exc
+    return torch, SpaGCNMinimal, SpaGCNMinimalConfig
+
+
+def _require_stagate() -> tuple[object, object, object]:
+    try:
+        import torch  # type: ignore
+        from stagate_minimal import STAGATEMinimal, STAGATEMinimalConfig  # type: ignore
+    except Exception as exc:  # pragma: no cover - dependency probe
+        raise RuntimeError(
+            "STAGATE baseline requested but dependencies are missing. "
+            "Install the torch stack in an isolated environment (see scripts/requirements_spagcn.txt)."
+        ) from exc
+    return torch, STAGATEMinimal, STAGATEMinimalConfig
+
+
+def _build_weighted_spatial_igraph(pcs: np.ndarray, spatial_graph: sparse.csr_matrix):
+    ig, _ = _require_leiden()
+    graph = spatial_graph.tocoo()
+    src = graph.row.astype(int)
+    dst = graph.col.astype(int)
+    keep = src < dst
+    src = src[keep]
+    dst = dst[keep]
+    if len(src) == 0:
+        raise ValueError("Spatial graph has no edges")
+
+    x = pcs.astype(np.float64, copy=False)
+    norms = np.linalg.norm(x, axis=1, keepdims=True)
+    norms[norms == 0] = 1.0
+    x = x / norms
+    cos = np.sum(x[src] * x[dst], axis=1)
+    weights = np.maximum(0.0, (1.0 + cos) / 2.0).astype(float).tolist()
+
+    edges = list(zip(src.tolist(), dst.tolist(), strict=True))
+    g = ig.Graph(n=x.shape[0], edges=[(a, b) for a, b in edges], directed=False)
+    g.es["weight"] = weights
+    return g
+
+
+def _leiden_membership(g, resolution: float, seed: int) -> np.ndarray:
+    _, la = _require_leiden()
+    try:
+        part = la.find_partition(
+            g,
+            la.RBConfigurationVertexPartition,
+            weights="weight",
+            resolution_parameter=float(resolution),
+            seed=int(seed),
+        )
+    except TypeError:  # pragma: no cover - older leidenalg
+        part = la.find_partition(
+            g,
+            la.RBConfigurationVertexPartition,
+            weights="weight",
+            resolution_parameter=float(resolution),
+        )
+    return np.asarray(part.membership, dtype=int)
+
+
+def _select_resolution_for_exact_k(g, target_k: int, seed: int) -> tuple[float, int, bool]:
+    candidates = [0.01, 0.02, 0.05, 0.10, 0.20, 0.50, 1.0, 2.0, 5.0, 10.0]
+    evals: list[tuple[float, int]] = []
+    for res in candidates:
+        labels = _leiden_membership(g, res, seed=seed)
+        k_obs = int(len(np.unique(labels)))
+        evals.append((res, k_obs))
+        if k_obs == target_k:
+            return res, k_obs, True
+
+    evals = sorted(evals, key=lambda t: t[0])
+    below = [(r, k) for r, k in evals if k < target_k]
+    above = [(r, k) for r, k in evals if k > target_k]
+    if below and above:
+        low = max(below, key=lambda t: t[0])[0]
+        high = min(above, key=lambda t: t[0])[0]
+        best_res = low
+        best_k = dict(evals).get(low, 0)
+        best_diff = abs(best_k - target_k)
+        for _ in range(18):
+            mid = math.sqrt(low * high)
+            labels = _leiden_membership(g, mid, seed=seed)
+            k_obs = int(len(np.unique(labels)))
+            diff = abs(k_obs - target_k)
+            if diff < best_diff:
+                best_diff = diff
+                best_res = mid
+                best_k = k_obs
+            if k_obs == target_k:
+                return mid, k_obs, True
+            if k_obs < target_k:
+                low = mid
+            else:
+                high = mid
+        # Final attempt: dense scan in the bracket on a log scale.
+        scan = np.geomspace(low, high, num=60)
+        for res in scan:
+            labels = _leiden_membership(g, float(res), seed=seed)
+            k_obs = int(len(np.unique(labels)))
+            if k_obs == target_k:
+                return float(res), k_obs, True
+        return best_res, best_k, False
+
+    # Fallback: broad scan on a log scale (robust to non-monotonicity).
+    best_res, best_k = min(evals, key=lambda t: (abs(t[1] - target_k), t[0]))
+    scan = np.geomspace(0.005, 10.0, num=90)
+    for res in scan:
+        labels = _leiden_membership(g, float(res), seed=seed)
+        k_obs = int(len(np.unique(labels)))
+        if k_obs == target_k:
+            return float(res), k_obs, True
+        diff = abs(k_obs - target_k)
+        if diff < abs(best_k - target_k):
+            best_res, best_k = float(res), k_obs
+    return best_res, best_k, False
+
+
+def _spagcn_membership(
+    x: np.ndarray,
+    coords: np.ndarray,
+    target_k: int,
+    seed: int,
+    p_target: float,
+    max_epochs: int,
+    max_spots: int,
+) -> tuple[np.ndarray, str]:
+    if x.shape[0] > max_spots:
+        raise RuntimeError(
+            f"SpaGCN skipped: n_spots={x.shape[0]} exceeds --spagcn-max-spots={max_spots} "
+            "(avoid O(n^2) adjacency blow-up)."
+        )
+
+    torch_mod, SpaGCNMinimal, SpaGCNMinimalConfig = _require_spagcn()
+
+    coords_f = coords.astype(np.float32, copy=False)
+    # Dense pairwise distances (xy-only, no histology) to avoid numba/llvmlite builds on macOS.
+    gram = coords_f @ coords_f.T
+    sq = np.sum(coords_f**2, axis=1, keepdims=True)
+    dist2 = sq + sq.T - 2.0 * gram
+    dist2[dist2 < 0] = 0
+    adj = np.sqrt(dist2).astype(np.float32, copy=False)
+
+    def calc_p(l: float) -> float:
+        adj_exp = np.exp(-1.0 * (adj**2) / (2.0 * (l**2)))
+        return float(np.mean(np.sum(adj_exp, axis=1)) - 1.0)
+
+    def search_l_silent(target_p: float, start: float = 0.01, end: float = 1000.0, tol: float = 0.01) -> float | None:
+        p_low = calc_p(start)
+        p_high = calc_p(end)
+        if p_low > target_p + tol:
+            return None
+        if p_high < target_p - tol:
+            return None
+        if abs(p_low - target_p) <= tol:
+            return float(start)
+        if abs(p_high - target_p) <= tol:
+            return float(end)
+        low, high = float(start), float(end)
+        for _ in range(60):
+            mid = 0.5 * (low + high)
+            p_mid = calc_p(mid)
+            if abs(p_mid - target_p) <= tol:
+                return float(mid)
+            if p_mid <= target_p:
+                low = mid
+            else:
+                high = mid
+        return float(low)
+
+    l_val = search_l_silent(p_target, start=0.01, end=1000.0, tol=0.01)
+
+    if l_val is None or not np.isfinite(l_val):
+        adj_flat = adj.ravel()
+        adj_pos = adj_flat[np.isfinite(adj_flat) & (adj_flat > 0)]
+        if adj_pos.size == 0:
+            raise RuntimeError("SpaGCN failed: adjacency matrix has no positive finite distances")
+        l_val = float(np.quantile(adj_pos, 0.05))
+
+    random.seed(int(seed))
+    np.random.seed(int(seed))
+    torch_mod.manual_seed(int(seed))
+
+    config_obj = SpaGCNMinimalConfig(max_epochs=int(max_epochs))
+    clf = SpaGCNMinimal(config=config_obj)
+    clf.set_l(float(l_val))
+    with contextlib.redirect_stdout(io.StringIO()):
+        clf.train(x.astype(np.float32, copy=False), adj, n_clusters=int(target_k))
+        labels = clf.predict()
+    k_obs = int(len(np.unique(labels)))
+    if k_obs != int(target_k):
+        raise RuntimeError(f"SpaGCN produced {k_obs} clusters (target K={target_k})")
+
+    note = f"spagcn_p={p_target};l={float(l_val):.4g};max_epochs={int(max_epochs)}"
+    return labels, note
+
+
+def _stagate_membership(
+    x: np.ndarray,
+    spatial_graph: sparse.csr_matrix,
+    target_k: int,
+    seed: int,
+    num_pcs: int,
+    hidden_dim: int,
+    latent_dim: int,
+    max_epochs: int,
+    max_spots: int,
+) -> tuple[np.ndarray, str]:
+    if x.shape[0] > max_spots:
+        raise RuntimeError(
+            f"STAGATE skipped: n_spots={x.shape[0]} exceeds --stagate-max-spots={max_spots} "
+            "(avoid excessive runtime on large graphs)."
+        )
+
+    torch_mod, STAGATEMinimal, STAGATEMinimalConfig = _require_stagate()
+
+    random.seed(int(seed))
+    np.random.seed(int(seed))
+    torch_mod.manual_seed(int(seed))
+
+    config_obj = STAGATEMinimalConfig(
+        num_pcs=int(num_pcs),
+        hidden_dim=int(hidden_dim),
+        latent_dim=int(latent_dim),
+        max_epochs=int(max_epochs),
+    )
+    clf = STAGATEMinimal(config=config_obj)
+    with contextlib.redirect_stdout(io.StringIO()):
+        clf.fit(x.astype(np.float32, copy=False), spatial_graph, seed=int(seed))
+        labels = clf.predict_labels(k=int(target_k), seed=int(seed))
+
+    k_obs = int(len(np.unique(labels)))
+    if k_obs != int(target_k):
+        raise RuntimeError(f"STAGATE produced {k_obs} clusters (target K={target_k})")
+
+    note = (
+        f"stagate_num_pcs={int(num_pcs)};"
+        f"hidden_dim={int(hidden_dim)};"
+        f"latent_dim={int(latent_dim)};"
+        f"max_epochs={int(max_epochs)}"
+    )
+    return labels, note
+
+
 def append_rows(path: pathlib.Path, rows: list[dict[str, object]]) -> None:
     if not rows:
         return
-    with path.open("r", encoding="utf-8", newline="") as existing:
-        header = existing.readline().rstrip("\n").split("\t")
-    with path.open("a", encoding="utf-8", newline="") as handle:
+    if path.exists():
+        with path.open("r", encoding="utf-8", newline="") as existing:
+            header = existing.readline().rstrip("\n").split("\t")
+        with path.open("r", encoding="utf-8", newline="") as existing:
+            reader = csv.DictReader(existing, delimiter="\t")
+            seen = {tuple((r.get(k, "") or "") for k in header) for r in reader}
+        mode = "a"
+    else:
+        header = list(rows[0].keys())
+        seen = set()
+        mode = "w"
+
+    with path.open(mode, encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=header, delimiter="\t", extrasaction="ignore")
+        if mode == "w":
+            writer.writeheader()
         for row in rows:
-            writer.writerow({k: row.get(k, "") for k in header})
+            out_row = {k: row.get(k, "") for k in header}
+            key = tuple((out_row.get(k, "") or "") for k in header)
+            if key in seen:
+                continue
+            seen.add(key)
+            writer.writerow(out_row)
 
 
 def main() -> int:
@@ -272,6 +556,11 @@ def main() -> int:
     parser.add_argument("--dataset-id", default="GSE285505")
     parser.add_argument("--dataset-root", default="data/raw/GSE285505/extracted")
     parser.add_argument("--max-samples", type=int, default=1)
+    parser.add_argument(
+        "--sample-ids",
+        default="",
+        help="Optional comma-separated sample_id allowlist (runs only these samples, in the provided order).",
+    )
     parser.add_argument("--max-genes", type=int, default=2000)
     parser.add_argument("--k-grid", default="4,6")
     parser.add_argument("--seeds", default="11,23,37")
@@ -284,6 +573,14 @@ def main() -> int:
     parser.add_argument("--results-fig", default="results/figures")
     parser.add_argument("--hardware-id", default="local-macbook-air-8gb-smoketest")
     parser.add_argument("--note", default="smoke-test")
+    parser.add_argument("--spagcn-p", type=float, default=0.50)
+    parser.add_argument("--spagcn-max-epochs", type=int, default=200)
+    parser.add_argument("--spagcn-max-spots", type=int, default=6500)
+    parser.add_argument("--stagate-num-pcs", type=int, default=50)
+    parser.add_argument("--stagate-hidden-dim", type=int, default=64)
+    parser.add_argument("--stagate-latent-dim", type=int, default=30)
+    parser.add_argument("--stagate-max-epochs", type=int, default=200)
+    parser.add_argument("--stagate-max-spots", type=int, default=6500)
     args = parser.parse_args()
 
     dataset_root = pathlib.Path(args.dataset_root)
@@ -293,7 +590,16 @@ def main() -> int:
     seeds = [int(x) for x in args.seeds.split(",") if x.strip()]
     methods_requested = [m.strip() for m in args.methods.split(",") if m.strip()]
 
-    sample_entries = find_sample_entries(dataset_root)[: args.max_samples]
+    sample_entries = find_sample_entries(dataset_root)
+    allowlist = [s.strip() for s in str(args.sample_ids).split(",") if s.strip()]
+    if allowlist:
+        entry_by_id = {e["sample_id"]: e for e in sample_entries}
+        missing = [sid for sid in allowlist if sid not in entry_by_id]
+        if missing:
+            raise FileNotFoundError(f"Requested --sample-ids not found under dataset_root: {', '.join(missing)}")
+        sample_entries = [entry_by_id[sid] for sid in allowlist]
+    else:
+        sample_entries = sample_entries[: args.max_samples]
     if not sample_entries:
         raise FileNotFoundError(f"No sample entries found under {dataset_root}")
 
@@ -328,6 +634,15 @@ def main() -> int:
         if "M2_spatial_ward" in methods_requested:
             # Spatially constrained Ward clustering (expression PCs with coordinate connectivity constraint).
             method_configs.append(("M2_spatial_ward", "ward", pcs, [seeds[0]]))
+        if "M3_spatial_leiden" in methods_requested:
+            # Spatially constrained graph baseline (Leiden on weighted spatial kNN graph).
+            method_configs.append(("M3_spatial_leiden", "leiden", pcs, seeds))
+        if "M4_spagcn" in methods_requested:
+            # SpaGCN (expression + spatial coordinates, no histology; fixed-K via kmeans init).
+            method_configs.append(("M4_spagcn", "spagcn", pcs, seeds[:2] if len(seeds) > 1 else seeds))
+        if "M5_stagate" in methods_requested:
+            # STAGATE (graph-attention autoencoder; portable implementation; fixed-K via k-means).
+            method_configs.append(("M5_stagate", "stagate", pcs, seeds[:2] if len(seeds) > 1 else seeds))
 
         fig1_rows.append(
             {
@@ -350,7 +665,13 @@ def main() -> int:
             "M0_expr_kmeans": 0,
             "M1_spatial_concat_kmeans": 100,
             "M2_spatial_ward": 200,
+            "M3_spatial_leiden": 300,
+            "M4_spagcn": 400,
+            "M5_stagate": 500,
         }
+
+        leiden_graph = None
+        leiden_resolution_by_k: dict[int, tuple[float, int, bool]] = {}
 
         for method_id, method_kind, features, method_seeds in method_configs:
             for k in k_grid:
@@ -360,7 +681,38 @@ def main() -> int:
                 run_times: list[float] = []
                 run_mem: list[float] = []
 
+                leiden_note = ""
+                spagcn_note = ""
+                stagate_note = ""
+                if method_kind == "leiden":
+                    if leiden_graph is None:
+                        leiden_graph = _build_weighted_spatial_igraph(pcs, spatial_graph)
+                    if k not in leiden_resolution_by_k:
+                        res, k_obs, exact = _select_resolution_for_exact_k(leiden_graph, target_k=k, seed=seeds[0])
+                        leiden_resolution_by_k[k] = (res, k_obs, exact)
+                    res, k_obs, exact = leiden_resolution_by_k[k]
+                    leiden_note = f"leiden_res={res:.4g};k_observed={k_obs};exact_k={int(exact)};res_seed={seeds[0]}"
+                if method_kind == "spagcn":
+                    spagcn_note = (
+                        f"spagcn_p={float(args.spagcn_p):.3g};"
+                        f"max_epochs={int(args.spagcn_max_epochs)};"
+                        f"max_spots={int(args.spagcn_max_spots)}"
+                    )
+                if method_kind == "stagate":
+                    stagate_note = (
+                        f"stagate_num_pcs={int(args.stagate_num_pcs)};"
+                        f"hidden_dim={int(args.stagate_hidden_dim)};"
+                        f"latent_dim={int(args.stagate_latent_dim)};"
+                        f"max_epochs={int(args.stagate_max_epochs)};"
+                        f"max_spots={int(args.stagate_max_spots)}"
+                    )
+
                 for seed in method_seeds:
+                    if method_kind in {"spagcn", "stagate"}:
+                        print(
+                            f"[run] method={method_id} sample={sample_id} K={k} seed={seed} note={args.note}",
+                            flush=True,
+                        )
                     started = time.perf_counter()
                     started_utc = utc_now()
                     status = "success"
@@ -382,8 +734,45 @@ def main() -> int:
                                 connectivity=spatial_graph,
                             )
                             labels = model.fit_predict(features)
+                        elif method_kind == "leiden":
+                            if leiden_graph is None:
+                                raise RuntimeError("Leiden graph was not initialized")
+                            res, _, _ = leiden_resolution_by_k[k]
+                            exact = bool(leiden_resolution_by_k[k][2])
+                            if (not exact) and str(args.note).startswith("stage3"):
+                                raise RuntimeError("Leiden resolution search did not find exact K for this sample")
+                            labels = _leiden_membership(leiden_graph, res, seed=seed)
+                            if exact and int(len(np.unique(labels))) != int(k):
+                                raise RuntimeError(
+                                    f"Leiden produced {int(len(np.unique(labels)))} clusters (target K={k})"
+                                )
                         else:
-                            raise ValueError(f"Unknown method_kind={method_kind}")
+                            if method_kind == "spagcn":
+                                labels, spagcn_run_note = _spagcn_membership(
+                                    x,
+                                    coords,
+                                    target_k=k,
+                                    seed=seed,
+                                    p_target=float(args.spagcn_p),
+                                    max_epochs=int(args.spagcn_max_epochs),
+                                    max_spots=int(args.spagcn_max_spots),
+                                )
+                                spagcn_note = spagcn_run_note
+                            elif method_kind == "stagate":
+                                labels, stagate_run_note = _stagate_membership(
+                                    x,
+                                    spatial_graph,
+                                    target_k=k,
+                                    seed=seed,
+                                    num_pcs=int(args.stagate_num_pcs),
+                                    hidden_dim=int(args.stagate_hidden_dim),
+                                    latent_dim=int(args.stagate_latent_dim),
+                                    max_epochs=int(args.stagate_max_epochs),
+                                    max_spots=int(args.stagate_max_spots),
+                                )
+                                stagate_note = stagate_run_note
+                            else:
+                                raise ValueError(f"Unknown method_kind={method_kind}")
                     except Exception as exc:  # pragma: no cover - defensive logging
                         status = "failed"
                         error_message = str(exc)
@@ -409,7 +798,15 @@ def main() -> int:
                             "finished_utc": finished_utc,
                             "hardware_id": args.hardware_id,
                             "software_versions": "python-smoketest",
-                            "notes": "",
+                            "notes": (
+                                leiden_note
+                                if method_kind == "leiden"
+                                else (
+                                    spagcn_note
+                                    if method_kind == "spagcn"
+                                    else (stagate_note if method_kind == "stagate" else "")
+                                )
+                            ),
                         }
                     )
 
@@ -430,9 +827,17 @@ def main() -> int:
                                 "wall_time_sec": round(elapsed, 6),
                                 "peak_rss_mb": round(peak_rss_mb, 3),
                                 "finished_utc": finished_utc,
-                                "notes": "",
-                            }
-                        )
+                            "notes": (
+                                leiden_note
+                                if method_kind == "leiden"
+                                else (
+                                    spagcn_note
+                                    if method_kind == "spagcn"
+                                    else (stagate_note if method_kind == "stagate" else "")
+                                )
+                            ),
+                        }
+                    )
                         continue
 
                     labels_by_seed[seed] = labels
@@ -597,7 +1002,11 @@ def main() -> int:
                     "wall_time_sec_median": round(float(np.median(run_times)), 6),
                     "peak_rss_mb_median": round(float(np.median(run_mem)), 3),
                     "failure_rate": round(failure_rate, 6),
-                    "notes": args.note,
+                    "notes": (
+                        f"{args.note};{leiden_note}"
+                        if leiden_note
+                        else (f"{args.note};{spagcn_note}" if spagcn_note else args.note)
+                    ),
                 }
                 method_rows.append(summary_row)
                 fig2_rows.append({"panel_id": "Fig2A", **summary_row})

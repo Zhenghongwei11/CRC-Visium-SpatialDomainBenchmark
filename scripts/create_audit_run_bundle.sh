@@ -16,9 +16,10 @@ date -u +"%Y-%m-%dT%H:%M:%SZ" > "${OUT_DIR}/created_utc.txt"
   echo "- created_utc: $(cat "${OUT_DIR}/created_utc.txt")"
   echo
   echo "## What this is"
-  echo "A lightweight provenance bundle capturing environment info and checksums for key outputs."
+  echo "A lightweight, internal provenance bundle capturing environment info and checksums for key outputs."
   echo
   echo "## What this is not"
+  echo "- Not a submission artifact."
   echo "- Not a guarantee of exact numerical reproducibility across platforms (Bayesian MCMC and numeric libs can differ)."
   echo
   echo "## Reproduction entrypoints"

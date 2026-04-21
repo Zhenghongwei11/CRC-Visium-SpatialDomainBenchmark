@@ -9,9 +9,7 @@ authors:
   - family-names: Chen
     given-names: Wenbiao
     affiliation: "School of Medicine, Quanzhou Medical College, Quanzhou, Fujian 362000, China"
-repository-code: "https://github.com/Zhenghongwei11/Benchmarking-spatial-domain-identification-in-colorectal-cancer-Visium-data"
-doi: "10.5281/zenodo.18733930"
-url: "https://doi.org/10.5281/zenodo.18733930"
+repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
 contact:
   - family-names: Chen
     given-names: Wenbiao

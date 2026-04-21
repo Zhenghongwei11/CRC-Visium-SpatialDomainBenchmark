@@ -6,6 +6,7 @@ VENV_DIR="${ROOT_DIR}/.venv"
 SUMMARY_TSV="${ROOT_DIR}/results/benchmarks/stage3_run_summary.tsv"
 K_GRID="${K_GRID:-4,6}"
 SEEDS="${SEEDS:-11,23,37}"
+METHODS="${METHODS:-M0_expr_kmeans,M1_spatial_concat_kmeans,M3_spatial_leiden}"
 BAYES_INSTALL="${BAYES_INSTALL:-0}"
 STAGES="${STAGES:-stage3a,stage3b,stage3c}"
 
@@ -81,6 +82,7 @@ run_full_stage() {
     --max-samples 999 \
     --k-grid "${K_GRID}" \
     --seeds "${SEEDS}" \
+    --methods "${METHODS}" \
     --note "${note}"; then
     status="failed"
     processed="0"

@@ -6,6 +6,7 @@ VENV_DIR="${ROOT_DIR}/.venv"
 SUMMARY_TSV="${ROOT_DIR}/results/benchmarks/stage2_run_summary.tsv"
 K_GRID="${K_GRID:-4,6}"
 SEEDS="${SEEDS:-11,23,37}"
+METHODS="${METHODS:-M0_expr_kmeans,M1_spatial_concat_kmeans,M3_spatial_leiden}"
 STAGES="${STAGES:-stage2a,stage2b,stage2c}"
 
 cd "${ROOT_DIR}"
@@ -77,6 +78,7 @@ run_stage() {
     --max-samples "${max_samples}" \
     --k-grid "${K_GRID}" \
     --seeds "${SEEDS}" \
+    --methods "${METHODS}" \
     --note "${note}"; then
     status="failed"
   fi

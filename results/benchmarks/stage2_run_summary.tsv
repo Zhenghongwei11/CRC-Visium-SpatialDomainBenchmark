@@ -2,3 +2,4 @@ stage_id	dataset_id	run_scope	max_samples_requested	samples_discovered	samples_p
 stage2a	GSE285505	all-samples-local-pilot	99	4	4	4,6	11,23,37	2026-02-11T18:59:23Z	2026-02-11T18:59:23Z	success	stage2a-local-full
 stage2b	GSE311294	replication-smoke	1	5	1	4,6	11,23,37	2026-02-11T18:59:23Z	2026-02-11T18:59:23Z	success	stage2b-replication-smoke
 stage2c	GSE267401	replication-smoke	1	4	1	4,6	11,23,37	2026-02-11T18:59:23Z	2026-02-11T18:59:23Z	success	stage2c-replication-smoke
+stage2a	GSE285505	all-samples-local-pilot	99	4	4	4,6	11,23,37	2026-04-20T20:31:33Z	2026-04-20T20:32:34Z	success	stage2a-local-full

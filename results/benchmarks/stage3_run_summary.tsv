@@ -6,3 +6,5 @@ stage3c	GSE311294	bayesspace-attempt	1	1	1	4,6	11,23,37	2026-02-12T04:30:16Z	202
 stage3c	GSE311294	bayesspace-attempt	1	1	1	4,6	11,23,37	2026-02-12T04:45:56Z	2026-02-12T04:51:56Z	failed	stage3-bayesspace-attempt
 stage3c	GSE311294	bayesspace-attempt	1	1	1	4,6	11,23,37	2026-02-12T04:52:30Z	2026-02-12T05:00:09Z	failed	stage3-bayesspace-attempt
 stage3c	GSE311294	bayesspace-attempt	1	1	1	4,6	11,23,37	2026-02-12T05:02:09Z	2026-02-12T05:08:30Z	success	stage3-bayesspace-attempt
+stage3a	GSE311294	full-replication	999	5	5	4,6	11,23,37	2026-04-20T20:32:43Z	2026-04-20T20:34:34Z	success	stage3a-full-replication
+stage3b	GSE267401	full-replication	999	4	4	4,6	11,23,37	2026-04-20T20:34:34Z	2026-04-20T20:36:28Z	success	stage3b-full-replication

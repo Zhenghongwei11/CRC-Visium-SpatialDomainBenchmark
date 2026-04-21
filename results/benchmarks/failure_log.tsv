@@ -12,3 +12,20 @@ GSE311294	NA	BayesSpace	bayesspace_default	K4	4	11	bayesspace_error	During start
 GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-02-13T01:50:26Z	smoke-test completed without runtime failures
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-02-21T08:42:37Z	stage3a-full-replication-m2 completed without runtime failures
 GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-02-21T08:43:33Z	stage3b-full-replication-m2 completed without runtime failures
+GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-20T20:32:33Z	stage2a-local-full completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-20T20:34:33Z	stage3a-full-replication completed without runtime failures
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-20T20:36:27Z	stage3b-full-replication completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-20T20:37:19Z	stage3a-full-replication-m2 completed without runtime failures
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-20T20:38:14Z	stage3b-full-replication-m2 completed without runtime failures
+GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	11	runtime_error	Numpy is not available			15.217227	841.664	2026-04-21T04:39:38Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
+GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	23	runtime_error	Numpy is not available			5.474059	1009.168	2026-04-21T04:39:43Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
+GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	4	11	runtime_error	Numpy is not available			15.954088	1034.742	2026-04-21T04:40:22Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
+GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	4	23	runtime_error	Numpy is not available			8.953003	1323.051	2026-04-21T04:40:31Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T04:48:15Z	stage3a-full-replication-m4 completed without runtime failures
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-21T04:49:17Z	stage3b-full-replication-m4 completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T04:53:51Z	stage3a-full-replication-m4 completed without runtime failures
+GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	23	runtime_error	SpaGCN produced 5 clusters (target K=6)			21.388071	1036.227	2026-04-21T04:57:22Z	spagcn_p=0.5;l=11.24;max_epochs=200
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T07:34:32Z	stagate-smoke completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T08:54:51Z	stagate-fast-smoke completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T09:00:24Z	stage3a-full-replication-m5 completed without runtime failures
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-21T09:06:20Z	stage3b-full-replication-m5 completed without runtime failures
