@@ -23,6 +23,10 @@ Then rebuild the claim-gate table and derived artifacts:
 - `Rscript scripts/build_statistical_gate_summary.R`
 - `python3 scripts/build_required_artifacts.py`
 
+Optional targeted sensitivity (BayesSpace MCMC depth):
+- `bash scripts/run_crc_stage3g_bayesspace_nrep_sensitivity.sh` (nrep=1000 on two representative sections)
+- `python3 scripts/build_bayesspace_nrep_sensitivity.py` (writes `results/benchmarks/bayesspace_nrep_sensitivity_summary.tsv`)
+
 ### One-click (end-to-end)
 To run the full pipeline (tables + figures) with a single command:
 - `bash scripts/reproduce_one_click.sh`
@@ -38,6 +42,13 @@ If you want to regenerate publication figures locally, install the Python depend
 Public GEO accessions used in this benchmark:
 - GSE267401
 - GSE311294
-- GSE285505
+- GSE280318
+- GSE289934 (optional portability demo; mouse brain)
 
 The download URLs and file sizes are recorded in `docs/DATA_MANIFEST.tsv`.
+
+## Optional portability demo (non-CRC)
+To demonstrate that the evaluation framework can be applied outside CRC, we include a small non-CRC Visium dataset (GSE289934; mouse brain; 2 sections). If the dataset is downloaded and the STAGATE environment is available, you can build a descriptive portability summary and an image-based weak anchor (edge-alignment) table:
+
+- `bash scripts/build_portability_edge_alignment.sh` (writes `results/benchmarks/portability_histology_edge_alignment.tsv`)
+- `python3 scripts/build_portability_demo_summary.py` (writes `results/benchmarks/portability_demo_noncrc_summary.tsv`)

@@ -10,7 +10,7 @@ than expression-only clustering baselines, across multiple independent CRC Visiu
 - Study type: benchmark / best-practice paper (pure computational biology; no wet lab).
 - Task: **spatial domain identification / clustering** (NOT deconvolution as the mainline claim driver).
 - Disease context: colorectal cancer (CRC) Visium spatial transcriptomics (human primary; mouse optional as stress-test).
-- Target journal: **PLOS ONE** (rigor + reproducibility prioritized).
+- Target journal class: computational methods / bioinformatics benchmark venue (current draft target: **BMC Bioinformatics**).
 
 ## Non-goals (explicit)
 - No new CRC “mechanism” claims beyond what is required to interpret domain marker coherence.
@@ -28,5 +28,5 @@ than expression-only clustering baselines, across multiple independent CRC Visiu
 ## Success criteria (what “done” looks like)
 - A locked evaluation protocol (`docs/ALGORITHM_SELECTION.md`) with fairness rules and negative controls.
 - Standardized benchmark tables under `results/benchmarks/` that can regenerate all numbers in the paper.
-- Panel-level storyboard (`docs/FIGURE_STORYBOARD.tsv`) where each **main figure maps to one claim** and one anchor table.
+- Figure lineage metadata (`docs/FIGURE_PROVENANCE.tsv` + `docs/SOURCE_DATA_MAP.tsv`) so that each main figure maps to one anchor table.
 - Runtime/memory feasibility demonstrated on an **8GB laptop** for the core method set, with a clear cloud scale-up path.

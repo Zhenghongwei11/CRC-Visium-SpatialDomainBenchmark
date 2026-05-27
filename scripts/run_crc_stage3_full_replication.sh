@@ -8,9 +8,10 @@ K_GRID="${K_GRID:-4,6}"
 SEEDS="${SEEDS:-11,23,37}"
 METHODS="${METHODS:-M0_expr_kmeans,M1_spatial_concat_kmeans,M3_spatial_leiden}"
 BAYES_INSTALL="${BAYES_INSTALL:-0}"
-STAGES="${STAGES:-stage3a,stage3b,stage3c}"
+STAGES="${STAGES:-stage3a,stage3b,stage3g}"
 
 cd "${ROOT_DIR}"
+mkdir -p "${ROOT_DIR}/results/benchmarks" "${ROOT_DIR}/results/figures"
 
 if [[ ! -d "${VENV_DIR}" ]]; then
   python3 -m venv "${VENV_DIR}"
@@ -161,6 +162,7 @@ run_if_selected() {
 
 run_if_selected "stage3a" run_full_stage "stage3a" "GSE311294" "stage3a-full-replication"
 run_if_selected "stage3b" run_full_stage "stage3b" "GSE267401" "stage3b-full-replication"
+run_if_selected "stage3g" run_full_stage "stage3g" "GSE280318" "stage3g-full-replication"
 run_if_selected "stage3c" run_bayesspace_stage
 
 echo "Stage-3 runs completed."

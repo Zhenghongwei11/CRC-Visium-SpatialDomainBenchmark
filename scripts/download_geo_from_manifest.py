@@ -69,7 +69,7 @@ def unpack_tar(tar_path: pathlib.Path, output_dir: pathlib.Path) -> None:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", default="docs/DATA_MANIFEST.tsv")
-    parser.add_argument("--dataset-id", default="GSE285505")
+    parser.add_argument("--dataset-id", default="GSE280318")
     parser.add_argument("--output-dir", default="data/raw")
     parser.add_argument("--force-download", action="store_true")
     parser.add_argument("--skip-unpack", action="store_true")

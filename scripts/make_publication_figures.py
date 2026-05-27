@@ -84,7 +84,7 @@ def fig1(repo_root: Path) -> None:
     ax_d = fig.add_subplot(gs[1, 2])
 
     # Panel A: dataset coverage
-    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE285505"])].copy()
+    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE280318"])].copy()
     ds_used["total_samples"] = ds_used["samples_on_disk"].astype(int)
     ds_used["bayesspace_samples"] = ds_used["bayesspace_samples_covered"].astype(int)
     ds_used = ds_used.sort_values("dataset_id")

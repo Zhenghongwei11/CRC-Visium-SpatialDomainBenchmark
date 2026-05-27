@@ -310,8 +310,8 @@ def make_s2_workflow_schematic(root: Path) -> None:
         [("GEO", "public CRC Visium", MID),
          ("GSE267401", "primary, n = 4", MID),
          ("GSE311294", "replication, n = 5", MID),
-         ("GSE285505", "replication, n = 4", MID),
-         ("6 samples", "in primary comparison", DARK)],
+         ("GSE280318", "replication, n = 4", MID),
+         ("13 samples", "in primary comparison", DARK)],
         [("Spot \u00d7 gene", "counts + spatial coords", MID),
          ("Log-normalisation", "", MID),
          ("HVG", "selection", MID),
@@ -324,9 +324,9 @@ def make_s2_workflow_schematic(root: Path) -> None:
          ("M4", "SpaGCN baseline", MID),
          ("M5", "STAGATE baseline", MID),
          ("BayesSpace", "Bayesian / Potts prior", DARK)],
-        [("Fig. 1\u20134", "main results", MID),
+        [("Fig. 1\u20135", "main results", MID),
          ("S1\u2013S3", "supplementary figures", MID),
-         ("S1\u2013S11", "supporting data tables", MID),
+         ("S1\u2013S17", "supporting data tables", MID),
          ("GitHub repo", "+ review bundle", MID),
          ("Checksum", "manifest", MID)],
     ]
@@ -361,13 +361,13 @@ def make_s2_workflow_schematic(root: Path) -> None:
         ax.text(lp_x + 0.12, ey - 0.16, desc, fontsize=5.8, color=GREY, va="top")
 
     rp_x, rp_w = 3.88, 3.20
-    section_bar(rp_x, lp_top, rp_w, 0.28, AMBER, "STATISTICAL GATES")
+    section_bar(rp_x, lp_top, rp_w, 0.28, AMBER, "STATISTICAL CHECKS")
     for i, (title, desc) in enumerate([
         ("Paired Wilcoxon signed-rank", "method-level comparisons"),
-        ("One-sided stability threshold", "prespecified ARI cutoff"),
+        ("One-sided stability threshold", "planned ARI cutoff"),
         ("BH-FDR correction", "q < 0.05, family-controlled"),
         ("Effect sizes", "median \u0394 + bootstrap 95 % CI"),
-        ("Negative controls", "prespecified coordinate shuffle"),
+        ("Negative controls", "planned coordinate shuffle"),
     ]):
         gy = lp_top - 0.14 - i * 0.34
         ax.text(rp_x + 0.12, gy, title, fontsize=6.5, fontweight="bold",
@@ -402,13 +402,14 @@ def make_s2_workflow_schematic(root: Path) -> None:
         boxstyle="round,pad=0.06",
         facecolor=AMBER_L, edgecolor="none", linewidth=0, zorder=0, alpha=0.5))
 
-    ax.text(W / 2, H - 0.22, "Study overview and prespecified evaluation framework",
+    ax.text(W / 2, H - 0.22, "Study overview and evaluation framework",
             ha="center", va="top", fontsize=10, fontweight="bold", color=DARK)
 
     fig.subplots_adjust(left=0.01, right=0.99, top=0.96, bottom=0.06)
-    _save(fig, root, "figure5")
-    print("Wrote plots/publication/png/figure5.png")
-    print("Wrote plots/publication/pdf/figure5.pdf")
+    # Workflow schematic is Fig 2 in the submission manuscript (first-callout order).
+    _save(fig, root, "figure2")
+    print("Wrote plots/publication/png/figure2.png")
+    print("Wrote plots/publication/pdf/figure2.pdf")
 
 
 def make_s3_instability_case_study(root: Path) -> None:
@@ -547,7 +548,9 @@ def make_s3_instability_case_study(root: Path) -> None:
     sc1 = _marker_panel(ax_epi, ref["expr_epithelial"], f"{epi_name} (logcounts)")
     cax1 = fig.add_subplot(gs_bot[0, 1])
     cb1 = fig.colorbar(sc1, cax=cax1)
-    cb1.ax.tick_params(labelsize=7, pad=2)
+    # Keep tick labels away from the central gutter to avoid any clipping when embedded in DOCX.
+    cb1.ax.yaxis.set_ticks_position("left")
+    cb1.ax.tick_params(labelsize=7, pad=1)
     cb1.outline.set_linewidth(0.8)
 
     ax_str = fig.add_subplot(gs_bot[0, 3])
@@ -568,12 +571,107 @@ def make_s3_instability_case_study(root: Path) -> None:
     print("Wrote plots/publication/pdf/figureS2.pdf")
 
 
+def make_s4_boundary_vs_interior_seed_sensitivity(root: Path) -> None:
+    """Downstream sensitivity: boundary-vs-interior signature deltas across seeds."""
+    src = root / "results" / "figures" / "figS4_boundary_vs_interior_seed_sensitivity.tsv"
+    if not src.exists():
+        raise FileNotFoundError(
+            "Missing boundary-sensitivity table. Generate it with:\n"
+            "  python3 scripts/build_figS4_boundary_vs_interior_seed_sensitivity.py "
+            "--dataset-root data/raw/GSE311294/extracted"
+        )
+
+    df = pd.read_csv(src, sep="\t")
+    if df.empty:
+        raise RuntimeError("Boundary sensitivity table is empty")
+
+    # Focus on signature-level readouts (more informative than sparse single-gene medians).
+    keep = [
+        "SIG_CAF_FAP",
+        "SIG_MY_SPP1",
+        "SIG_TCELL",
+        "SIG_EXCLUSION_TGFB_CXCL12",
+        "SIG_EXCLUSION_CONTRAST",
+    ]
+    sub = df[(df["feature_type"] == "signature") & (df["feature_id"].isin(keep))].copy()
+    if sub.empty:
+        raise RuntimeError("No expected signature rows found in boundary sensitivity table")
+
+    feature_order = keep
+    label_map = {
+        "SIG_CAF_FAP": "CAF / FAP",
+        "SIG_MY_SPP1": "SPP1-myeloid",
+        "SIG_TCELL": "T-cell",
+        "SIG_EXCLUSION_TGFB_CXCL12": "Exclusion (TGFβ/CXCL12)",
+        "SIG_EXCLUSION_CONTRAST": "Exclusion contrast",
+    }
+
+    seeds = sorted({int(s) for s in sub["seed"].astype(int).unique().tolist()})
+    palette = ["#56B4E9", "#E69F00", "#009E73", "#CC79A7"]  # colorblind-friendly
+    seed_to_col = {s: palette[i % len(palette)] for i, s in enumerate(seeds)}
+    col_dark = "#4D4D4D"
+    col_black = "#000000"
+
+    fig = plt.figure(figsize=(7.2, 3.2))
+    ax = fig.add_subplot(1, 1, 1)
+
+    xs = np.arange(len(feature_order), dtype=float)
+    jitter = np.linspace(-0.18, 0.18, num=max(2, len(seeds)))
+
+    for si, seed in enumerate(seeds):
+        ds = sub[sub["seed"].astype(int) == int(seed)].copy()
+        ys = []
+        for fid in feature_order:
+            row = ds[ds["feature_id"] == fid]
+            if row.empty:
+                ys.append(np.nan)
+            else:
+                ys.append(float(row["median_delta_boundary_minus_interior"].iloc[0]))
+        ax.scatter(xs + jitter[si], ys, s=36, color=seed_to_col[seed],
+                   edgecolors="white", linewidths=0.6, zorder=3, label=f"seed={seed}")
+
+    # Add a light summary line (median across seeds) to guide the eye.
+    med = []
+    for fid in feature_order:
+        vals = sub[sub["feature_id"] == fid]["median_delta_boundary_minus_interior"].astype(float).to_numpy()
+        med.append(float(np.nanmedian(vals)))
+    ax.plot(xs, med, color=col_dark, linewidth=1.2, zorder=2)
+
+    ax.axhline(0, color=col_black, linewidth=0.7, linestyle="--", zorder=1)
+    ax.set_xticks(xs)
+    ax.set_xticklabels([label_map.get(f, f) for f in feature_order], fontsize=7)
+    ax.set_ylabel("Boundary − interior (median Δ)", fontsize=8)
+    ax.set_title("Downstream sensitivity: boundary-associated signature deltas across seeds",
+                 fontsize=9, pad=8)
+
+    # Annotate boundary fractions per seed (small, non-intrusive).
+    frac_txt = []
+    for seed in seeds:
+        row = sub[sub["seed"].astype(int) == int(seed)].iloc[0]
+        n_b = int(row["n_boundary_spots"])
+        n_t = int(row["n_spots_total"])
+        frac_txt.append(f"{seed}: {n_b}/{n_t}")
+    ax.text(0.99, 0.02, "Boundary spots per seed (n): " + "; ".join(frac_txt),
+            transform=ax.transAxes, ha="right", va="bottom",
+            fontsize=6, color=col_dark)
+
+    ax.legend(frameon=False, fontsize=6, ncol=len(seeds), loc="upper right",
+              handletextpad=0.3, columnspacing=0.8)
+    ax.grid(axis="y", color="#E5E7EB", linewidth=0.6)
+    fig.tight_layout()
+
+    _save(fig, root, "figureS3")
+    print("Wrote plots/publication/png/figureS3.png")
+    print("Wrote plots/publication/pdf/figureS3.pdf")
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
-    # Figure 5 (main text) is generated from the workflow schematic.
+    # Figure 2 (main text) is generated from the workflow schematic.
     make_s2_workflow_schematic(root)
     make_s3_instability_case_study(root)
+    make_s4_boundary_vs_interior_seed_sensitivity(root)
     return 0
 
 

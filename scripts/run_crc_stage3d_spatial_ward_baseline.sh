@@ -8,6 +8,7 @@ K_GRID="${K_GRID:-4,6}"
 SEEDS="${SEEDS:-11,23,37}"
 
 cd "${ROOT_DIR}"
+mkdir -p "${ROOT_DIR}/results/benchmarks" "${ROOT_DIR}/results/figures"
 
 if [[ ! -d "${VENV_DIR}" ]]; then
   python3 -m venv "${VENV_DIR}"
@@ -95,5 +96,6 @@ run_full_stage_m2() {
 
 run_full_stage_m2 "stage3d" "GSE311294" "stage3a-full-replication-m2"
 run_full_stage_m2 "stage3d" "GSE267401" "stage3b-full-replication-m2"
+run_full_stage_m2 "stage3d" "GSE280318" "stage3g-full-replication-m2"
 
 echo "Stage-3d runs completed (M2 spatial Ward baseline)."

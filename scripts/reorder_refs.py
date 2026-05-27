@@ -1,10 +1,18 @@
 import re
 import csv
+import sys
 from pathlib import Path
 
 # 1. Extract citation order from manuscript
-manuscript_path = Path("docs/manuscript/manuscript.md")
-content = manuscript_path.read_text()
+default_path = Path("docs/submissions/BMC_BIOINFORMATICS/MANUSCRIPT_SUBMISSION.md")
+fallback_path = Path("docs/manuscript/manuscript.md")
+manuscript_path = Path(sys.argv[1]) if len(sys.argv) > 1 else (default_path if default_path.exists() else fallback_path)
+if not manuscript_path.exists():
+    raise SystemExit(
+        f"Manuscript not found: {manuscript_path}. Pass an explicit path, e.g. "
+        f"`python3 scripts/reorder_refs.py docs/submissions/BMC_BIOINFORMATICS/MANUSCRIPT_SUBMISSION.md`."
+    )
+content = manuscript_path.read_text(encoding="utf-8")
 # Find all citations like [@key1; @key2]
 groups = re.findall(r"\[@([^]]+)\]", content)
 order = []

@@ -1,4 +1,4 @@
-# Statistical decision rules (predeclared; PLOS ONE rigor)
+# Statistical decision rules (predeclared)
 
 ## Scope
 This rulebook defines claim-eligibility gates for the CRC spatial-domain benchmark project and must be locked before claim-upgrading analyses.
@@ -10,7 +10,8 @@ This rulebook defines claim-eligibility gates for the CRC spatial-domain benchma
 
 ## Analysis units and comparators
 - Primary unit: sample-level paired comparison.
-- Main method comparisons: `BayesSpace` vs `M0` and `BayesSpace` vs `M1` (fixed preprocessing and fixed `K`).
+- Primary method comparison (modern baseline): `BayesSpace` vs `M5_stagate` (fixed preprocessing and fixed `K`).
+- Calibration baselines (reported as context): `BayesSpace` vs `M0_expr_kmeans`, `M1_spatial_concat_kmeans`.
 - Primary `K` set for main claims: `K in {4, 6}`.
 
 ## Primary metrics
@@ -29,9 +30,10 @@ This rulebook defines claim-eligibility gates for the CRC spatial-domain benchma
 - Direction-consistency summary: fraction of samples with effect in expected direction.
 
 ## Multiplicity control
-- Family `F1` (C1 primary): BayesSpace vs the two k-means baselines (`M0`, `M1`) across the primary metrics; BH-FDR controlled at `q < 0.05`.
-- Family `F1_ext` (C1 extension; exploratory): BayesSpace vs an additional spatially constrained baseline (`M2_spatial_ward`) reported as a sensitivity analysis; BH-FDR controlled at `q < 0.05` and interpreted as supplementary.
-- Family `F2` (C2 sensitivity): all C2 sensitivity comparisons in one family, BH-FDR controlled at `q < 0.10`.
+- Family `F1` (C1 primary): BayesSpace vs `M5_stagate` across the two primary domain-quality metrics; BH-FDR controlled at `q < 0.05`.
+- Family `F1_secondary` (C1 calibration): BayesSpace vs (`M0_expr_kmeans`, `M1_spatial_concat_kmeans`) across the same metrics; BH-FDR controlled at `q < 0.05` (reported, but not used to claim superiority over modern baselines).
+- Families `F1_ext*` (C1 extension; exploratory): BayesSpace vs additional baselines (`M2_spatial_ward`, `M3_spatial_leiden`, `M4_spagcn`); BH-FDR controlled within each baseline-class family and interpreted as supplementary context.
+- Family `F2` (C2 stability gate): one-sided Wilcoxon one-sample test against ARI = 0.60 at `alpha = 0.10` (single endpoint; no multiplicity correction needed).
 - Family `F3` (C3 compute): descriptive-first family; inferential claims require predeclared test and BH-FDR at `q < 0.05`.
 
 ## Practical-effect and consistency gates

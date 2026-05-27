@@ -1,3 +1,0 @@
-stage_id	dataset_id	sample_id	k_grid	seed	bayes_install	started_utc	finished_utc	status	bayespace_rows_before	bayespace_rows_after	bayespace_rows_added	seeds_requested	notes
-stage8-bayesspace-crosscohort-multiseed	GSE267401	GSM8265212_CTC21M	4,6	23	0	2026-02-12T08:48:18Z	2026-02-12T08:59:45Z	success	9	11	2	23,37	stage8-bayesspace-crosscohort-multiseed-seed23
-stage8-bayesspace-crosscohort-multiseed	GSE267401	GSM8265212_CTC21M	4,6	37	0	2026-02-12T08:59:45Z	2026-02-12T09:11:07Z	success	11	13	2	23,37	stage8-bayesspace-crosscohort-multiseed-seed37

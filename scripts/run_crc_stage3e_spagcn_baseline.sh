@@ -11,6 +11,7 @@ SEEDS="${SEEDS:-11,23}"
 MAX_SAMPLES="${MAX_SAMPLES:-999}"
 
 cd "${ROOT_DIR}"
+mkdir -p "${ROOT_DIR}/results/benchmarks" "${ROOT_DIR}/results/figures"
 
 if ! command -v "${PYTHON_BIN}" >/dev/null 2>&1; then
   echo "Missing ${PYTHON_BIN}. Install Python 3.11 or set PYTHON_BIN to a working interpreter."
@@ -121,5 +122,6 @@ run_full_stage_m4() {
 
 run_full_stage_m4 "stage3e" "GSE311294" "stage3a-full-replication-m4"
 run_full_stage_m4 "stage3e" "GSE267401" "stage3b-full-replication-m4"
+run_full_stage_m4 "stage3e" "GSE280318" "stage3g-full-replication-m4"
 
 echo "Stage-3e runs completed (M4 SpaGCN baseline)."

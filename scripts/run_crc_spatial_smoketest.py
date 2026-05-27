@@ -526,6 +526,7 @@ def _stagate_membership(
 def append_rows(path: pathlib.Path, rows: list[dict[str, object]]) -> None:
     if not rows:
         return
+    path.parent.mkdir(parents=True, exist_ok=True)
     if path.exists():
         with path.open("r", encoding="utf-8", newline="") as existing:
             header = existing.readline().rstrip("\n").split("\t")
@@ -553,8 +554,8 @@ def append_rows(path: pathlib.Path, rows: list[dict[str, object]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset-id", default="GSE285505")
-    parser.add_argument("--dataset-root", default="data/raw/GSE285505/extracted")
+    parser.add_argument("--dataset-id", default="GSE280318")
+    parser.add_argument("--dataset-root", default="data/raw/GSE280318/extracted")
     parser.add_argument("--max-samples", type=int, default=1)
     parser.add_argument(
         "--sample-ids",

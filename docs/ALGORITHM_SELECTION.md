@@ -72,7 +72,7 @@ Because “true domains” are not available, we use **orthogonal** unsupervised
 - **Random clustering control:** random labels matched to K as a floor baseline.
 - Output table: `results/benchmarks/negative_controls.tsv`.
 
-## 7) Fairness rules (to satisfy PLOS ONE rigor expectations)
+## 7) Fairness rules (reviewer-facing)
 - No post hoc tuning of parameter grids based on downstream benchmark outcomes.
 - Report full distributions (not only means) and per-sample heterogeneity.
 - Report failures; do not silently drop hard samples.

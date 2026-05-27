@@ -15,6 +15,7 @@ STAGATE_HIDDEN_DIM="${STAGATE_HIDDEN_DIM:-64}"
 STAGATE_LATENT_DIM="${STAGATE_LATENT_DIM:-30}"
 
 cd "${ROOT_DIR}"
+mkdir -p "${ROOT_DIR}/results/benchmarks" "${ROOT_DIR}/results/figures"
 
 if ! command -v "${PYTHON_BIN}" >/dev/null 2>&1; then
   echo "Missing ${PYTHON_BIN}. Install Python 3.11 or set PYTHON_BIN to a working interpreter."
@@ -93,7 +94,6 @@ run_full_stage_m5() {
   local stage_id="$1"
   local dataset_id="$2"
   local note="$3"
-  local sample_ids="$4"
   local started finished discovered status processed
   status="success"
   started="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
@@ -103,11 +103,10 @@ run_full_stage_m5() {
 
   local before_count after_count added_count
   before_count="$(count_stagate_rows)"
-  if ! python scripts/run_crc_spatial_smoketest.py \
+  cmd=(python scripts/run_crc_spatial_smoketest.py \
     --dataset-id "${dataset_id}" \
     --dataset-root "data/raw/${dataset_id}/extracted" \
     --max-samples "${MAX_SAMPLES}" \
-    --sample-ids "${sample_ids}" \
     --k-grid "${K_GRID}" \
     --seeds "${SEEDS}" \
     --methods "M5_stagate" \
@@ -115,7 +114,8 @@ run_full_stage_m5() {
     --stagate-hidden-dim "${STAGATE_HIDDEN_DIM}" \
     --stagate-latent-dim "${STAGATE_LATENT_DIM}" \
     --stagate-max-epochs "${STAGATE_MAX_EPOCHS}" \
-    --note "${note}"; then
+    --note "${note}")
+  if ! "${cmd[@]}"; then
     status="failed"
     processed="0"
   fi
@@ -132,7 +132,8 @@ run_full_stage_m5() {
   fi
 }
 
-run_full_stage_m5 "stage3f" "GSE311294" "stage3a-full-replication-m5" "GSM9322957_TR11_206,GSM9322958_TR11_16184,GSM9322959_TR11_18105"
-run_full_stage_m5 "stage3f" "GSE267401" "stage3b-full-replication-m5" "GSM8265211_CTC21P,GSM8265212_CTC21M,GSM8265213_CTC17P"
+run_full_stage_m5 "stage3f" "GSE311294" "stage3a-full-replication-m5"
+run_full_stage_m5 "stage3f" "GSE267401" "stage3b-full-replication-m5"
+run_full_stage_m5 "stage3f" "GSE280318" "stage3g-full-replication-m5"
 
 echo "Stage-3f runs completed (M5 STAGATE baseline)."

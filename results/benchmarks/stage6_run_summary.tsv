@@ -1,3 +1,0 @@
-stage_id	dataset_id	sample_id	k_grid	seed	bayes_install	started_utc	finished_utc	status	bayespace_rows_before	bayespace_rows_after	bayespace_rows_added	seeds_requested	notes
-stage6-bayesspace-multiseed	GSE311294	GSM9322959_TR11_18105	4,6	23	0	2026-02-12T08:15:55Z	2026-02-12T08:20:18Z	success	3	5	2	23,37	stage6-bayesspace-multiseed-seed23
-stage6-bayesspace-multiseed	GSE311294	GSM9322959_TR11_18105	4,6	37	0	2026-02-12T08:20:18Z	2026-02-12T08:24:44Z	success	5	7	2	23,37	stage6-bayesspace-multiseed-seed37

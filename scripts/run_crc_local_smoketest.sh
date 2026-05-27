@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DATASET_ID="${1:-GSE285505}"
+DATASET_ID="${1:-GSE280318}"
 VENV_DIR="${ROOT_DIR}/.venv"
 
 cd "${ROOT_DIR}"

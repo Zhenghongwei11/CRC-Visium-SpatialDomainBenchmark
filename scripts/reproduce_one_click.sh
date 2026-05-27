@@ -20,6 +20,7 @@ SKIP_FIGURES="${SKIP_FIGURES:-0}"
 
 bash scripts/run_crc_stage2_local.sh
 bash scripts/run_crc_stage3_full_replication.sh
+bash scripts/run_crc_stage3d_spatial_ward_baseline.sh
 
 if [[ "${RUN_SPAGCN}" == "1" ]]; then
   PYTHON_BIN="${PYTHON_BIN}" bash scripts/run_crc_stage3e_spagcn_baseline.sh
@@ -30,7 +31,6 @@ if [[ "${RUN_STAGATE}" == "1" ]]; then
 fi
 
 BAYES_INSTALL="${BAYES_INSTALL}" bash scripts/run_crc_stage4_bayesspace.sh
-bash scripts/run_crc_stage10_bayesspace_rigor_backfill.sh
 
 Rscript scripts/build_statistical_gate_summary.R
 python3 scripts/build_required_artifacts.py

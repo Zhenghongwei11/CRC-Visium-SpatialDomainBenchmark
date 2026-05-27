@@ -161,7 +161,7 @@ def figure1(root: Path) -> None:
 
     # ── Panel A: cohort coverage (horizontal lollipop, not bars) ─────────
     ax_a = fig.add_subplot(gs[0, :])
-    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE285505"])].copy()
+    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE280318"])].copy()
     ds_used["total"]   = ds_used["samples_on_disk"].astype(int)
     ds_used["covered"] = ds_used["bayesspace_samples_covered"].astype(int)
     ds_used = ds_used.sort_values("total", ascending=True).reset_index(drop=True)
@@ -271,7 +271,9 @@ def figure2(root: Path) -> None:
                  title="Pre-specified effect-size gates (paired median Δ, 95% CI)")
     _panel_label(ax_c, "C", x=0.01, y=1.02)
 
-    _save(fig, root, "figure2")
+    # NOTE: Manuscript figure numbering is aligned to first-callout order.
+    # Domain-quality summary appears after the workflow schematic, so it is Fig 3.
+    _save(fig, root, "figure3")
 
 
 def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
@@ -362,6 +364,13 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
         metric = str(row["metric_id"]).replace("_median", "").replace("_", " ").title()
         comp   = str(row.get("comparison_id", ""))
         base   = comp.split("_vs_")[-1] if "_vs_" in comp else ""
+        # Compact comparison labels (avoid long "M5_stagate_K4K6" strings that
+        # collide with the pass/fail badge column).
+        base = (
+            base.replace("_K4K6", "")
+            .replace("_K4", "")
+            .replace("_K6", "")
+        )
         base   = METHOD_LABEL.get(base, base.replace("_", " "))
         y_labels.append(f"{metric}\nvs {base}")
     ax.set_yticklabels(y_labels, fontsize=6.5, linespacing=1.1)
@@ -374,10 +383,11 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
     for i, row in gate_df.iterrows():
         gate = str(row.get("overall_gate_status", ""))
         badge_color = OI["bluish_green"] if gate == "pass" else OI["vermillion"]
-        # gate pass/fail badge: positioned below the y-axis label on the left
-        ax.text(-0.12, i + 0.3, gate.upper(), transform=ax.get_yaxis_transform(),
+        # gate pass/fail badge: keep in a dedicated left column (avoid overlapping y-labels)
+        ax.text(-0.34, i + 0.3, gate.upper(), transform=ax.get_yaxis_transform(),
                 fontsize=5, fontweight="bold", color=badge_color,
                 ha="right", va="center",
+                clip_on=False,
                 bbox=dict(boxstyle="round,pad=0.15", fc="white", ec=badge_color,
                         linewidth=0.6))
 
@@ -491,7 +501,8 @@ def figure3(root: Path) -> None:
     _add_fine_grid(ax_b, axis="x")
     _panel_label(ax_b, "B")
 
-    _save(fig, root, "figure3")
+    # Stability appears after domain-quality results, so it is Fig 4.
+    _save(fig, root, "figure4")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -609,7 +620,8 @@ def figure4(root: Path) -> None:
     _add_fine_grid(ax_b, axis="x")
     _panel_label(ax_b, "B")
 
-    _save(fig, root, "figure4")
+    # Compute feasibility appears after stability, so it is Fig 5.
+    _save(fig, root, "figure5")
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

@@ -1,31 +1,18 @@
 dataset_id	sample_id	method_id	preprocessing_id	param_set_id	K	seed	failure_type	error_message	log_path	stacktrace_path	wall_time_sec	peak_rss_mb	finished_utc	notes
-GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-02-11T17:41:46Z	smoke-test completed without runtime failures
-GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-02-11T18:23:09Z	stage2a-local-full completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-02-11T18:39:38Z	stage2b-replication-smoke completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-02-11T18:58:26Z	stage2c-replication-smoke completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-02-12T02:56:46Z	stage3a-full-replication completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-02-12T02:58:02Z	stage3b-full-replication completed without runtime failures
-GSE311294	NA	BayesSpace	bayesspace_default	K4	4	11	bayesspace_error	Missing required packages: BayesSpace					2026-02-12T03:05:17Z	stage3-bayesspace-attempt
-GSE311294	NA	BayesSpace	bayesspace_default	K4	4	11	bayesspace_error	During startup - Warning messages: 1: Setting LC_CTYPE failed, using "C"  2: Setting LC_COLLATE failed, using "C"  3: Setting LC_TIME failed, using "C"  4: Setting LC_MESSAGES failed, using "C"  5: Setting LC_MONETARY failed, using "C"  Error in spatialCluster(sce, q = q, platform = "Visium", d = min(15, ncol(reducedDim(sce,  :    unused argument (verbose = FALSE) Execution halted 					2026-02-12T04:44:59Z	stage3-bayesspace-attempt
-GSE311294	NA	BayesSpace	bayesspace_default	K4	4	11	bayesspace_error	During startup - Warning messages: 1: Setting LC_CTYPE failed, using "C"  2: Setting LC_COLLATE failed, using "C"  3: Setting LC_TIME failed, using "C"  4: Setting LC_MESSAGES failed, using "C"  5: Setting LC_MONETARY failed, using "C"  Error in (function (sce, q, use.dimred = "PCA", d = 15, platform = c("Visium",  :    Please specify a burn-in period shorter than the total number of iterations. Calls: do.call -> do.call -> <Anonymous> Execution halted 					2026-02-12T04:51:56Z	stage3-bayesspace-attempt
-GSE311294	NA	BayesSpace	bayesspace_default	K4	4	11	bayesspace_error	During startup - Warning messages: 1: Setting LC_CTYPE failed, using "C"  2: Setting LC_COLLATE failed, using "C"  3: Setting LC_TIME failed, using "C"  4: Setting LC_MESSAGES failed, using "C"  5: Setting LC_MONETARY failed, using "C"  Error: subscript contains invalid names Execution halted 					2026-02-12T05:00:09Z	stage3-bayesspace-attempt
-GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-02-13T01:50:26Z	smoke-test completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-02-21T08:42:37Z	stage3a-full-replication-m2 completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-02-21T08:43:33Z	stage3b-full-replication-m2 completed without runtime failures
-GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-20T20:32:33Z	stage2a-local-full completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-20T20:34:33Z	stage3a-full-replication completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-20T20:36:27Z	stage3b-full-replication completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-20T20:37:19Z	stage3a-full-replication-m2 completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-20T20:38:14Z	stage3b-full-replication-m2 completed without runtime failures
-GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	11	runtime_error	Numpy is not available			15.217227	841.664	2026-04-21T04:39:38Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
-GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	23	runtime_error	Numpy is not available			5.474059	1009.168	2026-04-21T04:39:43Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
-GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	4	11	runtime_error	Numpy is not available			15.954088	1034.742	2026-04-21T04:40:22Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
-GSE267401	GSM8265211_CTC21P	M4_spagcn	log1p_hvg	K4	4	23	runtime_error	Numpy is not available			8.953003	1323.051	2026-04-21T04:40:31Z	spagcn_p=0.5;max_epochs=200;max_spots=6500
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T04:48:15Z	stage3a-full-replication-m4 completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-21T04:49:17Z	stage3b-full-replication-m4 completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T04:53:51Z	stage3a-full-replication-m4 completed without runtime failures
-GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	23	runtime_error	SpaGCN produced 5 clusters (target K=6)			21.388071	1036.227	2026-04-21T04:57:22Z	spagcn_p=0.5;l=11.24;max_epochs=200
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T07:34:32Z	stagate-smoke completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T08:54:51Z	stagate-fast-smoke completed without runtime failures
-GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-21T09:00:24Z	stage3a-full-replication-m5 completed without runtime failures
-GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-21T09:06:20Z	stage3b-full-replication-m5 completed without runtime failures
+GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:18:46Z	stage2a-local-full completed without runtime failures
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:19:13Z	
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:19:49Z	
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:21:20Z	
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:22:52Z	
+GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	runtime_error	Leiden resolution search did not find exact K for this sample			7.3e-05	270.078	2026-04-22T04:24:15Z	
+GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	runtime_error	Leiden resolution search did not find exact K for this sample			3.4e-05	270.078	2026-04-22T04:24:15Z	
+GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	runtime_error	Leiden resolution search did not find exact K for this sample			1.4e-05	270.078	2026-04-22T04:24:15Z	
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:24:50Z	
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:25:45Z	
+GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:26:05Z	
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:30:21Z	
+GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	23	runtime_error	SpaGCN produced 5 clusters (target K=6)			28.548377	1035.211	2026-04-22T04:34:39Z	
+GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:38:42Z	
+GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:49:08Z	
+GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:58:15Z	
+GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T05:04:58Z	

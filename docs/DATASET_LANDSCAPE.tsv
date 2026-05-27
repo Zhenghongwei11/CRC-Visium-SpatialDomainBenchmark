@@ -1,7 +1,7 @@
 dataset_id_or_name	modality	sample_size	population_or_ancestry	access_link	intended_role	notes
 GSE267401	Visium (human CRC; FFPE; CytAssist)	4 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE267401	Primary (local pilot)	RAW.tar Content-Length 376023040 bytes
 GSE311294	Visium (human CRC)	5 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE311294	Replication (local)	RAW.tar Content-Length 194928640 bytes
-GSE285505	Visium (human CRC)	4 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE285505	Replication (local)	RAW.tar Content-Length 69109760 bytes
+GSE280318	Visium (human CRC)	4 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE280318	Replication (local)	RAW.tar Content-Length 69109760 bytes
 GSE283052	Visium (human CRC tumor tissues)	12 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE283052	Replication extension (local/cloud)	RAW.tar Content-Length 700508160 bytes
 GSE284061	Visium (human CRC)	1 sample	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE284061	Small sanity check / dev dataset	RAW.tar Content-Length 71403520 bytes
 GSE217414	Visium (CRC metastasis context)	4 samples	Unspecified (check series metadata)	https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE217414	Optional external replication	RAW.tar Content-Length 118589440 bytes

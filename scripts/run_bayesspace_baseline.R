@@ -5,6 +5,7 @@ suppressPackageStartupMessages({
   library(SingleCellExperiment)
   library(BayesSpace)
   library(mclust)
+  library(hdf5r)
 })
 
 parse_args <- function(input) {
@@ -15,6 +16,8 @@ parse_args <- function(input) {
     k_grid = "4",
     seed = "11",
     seeds = "",
+    nrep = "100",
+    gamma = "3",
     output_domain_map_tsv = "",
     domain_map_seed = "",
     output_tsv = "results/benchmarks/bayesspace_stage3.tsv",
@@ -40,6 +43,14 @@ args <- parse_args(commandArgs(trailingOnly = TRUE))
 dataset_root <- args$dataset_root
 dataset_id <- args$dataset_id
 k_values <- as.integer(strsplit(args$k_grid, ",")[[1]])
+nrep <- suppressWarnings(as.integer(args$nrep))
+if (is.na(nrep) || nrep < 100) {
+  nrep <- 100L
+}
+gamma_val <- suppressWarnings(as.numeric(args$gamma))
+if (!is.finite(gamma_val) || gamma_val <= 0) {
+  gamma_val <- 3
+}
 
 if (!is.null(args$seeds) && nzchar(args$seeds)) {
   seed_values <- as.integer(strsplit(args$seeds, ",")[[1]])
@@ -99,47 +110,112 @@ marker_separation_score <- function(sce_obj, labels) {
   median(cluster_scores)
 }
 
+read_10x_h5_counts <- function(h5_path) {
+  f <- hdf5r::H5File$new(h5_path, mode = "r")
+  on.exit({
+    try(f$close_all(), silent = TRUE)
+  })
+
+  group <- f[["matrix"]]
+  data <- group[["data"]][]
+  indices <- group[["indices"]][]
+  indptr <- group[["indptr"]][]
+  shape <- group[["shape"]][]
+  barcodes <- group[["barcodes"]][]
+
+  feat <- group[["features"]]
+  feat_name <- feat[["name"]][]
+  feat_id <- NULL
+  if ("id" %in% names(feat)) {
+    feat_id <- feat[["id"]][]
+  }
+
+  barcodes <- as.character(barcodes)
+  feat_name <- as.character(feat_name)
+  if (!is.null(feat_id)) feat_id <- as.character(feat_id)
+
+  m <- new(
+    "dgCMatrix",
+    Dim = as.integer(shape),
+    p = as.integer(indptr),
+    i = as.integer(indices),
+    x = as.numeric(data)
+  )
+  rownames(m) <- make.unique(feat_name)
+  colnames(m) <- barcodes
+  m
+}
+
 matrix_files <- sort(list.files(dataset_root, pattern = "_matrix\\.mtx\\.gz$", full.names = TRUE))
-if (length(matrix_files) == 0) {
-  stop(sprintf("No flat matrix files found under %s", dataset_root))
+h5_files <- sort(list.files(dataset_root, pattern = "_filtered_feature_bc_matrix\\.h5$", full.names = TRUE))
+if (length(matrix_files) == 0 && length(h5_files) == 0) {
+  stop(sprintf("No Visium matrix files found under %s (expected *_matrix.mtx.gz or *_filtered_feature_bc_matrix.h5)", dataset_root))
 }
 
 selected_prefix <- args$sample_id
 if (!is.null(selected_prefix) && nzchar(selected_prefix)) {
   selected_path <- file.path(dataset_root, paste0(selected_prefix, "_matrix.mtx.gz"))
-  if (!file.exists(selected_path)) {
-    stop(sprintf("Requested sample_id not found: %s", selected_prefix))
+  selected_h5 <- file.path(dataset_root, paste0(selected_prefix, "_filtered_feature_bc_matrix.h5"))
+  if (file.exists(selected_path)) {
+    matrix_file <- selected_path
+  } else if (file.exists(selected_h5)) {
+    matrix_file <- selected_h5
+  } else {
+    stop(sprintf("Requested sample_id not found under dataset_root: %s", selected_prefix))
   }
-  matrix_file <- selected_path
 } else {
-  matrix_file <- matrix_files[[1]]
+  if (length(matrix_files) > 0) {
+    matrix_file <- matrix_files[[1]]
+  } else {
+    matrix_file <- h5_files[[1]]
+  }
 }
 
-prefix <- sub("_matrix\\.mtx\\.gz$", "", basename(matrix_file))
-barcodes_file <- file.path(dataset_root, paste0(prefix, "_barcodes.tsv.gz"))
-features_file <- file.path(dataset_root, paste0(prefix, "_features.tsv.gz"))
+is_h5 <- grepl("\\.h5$", matrix_file)
+if (is_h5) {
+  prefix <- sub("_filtered_feature_bc_matrix\\.h5$", "", basename(matrix_file))
+} else {
+  prefix <- sub("_matrix\\.mtx\\.gz$", "", basename(matrix_file))
+}
+
 coords_file <- file.path(dataset_root, paste0(prefix, "_tissue_positions.csv.gz"))
 if (!file.exists(coords_file)) {
   coords_file <- file.path(dataset_root, paste0(prefix, "_tissue_positions_list.csv.gz"))
 }
-
-if (!file.exists(barcodes_file) || !file.exists(features_file) || !file.exists(coords_file)) {
-  stop("Missing paired barcodes/features/coords files for selected matrix")
+if (!file.exists(coords_file)) {
+  coords_file <- file.path(dataset_root, paste0(prefix, "_tissue_positions_list.csv"))
+}
+if (!file.exists(coords_file)) {
+  coords_file <- file.path(dataset_root, paste0(prefix, "_tissue_positions.csv"))
+}
+if (!file.exists(coords_file)) {
+  stop("Missing tissue_positions file for selected sample")
 }
 
-counts <- readMM(gzfile(matrix_file))
-barcodes <- read.delim(gzfile(barcodes_file), header = FALSE, stringsAsFactors = FALSE)
-features <- read.delim(gzfile(features_file), header = FALSE, stringsAsFactors = FALSE)
-coords <- read.csv(gzfile(coords_file), stringsAsFactors = FALSE)
+if (is_h5) {
+  counts <- read_10x_h5_counts(matrix_file)
+  coords <- read.csv(coords_file, stringsAsFactors = FALSE, header = FALSE)
+} else {
+  barcodes_file <- file.path(dataset_root, paste0(prefix, "_barcodes.tsv.gz"))
+  features_file <- file.path(dataset_root, paste0(prefix, "_features.tsv.gz"))
+  if (!file.exists(barcodes_file)) barcodes_file <- file.path(dataset_root, paste0(prefix, "_barcodes.tsv"))
+  if (!file.exists(features_file)) features_file <- file.path(dataset_root, paste0(prefix, "_features.tsv"))
+  if (!file.exists(barcodes_file) || !file.exists(features_file)) {
+    stop("Missing paired barcodes/features files for selected matrix")
+  }
+  counts <- readMM(gzfile(matrix_file))
+  barcodes <- read.delim(gzfile(barcodes_file), header = FALSE, stringsAsFactors = FALSE)
+  features <- read.delim(gzfile(features_file), header = FALSE, stringsAsFactors = FALSE)
+  rownames(counts) <- make.unique(features[[2]])
+  colnames(counts) <- barcodes[[1]]
+  coords <- read.csv(coords_file, stringsAsFactors = FALSE)
+}
 
 if (!("barcode" %in% colnames(coords))) {
   colnames(coords) <- c(
     "barcode", "in_tissue", "array_row", "array_col", "pxl_row_in_fullres", "pxl_col_in_fullres"
   )
 }
-
-rownames(counts) <- make.unique(features[[2]])
-colnames(counts) <- barcodes[[1]]
 
 coords <- coords[coords$barcode %in% colnames(counts), , drop = FALSE]
 coords <- coords[match(colnames(counts), coords$barcode), , drop = FALSE]
@@ -185,8 +261,8 @@ for (q in k_values) {
       d = min(15, ncol(reducedDim(sce_pre, "PCA"))),
       init.method = "mclust",
       model = "t",
-      gamma = 3,
-      nrep = 200,
+      gamma = gamma_val,
+      nrep = nrep,
       save.chain = FALSE
     )
     if ("burn.in" %in% names(formals(BayesSpace::spatialCluster))) {

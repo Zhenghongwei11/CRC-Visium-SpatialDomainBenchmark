@@ -10,6 +10,7 @@ METHODS="${METHODS:-M0_expr_kmeans,M1_spatial_concat_kmeans,M3_spatial_leiden}"
 STAGES="${STAGES:-stage2a,stage2b,stage2c}"
 
 cd "${ROOT_DIR}"
+mkdir -p "${ROOT_DIR}/results/benchmarks" "${ROOT_DIR}/results/figures"
 
 if [[ ! -d "${VENV_DIR}" ]]; then
   python3 -m venv "${VENV_DIR}"
@@ -102,7 +103,7 @@ run_if_selected() {
   fi
 }
 
-run_if_selected "stage2a" "GSE285505" "all-samples-local-pilot" "99" "stage2a-local-full"
+run_if_selected "stage2a" "GSE280318" "all-samples-local-pilot" "99" "stage2a-local-full"
 run_if_selected "stage2b" "GSE311294" "replication-smoke" "1" "stage2b-replication-smoke"
 run_if_selected "stage2c" "GSE267401" "replication-smoke" "1" "stage2c-replication-smoke"
 

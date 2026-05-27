@@ -13,7 +13,7 @@ from typing import Any, Iterable
 
 
 RE_INT = re.compile(r"(-?\d+)")
-RE_STAGE3_BASELINE = re.compile(r"^stage3[ab]-full-replication")
+RE_STAGE3_BASELINE = re.compile(r"^stage3[a-z]-full-replication")
 
 
 def read_tsv(path: Path) -> list[dict[str, str]]:

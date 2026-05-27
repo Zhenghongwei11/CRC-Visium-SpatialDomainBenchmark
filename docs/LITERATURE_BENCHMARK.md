@@ -10,8 +10,8 @@ Benchmark writing structure and evidence presentation against recent Q1/Q2 paper
 | NM2024_SpatialClust_Benchmark | Nature Methods (Q1) | 2024 | https://www.nature.com/articles/s41592-024-02215-8 | Benchmarking spatial clustering methods; relevant for how to discuss "domain calls" without ground truth | Use multiple metrics; emphasize robustness and continuity; avoid overclaiming method superiority beyond evaluated settings |
 | NM2024_sST_Tech_Benchmark | Nature Methods (Q1) | 2024 | https://www.nature.com/articles/s41592-024-02325-3 | Technology benchmarking paper; useful for how to describe benchmarking datasets, fairness, and scope-limited recommendations | Early framing: define the gap, then define reference tissues + standard pipeline; explicit "serves multiple purposes" list; strong limitations about simulation/ground truth |
 
-## PLOS-style (optional tone reference; not part of the Q1/Q2 count)
-- PLOS Computational Biology methods paper (open access; PLOS writing tone; algorithms + evaluation): https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011935
+## Optional (open-access) tone reference
+- PLOS Computational Biology methods paper (writing tone reference only): https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011935
 
 ## Q1 anchor-paper deep read
 Anchor paper: GB2024_ST_Benchmark (Genome Biology 2024; open access)
