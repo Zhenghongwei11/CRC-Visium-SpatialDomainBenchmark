@@ -471,3 +471,11 @@ GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	11	success	23.237333	23.2
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	23	success	22.421517	22.421517	463.402		2026-04-22T05:03:47Z	2026-04-22T05:04:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	11	success	23.512209	23.512209	462.305		2026-04-22T05:04:10Z	2026-04-22T05:04:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	23	success	24.345964	24.345964	455.562		2026-04-22T05:04:33Z	2026-04-22T05:04:58Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	11	success	19.702249	19.702249	512.691		2026-05-27T12:44:56Z	2026-05-27T12:45:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	23	success	11.841065	11.841065	517.398		2026-05-27T12:45:16Z	2026-05-27T12:45:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	11	success	12.444092	12.444092	517.777		2026-05-27T12:45:28Z	2026-05-27T12:45:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	23	success	12.527157	12.527157	517.801		2026-05-27T12:45:41Z	2026-05-27T12:45:53Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	11	success	10.80144	10.80144	517.418		2026-05-27T12:45:58Z	2026-05-27T12:46:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	23	success	11.060348	11.060348	517.445		2026-05-27T12:46:09Z	2026-05-27T12:46:20Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	11	success	11.591179	11.591179	517.715		2026-05-27T12:46:20Z	2026-05-27T12:46:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	23	success	13.26755	13.26755	517.66		2026-05-27T12:46:32Z	2026-05-27T12:46:45Z	local-macbook-air-8gb-smoketest	python-smoketest	

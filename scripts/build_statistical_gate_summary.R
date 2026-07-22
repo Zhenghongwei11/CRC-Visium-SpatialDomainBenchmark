@@ -40,13 +40,14 @@ dedupe_max_seed_count <- function(df, key_cols) {
   df
 }
 
-bayes <- subset(x, method_id == "BayesSpace" & grepl("^rigor-backfill", notes))
+bayes <- subset(x, method_id == "BayesSpace" & grepl("^rigor-backfill", notes) & dataset_id %in% c("GSE267401", "GSE311294", "GSE280318"))
 bayes <- dedupe_max_seed_count(bayes, c("dataset_id", "sample_id", "K"))
 
 base <- subset(
   x,
   method_id %in% c("M0_expr_kmeans", "M1_spatial_concat_kmeans", "M2_spatial_ward", "M3_spatial_leiden", "M4_spagcn", "M5_stagate") &
-    grepl("^stage3[a-z]-full-replication", notes)
+    grepl("^stage3[a-z]-full-replication", notes) &
+    dataset_id %in% c("GSE267401", "GSE311294", "GSE280318")
 )
 base <- dedupe_max_seed_count(base, c("dataset_id", "sample_id", "method_id", "K"))
 

@@ -233,6 +233,7 @@ def main() -> int:
         "M4_spagcn",
         "M5_stagate",
     }
+    primary_datasets = {"GSE267401", "GSE311294", "GSE280318"}
 
     # Lock the benchmark table to the rows used for claims/figures:
     # - BayesSpace: rigor-backfill rows only (dedup by max seed_count per sample×K)
@@ -345,6 +346,8 @@ def main() -> int:
     stability_rows: list[dict[str, Any]] = []
     for k in bayespace_keys:
         bs = index[k]
+        if k.dataset_id not in primary_datasets:
+            continue
         stability_rows.append(
             {
                 "dataset_id": k.dataset_id,

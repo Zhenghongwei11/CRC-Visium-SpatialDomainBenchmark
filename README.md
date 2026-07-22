@@ -47,6 +47,9 @@ Public GEO accessions used in this benchmark:
 
 The download URLs and file sizes are recorded in `docs/DATA_MANIFEST.tsv`.
 
+## Supplementary tables
+The repository includes a consolidated supplementary-table workbook at `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`. The workbook provides reader-facing sheets for the supplementary data tables cited by the manuscript. The same machine-readable source tables are also available as TSV files under `results/`, with figure/table provenance recorded in `docs/FIGURE_PROVENANCE.tsv` and source-data links recorded in `docs/SOURCE_DATA_MAP.tsv`.
+
 ## Optional portability demo (non-CRC)
 To demonstrate that the evaluation framework can be applied outside CRC, we include a small non-CRC Visium dataset (GSE289934; mouse brain; 2 sections). If the dataset is downloaded and the STAGATE environment is available, you can build a descriptive portability summary and an image-based weak anchor (edge-alignment) table:
 

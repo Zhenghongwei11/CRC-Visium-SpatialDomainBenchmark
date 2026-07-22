@@ -31,7 +31,7 @@ def main() -> int:
         raise SystemExit("No GSE289934 BayesSpace/STAGATE rows found in results/benchmarks/method_benchmark.tsv")
 
     # Remove internal run tags; the portability table is descriptive and should stay
-    # neutral/readable for a journal submission.
+    # neutral/readable for scientific reporting.
     df["notes"] = ""
 
     # Optional weak external anchor for the portability demo: histology edge alignment

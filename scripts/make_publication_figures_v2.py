@@ -25,6 +25,8 @@ from pathlib import Path
 from typing import Sequence
 
 import matplotlib as mpl
+# Force a headless backend (required in CI / sandboxed environments).
+mpl.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import matplotlib.patches as mpatches
@@ -79,7 +81,8 @@ def _short_sample(sid: str) -> str:
 def _set_style() -> None:
     mpl.rcParams.update({
         "font.family":        "sans-serif",
-        "font.sans-serif":    ["Arial", "Helvetica", "DejaVu Sans"],
+        # Prefer Matplotlib-bundled fonts to avoid slow/fragile system font discovery in sandboxed runs.
+        "font.sans-serif":    ["DejaVu Sans", "Arial", "Helvetica"],
         "mathtext.default":   "regular",
         "axes.titlesize":     9,
         "axes.titleweight":   "bold",
@@ -241,7 +244,7 @@ def figure2(root: Path) -> None:
     gates  = pd.read_csv(root / "results" / "benchmarks" /
                          "statistical_gate_summary.tsv", sep="\t")
 
-    # PLOS ONE max width is 7.5 in (2250 px at 300 dpi). Because we use
+    # Common journal max width is about 7.5 in (2250 px at 300 dpi). Because we use
     # savefig.bbox='tight', the rendered pixel width can exceed fig.width*dpi.
     # Keep Fig 2 slightly narrower to stay within the pixel constraint.
     fig = plt.figure(figsize=(6.25, 7.5))
@@ -268,7 +271,7 @@ def figure2(root: Path) -> None:
     ax_c = fig.add_subplot(gs[1, :])
     c1 = gates[gates["claim_id"] == "C1_domain_quality"].copy()
     _plot_forest(ax_c, c1, null_value=0,
-                 title="Pre-specified effect-size gates (paired median Δ, 95% CI)")
+                 title="Pre-specified effect sizes (paired median Δ, 95% CI)")
     _panel_label(ax_c, "C", x=0.01, y=1.02)
 
     # NOTE: Manuscript figure numbering is aligned to first-callout order.
@@ -278,9 +281,11 @@ def figure2(root: Path) -> None:
 
 def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
                              col: str, xlabel: str) -> None:
-    """Paired dot+line plot: each sample contributes two baselines connected."""
+    """Dot+segment plot of BayesSpace−baseline deltas per sample×K unit."""
     samples = sorted(deltas["sample_id"].unique(), key=_short_sample)
     y_map = {s: i for i, s in enumerate(samples)}
+    # Visually separate K values while keeping a single tick per section.
+    k_offsets = {4: -0.18, 6: 0.18}
 
     for baseline, marker, color in [
         ("M0_expr_kmeans",            "o", OI["gray"]),
@@ -291,17 +296,20 @@ def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
         ("M5_stagate",                "X", OI["sky_blue"]),
     ]:
         sub = deltas[deltas["baseline_method_id"] == baseline].copy()
-        ys = [y_map[s] for s in sub["sample_id"]]
+        ys = [
+            y_map[s] + k_offsets.get(int(k), 0.0)
+            for s, k in zip(sub["sample_id"].tolist(), sub["K"].tolist())
+        ]
         ax.scatter(sub[col], ys, s=22, marker=marker, c=color,
                    edgecolors="white", linewidths=0.3, alpha=0.9, zorder=4,
                    label=METHOD_LABEL.get(baseline, baseline))
 
-    # connect baseline deltas per (sample, K) with a thin line
+    # connect baseline deltas per (sample, K) with a thin segment
     for (sid, k), grp in deltas.groupby(["sample_id", "K"]):
         vals = [float(v) for v in grp[col].values if np.isfinite(v)]
         if len(vals) >= 2:
             vals = sorted(vals)
-            y = y_map[sid]
+            y = y_map[sid] + k_offsets.get(int(k), 0.0)
             ax.plot(vals, [y] * len(vals), color=OI["dark_gray"], linewidth=0.5,
                     alpha=0.45, zorder=2)
 
@@ -313,6 +321,16 @@ def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
                  fontsize=8, pad=6)
     ax.legend(frameon=False, loc="lower right", fontsize=6,
               handletextpad=0.3, markerscale=0.9)
+    ax.text(
+        0.02,
+        0.02,
+        "K=4 (lower)   K=6 (upper)",
+        transform=ax.transAxes,
+        ha="left",
+        va="bottom",
+        fontsize=5.5,
+        color=OI["dark_gray"],
+    )
     _add_fine_grid(ax, axis="x")
     # annotate n on top-right
     n = deltas["sample_id"].nunique()
@@ -322,7 +340,7 @@ def _plot_paired_delta_panel(ax: mpl.axes.Axes, deltas: pd.DataFrame,
 
 def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
                  null_value: float, title: str) -> None:
-    """Forest plot (horizontal CI + point estimate) for claim-level gates."""
+    """Forest plot (horizontal CI + point estimate) for prespecified comparisons."""
     gate_df = gate_df.copy().reset_index(drop=True)
     n_rows = len(gate_df)
     y = np.arange(n_rows)
@@ -379,18 +397,6 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
     ax.invert_yaxis()
     _add_fine_grid(ax, axis="x")
 
-    # gate pass/fail badge
-    for i, row in gate_df.iterrows():
-        gate = str(row.get("overall_gate_status", ""))
-        badge_color = OI["bluish_green"] if gate == "pass" else OI["vermillion"]
-        # gate pass/fail badge: keep in a dedicated left column (avoid overlapping y-labels)
-        ax.text(-0.34, i + 0.3, gate.upper(), transform=ax.get_yaxis_transform(),
-                fontsize=5, fontweight="bold", color=badge_color,
-                ha="right", va="center",
-                clip_on=False,
-                bbox=dict(boxstyle="round,pad=0.15", fc="white", ec=badge_color,
-                        linewidth=0.6))
-
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # Figure 3  –  Stability (multi-seed ARI)
@@ -407,55 +413,61 @@ def figure3(root: Path) -> None:
         1, 2, figure=fig,
         width_ratios=[1.4, 1],
         wspace=0.40,
-        left=0.10, right=0.95, top=0.90, bottom=0.15,
+        # Extra bottom margin prevents x-label collisions after downscaling in DOCX.
+        left=0.10, right=0.95, top=0.90, bottom=0.28,
     )
 
     # ── Panel A: lollipop of ARI per sample×K with threshold ─────────────
     ax_a = fig.add_subplot(gs[0, 0])
     stab = stab.sort_values(["dataset_id", "sample_id", "K"]).reset_index(drop=True)
 
-    # colour encode K
+    # Plot by sample (single tick per section) with K-specific offsets to avoid label collisions.
     k_colors = {4: OI["sky_blue"], 6: OI["orange"]}
-    x_labels = []
-    for i, row in stab.iterrows():
-        ari = float(row["stability_ari_median"])
-        k   = int(row["K"])
-        col = k_colors.get(k, OI["gray"])
-        # stem
-        ax_a.vlines(i, 0, ari, colors=col, linewidth=1.5, zorder=2)
-        # dot
-        ax_a.scatter(i, ari, s=32, c=col, edgecolors="white",
-                     linewidths=0.4, zorder=4)
-        x_labels.append(f"{_short_sample(row['sample_id'])}\nK={k}")
+    k_offsets = {4: -0.18, 6: 0.18}
+
+    sample_order = stab[["dataset_id", "sample_id"]].drop_duplicates().reset_index(drop=True)
+    for i, row in sample_order.iterrows():
+        sid = row["sample_id"]
+        for k in (4, 6):
+            sub = stab[(stab["sample_id"] == sid) & (stab["K"].astype(int) == k)]
+            if sub.empty:
+                continue
+            ari = float(sub["stability_ari_median"].iloc[0])
+            col = k_colors.get(k, OI["gray"])
+            x = i + k_offsets.get(k, 0.0)
+            ax_a.vlines(x, 0, ari, colors=col, linewidth=1.5, zorder=2)
+            ax_a.scatter(x, ari, s=32, c=col, edgecolors="white",
+                         linewidths=0.4, zorder=4)
 
     # threshold line
     ax_a.axhline(0.60, color=OI["vermillion"], linewidth=1.0, linestyle="--",
-                 zorder=1, label="Pre-specified threshold (ARI = 0.60)")
-    ax_a.set_xticks(range(len(stab)))
-    ax_a.set_xticklabels(x_labels, rotation=55, ha="right", fontsize=5.5)
+                 zorder=1)
+    ax_a.set_xticks(range(len(sample_order)))
+    ax_a.set_xticklabels(
+        [_short_sample(s) for s in sample_order["sample_id"].tolist()],
+        rotation=60,
+        ha="right",
+        fontsize=5.5,
+        rotation_mode="anchor",
+    )
     ax_a.set_ylabel("Adjusted Rand Index (median)")
     ax_a.set_ylim(0, 1.05)
     ax_a.set_title("Multi-seed stability per sample × K", fontsize=8, pad=6)
-    ax_a.legend(frameon=False, loc="upper right", fontsize=6)
     _add_fine_grid(ax_a, axis="y")
     # n annotation
     ax_a.text(0.98, 0.02, f"n = {len(stab)} sample×K combinations",
               transform=ax_a.transAxes, ha="right", va="bottom",
               fontsize=5.5, color=OI["dark_gray"])
 
-    # K legend
-    k_handles = [mlines.Line2D([], [], marker="o", linestyle="",
-                 color=k_colors[k], markersize=5, label=f"K = {k}")
-                 for k in sorted(k_colors)]
-    leg2 = ax_a.legend(handles=k_handles, frameon=False, loc="upper left",
-                       fontsize=6, handletextpad=0.2, title="Resolution",
-                       title_fontsize=6.5)
-    ax_a.add_artist(leg2)
-    # re-add threshold legend
+    # Compact legend (K colors + threshold) – avoid overlapping x labels.
+    k_handles = [
+        mlines.Line2D([], [], marker="o", linestyle="", color=k_colors[k], markersize=5, label=f"K = {k}")
+        for k in sorted(k_colors)
+    ]
     th_handle = mlines.Line2D([], [], color=OI["vermillion"], linestyle="--",
                               linewidth=1.0, label="Threshold (0.60)")
-    ax_a.legend(handles=[th_handle], frameon=False, loc="lower left", fontsize=5.5)
-    ax_a.add_artist(leg2)
+    ax_a.legend(handles=k_handles + [th_handle], frameon=False, loc="upper left",
+                fontsize=6, handletextpad=0.2, title="Resolution", title_fontsize=6.5)
 
     _panel_label(ax_a, "A")
 
@@ -485,18 +497,10 @@ def figure3(root: Path) -> None:
               fontsize=6, ha="center", va="top", color=OI["dark_gray"],
               linespacing=1.3)
 
-    gate = str(c2.get("overall_gate_status", ""))
-    badge_col = OI["bluish_green"] if gate == "pass" else OI["vermillion"]
-    ax_b.text(0.97, 0.97, gate.upper(), transform=ax_b.transAxes,
-              fontsize=8, fontweight="bold", color=badge_col,
-              ha="right", va="top",
-              bbox=dict(boxstyle="round,pad=0.2", fc="white", ec=badge_col,
-                        linewidth=0.8))
-
     ax_b.set_yticks([0])
     ax_b.set_yticklabels(["Median ARI\n(across sample×K)"], fontsize=6.5)
     ax_b.set_xlabel("Bootstrap 95% CI", fontsize=7.5)
-    ax_b.set_title("Claim-level stability gate", fontsize=8, pad=6)
+    ax_b.set_title("Stability estimate (with prespecified threshold)", fontsize=8, pad=6)
     ax_b.set_ylim(-0.6, 0.6)
     _add_fine_grid(ax_b, axis="x")
     _panel_label(ax_b, "B")
@@ -510,10 +514,22 @@ def figure3(root: Path) -> None:
 # ═══════════════════════════════════════════════════════════════════════════════
 def figure4(root: Path) -> None:
     rt    = pd.read_csv(root / "results" / "benchmarks" / "runtime_memory.tsv", sep="\t")
+    # Keep compute summaries aligned with the primary CRC inference set.
+    crc_datasets = {"GSE267401", "GSE311294", "GSE280318"}
+    rt = rt[rt["dataset_id"].isin(crc_datasets)].copy()
+    # Convert per-run runtimes to per sample×K medians to keep the runtime
+    # distribution panel comparable across methods (and comparable to the
+    # BayesSpace per-unit medians in method_benchmark.tsv).
+    rt_ok = rt[(rt["status"] == "success") & np.isfinite(rt["wall_time_sec"])].copy()
+    rt_unit = (
+        rt_ok.groupby(["method_id", "dataset_id", "sample_id", "K"], as_index=False)
+        .agg(wall_time_sec=("wall_time_sec", "median"))
+    )
     mb_path = root / "results" / "benchmarks" / "method_benchmark_locked.tsv"
     if not mb_path.exists():
         mb_path = root / "results" / "benchmarks" / "method_benchmark.tsv"
     mb = pd.read_csv(mb_path, sep="\t")
+    mb = mb[mb["dataset_id"].isin(crc_datasets)].copy()
     gates = pd.read_csv(root / "results" / "benchmarks" /
                         "statistical_gate_summary.tsv", sep="\t")
     c3 = gates[gates["claim_id"] == "C3_compute_feasibility"].iloc[0]
@@ -531,16 +547,18 @@ def figure4(root: Path) -> None:
 
     # Collect runtimes per method group
     groups = [
-        ("Expr-only\nk-means",   rt[rt["method_id"] == "M0_expr_kmeans"]["wall_time_sec"].values,
+        ("Expr-only\nk-means",   rt_unit[rt_unit["method_id"] == "M0_expr_kmeans"]["wall_time_sec"].values,
          OI["gray"]),
-        ("Spatial\nk-means",     rt[rt["method_id"] == "M1_spatial_concat_kmeans"]["wall_time_sec"].values,
+        ("Spatial\nk-means",     rt_unit[rt_unit["method_id"] == "M1_spatial_concat_kmeans"]["wall_time_sec"].values,
          OI["vermillion"]),
-        ("Spatial\nWard",        rt[rt["method_id"] == "M2_spatial_ward"]["wall_time_sec"].values,
+        ("Spatial\nWard",        rt_unit[rt_unit["method_id"] == "M2_spatial_ward"]["wall_time_sec"].values,
          OI["bluish_green"]),
-        ("Spatial\nLeiden",      rt[rt["method_id"] == "M3_spatial_leiden"]["wall_time_sec"].values,
+        ("Spatial\nLeiden",      rt_unit[rt_unit["method_id"] == "M3_spatial_leiden"]["wall_time_sec"].values,
          OI["reddish_purple"]),
-        ("SpaGCN",               rt[rt["method_id"] == "M4_spagcn"]["wall_time_sec"].values,
+        ("SpaGCN",               rt_unit[rt_unit["method_id"] == "M4_spagcn"]["wall_time_sec"].values,
          OI["orange"]),
+        ("STAGATE",              rt_unit[rt_unit["method_id"] == "M5_stagate"]["wall_time_sec"].values,
+         OI["sky_blue"]),
         ("BayesSpace",           mb[mb["method_id"] == "BayesSpace"]["wall_time_sec_median"].values,
          OI["blue"]),
     ]
@@ -565,16 +583,14 @@ def figure4(root: Path) -> None:
         jitter = (rng.rand(len(vals)) - 0.5) * 0.18
         ax_a.scatter(np.full(len(vals), pos) + jitter, vals,
                      s=8, c=color, alpha=0.55, edgecolors="none", zorder=5)
-        # annotate n below each group (use axes transform for y)
-        ax_a.text(pos, -0.06, f"n={len(vals)}",
-                  ha="center", va="top", fontsize=5.5,
-                  color=OI["dark_gray"], transform=ax_a.get_xaxis_transform())
+        # NOTE: Avoid per-group n annotations under the x-axis; these routinely collide
+        # with multi-line tick labels after downscaling in DOCX.
 
     ax_a.set_xticks(positions)
     ax_a.set_xticklabels([g[0] for g in groups], fontsize=7)
     ax_a.set_yscale("log")
     ax_a.set_ylabel("Wall-clock time (s, log scale)", fontsize=7.5)
-    ax_a.set_title("Runtime distribution (local hardware)", fontsize=8, pad=6)
+    ax_a.set_title("Runtime distribution (local compute)", fontsize=8, pad=6)
     _add_fine_grid(ax_a, axis="y")
     ax_a.yaxis.set_major_formatter(ticker.FuncFormatter(
         lambda v, _: f"{v:.0f}" if v >= 1 else f"{v:.2f}"))
@@ -604,18 +620,10 @@ def figure4(root: Path) -> None:
               fontsize=6, ha="center", va="top", color=OI["dark_gray"],
               linespacing=1.3)
 
-    gate = str(c3.get("overall_gate_status", ""))
-    badge_col = OI["bluish_green"] if gate == "pass" else OI["vermillion"]
-    ax_b.text(0.97, 0.97, gate.upper(), transform=ax_b.transAxes,
-              fontsize=8, fontweight="bold", color=badge_col,
-              ha="right", va="top",
-              bbox=dict(boxstyle="round,pad=0.2", fc="white", ec=badge_col,
-                        linewidth=0.8))
-
     ax_b.set_yticks([0])
     ax_b.set_yticklabels(["Median runtime\n(BayesSpace)"], fontsize=6.5)
     ax_b.set_xlabel("Bootstrap 95% CI (seconds)", fontsize=7.5)
-    ax_b.set_title("Compute feasibility gate (local hardware)", fontsize=8, pad=6)
+    ax_b.set_title("Compute summary (with prespecified limit)", fontsize=8, pad=6)
     ax_b.set_ylim(-0.6, 0.6)
     _add_fine_grid(ax_b, axis="x")
     _panel_label(ax_b, "B")

@@ -11,7 +11,7 @@ K_GRID="${K_GRID:-4,6}"
 SEEDS="${SEEDS:-11,23}"
 NOTE_PREFIX="${NOTE_PREFIX:-rigor-backfill-v3}"
 BAYES_INSTALL="${BAYES_INSTALL:-1}"
-BAYES_NREP="${BAYES_NREP:-80}"
+BAYES_NREP="${BAYES_NREP:-100}"
 BAYES_GAMMA="${BAYES_GAMMA:-3}"
 
 cd "${ROOT_DIR}"
@@ -112,6 +112,7 @@ for dataset_id in "${dataset_list[@]}"; do
     tmp_log="$(mktemp)"
     started_sample="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
     before_sample="$(count_bayes_rows)"
+    sample_status="success"
 
     echo "[stage4] BayesSpace ${dataset_id}/${sample_id} K=${K_GRID} seeds=${SEEDS}"
     if ! Rscript scripts/run_bayesspace_baseline.R \
@@ -124,6 +125,7 @@ for dataset_id in "${dataset_list[@]}"; do
       --gamma "${BAYES_GAMMA}" \
       --note "${note}" \
       --output-tsv "${tmp_tsv}" >"${tmp_log}" 2>&1; then
+      sample_status="failed"
       overall_status="failed"
       append_failure_log "${dataset_id}" "${sample_id}" "$(tail -n 40 "${tmp_log}")"
       echo "[stage4] FAILED ${dataset_id}/${sample_id}"
@@ -143,7 +145,7 @@ for dataset_id in "${dataset_list[@]}"; do
     finished_sample="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
     printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" \
       "stage4-bayesspace" "${started_sample}" "${finished_sample}" "${BAYES_INSTALL}" \
-      "${dataset_id}" "${sample_id}" "${added_sample}" "${overall_status}" "${note}" >> "${SUMMARY_TSV}"
+      "${dataset_id}" "${sample_id}" "${added_sample}" "${sample_status}" "${note}" >> "${SUMMARY_TSV}"
   done < <(list_samples "${dataset_id}")
 done
 

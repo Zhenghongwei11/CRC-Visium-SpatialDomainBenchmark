@@ -1,0 +1,37 @@
+dataset_id	sample_id	method_id	K	seed_count	config_id	config_family	spagcn_p	stagate_latent_dim	stagate_max_epochs	spatial_coherence_median	marker_coherence_median	stability_ari_median	wall_time_sec_median	failure_rate	notes
+GSE280318	GSM8703563_Tumor19	M4_spagcn	4	2	sensitivity_spagcn_p0.35	unknown				0.569902	0.177608	0.281329	35.315023	0.0	
+GSE280318	GSM8703563_Tumor19	M4_spagcn	4	2	sensitivity_spagcn_p0.50	unknown				0.589178	0.176524	0.236872	36.242755	0.0	
+GSE280318	GSM8703563_Tumor19	M4_spagcn	4	2	sensitivity_spagcn_p0.65	unknown				0.613226	0.182497	0.261306	26.500793	0.0	
+GSE280318	GSM8703563_Tumor19	M4_spagcn	6	2	sensitivity_spagcn_p0.35	unknown				0.46765	0.250288	0.186968	33.444032	0.0	
+GSE280318	GSM8703563_Tumor19	M4_spagcn	6	2	sensitivity_spagcn_p0.50	unknown				0.497256	0.250453	0.206937	32.339272	0.0	
+GSE280318	GSM8703563_Tumor19	M4_spagcn	6	2	sensitivity_spagcn_p0.65	unknown				0.498807	0.173415		35.91798	0.5	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent15_epochs120	stagate		15	120	0.849365	0.199883	0.3052	14.868545	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent15_epochs200	stagate		15	200	0.853278	0.20356	0.313716	23.927087	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent30_epochs120	stagate		30	120	0.856212	0.266682	0.621922	19.701895	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent30_epochs200	stagate		30	200	0.855711	0.220612	0.305792	31.328815	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent50_epochs120	stagate		50	120	0.854972	0.250261	0.668921	16.224364	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	4	2	sensitivity_stagate_latent50_epochs200	stagate		50	200	0.857071	0.234539	0.382313	25.81942	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent15_epochs120	stagate		15	120	0.802844	0.229326	0.38796	14.008675	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent15_epochs200	stagate		15	200	0.817826	0.2557	0.413686	22.950315	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent30_epochs120	stagate		30	120	0.803703	0.264044	0.502382	16.08556	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent30_epochs200	stagate		30	200	0.813055	0.2438	0.480308	25.780256	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent50_epochs120	stagate		50	120	0.821572	0.272788	0.562651	15.078356	0.0	
+GSE280318	GSM8703563_Tumor19	M5_stagate	6	2	sensitivity_stagate_latent50_epochs200	stagate		50	200	0.816943	0.272077	0.580313	25.065035	0.0	
+GSE311294	GSM9322957_TR11_206	M4_spagcn	4	2	sensitivity_spagcn_p0.35	unknown				0.823869	1.420796	0.890913	8.516835	0.0	sensitivity_spagcn_p0.35;spagcn_p=0.35;l=9.043;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M4_spagcn	4	2	sensitivity_spagcn_p0.50	unknown				0.832576	1.417688	0.898131	8.647534	0.0	sensitivity_spagcn_p0.50;spagcn_p=0.5;l=9.653;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M4_spagcn	4	2	sensitivity_spagcn_p0.65	unknown				0.843132	1.415698	0.898734	8.13416	0.0	sensitivity_spagcn_p0.65;spagcn_p=0.65;l=10.2;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M4_spagcn	6	2	sensitivity_spagcn_p0.35	unknown				0.748976	1.254419	0.832693	6.652981	0.0	sensitivity_spagcn_p0.35;spagcn_p=0.35;l=9.043;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M4_spagcn	6	2	sensitivity_spagcn_p0.50	unknown				0.763451	1.254944	0.843377	6.312132	0.0	sensitivity_spagcn_p0.50;spagcn_p=0.5;l=9.653;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M4_spagcn	6	2	sensitivity_spagcn_p0.65	unknown				0.756926	1.291083	0.660049	5.416561	0.0	sensitivity_spagcn_p0.65;spagcn_p=0.65;l=10.2;max_epochs=200
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent15_epochs120	stagate		15	120	0.863086	1.438608	0.668944	23.709134	0.0	sensitivity_stagate_latent15_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent15_epochs200	stagate		15	200	0.844268	1.435523	0.579661	26.650083	0.0	sensitivity_stagate_latent15_epochs200
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent30_epochs120	stagate		30	120	0.847697	1.444777	0.602871	18.706212	0.0	sensitivity_stagate_latent30_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent30_epochs200	stagate		30	200	0.816386	1.13294	0.415325	34.028886	0.0	sensitivity_stagate_latent30_epochs200
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent50_epochs120	stagate		50	120	0.856761	1.473803	0.641726	20.855012	0.0	sensitivity_stagate_latent50_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	4	2	sensitivity_stagate_latent50_epochs200	stagate		50	200	0.841328	1.45768	0.681765	28.577974	0.0	sensitivity_stagate_latent50_epochs200
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent15_epochs120	stagate		15	120	0.8179	1.193868	0.702938	14.949471	0.0	sensitivity_stagate_latent15_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent15_epochs200	stagate		15	200	0.802957	1.169219	0.631466	24.645441	0.0	sensitivity_stagate_latent15_epochs200
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent30_epochs120	stagate		30	120	0.805029	1.232768	0.632402	16.242297	0.0	sensitivity_stagate_latent30_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent30_epochs200	stagate		30	200	0.790241	1.243489	0.548333	28.892566	0.0	sensitivity_stagate_latent30_epochs200
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent50_epochs120	stagate		50	120	0.81338	1.204659	0.740728	16.487694	0.0	sensitivity_stagate_latent50_epochs120
+GSE311294	GSM9322957_TR11_206	M5_stagate	6	2	sensitivity_stagate_latent50_epochs200	stagate		50	200	0.799996	1.200962	0.675368	26.999542	0.0	sensitivity_stagate_latent50_epochs200

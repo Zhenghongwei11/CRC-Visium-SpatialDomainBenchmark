@@ -1,4 +1,4 @@
-name: Publish release (bundle + checksums)
+name: Publish release (reproducibility bundle + checksums)
 
 on:
   push:
@@ -15,15 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build canonical review bundle
+      - name: Build canonical reproducibility bundle
         run: |
-          bash scripts/build_review_bundle.sh
+          bash scripts/build_reproducibility_bundle.sh
 
       - name: Create GitHub release and upload assets
         uses: softprops/action-gh-release@v2
         with:
           generate_release_notes: true
           files: |
-            docs/review_bundle/crc_spatial_benchmark_review_bundle.zip
-            docs/review_bundle/CHECKSUMS.sha256
-
+            docs/reproducibility_bundle/crc_spatial_benchmark_reproducibility_bundle.zip
+            docs/reproducibility_bundle/CHECKSUMS.sha256

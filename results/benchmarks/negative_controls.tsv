@@ -381,3 +381,11 @@ GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	11	random_labels	neighbor
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	11	shuffled_coordinates	neighbor_agreement	0.318692	0.872182	-0.55349	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	11	random_labels	neighbor_agreement	0.167155	0.811371	-0.644217	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	11	shuffled_coordinates	neighbor_agreement	0.204051	0.811371	-0.607321	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	11	random_labels	neighbor_agreement	0.241857	0.908608	-0.666751	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	11	shuffled_coordinates	neighbor_agreement	0.339494	0.908608	-0.569114	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	11	random_labels	neighbor_agreement	0.169451	0.847595	-0.678143	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	11	shuffled_coordinates	neighbor_agreement	0.199662	0.847595	-0.647932	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	11	random_labels	neighbor_agreement	0.252806	0.901983	-0.649177	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	11	shuffled_coordinates	neighbor_agreement	0.348672	0.901983	-0.553311	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	11	random_labels	neighbor_agreement	0.165357	0.896745	-0.731388	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	11	shuffled_coordinates	neighbor_agreement	0.239899	0.896745	-0.656846	

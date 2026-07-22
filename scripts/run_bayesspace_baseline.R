@@ -289,18 +289,23 @@ for (q in k_values) {
           method_id = "BayesSpace",
           K = q,
           seed = seed,
+          barcode = colnames(sce_q),
           x = as.numeric(colData(sce_q)$imagecol),
           y = as.numeric(colData(sce_q)$imagerow),
           domain_label = labels,
           notes = args$note,
           stringsAsFactors = FALSE
         )
+        out_path <- args$output_domain_map_tsv
+        append_mode <- file.exists(out_path)
         write.table(
           map_out,
-          file = args$output_domain_map_tsv,
+          file = out_path,
           sep = "\t",
           quote = FALSE,
-          row.names = FALSE
+          row.names = FALSE,
+          col.names = !append_mode,
+          append = append_mode
         )
       }
     }

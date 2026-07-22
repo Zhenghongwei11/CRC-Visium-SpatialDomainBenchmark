@@ -152,7 +152,7 @@ def resolve_file(parent: pathlib.Path, names: list[str]) -> pathlib.Path:
     raise FileNotFoundError(f"Missing one of {names} under {parent}")
 
 
-def load_sample(sample_entry: SampleEntry) -> tuple[str, sparse.csr_matrix, np.ndarray]:
+def load_sample(sample_entry: SampleEntry) -> tuple[str, sparse.csr_matrix, np.ndarray, np.ndarray]:
     matrix_path = pathlib.Path(sample_entry["matrix_path"])
     coords_path = pathlib.Path(sample_entry["coords_path"])
 
@@ -204,9 +204,10 @@ def load_sample(sample_entry: SampleEntry) -> tuple[str, sparse.csr_matrix, np.n
     matrix = matrix.transpose().tocsr()
     matrix = matrix[in_tissue, :]
     coord_array = coords.loc[in_tissue, ["pxl_col_in_fullres", "pxl_row_in_fullres"]].to_numpy()
+    barcode_array = coords.loc[in_tissue, "barcode"].astype(str).to_numpy()
 
     sample_id = sample_entry["sample_id"]
-    return sample_id, matrix, coord_array
+    return sample_id, matrix, coord_array, barcode_array
 
 
 def normalize_and_select(matrix: sparse.csr_matrix, max_genes: int) -> np.ndarray:
@@ -582,6 +583,20 @@ def main() -> int:
     parser.add_argument("--stagate-latent-dim", type=int, default=30)
     parser.add_argument("--stagate-max-epochs", type=int, default=200)
     parser.add_argument("--stagate-max-spots", type=int, default=6500)
+    parser.add_argument(
+        "--export-domain-maps-tsv",
+        default="",
+        help=(
+            "Optional TSV path to append reference-seed domain maps "
+            "(dataset_id, sample_id, method_id, K, seed, barcode, x, y, domain_label, notes). "
+            "Writes one map per method×sample×K using the method's reference seed."
+        ),
+    )
+    parser.add_argument(
+        "--export-domain-maps-reset",
+        action="store_true",
+        help="If set, delete --export-domain-maps-tsv before appending.",
+    )
     args = parser.parse_args()
 
     dataset_root = pathlib.Path(args.dataset_root)
@@ -619,8 +634,14 @@ def main() -> int:
     fig3_rows: list[dict[str, object]] = []
     fig4_rows: list[dict[str, object]] = []
 
+    export_map_path = pathlib.Path(args.export_domain_maps_tsv) if str(args.export_domain_maps_tsv).strip() else None
+    if export_map_path is not None:
+        export_map_path.parent.mkdir(parents=True, exist_ok=True)
+        if args.export_domain_maps_reset and export_map_path.exists():
+            export_map_path.unlink()
+
     for sample_entry in sample_entries:
-        sample_id, matrix, coords = load_sample(sample_entry)
+        sample_id, matrix, coords, barcodes = load_sample(sample_entry)
         x = normalize_and_select(matrix, max_genes=args.max_genes)
         pcs = build_pcs(x)
         coords_scaled = (coords - coords.mean(axis=0)) / (coords.std(axis=0) + 1e-6)
@@ -894,8 +915,56 @@ def main() -> int:
                         }
                     )
 
-                reference_seed = method_seeds[0]
-                ref_labels = labels_by_seed[reference_seed]
+                # Choose a reference run for downstream summaries. Prefer the first requested seed,
+                # but fall back gracefully if that run failed (e.g., for heavier settings).
+                reference_seed = next((s for s in method_seeds if s in labels_by_seed), None)
+                if reference_seed is None:
+                    reference_seed = sorted(labels_by_seed.keys())[0]
+                ref_labels = labels_by_seed[int(reference_seed)]
+
+                if export_map_path is not None:
+                    note = (
+                        leiden_note
+                        if method_kind == "leiden"
+                        else (
+                            spagcn_note
+                            if method_kind == "spagcn"
+                            else (stagate_note if method_kind == "stagate" else "")
+                        )
+                    )
+                    with export_map_path.open("a", encoding="utf-8", newline="") as handle:
+                        fieldnames = [
+                            "dataset_id",
+                            "sample_id",
+                            "method_id",
+                            "K",
+                            "seed",
+                            "barcode",
+                            "x",
+                            "y",
+                            "domain_label",
+                            "notes",
+                        ]
+                        writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
+                        if handle.tell() == 0:
+                            writer.writeheader()
+                        for bc, (xv, yv), lab in zip(
+                            barcodes.tolist(), coords.tolist(), ref_labels.tolist(), strict=True
+                        ):
+                            writer.writerow(
+                                {
+                                    "dataset_id": args.dataset_id,
+                                    "sample_id": sample_id,
+                                    "method_id": method_id,
+                                    "K": int(k),
+                                    "seed": int(reference_seed),
+                                    "barcode": str(bc),
+                                    "x": float(xv),
+                                    "y": float(yv),
+                                    "domain_label": int(lab) + 1,
+                                    "notes": note,
+                                }
+                            )
                 for cluster in np.unique(ref_labels):
                     in_mask = ref_labels == cluster
                     out_mask = ~in_mask

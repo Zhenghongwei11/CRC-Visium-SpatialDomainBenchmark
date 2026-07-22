@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import gzip
+import os
 from pathlib import Path
 
 import matplotlib.patches as mpatches
@@ -311,7 +312,8 @@ def make_s2_workflow_schematic(root: Path) -> None:
          ("GSE267401", "primary, n = 4", MID),
          ("GSE311294", "replication, n = 5", MID),
          ("GSE280318", "replication, n = 4", MID),
-         ("13 samples", "in primary comparison", DARK)],
+         ("13 samples", "in primary comparison", DARK),
+         ("GSE289934", "portability demo (non-CRC), n = 2", MID)],
         [("Spot \u00d7 gene", "counts + spatial coords", MID),
          ("Log-normalisation", "", MID),
          ("HVG", "selection", MID),
@@ -325,10 +327,10 @@ def make_s2_workflow_schematic(root: Path) -> None:
          ("M5", "STAGATE baseline", MID),
          ("BayesSpace", "Bayesian / Potts prior", DARK)],
         [("Fig. 1\u20135", "main results", MID),
-         ("S1\u2013S3", "supplementary figures", MID),
-         ("S1\u2013S17", "supporting data tables", MID),
-         ("GitHub repo", "+ review bundle", MID),
-         ("Checksum", "manifest", MID)],
+         ("S1\u2013S5", "supplementary figures", MID),
+         ("S1\u2013S21", "supporting data tables", MID),
+         ("GitHub repo", "code + docs", MID),
+         ("Zenodo", "archived release", MID)],
     ]
     for ci, col_items in enumerate(details):
         cx = x0 + ci * (chev_w + chev_gap) + 0.15
@@ -336,7 +338,7 @@ def make_s2_workflow_schematic(root: Path) -> None:
         ax.plot([mid_x, mid_x], [chev_y - 0.02, panel_top],
                 color=LIGHT_LN, lw=0.5, ls=":", zorder=1)
         row_step = 0.26
-        if ci == 2:
+        if ci in (0, 2):
             # Methods column lists more items; tighten spacing slightly.
             row_step = 0.22
         for ri, (bpfx, desc, clr) in enumerate(col_items):
@@ -510,7 +512,9 @@ def make_s3_instability_case_study(root: Path) -> None:
     fig = plt.figure(figsize=(7.5, 6.2), facecolor=WHITE)
     outer = fig.add_gridspec(2, 1, height_ratios=[1.0, 0.9], hspace=0.18)
     gs_top = outer[0].subgridspec(1, 4, wspace=0.05)
-    gs_bot = outer[1].subgridspec(1, 5, width_ratios=[1.0, 0.055, 0.10, 1.0, 0.055], wspace=0.10)
+    # Give the right colorbar a slightly wider lane and more breathing room so its tick labels
+    # are never clipped when embedded in DOCX.
+    gs_bot = outer[1].subgridspec(1, 5, width_ratios=[1.0, 0.055, 0.12, 1.0, 0.075], wspace=0.10)
 
     # top row: 4 seeds
     for i, seed in enumerate(show_seeds):
@@ -557,15 +561,14 @@ def make_s3_instability_case_study(root: Path) -> None:
     sc2 = _marker_panel(ax_str, ref["expr_stromal"], f"{str_name} (logcounts)")
     cax2 = fig.add_subplot(gs_bot[0, 4])
     cb2 = fig.colorbar(sc2, cax=cax2)
-    cb2.ax.tick_params(labelsize=7, pad=2)
+    # Keep the right-side tick labels comfortably inside the canvas.
+    cb2.ax.tick_params(labelsize=7, pad=1)
     cb2.outline.set_linewidth(0.8)
 
     title = f"Instability case study (BayesSpace) — {dataset_id}/{sample_id}, K={k}"
-    subtitle = f"Multi-seed stability: median ARI={ari_med:.3f} (IQR={ari_iqr:.3f}); labels aligned to seed={ref_seed} for visualization"
     fig.suptitle(title, y=0.98, fontsize=10, fontweight="bold", color=DARK)
-    fig.text(0.5, 0.945, textwrap.fill(subtitle, width=95), ha="center", va="top", fontsize=7.5, color=GREY)
 
-    fig.subplots_adjust(left=0.03, right=0.985, top=0.90, bottom=0.05)
+    fig.subplots_adjust(left=0.03, right=0.95, top=0.92, bottom=0.05)
     _save(fig, root, "figureS2")
     print("Wrote plots/publication/png/figureS2.png")
     print("Wrote plots/publication/pdf/figureS2.pdf")
@@ -644,17 +647,6 @@ def make_s4_boundary_vs_interior_seed_sensitivity(root: Path) -> None:
     ax.set_title("Downstream sensitivity: boundary-associated signature deltas across seeds",
                  fontsize=9, pad=8)
 
-    # Annotate boundary fractions per seed (small, non-intrusive).
-    frac_txt = []
-    for seed in seeds:
-        row = sub[sub["seed"].astype(int) == int(seed)].iloc[0]
-        n_b = int(row["n_boundary_spots"])
-        n_t = int(row["n_spots_total"])
-        frac_txt.append(f"{seed}: {n_b}/{n_t}")
-    ax.text(0.99, 0.02, "Boundary spots per seed (n): " + "; ".join(frac_txt),
-            transform=ax.transAxes, ha="right", va="bottom",
-            fontsize=6, color=col_dark)
-
     ax.legend(frameon=False, fontsize=6, ncol=len(seeds), loc="upper right",
               handletextpad=0.3, columnspacing=0.8)
     ax.grid(axis="y", color="#E5E7EB", linewidth=0.6)
@@ -665,13 +657,396 @@ def make_s4_boundary_vs_interior_seed_sensitivity(root: Path) -> None:
     print("Wrote plots/publication/pdf/figureS3.pdf")
 
 
+def make_s5_histology_overlay_switching_spots(root: Path) -> None:
+    """Histology overlay for the instability case study (stable vs switching spots).
+
+    Renders a reviewer-friendly visualization showing that switching spots are
+    spatially structured (interface-localized) rather than scattered noise.
+    """
+    import io
+    import textwrap
+
+    from PIL import Image  # type: ignore
+
+    src = root / "results" / "figures" / "figS3_instability_case_study.tsv"
+    if not src.exists():
+        raise FileNotFoundError(
+            "Missing figS3 input table. Generate it with:\n"
+            "  Rscript scripts/build_figS3_instability_case_study.R"
+        )
+
+    df = pd.read_csv(src, sep="\t")
+    if df.empty:
+        raise RuntimeError("figS3 table is empty")
+
+    dataset_id = str(df["dataset_id"].iloc[0])
+    sample_id = str(df["sample_id"].iloc[0])
+    k = int(df["K"].iloc[0])
+
+    # Load the section image shipped with the GEO bundle.
+    img_gz = root / "data" / "raw" / dataset_id / "extracted" / f"{sample_id}_detected_tissue_image.jpg.gz"
+    if not img_gz.exists():
+        raise FileNotFoundError(img_gz)
+    with gzip.open(img_gz, "rb") as handle:
+        img = Image.open(io.BytesIO(handle.read())).convert("RGB")
+    w, h = img.size
+
+    seeds = sorted(int(s) for s in df["seed"].astype(int).unique().tolist())
+    ref_seed = seeds[0]
+    ref = df[df["seed"].astype(int) == ref_seed].copy()
+    if ref.empty:
+        raise RuntimeError("Reference seed rows missing")
+    ref = ref.sort_values("barcode")
+    ref_barcodes = ref["barcode"].astype(str).to_numpy()
+    ref_labels = ref["domain_label"].astype(int).to_numpy()
+    ref_xy = ref[["x", "y"]].to_numpy(dtype=float)
+    ref_map = {b: int(l) for b, l in zip(ref_barcodes, ref_labels)}
+
+    def _align_labels(barcodes: np.ndarray, labels: np.ndarray) -> np.ndarray:
+        obs = np.array([ref_map.get(b, -1) for b in barcodes], dtype=int)
+        keep = obs >= 0
+        if keep.sum() == 0:
+            return labels
+        obs = obs[keep]
+        lab = labels[keep]
+
+        ref_ids = sorted(set(obs.tolist()))
+        lab_ids = sorted(set(lab.tolist()))
+        M = np.zeros((len(ref_ids), len(lab_ids)), dtype=int)
+        for i, r in enumerate(ref_ids):
+            for j, c in enumerate(lab_ids):
+                M[i, j] = int(np.sum((obs == r) & (lab == c)))
+
+        mapping: dict[int, int] = {}
+        try:
+            from scipy.optimize import linear_sum_assignment  # type: ignore
+
+            rr, cc = linear_sum_assignment(-M)
+            for i, j in zip(rr, cc):
+                mapping[int(lab_ids[j])] = int(ref_ids[i])
+        except Exception:
+            used_ref: set[int] = set()
+            used_lab: set[int] = set()
+            pairs: list[tuple[int, int, int]] = []
+            for i, r in enumerate(ref_ids):
+                for j, c in enumerate(lab_ids):
+                    pairs.append((int(M[i, j]), int(r), int(c)))
+            for _, r, c in sorted(pairs, reverse=True):
+                if r in used_ref or c in used_lab:
+                    continue
+                mapping[c] = r
+                used_ref.add(r)
+                used_lab.add(c)
+
+        aligned = labels.copy()
+        for c, r in mapping.items():
+            aligned[labels == c] = r
+        return aligned
+
+    # Build aligned labels per seed and classify switching barcodes.
+    labs_by_barcode: dict[str, list[int]] = {str(b): [] for b in ref_barcodes.tolist()}
+    for seed in seeds:
+        sub = df[df["seed"].astype(int) == int(seed)].copy().sort_values("barcode")
+        bar = sub["barcode"].astype(str).to_numpy()
+        lab = sub["domain_label"].astype(int).to_numpy()
+        lab = _align_labels(bar, lab)
+        for b, l in zip(bar.tolist(), lab.tolist()):
+            if b in labs_by_barcode:
+                labs_by_barcode[b].append(int(l))
+
+    switching_mask = np.array([len(set(labs_by_barcode[b])) > 1 for b in ref_barcodes], dtype=bool)
+
+    # Choose a zoom window centered on the switching distribution.
+    switch_xy = ref_xy[switching_mask]
+    if len(switch_xy) < 10:
+        raise RuntimeError("Too few switching spots found; expected a non-trivial switching set")
+    cx = float(np.median(switch_xy[:, 0]))
+    cy = float(np.median(switch_xy[:, 1]))
+    half = 520.0
+    x0 = max(0.0, cx - half)
+    x1 = min(float(w), cx + half)
+    y0 = max(0.0, cy - half)
+    y1 = min(float(h), cy + half)
+
+    # ── Plot ─────────────────────────────────────────────────────────────
+    fig = plt.figure(figsize=(7.4, 3.9))
+    gs = fig.add_gridspec(1, 2, width_ratios=[1.25, 1.0], wspace=0.06)
+    ax0 = fig.add_subplot(gs[0, 0])
+    ax1 = fig.add_subplot(gs[0, 1])
+
+    for ax in (ax0, ax1):
+        ax.imshow(img, origin="upper")
+        ax.set_xticks([])
+        ax.set_yticks([])
+        for spine in ax.spines.values():
+            spine.set_visible(False)
+
+    # Full view with zoom box
+    ax0.scatter(ref_xy[~switching_mask, 0], ref_xy[~switching_mask, 1], s=2.0, c="#111827", alpha=0.12, linewidths=0)
+    ax0.scatter(ref_xy[switching_mask, 0], ref_xy[switching_mask, 1], s=3.6, c="#DC2626", alpha=0.75, linewidths=0)
+    ax0.add_patch(
+        mpatches.Rectangle(
+            (x0, y0),
+            x1 - x0,
+            y1 - y0,
+            fill=False,
+            edgecolor="#DC2626",
+            linewidth=1.0,
+            linestyle="--",
+        )
+    )
+    ax0.set_title("Stable vs switching spots (full section)", fontsize=9, pad=2)
+
+    # Zoom view
+    ax1.set_xlim(x0, x1)
+    ax1.set_ylim(y1, y0)  # keep origin='upper' orientation
+    ax1.scatter(ref_xy[~switching_mask, 0], ref_xy[~switching_mask, 1], s=4.0, c="#111827", alpha=0.14, linewidths=0)
+    ax1.scatter(ref_xy[switching_mask, 0], ref_xy[switching_mask, 1], s=7.5, c="#DC2626", alpha=0.85, linewidths=0)
+    ax1.set_title("Zoom: interface-localized switching", fontsize=9, pad=2)
+
+    # Legend
+    handles = [
+        mpatches.Patch(color="#111827", label="Stable spots"),
+        mpatches.Patch(color="#DC2626", label="Switching spots"),
+    ]
+    ax1.legend(handles=handles, frameon=False, fontsize=7, loc="lower right")
+
+    title = f"Histology overlay for the instability case study — {dataset_id}/{sample_id}, K={k}"
+    subtitle = (
+        "Switching spots (changed domain label across seeds after label alignment) "
+        "form a structured band rather than scattered noise."
+    )
+    fig.suptitle(title, y=0.98, fontsize=10, fontweight="bold", color="#111827")
+    fig.text(0.5, 0.945, textwrap.fill(subtitle, width=95), ha="center", va="top", fontsize=7.5, color="#4B5563")
+
+    # Keep extra headroom so the subtitle does not collide with panel titles.
+    fig.subplots_adjust(left=0.02, right=0.99, top=0.83, bottom=0.05)
+    _save(fig, root, "figureS4")
+    print("Wrote plots/publication/png/figureS4.png")
+    print("Wrote plots/publication/pdf/figureS4.pdf")
+
+
+def make_s6_histology_feature_audit(root: Path) -> None:
+    """Quantify histology contrast around switching vs stable spots.
+
+    Writes:
+    - results/figures/figS5_histology_patch_features.tsv  (per-spot features)
+    - plots/publication/png/figureS5.png (distribution summary)
+    """
+    import io
+
+    from PIL import Image  # type: ignore
+
+    src = root / "results" / "figures" / "figS3_instability_case_study.tsv"
+    if not src.exists():
+        raise FileNotFoundError(
+            "Missing figS3 input table. Generate it with:\n"
+            "  Rscript scripts/build_figS3_instability_case_study.R"
+        )
+
+    df = pd.read_csv(src, sep="\t")
+    if df.empty:
+        raise RuntimeError("figS3 table is empty")
+
+    dataset_id = str(df["dataset_id"].iloc[0])
+    sample_id = str(df["sample_id"].iloc[0])
+    k = int(df["K"].iloc[0])
+
+    seeds = sorted(int(s) for s in df["seed"].astype(int).unique().tolist())
+    ref_seed = seeds[0]
+    ref = df[df["seed"].astype(int) == ref_seed].copy()
+    ref = ref.sort_values("barcode")
+    ref_barcodes = ref["barcode"].astype(str).to_numpy()
+    ref_labels = ref["domain_label"].astype(int).to_numpy()
+    ref_xy = ref[["x", "y"]].to_numpy(dtype=float)
+    ref_map = {b: int(l) for b, l in zip(ref_barcodes, ref_labels)}
+
+    def _align_labels(barcodes: np.ndarray, labels: np.ndarray) -> np.ndarray:
+        obs = np.array([ref_map.get(b, -1) for b in barcodes], dtype=int)
+        keep = obs >= 0
+        if keep.sum() == 0:
+            return labels
+        obs = obs[keep]
+        lab = labels[keep]
+
+        ref_ids = sorted(set(obs.tolist()))
+        lab_ids = sorted(set(lab.tolist()))
+        M = np.zeros((len(ref_ids), len(lab_ids)), dtype=int)
+        for i, r in enumerate(ref_ids):
+            for j, c in enumerate(lab_ids):
+                M[i, j] = int(np.sum((obs == r) & (lab == c)))
+
+        mapping: dict[int, int] = {}
+        try:
+            from scipy.optimize import linear_sum_assignment  # type: ignore
+
+            rr, cc = linear_sum_assignment(-M)
+            for i, j in zip(rr, cc):
+                mapping[int(lab_ids[j])] = int(ref_ids[i])
+        except Exception:
+            used_ref: set[int] = set()
+            used_lab: set[int] = set()
+            pairs: list[tuple[int, int, int]] = []
+            for i, r in enumerate(ref_ids):
+                for j, c in enumerate(lab_ids):
+                    pairs.append((int(M[i, j]), int(r), int(c)))
+            for _, r, c in sorted(pairs, reverse=True):
+                if r in used_ref or c in used_lab:
+                    continue
+                mapping[c] = r
+                used_ref.add(r)
+                used_lab.add(c)
+
+        aligned = labels.copy()
+        for c, r in mapping.items():
+            aligned[labels == c] = r
+        return aligned
+
+    labs_by_barcode: dict[str, list[int]] = {str(b): [] for b in ref_barcodes.tolist()}
+    for seed in seeds:
+        sub = df[df["seed"].astype(int) == int(seed)].copy().sort_values("barcode")
+        bar = sub["barcode"].astype(str).to_numpy()
+        lab = sub["domain_label"].astype(int).to_numpy()
+        lab = _align_labels(bar, lab)
+        for b, l in zip(bar.tolist(), lab.tolist()):
+            if b in labs_by_barcode:
+                labs_by_barcode[b].append(int(l))
+
+    switching_mask = np.array([len(set(labs_by_barcode[b])) > 1 for b in ref_barcodes], dtype=bool)
+
+    img_gz = root / "data" / "raw" / dataset_id / "extracted" / f"{sample_id}_detected_tissue_image.jpg.gz"
+    if not img_gz.exists():
+        raise FileNotFoundError(img_gz)
+    with gzip.open(img_gz, "rb") as handle:
+        img = Image.open(io.BytesIO(handle.read())).convert("RGB")
+    w, h = img.size
+    arr = np.asarray(img, dtype=np.float32)
+    gray = (0.2989 * arr[..., 0] + 0.5870 * arr[..., 1] + 0.1140 * arr[..., 2]).astype(np.float32)
+
+    patch_r = 24  # ~50 px window
+
+    def _patch(x: int, y: int) -> np.ndarray:
+        x0 = max(0, x - patch_r)
+        x1 = min(w, x + patch_r + 1)
+        y0 = max(0, y - patch_r)
+        y1 = min(h, y + patch_r + 1)
+        return gray[y0:y1, x0:x1]
+
+    feat_rows: list[dict[str, object]] = []
+    for (x_f, y_f), bc, is_sw in zip(ref_xy.tolist(), ref_barcodes.tolist(), switching_mask.tolist()):
+        x = int(round(float(x_f)))
+        y = int(round(float(y_f)))
+        if not (0 <= x < w and 0 <= y < h):
+            continue
+        p = _patch(x, y)
+        if p.size < 25:
+            continue
+        # simple gradient magnitude (finite differences)
+        dx = p[:, 2:] - p[:, :-2] if p.shape[1] >= 3 else np.zeros_like(p)
+        dy = p[2:, :] - p[:-2, :] if p.shape[0] >= 3 else np.zeros_like(p)
+        if dx.size and dy.size:
+            # match shapes by trimming to common interior
+            dx_i = dx[1:-1, :] if dx.shape[0] > 2 else dx
+            dy_i = dy[:, 1:-1] if dy.shape[1] > 2 else dy
+            g = np.sqrt(dx_i**2 + dy_i**2)
+        else:
+            g = np.zeros((1, 1), dtype=np.float32)
+
+        feat_rows.append(
+            {
+                "dataset_id": dataset_id,
+                "sample_id": sample_id,
+                "K": k,
+                "barcode": str(bc),
+                "x": float(x_f),
+                "y": float(y_f),
+                "is_switching": int(bool(is_sw)),
+                "patch_gray_mean": float(np.mean(p)),
+                "patch_gray_sd": float(np.std(p)),
+                "patch_grad_mean": float(np.mean(g)),
+                "patch_grad_p95": float(np.quantile(g, 0.95)),
+            }
+        )
+
+    out_table = root / "results" / "figures" / "figS5_histology_patch_features.tsv"
+    fieldnames = [
+        "dataset_id",
+        "sample_id",
+        "K",
+        "barcode",
+        "x",
+        "y",
+        "is_switching",
+        "patch_gray_mean",
+        "patch_gray_sd",
+        "patch_grad_mean",
+        "patch_grad_p95",
+    ]
+    write_tsv(out_table, feat_rows, fieldnames=fieldnames)
+
+    feat = pd.DataFrame(feat_rows)
+    sw = feat[feat["is_switching"] == 1]
+    st = feat[feat["is_switching"] == 0]
+
+    fig = plt.figure(figsize=(7.4, 3.0))
+    gs = fig.add_gridspec(1, 2, wspace=0.35)
+    ax0 = fig.add_subplot(gs[0, 0])
+    ax1 = fig.add_subplot(gs[0, 1])
+
+    def _box(ax, col, title, ylab):
+        vals = [st[col].to_numpy(dtype=float), sw[col].to_numpy(dtype=float)]
+        ax.boxplot(
+            vals,
+            widths=0.5,
+            showfliers=False,
+            patch_artist=True,
+            boxprops=dict(facecolor="#E5E7EB", edgecolor="#111827", linewidth=0.8),
+            whiskerprops=dict(color="#111827", linewidth=0.8),
+            capprops=dict(color="#111827", linewidth=0.8),
+            medianprops=dict(color="#DC2626", linewidth=1.2),
+        )
+        rng = np.random.RandomState(42)
+        for i, v in enumerate(vals, start=1):
+            if len(v) == 0:
+                continue
+            jitter = (rng.rand(len(v)) - 0.5) * 0.18
+            ax.scatter(np.full(len(v), i) + jitter, v, s=8, c="#111827", alpha=0.10, linewidths=0)
+        ax.set_xticks([1, 2])
+        ax.set_xticklabels(["Stable", "Switching"], fontsize=8)
+        ax.set_title(title, fontsize=9, pad=6)
+        ax.set_ylabel(ylab, fontsize=8)
+        ax.grid(axis="y", color="#E5E7EB", linewidth=0.6)
+
+    _box(ax0, "patch_grad_mean", "Local histology gradient", "Mean gradient (a.u.)")
+    _box(ax1, "patch_gray_sd", "Local histology contrast", "Gray SD (a.u.)")
+
+    fig.suptitle(
+        f"Histology feature analysis for switching spots — {dataset_id}/{sample_id}, K={k}",
+        y=0.98,
+        fontsize=10,
+        fontweight="bold",
+        color="#111827",
+    )
+    fig.subplots_adjust(left=0.07, right=0.98, top=0.86, bottom=0.14)
+    _save(fig, root, "figureS5")
+
+    print(f"Wrote {out_table}")
+    print("Wrote plots/publication/png/figureS5.png")
+    print("Wrote plots/publication/pdf/figureS5.pdf")
+
+
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
-    # Figure 2 (main text) is generated from the workflow schematic.
-    make_s2_workflow_schematic(root)
+    # NOTE: The main-text workflow schematic (Fig 2) is now maintained as a vector
+    # diagram (see `plots/diagrams/figure2.svg`) and rendered separately.
+    # Keep the legacy matplotlib schematic optional to avoid overwriting the submission asset.
+    if os.environ.get("MAKE_LEGACY_FIG2_WORKFLOW", "").strip() == "1":
+        make_s2_workflow_schematic(root)
     make_s3_instability_case_study(root)
     make_s4_boundary_vs_interior_seed_sensitivity(root)
+    make_s5_histology_overlay_switching_spots(root)
+    make_s6_histology_feature_audit(root)
     return 0
 
 

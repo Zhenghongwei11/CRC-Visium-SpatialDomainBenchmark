@@ -1,0 +1,17 @@
+method_id	K	metric_id	n_units	median_of_unit_medians	median_unit_range	median_unit_iqr	notes
+M4_spagcn	4	spatial_coherence_median	2	0.710877	0.03129350000000003	0.015646750000000043	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	4	marker_coherence_median	2	0.797648	0.0055355000000000265	0.0027677500000000688	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	4	stability_ari_median	2	0.5797185	0.026139000000000037	0.013069499999999956	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	4	wall_time_sec_median	2	21.915929	5.127668000000001	2.563834	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	6	spatial_coherence_median	2	0.627091	0.022816000000000003	0.011407999999999974	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	6	marker_coherence_median	2	0.7526160000000001	0.056851	0.028425499999999992	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	6	stability_ari_median	2	0.51482275	0.10164850000000003	0.05082425000000004	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M4_spagcn	6	wall_time_sec_median	2	19.878082	2.4075639999999994	1.2037819999999977	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	4	spatial_coherence_median	2	0.850662	0.027203000000000033	0.007408625000000002	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	4	marker_coherence_median	2	0.834634	0.20383099999999993	0.02833374999999999	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	4	stability_ari_median	2	0.48515650000000005	0.3150805	0.16546137499999994	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	4	wall_time_sec_median	2	23.497049750000002	15.891472	7.390024374999999	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	6	spatial_coherence_median	2	0.809496	0.023193499999999978	0.011060124999999976	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	6	marker_coherence_median	2	0.73134125	0.058866000000000016	0.02669649999999997	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	6	stability_ari_median	2	0.5726150000000001	0.19237400000000002	0.09079387500000005	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking
+M5_stagate	6	wall_time_sec_median	2	20.042252500000004	12.857337999999999	9.656784250000001	2-section hyperparameter sweep; interpret as sensitivity, not performance ranking

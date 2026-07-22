@@ -389,3 +389,7 @@ GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	4	seed_pair_ari	11_vs_23	11
 GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	6	seed_pair_ari	11_vs_23	11	23	ari	0.7051	3563	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	seed_pair_ari	11_vs_23	11	23	ari	0.642637	3415	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	seed_pair_ari	11_vs_23	11	23	ari	0.554916	3415	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	seed_pair_ari	11_vs_23	11	23	ari	0.828077	1975	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	seed_pair_ari	11_vs_23	11	23	ari	0.736756	1975	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	seed_pair_ari	11_vs_23	11	23	ari	0.738824	1782	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	seed_pair_ari	11_vs_23	11	23	ari	0.664633	1782	

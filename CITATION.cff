@@ -5,15 +5,15 @@ type: software
 authors:
   - family-names: Zheng
     given-names: Hongwei
-    affiliation: "School of Medicine, Quanzhou Medical College, Quanzhou, Fujian 362000, China"
-  - family-names: Chen
-    given-names: Wenbiao
-    affiliation: "School of Medicine, Quanzhou Medical College, Quanzhou, Fujian 362000, China"
+    affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
+  - family-names: Bu
+    given-names: Wanping
+    affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
 repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
 contact:
-  - family-names: Chen
-    given-names: Wenbiao
-    email: "2008001@qzmc.edu.cn"
+  - family-names: Zheng
+    given-names: Hongwei
+    email: "lgmoon@qzmc.edu.cn"
 keywords:
   - spatial transcriptomics
   - colorectal cancer

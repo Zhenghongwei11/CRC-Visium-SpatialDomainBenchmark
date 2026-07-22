@@ -1,15 +1,15 @@
 {
   "title": "Benchmarking spatial domain identification in colorectal cancer Visium data: trade-offs, boundary uncertainty, and compute considerations",
   "upload_type": "software",
-  "description": "Reproducible benchmark of spatial domain identification methods in colorectal cancer (CRC) Visium spatial transcriptomics data, comparing BayesSpace with contemporary graph and spatial baselines and reporting complementary evaluation axes (coherence, marker separation, multiseed stability, and practical compute).",
+  "description": "Reproducible benchmark of spatial domain identification methods in colorectal cancer (CRC) Visium spatial transcriptomics data, comparing BayesSpace with contemporary graph and spatial baselines and reporting complementary evaluation axes (coherence, marker separation, multiseed stability, and practical compute). This release includes analysis scripts, derived machine-readable source tables, and a consolidated supplementary-table workbook.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
-      "affiliation": "School of Medicine, Quanzhou Medical College, Quanzhou, Fujian 362000, China"
+      "affiliation": "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
     },
     {
-      "name": "Chen, Wenbiao",
-      "affiliation": "School of Medicine, Quanzhou Medical College, Quanzhou, Fujian 362000, China"
+      "name": "Bu, Wanping",
+      "affiliation": "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
     }
   ],
   "keywords": [

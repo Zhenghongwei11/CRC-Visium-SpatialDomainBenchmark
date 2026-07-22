@@ -1,0 +1,2 @@
+claim_id	comparison_id	metric_id	analysis_unit	test_name	pvalue	effect_size_name	effect_size_value	effect_size_ci_lower	effect_size_ci_upper	direction_consistency_value	notes
+C4_histology_edge_alignment	BayesSpace_vs_M5_stagate_K4K6	delta_grad_boundary_minus_within	sample	wilcoxon_signed_rank_two_sided	1	paired_median_delta	0.0015775	-0.276303	0.184784	0.666666666666667	n_samples=3; anchor=histology_edge_alignment

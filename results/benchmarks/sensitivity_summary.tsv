@@ -190,3 +190,7 @@ GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_med
 GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.824633			stage3g-full-replication-m5
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.857687			stage3g-full-replication-m5
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.817033			stage3g-full-replication-m5
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.898228			portability-demo-noncrc-m5
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.842152			portability-demo-noncrc-m5
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	K	4	4	spatial_coherence_median	0.888795			portability-demo-noncrc-m5
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	K	6	6	spatial_coherence_median	0.871914			portability-demo-noncrc-m5

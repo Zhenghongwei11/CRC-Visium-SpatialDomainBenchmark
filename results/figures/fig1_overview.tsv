@@ -57,3 +57,5 @@ Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sap
 Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
 Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
 Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
+Fig1A	sample_overview	GSE289934	GSM8801844_A1	smoketest	Visium	10x	Homo sapiens	CRC	1975	19465	
+Fig1A	sample_overview	GSE289934	GSM8801845_B1	smoketest	Visium	10x	Homo sapiens	CRC	1782	19465	

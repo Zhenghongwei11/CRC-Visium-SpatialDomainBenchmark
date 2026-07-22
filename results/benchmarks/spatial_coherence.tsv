@@ -426,3 +426,11 @@ GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.8721
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.843192			3415	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.811371			3415	
 GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.822694			3415	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.908608			1975	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.887848			1975	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.847595			1975	
+GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.836709			1975	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.901983			1782	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K4	4	neighbor_agreement	0.875608			1782	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.896745			1782	
+GSE289934	GSM8801845_B1	M5_stagate	log1p_hvg	K6	6	neighbor_agreement	0.847082			1782	

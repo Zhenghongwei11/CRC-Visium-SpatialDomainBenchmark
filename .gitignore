@@ -8,4 +8,5 @@ docs/submissions/
 # reference-builder cache (rebuilt on demand)
 docs/references/cache/
 
-# generated review-bundle artifacts
+# generated reproducibility-bundle artifacts
+docs/reproducibility_bundle/
