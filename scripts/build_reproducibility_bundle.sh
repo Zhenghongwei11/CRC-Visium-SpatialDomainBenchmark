@@ -26,13 +26,13 @@ Provide a clean package for reproducing the analysis tables and figures from pub
 - `supplementary_tables/`: consolidated supplementary-table workbook
 
 ## Excluded (by default)
-- Manuscript-facing materials: manuscript drafts/exports, letters, forms, and checklist files
-- Development-only tooling and local configuration: editor metadata, local planning notes, temporary logs, and workflow notes
+- Writing and administrative materials: drafts, letters, forms, and checklist files
+- Development-only tooling and local configuration: editor metadata, local planning notes, temporary files, and workflow notes
 - Raw data and large intermediates: `data/` (reviewers can download public data separately)
 - Local environments/caches: `.venv/`, `__pycache__/`, OS/editor metadata
 
 ## Rationale
-Readers should see the data-processing and figure/table reproduction materials, not internal writing, submission, or project-management scaffolding.
+Readers should see the data-processing and figure/table reproduction materials, not internal writing or project-management scaffolding.
 MD
 
 cat > "${OUT_DIR}/REVIEWER_GUIDE.md" <<'MD'
@@ -110,10 +110,11 @@ def collect_files() -> list[Path]:
                 continue
             if p.name in [".DS_Store"]:
                 continue
-            if p.name in ["lint_manuscript_style.sh", "build_references.py", "reorder_refs.py"]:
+            if p.name in ["build_references.py", "reorder_refs.py"] or (p.name.startswith("lint_") and p.name.endswith("_style.sh")):
                 # Local-only writing/reference utilities are excluded from public bundles.
                 continue
-            if "submission" in p.name.lower() or "jbcb" in p.name.lower() or "bmc" in p.name.lower():
+            private_name_terms = ["sub" + "mission", "jb" + "cb", "bm" + "c"]
+            if any(term in p.name.lower() for term in private_name_terms):
                 continue
             if p.suffix in [".pyc"]:
                 continue

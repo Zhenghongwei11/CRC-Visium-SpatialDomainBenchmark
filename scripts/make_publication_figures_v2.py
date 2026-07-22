@@ -4,7 +4,7 @@ Publication-quality figures for the CRC Visium spatial-clustering benchmark.
 
 Design rationale
 ================
-* Nature Methods / Genome Biology benchmark style: restrained, high information
+* Restrained benchmark style: high information
   density, fine grid lines, Okabe–Ito palette, matched panel labelling.
 * Every numeric value is read from the locked TSV tables – nothing is hard-coded.
 * No "uninformative bar charts": paired dot-line for per-sample deltas, strip +
@@ -244,7 +244,7 @@ def figure2(root: Path) -> None:
     gates  = pd.read_csv(root / "results" / "benchmarks" /
                          "statistical_gate_summary.tsv", sep="\t")
 
-    # Common journal max width is about 7.5 in (2250 px at 300 dpi). Because we use
+    # Common full-width figure limit is about 7.5 in (2250 px at 300 dpi). Because we use
     # savefig.bbox='tight', the rendered pixel width can exceed fig.width*dpi.
     # Keep Fig 2 slightly narrower to stay within the pixel constraint.
     fig = plt.figure(figsize=(6.25, 7.5))
@@ -274,7 +274,7 @@ def figure2(root: Path) -> None:
                  title="Pre-specified effect sizes (paired median Δ, 95% CI)")
     _panel_label(ax_c, "C", x=0.01, y=1.02)
 
-    # NOTE: Manuscript figure numbering is aligned to first-callout order.
+    # Figure numbering is aligned to the analysis figure set.
     # Domain-quality summary appears after the workflow schematic, so it is Fig 3.
     _save(fig, root, "figure3")
 
@@ -413,7 +413,7 @@ def figure3(root: Path) -> None:
         1, 2, figure=fig,
         width_ratios=[1.4, 1],
         wspace=0.40,
-        # Extra bottom margin prevents x-label collisions after downscaling in DOCX.
+        # Extra bottom margin prevents x-label collisions after downscaling.
         left=0.10, right=0.95, top=0.90, bottom=0.28,
     )
 
@@ -584,7 +584,7 @@ def figure4(root: Path) -> None:
         ax_a.scatter(np.full(len(vals), pos) + jitter, vals,
                      s=8, c=color, alpha=0.55, edgecolors="none", zorder=5)
         # NOTE: Avoid per-group n annotations under the x-axis; these routinely collide
-        # with multi-line tick labels after downscaling in DOCX.
+        # with multi-line tick labels after downscaling.
 
     ax_a.set_xticks(positions)
     ax_a.set_xticklabels([g[0] for g in groups], fontsize=7)

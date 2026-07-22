@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this software and dataset-derived tables, please cite the associated manuscript and this repository."
+message: "If you use this software and dataset-derived tables, please cite the associated study and this repository."
 title: "Benchmarking spatial domain identification in colorectal cancer Visium data"
 type: software
 authors:

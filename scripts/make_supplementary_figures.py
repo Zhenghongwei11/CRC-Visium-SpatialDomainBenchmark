@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Generate supplementary figures for the CRC spatial benchmark submission.
+"""Generate supplementary figures for the CRC spatial benchmark.
 
-This script is intentionally lightweight and reads only existing, locked tables.
+This script is intentionally lightweight and reads only existing analysis tables.
 """
 
 from __future__ import annotations
@@ -408,7 +408,7 @@ def make_s2_workflow_schematic(root: Path) -> None:
             ha="center", va="top", fontsize=10, fontweight="bold", color=DARK)
 
     fig.subplots_adjust(left=0.01, right=0.99, top=0.96, bottom=0.06)
-    # Workflow schematic is Fig 2 in the submission manuscript (first-callout order).
+    # Workflow schematic is exported as figure2 for the analysis figure set.
     _save(fig, root, "figure2")
     print("Wrote plots/publication/png/figure2.png")
     print("Wrote plots/publication/pdf/figure2.pdf")
@@ -512,8 +512,7 @@ def make_s3_instability_case_study(root: Path) -> None:
     fig = plt.figure(figsize=(7.5, 6.2), facecolor=WHITE)
     outer = fig.add_gridspec(2, 1, height_ratios=[1.0, 0.9], hspace=0.18)
     gs_top = outer[0].subgridspec(1, 4, wspace=0.05)
-    # Give the right colorbar a slightly wider lane and more breathing room so its tick labels
-    # are never clipped when embedded in DOCX.
+    # Give the right colorbar a slightly wider lane so its tick labels are never clipped.
     gs_bot = outer[1].subgridspec(1, 5, width_ratios=[1.0, 0.055, 0.12, 1.0, 0.075], wspace=0.10)
 
     # top row: 4 seeds
@@ -552,7 +551,7 @@ def make_s3_instability_case_study(root: Path) -> None:
     sc1 = _marker_panel(ax_epi, ref["expr_epithelial"], f"{epi_name} (logcounts)")
     cax1 = fig.add_subplot(gs_bot[0, 1])
     cb1 = fig.colorbar(sc1, cax=cax1)
-    # Keep tick labels away from the central gutter to avoid any clipping when embedded in DOCX.
+    # Keep tick labels away from the central gutter to avoid clipping in exported figures.
     cb1.ax.yaxis.set_ticks_position("left")
     cb1.ax.tick_params(labelsize=7, pad=1)
     cb1.outline.set_linewidth(0.8)
@@ -1038,9 +1037,9 @@ def make_s6_histology_feature_audit(root: Path) -> None:
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
-    # NOTE: The main-text workflow schematic (Fig 2) is now maintained as a vector
-    # diagram (see `plots/diagrams/figure2.svg`) and rendered separately.
-    # Keep the legacy matplotlib schematic optional to avoid overwriting the submission asset.
+    # NOTE: The workflow schematic is maintained as a vector diagram
+    # (see `plots/diagrams/figure2.svg`) and rendered separately.
+    # Keep the legacy matplotlib schematic optional to avoid overwriting that asset.
     if os.environ.get("MAKE_LEGACY_FIG2_WORKFLOW", "").strip() == "1":
         make_s2_workflow_schematic(root)
     make_s3_instability_case_study(root)

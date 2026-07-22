@@ -6,7 +6,7 @@ We benchmark spatial domain identification methods in colorectal cancer (CRC) 10
 Spatial transcriptomics makes it possible to see how tumor cells, stroma, and immune compartments are organized in situ, but many downstream analyses depend on an upstream “spatial domain” map that is often chosen by eye. In colorectal cancer, domain boundaries can be gradual and mixed, so small analytic choices can change the apparent tissue structure. This project benchmarks a commonly used Bayesian spatial clustering method (BayesSpace) against simple baselines under fixed settings and reports quantitative evidence for domain quality and stability, with a focus on transparent, reproducible decision-making.
 
 Zenodo DOIs:
-- After a GitHub Release is published, Zenodo will automatically archive that version and mint (i) a **version DOI** and (ii) a **concept DOI** for the record family. Manuscripts should cite the **version DOI** corresponding to the exact release tag used.
+- After a GitHub Release is published, Zenodo will automatically archive that version and mint (i) a **version DOI** and (ii) a **concept DOI** for the record family. Cite the **version DOI** corresponding to the exact release tag used.
 
 ## Quick start (reproduce key tables)
 Prerequisites: Python (3.x) and R (with `Rscript`) available on PATH.
@@ -48,7 +48,7 @@ Public GEO accessions used in this benchmark:
 The download URLs and file sizes are recorded in `docs/DATA_MANIFEST.tsv`.
 
 ## Supplementary tables
-The repository includes a consolidated supplementary-table workbook at `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`. The workbook provides reader-facing sheets for the supplementary data tables cited by the manuscript. The same machine-readable source tables are also available as TSV files under `results/`, with figure/table provenance recorded in `docs/FIGURE_PROVENANCE.tsv` and source-data links recorded in `docs/SOURCE_DATA_MAP.tsv`.
+The repository includes a consolidated supplementary-table workbook at `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`. The workbook provides reader-facing sheets for the supplementary data tables. The same machine-readable source tables are also available as TSV files under `results/`, with figure/table provenance recorded in `docs/FIGURE_PROVENANCE.tsv` and source-data links recorded in `docs/SOURCE_DATA_MAP.tsv`.
 
 ## Optional portability demo (non-CRC)
 To demonstrate that the evaluation framework can be applied outside CRC, we include a small non-CRC Visium dataset (GSE289934; mouse brain; 2 sections). If the dataset is downloaded and the STAGATE environment is available, you can build a descriptive portability summary and an image-based weak anchor (edge-alignment) table:
