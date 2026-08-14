@@ -1,9 +1,9 @@
 # Benchmarking spatial domain identification in CRC Visium data
 
-We benchmark spatial domain identification methods in colorectal cancer (CRC) 10x Genomics Visium spatial transcriptomics datasets and provide scripts plus derived tables to reproduce the key results. The benchmark emphasizes fixed-configuration comparisons, explicit statistical decision criteria, stability summaries across random seeds, and transparent reporting of trade-offs.
+We benchmark spatial domain identification methods in colorectal cancer (CRC) 10x Genomics Visium spatial transcriptomics datasets and provide scripts plus derived tables to reproduce the key results. The benchmark emphasizes fixed-configuration comparisons, stability across random seeds and MCMC depth, localized assignment uncertainty, and downstream sensitivity of boundary-focused summaries.
 
 ## Why this study matters
-Spatial transcriptomics makes it possible to see how tumor cells, stroma, and immune compartments are organized in situ, but many downstream analyses depend on an upstream “spatial domain” map that is often chosen by eye. In colorectal cancer, domain boundaries can be gradual and mixed, so small analytic choices can change the apparent tissue structure. This project benchmarks a commonly used Bayesian spatial clustering method (BayesSpace) against simple baselines under fixed settings and reports quantitative evidence for domain quality and stability, with a focus on transparent, reproducible decision-making.
+Spatial transcriptomics makes it possible to see how tumor cells, stroma, and immune compartments are organized in situ, but many downstream analyses depend on an upstream “spatial domain” map. In colorectal cancer, domain boundaries can be gradual and mixed, so small analytic choices can change the apparent tissue structure. This project evaluates BayesSpace against graph-based and classical baselines under fixed settings, then follows an unstable CRC interface into spot-level localization and boundary-summary sensitivity.
 
 Zenodo DOIs:
 - After a GitHub Release is published, Zenodo will automatically archive that version and mint (i) a **version DOI** and (ii) a **concept DOI** for the record family. Cite the **version DOI** corresponding to the exact release tag used.
@@ -42,7 +42,7 @@ If you want to regenerate publication figures locally, install the Python depend
 Public GEO accessions used in this benchmark:
 - GSE267401
 - GSE311294
-- GSE280318
+- GSE285505
 - GSE289934 (optional portability demo; mouse brain)
 
 The download URLs and file sizes are recorded in `docs/DATA_MANIFEST.tsv`.

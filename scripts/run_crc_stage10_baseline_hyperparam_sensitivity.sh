@@ -9,7 +9,7 @@ SEEDS="${SEEDS:-11,23}"
 
 # Two representative sections (one boundary-ambiguous, one external cohort section).
 SAMPLE_GSE311294="${SAMPLE_GSE311294:-GSM9322957_TR11_206}"
-SAMPLE_GSE280318="${SAMPLE_GSE280318:-GSM8703563_Tumor19}"
+SAMPLE_GSE285505="${SAMPLE_GSE285505:-GSM8703563_Tumor19}"
 
 OUT_ROOT_DIR="${OUT_ROOT_DIR:-${ROOT_DIR}/results/sensitivity_runs}"
 RESET_OUT="${RESET_OUT:-1}"
@@ -62,14 +62,14 @@ run_one() {
 
 echo "[stage10] Downloading datasets (if needed)…"
 python scripts/download_geo_from_manifest.py --dataset-id "GSE311294" >/dev/null
-python scripts/download_geo_from_manifest.py --dataset-id "GSE280318" >/dev/null
+python scripts/download_geo_from_manifest.py --dataset-id "GSE285505" >/dev/null
 
 echo "[stage10] STAGATE hyperparameter sweep (2 sections)…"
-for sample in "${SAMPLE_GSE311294}" "${SAMPLE_GSE280318}"; do
+for sample in "${SAMPLE_GSE311294}" "${SAMPLE_GSE285505}"; do
   if [[ "${sample}" == "${SAMPLE_GSE311294}" ]]; then
     ds="GSE311294"; root="data/raw/GSE311294/extracted"
   else
-    ds="GSE280318"; root="data/raw/GSE280318/extracted"
+    ds="GSE285505"; root="data/raw/GSE285505/extracted"
   fi
   for latent in 15 30 50; do
     for epochs in 120 200; do
@@ -84,11 +84,11 @@ for sample in "${SAMPLE_GSE311294}" "${SAMPLE_GSE280318}"; do
 done
 
 echo "[stage10] SpaGCN-style hyperparameter sweep (2 sections)…"
-for sample in "${SAMPLE_GSE311294}" "${SAMPLE_GSE280318}"; do
+for sample in "${SAMPLE_GSE311294}" "${SAMPLE_GSE285505}"; do
   if [[ "${sample}" == "${SAMPLE_GSE311294}" ]]; then
     ds="GSE311294"; root="data/raw/GSE311294/extracted"
   else
-    ds="GSE280318"; root="data/raw/GSE280318/extracted"
+    ds="GSE285505"; root="data/raw/GSE285505/extracted"
   fi
   for p in 0.35 0.50 0.65; do
     config_id="sensitivity_spagcn_p${p}"

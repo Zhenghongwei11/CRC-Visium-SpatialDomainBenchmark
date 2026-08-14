@@ -162,7 +162,7 @@ run_if_selected() {
 
 run_if_selected "stage3a" run_full_stage "stage3a" "GSE311294" "stage3a-full-replication"
 run_if_selected "stage3b" run_full_stage "stage3b" "GSE267401" "stage3b-full-replication"
-run_if_selected "stage3g" run_full_stage "stage3g" "GSE280318" "stage3g-full-replication"
+run_if_selected "stage3g" run_full_stage "stage3g" "GSE285505" "stage3g-full-replication"
 run_if_selected "stage3c" run_bayesspace_stage
 
 echo "Stage-3 runs completed."

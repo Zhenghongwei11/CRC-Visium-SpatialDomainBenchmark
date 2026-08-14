@@ -164,7 +164,7 @@ def figure1(root: Path) -> None:
 
     # ── Panel A: cohort coverage (horizontal lollipop, not bars) ─────────
     ax_a = fig.add_subplot(gs[0, :])
-    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE280318"])].copy()
+    ds_used = ds[ds["dataset_id"].isin(["GSE267401", "GSE311294", "GSE285505"])].copy()
     ds_used["total"]   = ds_used["samples_on_disk"].astype(int)
     ds_used["covered"] = ds_used["bayesspace_samples_covered"].astype(int)
     ds_used = ds_used.sort_values("total", ascending=True).reset_index(drop=True)
@@ -515,7 +515,7 @@ def figure3(root: Path) -> None:
 def figure4(root: Path) -> None:
     rt    = pd.read_csv(root / "results" / "benchmarks" / "runtime_memory.tsv", sep="\t")
     # Keep compute summaries aligned with the primary CRC inference set.
-    crc_datasets = {"GSE267401", "GSE311294", "GSE280318"}
+    crc_datasets = {"GSE267401", "GSE311294", "GSE285505"}
     rt = rt[rt["dataset_id"].isin(crc_datasets)].copy()
     # Convert per-run runtimes to per sample×K medians to keep the runtime
     # distribution panel comparable across methods (and comparable to the

@@ -1,76 +1,76 @@
 dataset_id	sample_id	method_id	preprocessing_id	param_set_id	K	seed	status	wall_time_sec	cpu_time_sec	peak_rss_mb	disk_tmp_bytes	started_utc	finished_utc	hardware_id	software_versions	notes
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.277944	0.277944	440.254		2026-04-22T04:17:39Z	2026-04-22T04:17:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.152684	0.152684	315.418		2026-04-22T04:17:40Z	2026-04-22T04:17:40Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.158725	0.158725	315.418		2026-04-22T04:17:40Z	2026-04-22T04:17:40Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.39032	0.39032	315.551		2026-04-22T04:17:40Z	2026-04-22T04:17:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.220093	0.220093	321.188		2026-04-22T04:17:41Z	2026-04-22T04:17:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.53517	0.53517	321.211		2026-04-22T04:17:41Z	2026-04-22T04:17:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.161745	0.161745	314.707		2026-04-22T04:17:42Z	2026-04-22T04:17:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.151809	0.151809	318.902		2026-04-22T04:17:42Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.206374	0.206374	321.133		2026-04-22T04:17:43Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.291195	0.291195	316.207		2026-04-22T04:17:43Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.186329	0.186329	321.832		2026-04-22T04:17:44Z	2026-04-22T04:17:44Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.227516	0.227516	320.555		2026-04-22T04:17:44Z	2026-04-22T04:17:44Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.20477	0.20477	283.461		2026-04-22T04:17:47Z	2026-04-22T04:17:47Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.200565	0.200565	369.605		2026-04-22T04:17:47Z	2026-04-22T04:17:47Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.215273	0.215273	340.758		2026-04-22T04:17:48Z	2026-04-22T04:17:48Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.217682	0.217682	355.512		2026-04-22T04:17:51Z	2026-04-22T04:17:51Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.210849	0.210849	385.211		2026-04-22T04:17:51Z	2026-04-22T04:17:51Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.21452	0.21452	338.898		2026-04-22T04:17:51Z	2026-04-22T04:17:52Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.140694	0.140694	230.039		2026-04-22T04:17:53Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.2685	0.2685	255.008		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.113027	0.113027	255.008		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.13995	0.13995	256.086		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.16508	0.16508	277.461		2026-04-22T04:17:54Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.136004	0.136004	277.461		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.123383	0.123383	269.496		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.117256	0.117256	258.543		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.106563	0.106563	258.547		2026-04-22T04:17:55Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.114763	0.114763	256.41		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.159496	0.159496	278.637		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.134229	0.134229	275.844		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.137031	0.137031	232.23		2026-04-22T04:17:58Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.13123	0.13123	295.781		2026-04-22T04:17:59Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.135168	0.135168	284.23		2026-04-22T04:17:59Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.138143	0.138143	284.402		2026-04-22T04:18:01Z	2026-04-22T04:18:01Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.148795	0.148795	319.844		2026-04-22T04:18:01Z	2026-04-22T04:18:01Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.136065	0.136065	322.008		2026-04-22T04:18:02Z	2026-04-22T04:18:02Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.157256	0.157256	295.746		2026-04-22T04:18:06Z	2026-04-22T04:18:06Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	23	success	1.029208	1.029208	392.727		2026-04-22T04:18:06Z	2026-04-22T04:18:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.323759	0.323759	377.094		2026-04-22T04:18:07Z	2026-04-22T04:18:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.210818	0.210818	355.402		2026-04-22T04:18:08Z	2026-04-22T04:18:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.155732	0.155732	331.992		2026-04-22T04:18:08Z	2026-04-22T04:18:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.15276	0.15276	331.992		2026-04-22T04:18:08Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.109504	0.109504	307.07		2026-04-22T04:18:09Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.225684	0.225684	315.531		2026-04-22T04:18:09Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.105303	0.105303	304.953		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.143092	0.143092	304.953		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.152538	0.152538	332.594		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.162448	0.162448	309.363		2026-04-22T04:18:10Z	2026-04-22T04:18:11Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.19428	0.19428	244.781		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.194105	0.194105	339.422		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.191317	0.191317	303.938		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.215985	0.215985	304.078		2026-04-22T04:18:16Z	2026-04-22T04:18:16Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	0.220395	0.220395	288.004		2026-04-22T04:18:16Z	2026-04-22T04:18:16Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	0.309976	0.309976	325.875		2026-04-22T04:18:16Z	2026-04-22T04:18:17Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.151961	0.151961	176.359		2026-04-22T04:18:20Z	2026-04-22T04:18:20Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.290704	0.290704	242.359		2026-04-22T04:18:20Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.13598	0.13598	271.898		2026-04-22T04:18:21Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.139873	0.139873	271.898		2026-04-22T04:18:21Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.14837	0.14837	253.434		2026-04-22T04:18:21Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.13493	0.13493	258.145		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.120726	0.120726	232.621		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.171165	0.171165	236.68		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.134024	0.134024	236.68		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.130876	0.130876	236.684		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.133253	0.133253	255.027		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.113395	0.113395	237.453		2026-04-22T04:18:23Z	2026-04-22T04:18:24Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.188858	0.188858	175.25		2026-04-22T04:18:26Z	2026-04-22T04:18:26Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.176611	0.176611	264.801		2026-04-22T04:18:27Z	2026-04-22T04:18:27Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.184867	0.184867	210.262		2026-04-22T04:18:27Z	2026-04-22T04:18:27Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.189051	0.189051	176.531		2026-04-22T04:18:45Z	2026-04-22T04:18:45Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.190209	0.190209	289.09		2026-04-22T04:18:45Z	2026-04-22T04:18:45Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.181948	0.181948	231.273		2026-04-22T04:18:45Z	2026-04-22T04:18:46Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.277944	0.277944	440.254		2026-04-22T04:17:39Z	2026-04-22T04:17:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.152684	0.152684	315.418		2026-04-22T04:17:40Z	2026-04-22T04:17:40Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.158725	0.158725	315.418		2026-04-22T04:17:40Z	2026-04-22T04:17:40Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.39032	0.39032	315.551		2026-04-22T04:17:40Z	2026-04-22T04:17:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.220093	0.220093	321.188		2026-04-22T04:17:41Z	2026-04-22T04:17:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.53517	0.53517	321.211		2026-04-22T04:17:41Z	2026-04-22T04:17:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.161745	0.161745	314.707		2026-04-22T04:17:42Z	2026-04-22T04:17:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.151809	0.151809	318.902		2026-04-22T04:17:42Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.206374	0.206374	321.133		2026-04-22T04:17:43Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.291195	0.291195	316.207		2026-04-22T04:17:43Z	2026-04-22T04:17:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.186329	0.186329	321.832		2026-04-22T04:17:44Z	2026-04-22T04:17:44Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.227516	0.227516	320.555		2026-04-22T04:17:44Z	2026-04-22T04:17:44Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.20477	0.20477	283.461		2026-04-22T04:17:47Z	2026-04-22T04:17:47Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.200565	0.200565	369.605		2026-04-22T04:17:47Z	2026-04-22T04:17:47Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.215273	0.215273	340.758		2026-04-22T04:17:48Z	2026-04-22T04:17:48Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.217682	0.217682	355.512		2026-04-22T04:17:51Z	2026-04-22T04:17:51Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.210849	0.210849	385.211		2026-04-22T04:17:51Z	2026-04-22T04:17:51Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.21452	0.21452	338.898		2026-04-22T04:17:51Z	2026-04-22T04:17:52Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1682;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.140694	0.140694	230.039		2026-04-22T04:17:53Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.2685	0.2685	255.008		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.113027	0.113027	255.008		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.13995	0.13995	256.086		2026-04-22T04:17:54Z	2026-04-22T04:17:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.16508	0.16508	277.461		2026-04-22T04:17:54Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.136004	0.136004	277.461		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.123383	0.123383	269.496		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.117256	0.117256	258.543		2026-04-22T04:17:55Z	2026-04-22T04:17:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.106563	0.106563	258.547		2026-04-22T04:17:55Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.114763	0.114763	256.41		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.159496	0.159496	278.637		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.134229	0.134229	275.844		2026-04-22T04:17:56Z	2026-04-22T04:17:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.137031	0.137031	232.23		2026-04-22T04:17:58Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.13123	0.13123	295.781		2026-04-22T04:17:59Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.135168	0.135168	284.23		2026-04-22T04:17:59Z	2026-04-22T04:17:59Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.138143	0.138143	284.402		2026-04-22T04:18:01Z	2026-04-22T04:18:01Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.148795	0.148795	319.844		2026-04-22T04:18:01Z	2026-04-22T04:18:01Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.136065	0.136065	322.008		2026-04-22T04:18:02Z	2026-04-22T04:18:02Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.1542;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.157256	0.157256	295.746		2026-04-22T04:18:06Z	2026-04-22T04:18:06Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	23	success	1.029208	1.029208	392.727		2026-04-22T04:18:06Z	2026-04-22T04:18:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.323759	0.323759	377.094		2026-04-22T04:18:07Z	2026-04-22T04:18:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.210818	0.210818	355.402		2026-04-22T04:18:08Z	2026-04-22T04:18:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.155732	0.155732	331.992		2026-04-22T04:18:08Z	2026-04-22T04:18:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.15276	0.15276	331.992		2026-04-22T04:18:08Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.109504	0.109504	307.07		2026-04-22T04:18:09Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.225684	0.225684	315.531		2026-04-22T04:18:09Z	2026-04-22T04:18:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.105303	0.105303	304.953		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.143092	0.143092	304.953		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.152538	0.152538	332.594		2026-04-22T04:18:10Z	2026-04-22T04:18:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.162448	0.162448	309.363		2026-04-22T04:18:10Z	2026-04-22T04:18:11Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.19428	0.19428	244.781		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.194105	0.194105	339.422		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.191317	0.191317	303.938		2026-04-22T04:18:14Z	2026-04-22T04:18:14Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.215985	0.215985	304.078		2026-04-22T04:18:16Z	2026-04-22T04:18:16Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	0.220395	0.220395	288.004		2026-04-22T04:18:16Z	2026-04-22T04:18:16Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	0.309976	0.309976	325.875		2026-04-22T04:18:16Z	2026-04-22T04:18:17Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.2;k_observed=6;exact_k=1;res_seed=11
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.151961	0.151961	176.359		2026-04-22T04:18:20Z	2026-04-22T04:18:20Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.290704	0.290704	242.359		2026-04-22T04:18:20Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.13598	0.13598	271.898		2026-04-22T04:18:21Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.139873	0.139873	271.898		2026-04-22T04:18:21Z	2026-04-22T04:18:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.14837	0.14837	253.434		2026-04-22T04:18:21Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.13493	0.13493	258.145		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.120726	0.120726	232.621		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.171165	0.171165	236.68		2026-04-22T04:18:22Z	2026-04-22T04:18:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.134024	0.134024	236.68		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.130876	0.130876	236.684		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.133253	0.133253	255.027		2026-04-22T04:18:23Z	2026-04-22T04:18:23Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.113395	0.113395	237.453		2026-04-22T04:18:23Z	2026-04-22T04:18:24Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.188858	0.188858	175.25		2026-04-22T04:18:26Z	2026-04-22T04:18:26Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.176611	0.176611	264.801		2026-04-22T04:18:27Z	2026-04-22T04:18:27Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.184867	0.184867	210.262		2026-04-22T04:18:27Z	2026-04-22T04:18:27Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.07071;k_observed=4;exact_k=1;res_seed=11
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.189051	0.189051	176.531		2026-04-22T04:18:45Z	2026-04-22T04:18:45Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.190209	0.190209	289.09		2026-04-22T04:18:45Z	2026-04-22T04:18:45Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.181948	0.181948	231.273		2026-04-22T04:18:45Z	2026-04-22T04:18:46Z	local-macbook-air-8gb-smoketest	python-smoketest	leiden_res=0.08409;k_observed=5;exact_k=0;res_seed=11
 GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.172307	0.172307	541.469		2026-04-22T04:19:00Z	2026-04-22T04:19:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.108424	0.108424	318.938		2026-04-22T04:19:01Z	2026-04-22T04:19:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.094403	0.094403	318.953		2026-04-22T04:19:01Z	2026-04-22T04:19:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
@@ -269,78 +269,78 @@ GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.279965
 GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.413645	0.413645	492.082		2026-04-22T04:22:50Z	2026-04-22T04:22:50Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.307306	0.307306	492.121		2026-04-22T04:22:50Z	2026-04-22T04:22:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	0.306282	0.306282	492.16		2026-04-22T04:22:51Z	2026-04-22T04:22:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.211207	0.211207	440.141		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.130376	0.130376	315.211		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.153065	0.153065	315.266		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.221402	0.221402	315.402		2026-04-22T04:23:03Z	2026-04-22T04:23:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.15554	0.15554	321.34		2026-04-22T04:23:03Z	2026-04-22T04:23:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.192662	0.192662	321.344		2026-04-22T04:23:03Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.123931	0.123931	314.496		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.116115	0.116115	318.691		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.115644	0.115644	320.926		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.330235	0.330235	316.035		2026-04-22T04:23:05Z	2026-04-22T04:23:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.143749	0.143749	321.66		2026-04-22T04:23:05Z	2026-04-22T04:23:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.153388	0.153388	320.383		2026-04-22T04:23:05Z	2026-04-22T04:23:06Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.18742	0.18742	281.301		2026-04-22T04:23:08Z	2026-04-22T04:23:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.207477	0.207477	368.816		2026-04-22T04:23:09Z	2026-04-22T04:23:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.183847	0.183847	320.516		2026-04-22T04:23:09Z	2026-04-22T04:23:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.177049	0.177049	312.906		2026-04-22T04:23:12Z	2026-04-22T04:23:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.182689	0.182689	384.973		2026-04-22T04:23:12Z	2026-04-22T04:23:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.241618	0.241618	339.137		2026-04-22T04:23:12Z	2026-04-22T04:23:13Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.121172	0.121172	231.758		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.099337	0.099337	256.785		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.099365	0.099365	256.785		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.125576	0.125576	257.863		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.14549	0.14549	279.238		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.124599	0.124599	279.238		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.09379	0.09379	279.582		2026-04-22T04:23:15Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.09778	0.09778	279.582		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.082579	0.082579	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.149959	0.149959	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.155662	0.155662	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.103149	0.103149	279.586		2026-04-22T04:23:17Z	2026-04-22T04:23:17Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.123848	0.123848	234.004		2026-04-22T04:23:18Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.12344	0.12344	298.109		2026-04-22T04:23:19Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.120499	0.120499	298.109		2026-04-22T04:23:19Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.131985	0.131985	313.387		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.129001	0.129001	321.527		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.120985	0.120985	323.113		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.259826	0.259826	295.91		2026-04-22T04:23:25Z	2026-04-22T04:23:25Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.546487	0.546487	392.879		2026-04-22T04:23:25Z	2026-04-22T04:23:26Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.975645	0.975645	392.879		2026-04-22T04:23:26Z	2026-04-22T04:23:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	11	success	1.002518	1.002518	394.168		2026-04-22T04:23:27Z	2026-04-22T04:23:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.470298	0.470298	385.637		2026-04-22T04:23:29Z	2026-04-22T04:23:29Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.678624	0.678624	385.637		2026-04-22T04:23:29Z	2026-04-22T04:23:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.483407	0.483407	360.539		2026-04-22T04:23:30Z	2026-04-22T04:23:31Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.384715	0.384715	368.984		2026-04-22T04:23:31Z	2026-04-22T04:23:31Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.298849	0.298849	358.406		2026-04-22T04:23:31Z	2026-04-22T04:23:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.335471	0.335471	358.406		2026-04-22T04:23:32Z	2026-04-22T04:23:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.644344	0.644344	386.047		2026-04-22T04:23:32Z	2026-04-22T04:23:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.62053	0.62053	362.816		2026-04-22T04:23:33Z	2026-04-22T04:23:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.270226	0.270226	299.699		2026-04-22T04:23:38Z	2026-04-22T04:23:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.275172	0.275172	391.391		2026-04-22T04:23:39Z	2026-04-22T04:23:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.296667	0.296667	358.398		2026-04-22T04:23:39Z	2026-04-22T04:23:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.301533	0.301533	358.535		2026-04-22T04:23:41Z	2026-04-22T04:23:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	0.292466	0.292466	358.984		2026-04-22T04:23:42Z	2026-04-22T04:23:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	0.258902	0.258902	376.871		2026-04-22T04:23:42Z	2026-04-22T04:23:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.333097	0.333097	270.953		2026-04-22T04:23:46Z	2026-04-22T04:23:46Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.204352	0.204352	336.945		2026-04-22T04:23:46Z	2026-04-22T04:23:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.271429	0.271429	366.484		2026-04-22T04:23:47Z	2026-04-22T04:23:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.304004	0.304004	366.484		2026-04-22T04:23:47Z	2026-04-22T04:23:48Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.373578	0.373578	348.016		2026-04-22T04:23:48Z	2026-04-22T04:23:48Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.376394	0.376394	352.723		2026-04-22T04:23:48Z	2026-04-22T04:23:49Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.314415	0.314415	327.145		2026-04-22T04:23:49Z	2026-04-22T04:23:49Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.221499	0.221499	331.203		2026-04-22T04:23:49Z	2026-04-22T04:23:50Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.308733	0.308733	331.203		2026-04-22T04:23:50Z	2026-04-22T04:23:50Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.252932	0.252932	331.203		2026-04-22T04:23:50Z	2026-04-22T04:23:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.46037	0.46037	349.398		2026-04-22T04:23:51Z	2026-04-22T04:23:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.22884	0.22884	331.82		2026-04-22T04:23:51Z	2026-04-22T04:23:52Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.246989	0.246989	269.844		2026-04-22T04:23:55Z	2026-04-22T04:23:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.288118	0.288118	358.914		2026-04-22T04:23:55Z	2026-04-22T04:23:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.365923	0.365923	304.336		2026-04-22T04:23:56Z	2026-04-22T04:23:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	failed	7.3e-05	7.3e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	3.4e-05	3.4e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	1.4e-05	1.4e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.211207	0.211207	440.141		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.130376	0.130376	315.211		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.153065	0.153065	315.266		2026-04-22T04:23:02Z	2026-04-22T04:23:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.221402	0.221402	315.402		2026-04-22T04:23:03Z	2026-04-22T04:23:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.15554	0.15554	321.34		2026-04-22T04:23:03Z	2026-04-22T04:23:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.192662	0.192662	321.344		2026-04-22T04:23:03Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.123931	0.123931	314.496		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.116115	0.116115	318.691		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.115644	0.115644	320.926		2026-04-22T04:23:04Z	2026-04-22T04:23:04Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.330235	0.330235	316.035		2026-04-22T04:23:05Z	2026-04-22T04:23:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.143749	0.143749	321.66		2026-04-22T04:23:05Z	2026-04-22T04:23:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.153388	0.153388	320.383		2026-04-22T04:23:05Z	2026-04-22T04:23:06Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.18742	0.18742	281.301		2026-04-22T04:23:08Z	2026-04-22T04:23:08Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.207477	0.207477	368.816		2026-04-22T04:23:09Z	2026-04-22T04:23:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.183847	0.183847	320.516		2026-04-22T04:23:09Z	2026-04-22T04:23:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.177049	0.177049	312.906		2026-04-22T04:23:12Z	2026-04-22T04:23:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.182689	0.182689	384.973		2026-04-22T04:23:12Z	2026-04-22T04:23:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.241618	0.241618	339.137		2026-04-22T04:23:12Z	2026-04-22T04:23:13Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.121172	0.121172	231.758		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.099337	0.099337	256.785		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.099365	0.099365	256.785		2026-04-22T04:23:14Z	2026-04-22T04:23:14Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.125576	0.125576	257.863		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.14549	0.14549	279.238		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.124599	0.124599	279.238		2026-04-22T04:23:15Z	2026-04-22T04:23:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.09379	0.09379	279.582		2026-04-22T04:23:15Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.09778	0.09778	279.582		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.082579	0.082579	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.149959	0.149959	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.155662	0.155662	279.586		2026-04-22T04:23:16Z	2026-04-22T04:23:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.103149	0.103149	279.586		2026-04-22T04:23:17Z	2026-04-22T04:23:17Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.123848	0.123848	234.004		2026-04-22T04:23:18Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.12344	0.12344	298.109		2026-04-22T04:23:19Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.120499	0.120499	298.109		2026-04-22T04:23:19Z	2026-04-22T04:23:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.131985	0.131985	313.387		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	23	success	0.129001	0.129001	321.527		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	log1p_hvg	K6	6	37	success	0.120985	0.120985	323.113		2026-04-22T04:23:21Z	2026-04-22T04:23:21Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.259826	0.259826	295.91		2026-04-22T04:23:25Z	2026-04-22T04:23:25Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.546487	0.546487	392.879		2026-04-22T04:23:25Z	2026-04-22T04:23:26Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.975645	0.975645	392.879		2026-04-22T04:23:26Z	2026-04-22T04:23:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	11	success	1.002518	1.002518	394.168		2026-04-22T04:23:27Z	2026-04-22T04:23:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.470298	0.470298	385.637		2026-04-22T04:23:29Z	2026-04-22T04:23:29Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.678624	0.678624	385.637		2026-04-22T04:23:29Z	2026-04-22T04:23:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.483407	0.483407	360.539		2026-04-22T04:23:30Z	2026-04-22T04:23:31Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.384715	0.384715	368.984		2026-04-22T04:23:31Z	2026-04-22T04:23:31Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.298849	0.298849	358.406		2026-04-22T04:23:31Z	2026-04-22T04:23:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.335471	0.335471	358.406		2026-04-22T04:23:32Z	2026-04-22T04:23:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.644344	0.644344	386.047		2026-04-22T04:23:32Z	2026-04-22T04:23:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.62053	0.62053	362.816		2026-04-22T04:23:33Z	2026-04-22T04:23:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.270226	0.270226	299.699		2026-04-22T04:23:38Z	2026-04-22T04:23:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.275172	0.275172	391.391		2026-04-22T04:23:39Z	2026-04-22T04:23:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K4	4	37	success	0.296667	0.296667	358.398		2026-04-22T04:23:39Z	2026-04-22T04:23:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	11	success	0.301533	0.301533	358.535		2026-04-22T04:23:41Z	2026-04-22T04:23:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	0.292466	0.292466	358.984		2026-04-22T04:23:42Z	2026-04-22T04:23:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	0.258902	0.258902	376.871		2026-04-22T04:23:42Z	2026-04-22T04:23:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	11	success	0.333097	0.333097	270.953		2026-04-22T04:23:46Z	2026-04-22T04:23:46Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	23	success	0.204352	0.204352	336.945		2026-04-22T04:23:46Z	2026-04-22T04:23:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K4	4	37	success	0.271429	0.271429	366.484		2026-04-22T04:23:47Z	2026-04-22T04:23:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	11	success	0.304004	0.304004	366.484		2026-04-22T04:23:47Z	2026-04-22T04:23:48Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	23	success	0.373578	0.373578	348.016		2026-04-22T04:23:48Z	2026-04-22T04:23:48Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	log1p_hvg	K6	6	37	success	0.376394	0.376394	352.723		2026-04-22T04:23:48Z	2026-04-22T04:23:49Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	11	success	0.314415	0.314415	327.145		2026-04-22T04:23:49Z	2026-04-22T04:23:49Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	23	success	0.221499	0.221499	331.203		2026-04-22T04:23:49Z	2026-04-22T04:23:50Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K4	4	37	success	0.308733	0.308733	331.203		2026-04-22T04:23:50Z	2026-04-22T04:23:50Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	11	success	0.252932	0.252932	331.203		2026-04-22T04:23:50Z	2026-04-22T04:23:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	23	success	0.46037	0.46037	349.398		2026-04-22T04:23:51Z	2026-04-22T04:23:51Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	log1p_hvg	K6	6	37	success	0.22884	0.22884	331.82		2026-04-22T04:23:51Z	2026-04-22T04:23:52Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	11	success	0.246989	0.246989	269.844		2026-04-22T04:23:55Z	2026-04-22T04:23:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	23	success	0.288118	0.288118	358.914		2026-04-22T04:23:55Z	2026-04-22T04:23:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K4	4	37	failed	0.365923	0.365923	304.336		2026-04-22T04:23:56Z	2026-04-22T04:23:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	failed	7.3e-05	7.3e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	failed	3.4e-05	3.4e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	failed	1.4e-05	1.4e-05	270.078		2026-04-22T04:24:15Z	2026-04-22T04:24:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.389028	0.389028	360.012		2026-04-22T04:24:28Z	2026-04-22T04:24:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.422242	0.422242	317.383		2026-04-22T04:24:28Z	2026-04-22T04:24:29Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.49328	0.49328	411.691		2026-04-22T04:24:35Z	2026-04-22T04:24:36Z	local-macbook-air-8gb-smoketest	python-smoketest	
@@ -359,14 +359,14 @@ GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.403613	0
 GSE267401	GSM8265213_CTC17P	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.300563	0.300563	520.977		2026-04-22T04:25:32Z	2026-04-22T04:25:32Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.441201	0.441201	461.648		2026-04-22T04:25:43Z	2026-04-22T04:25:43Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.431763	0.431763	461.406		2026-04-22T04:25:44Z	2026-04-22T04:25:44Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.362386	0.362386	360.398		2026-04-22T04:25:54Z	2026-04-22T04:25:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.397161	0.397161	297.887		2026-04-22T04:25:55Z	2026-04-22T04:25:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.234107	0.234107	247.844		2026-04-22T04:25:57Z	2026-04-22T04:25:57Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.204761	0.204761	247.461		2026-04-22T04:25:57Z	2026-04-22T04:25:57Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.368	0.368	300.418		2026-04-22T04:26:01Z	2026-04-22T04:26:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.301764	0.301764	335.406		2026-04-22T04:26:01Z	2026-04-22T04:26:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.330195	0.330195	268.664		2026-04-22T04:26:04Z	2026-04-22T04:26:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.316131	0.316131	288.387		2026-04-22T04:26:05Z	2026-04-22T04:26:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.362386	0.362386	360.398		2026-04-22T04:25:54Z	2026-04-22T04:25:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.397161	0.397161	297.887		2026-04-22T04:25:55Z	2026-04-22T04:25:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.234107	0.234107	247.844		2026-04-22T04:25:57Z	2026-04-22T04:25:57Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.204761	0.204761	247.461		2026-04-22T04:25:57Z	2026-04-22T04:25:57Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.368	0.368	300.418		2026-04-22T04:26:01Z	2026-04-22T04:26:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.301764	0.301764	335.406		2026-04-22T04:26:01Z	2026-04-22T04:26:02Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	log1p_hvg	K4	4	11	success	0.330195	0.330195	268.664		2026-04-22T04:26:04Z	2026-04-22T04:26:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	log1p_hvg	K6	6	11	success	0.316131	0.316131	288.387		2026-04-22T04:26:05Z	2026-04-22T04:26:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	11	success	15.555025	15.555025	813.656		2026-04-22T04:26:27Z	2026-04-22T04:26:42Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K4	4	23	success	6.770734	6.770734	1025.992		2026-04-22T04:26:42Z	2026-04-22T04:26:49Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M4_spagcn	log1p_hvg	K6	6	11	success	7.60007	7.60007	1033.082		2026-04-22T04:26:49Z	2026-04-22T04:26:57Z	local-macbook-air-8gb-smoketest	python-smoketest	
@@ -403,22 +403,22 @@ GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K4	4	11	success	29.491574	29.491
 GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K4	4	23	success	15.211817	15.211817	1033.246		2026-04-22T04:33:40Z	2026-04-22T04:33:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	11	success	14.653007	14.653007	1036.027		2026-04-22T04:33:56Z	2026-04-22T04:34:10Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	23	failed	28.548377	28.548377	1035.211		2026-04-22T04:34:10Z	2026-04-22T04:34:39Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K4	4	11	success	35.235086	35.235086	652.984		2026-04-22T04:34:52Z	2026-04-22T04:35:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K4	4	23	success	35.798293	35.798293	838.41		2026-04-22T04:35:27Z	2026-04-22T04:36:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K6	6	11	success	30.5659	30.5659	841.84		2026-04-22T04:36:03Z	2026-04-22T04:36:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K6	6	23	success	32.750417	32.750417	844.883		2026-04-22T04:36:34Z	2026-04-22T04:37:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K4	4	11	success	4.023404	4.023404	740.152		2026-04-22T04:37:08Z	2026-04-22T04:37:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K4	4	23	success	3.749462	3.749462	740.309		2026-04-22T04:37:12Z	2026-04-22T04:37:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K6	6	11	success	5.28876	5.28876	745.438		2026-04-22T04:37:16Z	2026-04-22T04:37:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K6	6	23	success	5.789541	5.789541	745.637		2026-04-22T04:37:22Z	2026-04-22T04:37:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K4	4	11	success	6.348653	6.348653	891.992		2026-04-22T04:37:31Z	2026-04-22T04:37:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K4	4	23	success	7.46487	7.46487	891.992		2026-04-22T04:37:38Z	2026-04-22T04:37:45Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K6	6	11	success	8.469051	8.469051	896.172		2026-04-22T04:37:45Z	2026-04-22T04:37:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K6	6	23	success	9.338584	9.338584	899.004		2026-04-22T04:37:54Z	2026-04-22T04:38:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K4	4	11	success	8.810154	8.810154	849.066		2026-04-22T04:38:07Z	2026-04-22T04:38:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K4	4	23	success	6.822203	6.822203	849.094		2026-04-22T04:38:16Z	2026-04-22T04:38:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K6	6	11	success	11.331425	11.331425	853.09		2026-04-22T04:38:23Z	2026-04-22T04:38:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K6	6	23	success	7.201711	7.201711	855.387		2026-04-22T04:38:34Z	2026-04-22T04:38:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K4	4	11	success	35.235086	35.235086	652.984		2026-04-22T04:34:52Z	2026-04-22T04:35:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K4	4	23	success	35.798293	35.798293	838.41		2026-04-22T04:35:27Z	2026-04-22T04:36:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K6	6	11	success	30.5659	30.5659	841.84		2026-04-22T04:36:03Z	2026-04-22T04:36:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M4_spagcn	log1p_hvg	K6	6	23	success	32.750417	32.750417	844.883		2026-04-22T04:36:34Z	2026-04-22T04:37:07Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K4	4	11	success	4.023404	4.023404	740.152		2026-04-22T04:37:08Z	2026-04-22T04:37:12Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K4	4	23	success	3.749462	3.749462	740.309		2026-04-22T04:37:12Z	2026-04-22T04:37:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K6	6	11	success	5.28876	5.28876	745.438		2026-04-22T04:37:16Z	2026-04-22T04:37:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M4_spagcn	log1p_hvg	K6	6	23	success	5.789541	5.789541	745.637		2026-04-22T04:37:22Z	2026-04-22T04:37:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K4	4	11	success	6.348653	6.348653	891.992		2026-04-22T04:37:31Z	2026-04-22T04:37:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K4	4	23	success	7.46487	7.46487	891.992		2026-04-22T04:37:38Z	2026-04-22T04:37:45Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K6	6	11	success	8.469051	8.469051	896.172		2026-04-22T04:37:45Z	2026-04-22T04:37:54Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M4_spagcn	log1p_hvg	K6	6	23	success	9.338584	9.338584	899.004		2026-04-22T04:37:54Z	2026-04-22T04:38:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K4	4	11	success	8.810154	8.810154	849.066		2026-04-22T04:38:07Z	2026-04-22T04:38:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K4	4	23	success	6.822203	6.822203	849.094		2026-04-22T04:38:16Z	2026-04-22T04:38:22Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K6	6	11	success	11.331425	11.331425	853.09		2026-04-22T04:38:23Z	2026-04-22T04:38:34Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M4_spagcn	log1p_hvg	K6	6	23	success	7.201711	7.201711	855.387		2026-04-22T04:38:34Z	2026-04-22T04:38:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K4	4	11	success	36.885624	36.885624	496.09		2026-04-22T04:39:04Z	2026-04-22T04:39:41Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K4	4	23	success	24.409564	24.409564	505.867		2026-04-22T04:39:41Z	2026-04-22T04:40:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE311294	GSM9322957_TR11_206	M5_stagate	log1p_hvg	K6	6	11	success	26.925546	26.925546	506.137		2026-04-22T04:40:06Z	2026-04-22T04:40:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
@@ -455,22 +455,22 @@ GSE267401	GSM8265214_CTC17M	M5_stagate	log1p_hvg	K4	4	11	success	30.991239	30.99
 GSE267401	GSM8265214_CTC17M	M5_stagate	log1p_hvg	K4	4	23	success	32.632953	32.632953	446.266		2026-04-22T04:56:32Z	2026-04-22T04:57:05Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M5_stagate	log1p_hvg	K6	6	11	success	32.78967	32.78967	455.457		2026-04-22T04:57:06Z	2026-04-22T04:57:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE267401	GSM8265214_CTC17M	M5_stagate	log1p_hvg	K6	6	23	success	35.962324	35.962324	446.641		2026-04-22T04:57:39Z	2026-04-22T04:58:15Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K4	4	11	success	32.820302	32.820302	432.73		2026-04-22T04:58:30Z	2026-04-22T04:59:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K4	4	23	success	24.437883	24.437883	434.945		2026-04-22T04:59:03Z	2026-04-22T04:59:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K6	6	11	success	25.05548	25.05548	435.258		2026-04-22T04:59:27Z	2026-04-22T04:59:52Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K6	6	23	success	26.588048	26.588048	434.629		2026-04-22T04:59:53Z	2026-04-22T05:00:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K4	4	11	success	17.251478	17.251478	422.637		2026-04-22T05:00:21Z	2026-04-22T05:00:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K4	4	23	success	17.186266	17.186266	422.566		2026-04-22T05:00:38Z	2026-04-22T05:00:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K6	6	11	success	17.07895	17.07895	422.555		2026-04-22T05:00:56Z	2026-04-22T05:01:13Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K6	6	23	success	17.274617	17.274617	422.605		2026-04-22T05:01:13Z	2026-04-22T05:01:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	4	11	success	26.711358	26.711358	482.176		2026-04-22T05:01:34Z	2026-04-22T05:02:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	4	23	success	29.614118	29.614118	482.297		2026-04-22T05:02:01Z	2026-04-22T05:02:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	6	11	success	24.741186	24.741186	482.316		2026-04-22T05:02:31Z	2026-04-22T05:02:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	6	23	success	24.748331	24.748331	482.309		2026-04-22T05:02:56Z	2026-04-22T05:03:20Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	11	success	23.237333	23.237333	462.219		2026-04-22T05:03:23Z	2026-04-22T05:03:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	23	success	22.421517	22.421517	463.402		2026-04-22T05:03:47Z	2026-04-22T05:04:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	11	success	23.512209	23.512209	462.305		2026-04-22T05:04:10Z	2026-04-22T05:04:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
-GSE280318	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	23	success	24.345964	24.345964	455.562		2026-04-22T05:04:33Z	2026-04-22T05:04:58Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K4	4	11	success	32.820302	32.820302	432.73		2026-04-22T04:58:30Z	2026-04-22T04:59:03Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K4	4	23	success	24.437883	24.437883	434.945		2026-04-22T04:59:03Z	2026-04-22T04:59:27Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K6	6	11	success	25.05548	25.05548	435.258		2026-04-22T04:59:27Z	2026-04-22T04:59:52Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703563_Tumor19	M5_stagate	log1p_hvg	K6	6	23	success	26.588048	26.588048	434.629		2026-04-22T04:59:53Z	2026-04-22T05:00:19Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K4	4	11	success	17.251478	17.251478	422.637		2026-04-22T05:00:21Z	2026-04-22T05:00:38Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K4	4	23	success	17.186266	17.186266	422.566		2026-04-22T05:00:38Z	2026-04-22T05:00:56Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K6	6	11	success	17.07895	17.07895	422.555		2026-04-22T05:00:56Z	2026-04-22T05:01:13Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703564_Tumor20	M5_stagate	log1p_hvg	K6	6	23	success	17.274617	17.274617	422.605		2026-04-22T05:01:13Z	2026-04-22T05:01:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	4	11	success	26.711358	26.711358	482.176		2026-04-22T05:01:34Z	2026-04-22T05:02:01Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K4	4	23	success	29.614118	29.614118	482.297		2026-04-22T05:02:01Z	2026-04-22T05:02:30Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	6	11	success	24.741186	24.741186	482.316		2026-04-22T05:02:31Z	2026-04-22T05:02:55Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703565_Tumor24	M5_stagate	log1p_hvg	K6	6	23	success	24.748331	24.748331	482.309		2026-04-22T05:02:56Z	2026-04-22T05:03:20Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	11	success	23.237333	23.237333	462.219		2026-04-22T05:03:23Z	2026-04-22T05:03:47Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K4	4	23	success	22.421517	22.421517	463.402		2026-04-22T05:03:47Z	2026-04-22T05:04:09Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	11	success	23.512209	23.512209	462.305		2026-04-22T05:04:10Z	2026-04-22T05:04:33Z	local-macbook-air-8gb-smoketest	python-smoketest	
+GSE285505	GSM8703566_Tumor26	M5_stagate	log1p_hvg	K6	6	23	success	24.345964	24.345964	455.562		2026-04-22T05:04:33Z	2026-04-22T05:04:58Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	11	success	19.702249	19.702249	512.691		2026-05-27T12:44:56Z	2026-05-27T12:45:16Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K4	4	23	success	11.841065	11.841065	517.398		2026-05-27T12:45:16Z	2026-05-27T12:45:28Z	local-macbook-air-8gb-smoketest	python-smoketest	
 GSE289934	GSM8801844_A1	M5_stagate	log1p_hvg	K6	6	11	success	12.444092	12.444092	517.777		2026-05-27T12:45:28Z	2026-05-27T12:45:41Z	local-macbook-air-8gb-smoketest	python-smoketest	

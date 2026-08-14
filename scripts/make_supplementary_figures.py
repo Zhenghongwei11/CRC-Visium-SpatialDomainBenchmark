@@ -311,7 +311,7 @@ def make_s2_workflow_schematic(root: Path) -> None:
         [("GEO", "public CRC Visium", MID),
          ("GSE267401", "primary, n = 4", MID),
          ("GSE311294", "replication, n = 5", MID),
-         ("GSE280318", "replication, n = 4", MID),
+         ("GSE285505", "replication, n = 4", MID),
          ("13 samples", "in primary comparison", DARK),
          ("GSE289934", "portability demo (non-CRC), n = 2", MID)],
         [("Spot \u00d7 gene", "counts + spatial coords", MID),

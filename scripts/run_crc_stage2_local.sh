@@ -103,7 +103,7 @@ run_if_selected() {
   fi
 }
 
-run_if_selected "stage2a" "GSE280318" "all-samples-local-pilot" "99" "stage2a-local-full"
+run_if_selected "stage2a" "GSE285505" "all-samples-local-pilot" "99" "stage2a-local-full"
 run_if_selected "stage2b" "GSE311294" "replication-smoke" "1" "stage2b-replication-smoke"
 run_if_selected "stage2c" "GSE267401" "replication-smoke" "1" "stage2c-replication-smoke"
 

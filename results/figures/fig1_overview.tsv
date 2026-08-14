@@ -1,8 +1,8 @@
 panel_id	record_type	dataset_id	sample_id	role	modality	platform	organism	tissue	n_spots	n_genes	notes
-Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	stage2a-local-full sample
-Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	stage2a-local-full sample
-Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	stage2a-local-full sample
-Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	stage2a-local-full sample
+Fig1A	sample_overview	GSE285505	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	stage2a-local-full sample
+Fig1A	sample_overview	GSE285505	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	stage2a-local-full sample
+Fig1A	sample_overview	GSE285505	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	stage2a-local-full sample
+Fig1A	sample_overview	GSE285505	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	stage2a-local-full sample
 Fig1A	sample_overview	GSE311294	GSM9322957_TR11_206	smoketest	Visium	10x	Homo sapiens	CRC	3742	18085	
 Fig1A	sample_overview	GSE267401	GSM8265211_CTC21P	smoketest	Visium	10x	Homo sapiens	CRC	4690	37082	
 Fig1A	sample_overview	GSE311294	GSM9322957_TR11_206	smoketest	Visium	10x	Homo sapiens	CRC	3742	18085	
@@ -14,10 +14,10 @@ Fig1A	sample_overview	GSE267401	GSM8265211_CTC21P	smoketest	Visium	10x	Homo sapi
 Fig1A	sample_overview	GSE267401	GSM8265212_CTC21M	smoketest	Visium	10x	Homo sapiens	CRC	3884	37082	
 Fig1A	sample_overview	GSE267401	GSM8265213_CTC17P	smoketest	Visium	10x	Homo sapiens	CRC	3721	37082	
 Fig1A	sample_overview	GSE267401	GSM8265214_CTC17M	smoketest	Visium	10x	Homo sapiens	CRC	4757	37082	
-Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
-Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
-Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
-Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
+Fig1A	sample_overview	GSE285505	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
+Fig1A	sample_overview	GSE285505	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
+Fig1A	sample_overview	GSE285505	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
+Fig1A	sample_overview	GSE285505	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
 Fig1A	sample_overview	GSE311294	GSM9322957_TR11_206	smoketest	Visium	10x	Homo sapiens	CRC	3742	18085	
 Fig1A	sample_overview	GSE311294	GSM9322958_TR11_16184	smoketest	Visium	10x	Homo sapiens	CRC	4732	18085	
 Fig1A	sample_overview	GSE311294	GSM9322959_TR11_18105	smoketest	Visium	10x	Homo sapiens	CRC	3673	18085	
@@ -27,10 +27,10 @@ Fig1A	sample_overview	GSE267401	GSM8265211_CTC21P	smoketest	Visium	10x	Homo sapi
 Fig1A	sample_overview	GSE267401	GSM8265212_CTC21M	smoketest	Visium	10x	Homo sapiens	CRC	3884	37082	
 Fig1A	sample_overview	GSE267401	GSM8265213_CTC17P	smoketest	Visium	10x	Homo sapiens	CRC	3721	37082	
 Fig1A	sample_overview	GSE267401	GSM8265214_CTC17M	smoketest	Visium	10x	Homo sapiens	CRC	4757	37082	
-Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
-Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
-Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
-Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
+Fig1A	sample_overview	GSE285505	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
+Fig1A	sample_overview	GSE285505	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
+Fig1A	sample_overview	GSE285505	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
+Fig1A	sample_overview	GSE285505	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
 Fig1A	sample_overview	GSE311294	GSM9322957_TR11_206	smoketest	Visium	10x	Homo sapiens	CRC	3742	18085	
 Fig1A	sample_overview	GSE311294	GSM9322958_TR11_16184	smoketest	Visium	10x	Homo sapiens	CRC	4732	18085	
 Fig1A	sample_overview	GSE311294	GSM9322959_TR11_18105	smoketest	Visium	10x	Homo sapiens	CRC	3673	18085	
@@ -40,10 +40,10 @@ Fig1A	sample_overview	GSE267401	GSM8265211_CTC21P	smoketest	Visium	10x	Homo sapi
 Fig1A	sample_overview	GSE267401	GSM8265212_CTC21M	smoketest	Visium	10x	Homo sapiens	CRC	3884	37082	
 Fig1A	sample_overview	GSE267401	GSM8265213_CTC17P	smoketest	Visium	10x	Homo sapiens	CRC	3721	37082	
 Fig1A	sample_overview	GSE267401	GSM8265214_CTC17M	smoketest	Visium	10x	Homo sapiens	CRC	4757	37082	
-Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
-Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
-Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
-Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
+Fig1A	sample_overview	GSE285505	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
+Fig1A	sample_overview	GSE285505	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
+Fig1A	sample_overview	GSE285505	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
+Fig1A	sample_overview	GSE285505	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
 Fig1A	sample_overview	GSE311294	GSM9322957_TR11_206	smoketest	Visium	10x	Homo sapiens	CRC	3742	18085	
 Fig1A	sample_overview	GSE311294	GSM9322958_TR11_16184	smoketest	Visium	10x	Homo sapiens	CRC	4732	18085	
 Fig1A	sample_overview	GSE311294	GSM9322959_TR11_18105	smoketest	Visium	10x	Homo sapiens	CRC	3673	18085	
@@ -53,9 +53,9 @@ Fig1A	sample_overview	GSE267401	GSM8265211_CTC21P	smoketest	Visium	10x	Homo sapi
 Fig1A	sample_overview	GSE267401	GSM8265212_CTC21M	smoketest	Visium	10x	Homo sapiens	CRC	3884	37082	
 Fig1A	sample_overview	GSE267401	GSM8265213_CTC17P	smoketest	Visium	10x	Homo sapiens	CRC	3721	37082	
 Fig1A	sample_overview	GSE267401	GSM8265214_CTC17M	smoketest	Visium	10x	Homo sapiens	CRC	4757	37082	
-Fig1A	sample_overview	GSE280318	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
-Fig1A	sample_overview	GSE280318	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
-Fig1A	sample_overview	GSE280318	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
-Fig1A	sample_overview	GSE280318	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
+Fig1A	sample_overview	GSE285505	GSM8703563_Tumor19	smoketest	Visium	10x	Homo sapiens	CRC	3493	17943	
+Fig1A	sample_overview	GSE285505	GSM8703564_Tumor20	smoketest	Visium	10x	Homo sapiens	CRC	2473	17943	
+Fig1A	sample_overview	GSE285505	GSM8703565_Tumor24	smoketest	Visium	10x	Homo sapiens	CRC	3563	17943	
+Fig1A	sample_overview	GSE285505	GSM8703566_Tumor26	smoketest	Visium	10x	Homo sapiens	CRC	3415	17943	
 Fig1A	sample_overview	GSE289934	GSM8801844_A1	smoketest	Visium	10x	Homo sapiens	CRC	1975	19465	
 Fig1A	sample_overview	GSE289934	GSM8801845_B1	smoketest	Visium	10x	Homo sapiens	CRC	1782	19465	

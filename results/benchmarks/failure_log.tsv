@@ -1,19 +1,19 @@
 dataset_id	sample_id	method_id	preprocessing_id	param_set_id	K	seed	failure_type	error_message	log_path	stacktrace_path	wall_time_sec	peak_rss_mb	finished_utc	notes
-GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:18:46Z	stage2a-local-full completed without runtime failures
+GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:18:46Z	stage2a-local-full completed without runtime failures
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:19:13Z	
 GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:19:49Z	
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:21:20Z	
 GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:22:52Z	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	runtime_error	Leiden resolution search did not find exact K for this sample			7.3e-05	270.078	2026-04-22T04:24:15Z	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	runtime_error	Leiden resolution search did not find exact K for this sample			3.4e-05	270.078	2026-04-22T04:24:15Z	
-GSE280318	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	runtime_error	Leiden resolution search did not find exact K for this sample			1.4e-05	270.078	2026-04-22T04:24:15Z	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	11	runtime_error	Leiden resolution search did not find exact K for this sample			7.3e-05	270.078	2026-04-22T04:24:15Z	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	23	runtime_error	Leiden resolution search did not find exact K for this sample			3.4e-05	270.078	2026-04-22T04:24:15Z	
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	log1p_hvg	K6	6	37	runtime_error	Leiden resolution search did not find exact K for this sample			1.4e-05	270.078	2026-04-22T04:24:15Z	
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:24:50Z	
 GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:25:45Z	
-GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:26:05Z	
+GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:26:05Z	
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:30:21Z	
 GSE267401	GSM8265214_CTC17M	M4_spagcn	log1p_hvg	K6	6	23	runtime_error	SpaGCN produced 5 clusters (target K=6)			28.548377	1035.211	2026-04-22T04:34:39Z	
-GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:38:42Z	
+GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T04:38:42Z	
 GSE311294	GSM9322957_TR11_206	none	log1p_hvg	NA			none						2026-04-22T04:49:08Z	
 GSE267401	GSM8265211_CTC21P	none	log1p_hvg	NA			none						2026-04-22T04:58:15Z	
-GSE280318	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T05:04:58Z	
+GSE285505	GSM8703563_Tumor19	none	log1p_hvg	NA			none						2026-04-22T05:04:58Z	
 GSE289934	GSM8801844_A1	none	log1p_hvg	NA			none						2026-05-27T12:46:45Z	portability-demo-noncrc-m5 completed without runtime failures

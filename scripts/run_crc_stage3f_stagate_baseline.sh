@@ -134,6 +134,6 @@ run_full_stage_m5() {
 
 run_full_stage_m5 "stage3f" "GSE311294" "stage3a-full-replication-m5"
 run_full_stage_m5 "stage3f" "GSE267401" "stage3b-full-replication-m5"
-run_full_stage_m5 "stage3f" "GSE280318" "stage3g-full-replication-m5"
+run_full_stage_m5 "stage3f" "GSE285505" "stage3g-full-replication-m5"
 
 echo "Stage-3f runs completed (M5 STAGATE baseline)."
