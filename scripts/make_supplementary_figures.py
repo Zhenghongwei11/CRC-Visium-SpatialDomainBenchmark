@@ -512,7 +512,7 @@ def make_s3_instability_case_study(root: Path) -> None:
     fig = plt.figure(figsize=(7.5, 6.2), facecolor=WHITE)
     outer = fig.add_gridspec(2, 1, height_ratios=[1.0, 0.9], hspace=0.18)
     gs_top = outer[0].subgridspec(1, 4, wspace=0.05)
-    # Give the right colorbar a slightly wider lane so its tick labels are never clipped.
+    # Give the right colorbar a slightly wider lane so its tick labels are not clipped.
     gs_bot = outer[1].subgridspec(1, 5, width_ratios=[1.0, 0.055, 0.12, 1.0, 0.075], wspace=0.10)
 
     # top row: 4 seeds
@@ -659,11 +659,9 @@ def make_s4_boundary_vs_interior_seed_sensitivity(root: Path) -> None:
 def make_s5_histology_overlay_switching_spots(root: Path) -> None:
     """Histology overlay for the instability case study (stable vs switching spots).
 
-    Renders a reviewer-friendly visualization showing that switching spots are
-    spatially structured (interface-localized) rather than scattered noise.
+    Renders the switching-spot overlay used as histology context for TR11_206.
     """
     import io
-    import textwrap
 
     from PIL import Image  # type: ignore
 
@@ -801,7 +799,7 @@ def make_s5_histology_overlay_switching_spots(root: Path) -> None:
     ax1.set_ylim(y1, y0)  # keep origin='upper' orientation
     ax1.scatter(ref_xy[~switching_mask, 0], ref_xy[~switching_mask, 1], s=4.0, c="#111827", alpha=0.14, linewidths=0)
     ax1.scatter(ref_xy[switching_mask, 0], ref_xy[switching_mask, 1], s=7.5, c="#DC2626", alpha=0.85, linewidths=0)
-    ax1.set_title("Zoom: interface-localized switching", fontsize=9, pad=2)
+    ax1.set_title("Zoom: tissue-transition region", fontsize=9, pad=2)
 
     # Legend
     handles = [
@@ -810,16 +808,13 @@ def make_s5_histology_overlay_switching_spots(root: Path) -> None:
     ]
     ax1.legend(handles=handles, frameon=False, fontsize=7, loc="lower right")
 
-    title = f"Histology overlay for the instability case study — {dataset_id}/{sample_id}, K={k}"
-    subtitle = (
-        "Switching spots (changed domain label across seeds after label alignment) "
-        "form a structured band rather than scattered noise."
-    )
+    title = f"Histology overlay for {sample_id} instability case study"
+    subtitle = "Switching spots are concentrated near a visible tissue transition."
     fig.suptitle(title, y=0.98, fontsize=10, fontweight="bold", color="#111827")
-    fig.text(0.5, 0.945, textwrap.fill(subtitle, width=95), ha="center", va="top", fontsize=7.5, color="#4B5563")
+    fig.text(0.5, 0.935, subtitle, ha="center", va="top", fontsize=7.5, color="#4B5563")
 
     # Keep extra headroom so the subtitle does not collide with panel titles.
-    fig.subplots_adjust(left=0.02, right=0.99, top=0.83, bottom=0.05)
+    fig.subplots_adjust(left=0.02, right=0.99, top=0.80, bottom=0.05)
     _save(fig, root, "figureS4")
     print("Wrote plots/publication/png/figureS4.png")
     print("Wrote plots/publication/pdf/figureS4.pdf")
@@ -1037,8 +1032,8 @@ def make_s6_histology_feature_audit(root: Path) -> None:
 def main() -> int:
     root = Path(__file__).resolve().parent.parent
     make_s1_domain_marker_heatmap(root)
-    # NOTE: The workflow schematic is maintained as a vector diagram
-    # (see `plots/diagrams/figure2.svg`) and rendered separately.
+    # NOTE: The workflow schematic is maintained as a vector
+    # diagram (see `plots/diagrams/figure2.svg`) and rendered separately.
     # Keep the legacy matplotlib schematic optional to avoid overwriting that asset.
     if os.environ.get("MAKE_LEGACY_FIG2_WORKFLOW", "").strip() == "1":
         make_s2_workflow_schematic(root)

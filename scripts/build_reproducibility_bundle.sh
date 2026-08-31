@@ -9,13 +9,13 @@ export LANG=C
 
 mkdir -p "${OUT_DIR}"
 
-cat > "${OUT_DIR}/POLICY.md" <<'MD'
-# Public reproducibility bundle policy
+cat > "${OUT_DIR}/BUNDLE_CONTENTS.md" <<'MD'
+# Reproducibility bundle contents
 
 ## Purpose
 Provide a clean package for reproducing the analysis tables and figures from public data.
 
-## Canonical bundle rule
+## Bundle rule
 - There is exactly one canonical ZIP in this folder.
 - The GitHub release asset and archived reproducibility bundle should be identical (verified by checksums).
 
@@ -109,6 +109,8 @@ def collect_files() -> list[Path]:
             if "__pycache__" in p.parts:
                 continue
             if p.name in [".DS_Store"]:
+                continue
+            if p.parts[-3:-1] == ("docs", "reproducibility_bundle"):
                 continue
             if p.name in ["build_references.py", "reorder_refs.py"] or (p.name.startswith("lint_") and p.name.endswith("_style.sh")):
                 # Local-only writing/reference utilities are excluded from public bundles.
