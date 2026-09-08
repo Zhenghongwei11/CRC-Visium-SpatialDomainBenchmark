@@ -63,7 +63,7 @@ python3 scripts/make_cross_method_boundary_figures.py
 
 ## Citation
 
-Use the version-specific Zenodo DOI shown on the GitHub release for the exact archived code and data-derived tables. Citation metadata are provided in `CITATION.cff`.
+The archived `v1.0.15` code and data-derived tables are available at [Zenodo](https://doi.org/10.5281/zenodo.22657617). Citation metadata are provided in `CITATION.cff`.
 
 ## License
 

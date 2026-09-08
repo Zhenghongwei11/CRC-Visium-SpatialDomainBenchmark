@@ -12,6 +12,7 @@ authors:
     given-names: Wanping
     affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
 repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
+doi: "10.5281/zenodo.22657617"
 contact:
   - family-names: Zheng
     given-names: Hongwei

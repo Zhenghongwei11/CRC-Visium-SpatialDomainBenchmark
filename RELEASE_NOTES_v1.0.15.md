@@ -1,5 +1,7 @@
 # v1.0.15: Cross-method boundary reliability analysis
 
+Archived version: <https://doi.org/10.5281/zenodo.22657617>
+
 This release extends the CRC Visium analysis from global domain-map characteristics to a common boundary-reliability sequence across seven approaches.
 
 ## Included
