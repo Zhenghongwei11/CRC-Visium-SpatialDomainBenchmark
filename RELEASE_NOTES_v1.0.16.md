@@ -13,3 +13,5 @@ This release preserves the completed seven-method boundary-reliability analysis 
 ## Interpretation
 
 The original point estimates are unchanged. Across the five spatial approaches, opposite-sign point estimates occurred in 8.0%-18.5% of evaluable feature-settings. The interval-supported subset occurred in 2.1%-4.5%. These spot-bootstrap intervals remain descriptive because neighboring Visium spots are spatially dependent.
+
+Version archive: <https://doi.org/10.5281/zenodo.22662579>
