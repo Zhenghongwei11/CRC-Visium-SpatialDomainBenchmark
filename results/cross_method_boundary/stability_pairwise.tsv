@@ -1,0 +1,346 @@
+dataset_id	sample_id	method_id	method_label	K	reference_id	alternative_id	stability_type	ari	below_0_60	n_spots	n_switching	switching_fraction
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.9384158760163274	False	4690	109	0.0232409381663113
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.928817202824643	False	4690	125	0.026652452025586353
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.7454977461636721	False	4690	890	0.18976545842217485
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.7402681426551235	False	4690	887	0.18912579957356077
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.44781188205023226	True	3884	955	0.24588053553038106
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.906046397733092	False	3884	134	0.0345005149330587
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.771430773724637	False	3884	329	0.08470648815653965
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.5507125520969315	True	3884	1083	0.27883625128733264
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.9204533441759319	False	3721	116	0.031174415479709755
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.9420277043782759	False	3721	83	0.022305831765654396
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.7106989058111293	False	3721	749	0.20128997581295352
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.9075398767318732	False	3721	162	0.04353668368718087
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.3514791606726976	True	4757	1705	0.3584191717468993
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.6479964368123238	False	4757	607	0.12760142947235653
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.5718574439981384	True	4757	1241	0.2608787050662182
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.43176638792635463	True	4757	2043	0.42947235652722304
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.6057680270481127	False	3493	732	0.20956198110506727
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.6302388688549071	False	3493	509	0.14572001145147437
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.7489843505568381	False	3493	447	0.12797022616661896
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.7993333624219351	False	3493	306	0.08760377898654452
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.6643544416058914	False	2473	396	0.16012939749292357
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.2927983475772002	True	2473	969	0.3918317832591994
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.8583967887941091	False	2473	132	0.05337646583097452
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.848057928156838	False	2473	143	0.0578245046502224
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.8529851588018181	False	3563	205	0.05753578445130508
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.8290201969878053	False	3563	382	0.10721302273365142
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.8450939654168796	False	3563	327	0.09177659275891104
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.531487051956965	True	3563	1283	0.3600898119562167
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.9013724450591091	False	3415	135	0.03953147877013177
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.8895610137480333	False	3415	149	0.04363103953147877
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.5632932648527977	True	3415	1311	0.38389458272327964
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.755671499492055	False	3415	516	0.15109809663250365
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.5719112019940297	True	3742	701	0.18733297701763763
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.32230381942949293	True	3742	1520	0.4061998931052913
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.6759184725489816	False	3742	885	0.23650454302512025
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.5416056338642015	True	3742	999	0.2669695350080171
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.4545234209178606	True	4732	1980	0.4184277261200338
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.8882556373327641	False	4732	200	0.042265426880811495
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.7332832571711453	False	4732	624	0.13186813186813187
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.6796126415312649	False	4732	1096	0.231614539306847
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.6023154570081374	False	3673	868	0.23631908521644432
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.9366985187074904	False	3673	94	0.0255921589980942
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.5391898969819523	True	3673	1039	0.2828750340321263
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.498869144059121	True	3673	1019	0.27742989381976585
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.9585380652220641	False	4362	73	0.016735442457588262
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.9713024832978964	False	4362	49	0.011233379183860614
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.9402580393780383	False	4362	135	0.030949105914718018
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.9268634544484406	False	4362	163	0.03736817973406694
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	4	seed_11	seed_23	seed_pair_ari	0.4282190094019782	True	4564	1823	0.39943032427695
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	4	seed_11	seed_37	seed_pair_ari	0.8483305090939658	False	4564	313	0.06858019281332164
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	6	seed_11	seed_23	seed_pair_ari	0.805567964802918	False	4564	569	0.12467134092900964
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	6	seed_11	seed_37	seed_pair_ari	0.858587948407416	False	4564	290	0.0635407537248028
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9997002470488495	False	4690	1	0.00021321961620469082
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9997002470488495	False	4690	1	0.00021321961620469082
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9980467753713929	False	4690	5	0.0010660980810234541
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	1.0	False	4690	0	0.0
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9893424365281229	False	3884	13	0.0033470648815653965
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9899684886074922	False	3884	12	0.003089598352214212
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9505193282368322	False	3884	80	0.02059732234809475
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.8996156225111807	False	3884	163	0.04196704428424305
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.926547057513446	False	3721	89	0.02391830153184628
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9952457818592992	False	3721	5	0.0013437248051599033
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9598830682675051	False	3721	59	0.01585595270088686
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9908788921288165	False	3721	17	0.004568664337543671
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9866973982997029	False	4757	22	0.004624763506411604
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9878718126977508	False	4757	20	0.004204330460374185
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	1.0	False	4757	0	0.0
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9928605160533893	False	4757	13	0.0027328147992432207
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9945533802126167	False	3493	7	0.002004008016032064
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9849760443965451	False	3493	18	0.005153163469796736
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9886587383265739	False	3493	16	0.004580589750930432
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9921500174662173	False	3493	10	0.0028628685943315204
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9986773723574646	False	2473	1	0.0004043671653861706
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9774797220647143	False	2473	25	0.010109179134654266
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9941187575546181	False	2473	6	0.002426202992317024
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9941187575546181	False	2473	6	0.002426202992317024
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	3563	0	0.0
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9882318088770128	False	3563	17	0.0047712601740106655
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.998882269332491	False	3563	2	0.000561324726354196
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.998882269332491	False	3563	2	0.000561324726354196
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.98796840385798	False	3415	16	0.004685212298682284
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.998485252776395	False	3415	2	0.0005856515373352855
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.8941730624224348	False	3415	166	0.048609077598828695
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.8973868056043279	False	3415	161	0.04714494875549048
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9993920741731873	False	3742	1	0.0002672367717797969
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9993920741731873	False	3742	1	0.0002672367717797969
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9963123507852549	False	3742	6	0.0016034206306787815
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9967624063976007	False	3742	6	0.0016034206306787815
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9946282140317934	False	4732	9	0.0019019442096365174
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	4732	0	0.0
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9977145766564307	False	4732	4	0.0008453085376162299
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.8341301993448184	False	4732	403	0.08516483516483517
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	0.9969696539115317	False	3673	4	0.0010890280424720937
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9969696539115317	False	3673	4	0.0010890280424720937
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9254647999806749	False	3673	99	0.026953444051184317
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9523066729650301	False	3673	62	0.016879934658317452
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	4362	0	0.0
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	0.9980279451466628	False	4362	5	0.0011462631820265932
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9992242974873528	False	4362	2	0.0004585052728106373
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	1.0	False	4362	0	0.0
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	4564	0	0.0
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	4564	0	0.0
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_23	seed_pair_ari	0.9951609195071399	False	4564	10	0.0021910604732690623
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	6	seed_11	seed_37	seed_pair_ari	0.9910279801543935	False	4564	17	0.0037248028045574057
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	4690	0	0.0
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	4690	0	0.0
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9981465142275455	False	4690	6	0.001279317697228145
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9993256773559773	False	4690	1	0.00021321961620469082
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9867975117577942	False	3884	16	0.004119464469618949
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9851006684817822	False	3884	18	0.004634397528321318
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9798227735952072	False	3884	32	0.008238928939237899
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9030712906475608	False	3884	157	0.04042224510813594
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9810750674152392	False	3721	20	0.005374899220639613
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9952453654122795	False	3721	5	0.0013437248051599033
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9925038721191214	False	3721	10	0.0026874496103198066
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9945733663948516	False	3721	7	0.0018812147272238647
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9998002687527872	False	4757	1	0.00021021652301870928
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9767719457269644	False	4757	36	0.0075677948286735335
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9930635888276821	False	4757	14	0.00294303132226193
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9865929077251138	False	4757	24	0.005045196552449022
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9784568644001919	False	3493	24	0.006870884626395649
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9804473171935157	False	3493	22	0.006298310907529345
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9342915788721	False	3493	127	0.03635843114801031
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.8530150183790621	False	3493	250	0.071571714858288
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	2473	0	0.0
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9774797220647143	False	2473	25	0.010109179134654266
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9949089795022076	False	2473	5	0.0020218358269308533
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9926796531004063	False	2473	7	0.0028305701577031944
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9549036220646275	False	3563	66	0.018523715969688465
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9987530760792245	False	3563	2	0.000561324726354196
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9798925389647986	False	3563	29	0.00813920853213584
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9746916242742204	False	3563	37	0.010384507437552624
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	3415	0	0.0
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	3415	0	0.0
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9254349030408636	False	3415	117	0.034260614934114204
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9681921905162674	False	3415	47	0.01376281112737921
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9986554026467954	False	3742	2	0.0005344735435595938
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	3742	0	0.0
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9981299613533064	False	3742	3	0.0008017103153393907
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9882857050411975	False	3742	18	0.004810261892036344
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	4732	0	0.0
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	4732	0	0.0
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9981041070297283	False	4732	4	0.0008453085376162299
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.8270628086836803	False	4732	429	0.09065934065934066
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.9960948578524983	False	3673	5	0.001361285053090117
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.9960948578524983	False	3673	5	0.001361285053090117
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9737521390067228	False	3673	36	0.009801252382248844
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.985990196425599	False	3673	18	0.004900626191124422
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	0.99938347946965	False	4362	1	0.00022925263640531865
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	0.99752104291909	False	4362	6	0.001375515818431912
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	0.9976176949032841	False	4362	5	0.0011462631820265932
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9965103261572578	False	4362	7	0.0016047684548372307
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_23	seed_pair_ari	1.0	False	4564	0	0.0
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	seed_11	seed_37	seed_pair_ari	1.0	False	4564	0	0.0
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_23	seed_pair_ari	1.0	False	4564	0	0.0
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	seed_11	seed_37	seed_pair_ari	0.9990223208872843	False	4564	2	0.00043821209465381246
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.6864284500840303	False	4690	742	0.1582089552238806
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.8879380087710298	False	4690	215	0.04584221748400853
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.7178016934811752	False	4690	741	0.1579957356076759
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.9270243784286208	False	4690	172	0.03667377398720682
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.30838217522053163	True	3884	1579	0.4065396498455201
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.2919301400499418	True	3884	1490	0.38362512873326465
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.3793119575230733	True	3884	1516	0.3903192584963955
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.398963988563086	True	3884	1255	0.32312049433573636
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.3960202774431143	True	3721	495	0.13302875571083042
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.24822953545794765	True	3721	753	0.20236495565708143
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.6277608355676774	False	3721	693	0.18624025799516258
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.8395327894596935	False	3721	489	0.13141628594463853
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.865499086622011	False	4757	533	0.11204540676897204
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.21777308360294118	True	4757	1512	0.3178473828042884
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.6661224442408927	False	4757	872	0.18330880807231448
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.3224327873226747	True	4757	1537	0.32310279587975616
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.48815539227949284	True	3493	666	0.19066704838247925
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.818792794424627	False	3493	211	0.060406527340395075
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.37989785173642004	True	3493	1377	0.3942170054394503
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.6879833375446105	False	3493	638	0.18265101631835098
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.6610791553899102	False	2473	316	0.12778002426202992
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.7385401407005663	False	2473	222	0.08976951071572989
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.46905871876134764	True	2473	630	0.2547513141932875
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.5079814322820538	True	2473	589	0.2381722604124545
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.5651828381030083	True	3563	827	0.23210777434746
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.6165382615429165	False	3563	668	0.18748245860230142
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.44489231693615844	True	3563	1201	0.33707549817569465
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.6279528813776113	False	3563	737	0.2068481616615212
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.5308956435369189	True	3415	1030	0.30161054172767204
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.5304975032288598	True	3415	858	0.25124450951683747
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.3784062537407307	True	3415	1525	0.4465592972181552
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.39000276673591555	True	3415	1641	0.48052708638360175
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.3861590971968506	True	3742	1260	0.3367183324425441
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.3699082775525228	True	3742	1362	0.3639764831640834
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.38147582155159515	True	3742	1509	0.4032602886157135
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.5959515311444108	True	3742	884	0.23623730625334047
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.619083028217888	False	4732	1121	0.23689771766694845
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.6561475214736123	False	4732	1064	0.22485207100591717
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.7269928265355268	False	4732	691	0.14602704987320372
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.7193739240564353	False	4732	692	0.14623837700760778
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.39909447363660666	True	3673	1098	0.2989381976585897
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.4241081316671164	True	3673	1054	0.28695888919139667
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.5429198245240935	True	3673	880	0.2395861693438606
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.4446860102230561	True	3673	1299	0.3536618567928124
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.7875741919089441	False	4362	362	0.08298945437872536
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.8732631905372084	False	4362	205	0.04699679046309033
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.6453805325748213	False	4362	1068	0.24484181568088034
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.7673628512904238	False	4362	585	0.13411279229711143
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_4	graph_specification_ari	0.772199095354476	False	4564	393	0.08610867659947415
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	4	neighbors_6	neighbors_8	graph_specification_ari	0.6982292585568877	False	4564	708	0.1551270815074496
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_4	graph_specification_ari	0.689892675056186	False	4564	714	0.15644171779141106
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	6	neighbors_6	neighbors_8	graph_specification_ari	0.6308277965118914	False	4564	987	0.21625766871165644
+GSE267401	GSM8265211_CTC21P	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.4493370378675408	True	4690	1596	0.3402985074626866
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.9251745792410169	False	3884	74	0.01905252317198764
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.9399215607756264	False	3884	59	0.015190525231719876
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.4361706676916613	True	3884	1585	0.4080844490216272
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.3867909139058372	True	3884	1635	0.4209577754891864
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.6612883099282038	False	3721	616	0.16554689599570008
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.6311497164620749	False	3721	715	0.19215264713786617
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.8760503333396004	False	3721	299	0.08035474334856221
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.7750585700813207	False	4757	554	0.11645995375236494
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.7704503365505977	False	4757	574	0.12066428421273911
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.8999489955234822	False	4757	206	0.04330460374185411
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.5045581599124727	True	3493	855	0.24477526481534498
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.621223904714297	False	3493	668	0.19123962210134554
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.5096618094831514	True	3493	1068	0.30575436587460636
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.4698089700429169	True	2473	743	0.3004448038819248
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.571701629105932	True	2473	467	0.1888394662353417
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.3951319002777486	True	2473	1042	0.4213505863323898
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.5267665333368035	True	2473	850	0.34371209057824503
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.5258040383413455	True	3563	796	0.22340724108896998
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.3521177798046543	True	3563	1658	0.4653381981476284
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.4018206468217198	True	3415	1263	0.3698389458272328
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.7025364186266748	False	3742	594	0.15873864243719935
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.5213760728550634	True	3742	970	0.259219668626403
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.4701368565188977	True	3742	1408	0.37626937466595406
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.5252974814674909	True	4732	1095	0.23140321217244295
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.48358104600540514	True	4732	1290	0.27261200338123415
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.44245076336060424	True	3673	1375	0.3743533895997822
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.5740004395390883	True	3673	801	0.21807786550503674
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.4538398412217354	True	4362	1157	0.26524530032095367
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.5215876960740311	True	4362	1109	0.2542411737734984
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.6737501234395817	False	4362	701	0.16070609812012837
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_23	seed_pair_ari	0.5920139611027448	True	4564	754	0.16520595968448729
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	4	seed_11	seed_37	seed_pair_ari	0.5945528849495301	True	4564	704	0.15425065731814197
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_23	seed_pair_ari	0.5522100355196259	True	4564	1086	0.23794916739702016
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	6	seed_11	seed_37	seed_pair_ari	0.419356345006112	True	4564	1747	0.3827782646801052
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.885481926038385	False	4690	398	0.08486140724946695
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.9150021091698459	False	4690	275	0.05863539445628998
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.3962430651378623	True	4690	1813	0.38656716417910447
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.6637861456417914	False	4690	857	0.18272921108742005
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.46199318155137103	True	3884	950	0.24459320288362513
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.45331505096555996	True	3884	957	0.24639546858908343
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.7611786587145578	False	3884	445	0.11457260556127703
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.7183442889601744	False	3884	525	0.1351699279093718
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.35543670142630523	True	3721	1309	0.3517871539908627
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.3404947551948931	True	3721	1474	0.39613007256113947
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.8158027946805915	False	3721	418	0.11233539371136791
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.8748209558667482	False	3721	272	0.07309862940069874
+GSE267401	GSM8265214_CTC17M	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.2717583225230379	True	4757	2006	0.4216943451755308
+GSE267401	GSM8265214_CTC17M	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.35560496031452066	True	4757	1616	0.3397099011982342
+GSE267401	GSM8265214_CTC17M	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.39201021122732105	True	4757	1687	0.35463527433256253
+GSE285505	GSM8703563_Tumor19	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.23342141657665555	True	3493	1503	0.4302891497280275
+GSE285505	GSM8703563_Tumor19	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.3259618345922808	True	3493	1237	0.35413684511880905
+GSE285505	GSM8703563_Tumor19	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.20628857692288347	True	3493	1827	0.5230460921843687
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.7666033952966026	False	2473	234	0.09462191670036393
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.7599852109145899	False	2473	239	0.09664375252729479
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.46645335618590905	True	2473	988	0.3995147594015366
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.5531509198248441	True	2473	644	0.2604124545086939
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.4412925149828666	True	3563	1176	0.3300589390962672
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.5258824971770281	True	3563	900	0.25259612685938815
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.5410301518417849	True	3563	1184	0.33230423800168396
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.5379652608134584	True	3563	1227	0.3443727196182992
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.5183850758555907	True	3415	964	0.2822840409956076
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.5103314327802432	True	3415	1012	0.29633967789165444
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.4882043363283289	True	3415	941	0.2755490483162518
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.4875689488566196	True	3415	928	0.27174231332357246
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.8980296230419237	False	3742	162	0.0432923570283271
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.9158335357613805	False	3742	125	0.03340459647247461
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.8433771651601655	False	3742	245	0.06547300908605024
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.8579559058895697	False	3742	242	0.06467129877071084
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.9182043466124618	False	4732	152	0.032121724429416736
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.933732371397007	False	4732	121	0.025570583262890956
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.6732241477771391	False	4732	1085	0.22928994082840237
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.6978046931064676	False	4732	818	0.17286559594251902
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.43620754483971563	True	3673	960	0.2613667301933025
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.4211998952567619	True	3673	1090	0.2967601415736455
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.48947485060272894	True	3673	908	0.24720936564116525
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.45451316553625554	True	3673	1185	0.32262455758235775
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.8611576572493812	False	4362	306	0.07015130674002751
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.9038178567022334	False	4362	174	0.039889958734525444
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.786280792182341	False	4362	530	0.12150389729481889
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.8420474712157808	False	4362	356	0.08161393856029345
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	4	seed_11	seed_23	seed_pair_ari	0.894669301766121	False	4564	208	0.04557405784399649
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	4	seed_11	seed_37	seed_pair_ari	0.9475393235839412	False	4564	93	0.02037686240140228
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	6	seed_11	seed_23	seed_pair_ari	0.8181011402241735	False	4564	394	0.08632778264680105
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	6	seed_11	seed_37	seed_pair_ari	0.911439850930665	False	4564	189	0.04141104294478527
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.7814710671088025	False	4690	544	0.11599147121535182
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.8235551809691752	False	4690	548	0.11684434968017057
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.42866225874074226	True	4690	1692	0.3607675906183369
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.6093380203897443	False	4690	1377	0.29360341151385927
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.3496834280993498	True	3884	1280	0.329557157569516
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.46465180834211955	True	3884	969	0.24948506694129763
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5819184554753977	True	3884	837	0.2154994850669413
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.8152638190010493	False	3884	326	0.0839340885684861
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.5871778169099283	True	3721	638	0.17145928513840367
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.21074584663594817	True	3721	1799	0.4834721848965332
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5416860280257496	True	3721	1216	0.32679387261488846
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.5432481863517169	True	3721	1217	0.3270626175759205
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.3651871793322926	True	4757	1436	0.3018709270548665
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.558011906827754	True	4757	939	0.197393315114568
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5107323368148059	True	4757	1271	0.2671852007567795
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.5226583709022751	True	4757	1407	0.29577464788732394
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.30336193382096993	True	3493	1275	0.3650157457772688
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.5501982012297081	True	3493	630	0.18036072144288579
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.4503088965692135	True	3493	1094	0.3131978242198683
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.5462106637939609	True	3493	720	0.20612653879186946
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.6583168019895494	False	2473	304	0.12292761827739587
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.8134913314244436	False	2473	160	0.0646987464617873
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.4929986060759494	True	2473	883	0.35705620703598867
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.4786169742697316	True	2473	821	0.3319854427820461
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.7557286179211563	False	3563	371	0.10412573673870335
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.4622316922103837	True	3563	1133	0.317990457479652
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5773904982734605	True	3563	773	0.2169520067358967
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.6665410547056908	False	3563	812	0.22789783889980353
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.7993836955904198	False	3415	270	0.07906295754026355
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.798983441797553	False	3415	281	0.08228404099560761
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.6004104283808045	False	3415	824	0.24128843338213762
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.534279484749666	True	3415	923	0.2702781844802343
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.4169336881962351	True	3742	1177	0.31453768038482094
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.7611058603889268	False	3742	357	0.0954035275253875
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5461594768528572	True	3742	849	0.22688401924104756
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.7630105329860579	False	3742	397	0.10609299839657937
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.44485490487927337	True	4732	1383	0.2922654268808115
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.5672913355958161	True	4732	1034	0.21851225697379545
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.49716932387146723	True	4732	1421	0.30029585798816566
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.6243511774444107	False	4732	1459	0.30832628909551985
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.5232167496762032	True	3673	1175	0.3199019874761775
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.4729992892181607	True	3673	1287	0.35039477266539615
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.6532682365082306	False	3673	573	0.15600326708412743
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.46668170369059764	True	3673	1244	0.3386877212088211
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.891073857321275	False	4362	234	0.05364511691884457
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.9120623629299177	False	4362	183	0.041953232462173314
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.6429753172533865	False	4362	1145	0.26249426868408987
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.8121908920971671	False	4362	405	0.09284731774415406
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	4	seed_11	seed_23	seed_pair_ari	0.8658833644355358	False	4564	242	0.053023663453111304
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	4	seed_11	seed_37	seed_pair_ari	0.8199069810863739	False	4564	338	0.0740578439964943
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	6	seed_11	seed_23	seed_pair_ari	0.5834265674422956	True	4564	1245	0.27278702892199824
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	6	seed_11	seed_37	seed_pair_ari	0.6182278986375163	False	4564	1124	0.2462751971954426

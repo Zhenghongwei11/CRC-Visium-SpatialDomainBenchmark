@@ -64,7 +64,7 @@ def main() -> int:
             how="left",
         )
 
-    # Add reviewer-friendly, sign-agnostic summaries for the weak anchor.
+    # Add sign-agnostic summaries for the weak image-based anchor.
     for col in [
         "edge_align_delta_grad_boundary_minus_within_refseed",
         "edge_align_delta_grad_boundary_minus_interior_refseed",

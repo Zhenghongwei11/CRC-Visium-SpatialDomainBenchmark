@@ -584,6 +584,12 @@ def main() -> int:
     parser.add_argument("--stagate-max-epochs", type=int, default=200)
     parser.add_argument("--stagate-max-spots", type=int, default=6500)
     parser.add_argument(
+        "--deep-method-seed-limit",
+        type=int,
+        default=2,
+        help="Maximum requested seeds used by SpaGCN/STAGATE; use 0 to run all requested seeds.",
+    )
+    parser.add_argument(
         "--export-domain-maps-tsv",
         default="",
         help=(
@@ -596,6 +602,11 @@ def main() -> int:
         "--export-domain-maps-reset",
         action="store_true",
         help="If set, delete --export-domain-maps-tsv before appending.",
+    )
+    parser.add_argument(
+        "--export-domain-maps-all-seeds",
+        action="store_true",
+        help="Export every successful seed-specific map instead of only the reference seed.",
     )
     args = parser.parse_args()
 
@@ -659,12 +670,15 @@ def main() -> int:
         if "M3_spatial_leiden" in methods_requested:
             # Spatially constrained graph baseline (Leiden on weighted spatial kNN graph).
             method_configs.append(("M3_spatial_leiden", "leiden", pcs, seeds))
+        deep_seeds = seeds
+        if int(args.deep_method_seed_limit) > 0:
+            deep_seeds = seeds[: int(args.deep_method_seed_limit)]
         if "M4_spagcn" in methods_requested:
             # SpaGCN (expression + spatial coordinates, no histology; fixed-K via kmeans init).
-            method_configs.append(("M4_spagcn", "spagcn", pcs, seeds[:2] if len(seeds) > 1 else seeds))
+            method_configs.append(("M4_spagcn", "spagcn", pcs, deep_seeds))
         if "M5_stagate" in methods_requested:
             # STAGATE (graph-attention autoencoder; portable implementation; fixed-K via k-means).
-            method_configs.append(("M5_stagate", "stagate", pcs, seeds[:2] if len(seeds) > 1 else seeds))
+            method_configs.append(("M5_stagate", "stagate", pcs, deep_seeds))
 
         fig1_rows.append(
             {
@@ -761,7 +775,7 @@ def main() -> int:
                                 raise RuntimeError("Leiden graph was not initialized")
                             res, _, _ = leiden_resolution_by_k[k]
                             exact = bool(leiden_resolution_by_k[k][2])
-                            if (not exact) and str(args.note).startswith("stage3"):
+                            if not exact:
                                 raise RuntimeError("Leiden resolution search did not find exact K for this sample")
                             labels = _leiden_membership(leiden_graph, res, seed=seed)
                             if exact and int(len(np.unique(labels))) != int(k):
@@ -798,6 +812,7 @@ def main() -> int:
                     except Exception as exc:  # pragma: no cover - defensive logging
                         status = "failed"
                         error_message = str(exc)
+                        labels = None
                     elapsed = time.perf_counter() - started
                     finished_utc = utc_now()
                     peak_rss_mb = process.memory_info().rss / (1024 * 1024)
@@ -932,6 +947,7 @@ def main() -> int:
                             else (stagate_note if method_kind == "stagate" else "")
                         )
                     )
+                    export_seeds = sorted(labels_by_seed) if args.export_domain_maps_all_seeds else [int(reference_seed)]
                     with export_map_path.open("a", encoding="utf-8", newline="") as handle:
                         fieldnames = [
                             "dataset_id",
@@ -939,32 +955,42 @@ def main() -> int:
                             "method_id",
                             "K",
                             "seed",
+                            "replicate_type",
+                            "replicate_id",
+                            "config_id",
                             "barcode",
                             "x",
                             "y",
                             "domain_label",
+                            "status",
                             "notes",
                         ]
                         writer = csv.DictWriter(handle, fieldnames=fieldnames, delimiter="\t")
                         if handle.tell() == 0:
                             writer.writeheader()
-                        for bc, (xv, yv), lab in zip(
-                            barcodes.tolist(), coords.tolist(), ref_labels.tolist(), strict=True
-                        ):
-                            writer.writerow(
-                                {
-                                    "dataset_id": args.dataset_id,
-                                    "sample_id": sample_id,
-                                    "method_id": method_id,
-                                    "K": int(k),
-                                    "seed": int(reference_seed),
-                                    "barcode": str(bc),
-                                    "x": float(xv),
-                                    "y": float(yv),
-                                    "domain_label": int(lab) + 1,
-                                    "notes": note,
-                                }
-                            )
+                        for export_seed in export_seeds:
+                            export_labels = labels_by_seed[int(export_seed)]
+                            for bc, (xv, yv), lab in zip(
+                                barcodes.tolist(), coords.tolist(), export_labels.tolist(), strict=True
+                            ):
+                                writer.writerow(
+                                    {
+                                        "dataset_id": args.dataset_id,
+                                        "sample_id": sample_id,
+                                        "method_id": method_id,
+                                        "K": int(k),
+                                        "seed": int(export_seed),
+                                        "replicate_type": "seed",
+                                        "replicate_id": f"seed_{int(export_seed)}",
+                                        "config_id": f"K{int(k)}_default",
+                                        "barcode": str(bc),
+                                        "x": float(xv),
+                                        "y": float(yv),
+                                        "domain_label": int(lab) + 1,
+                                        "status": "success",
+                                        "notes": note,
+                                    }
+                                )
                 for cluster in np.unique(ref_labels):
                     in_mask = ref_labels == cluster
                     out_mask = ~in_mask

@@ -4,3 +4,11 @@ Source Data 2	results/benchmarks/bayesspace_rigor_backfill.tsv	Fig2R/Fig4R rigor
 Source Data 3	results/benchmarks/statistical_gate_summary.tsv	claim gate outcomes	overall_gate_status and support_tier
 Source Data 4	results/benchmarks/failure_log.tsv	compute reliability appendix	explicit runtime failures
 Source Data 5	results/dataset_summary.tsv	dataset coverage and scale	datasets used, sample counts, and BayesSpace coverage
+Source Data 6	results/cross_method_boundary/coverage_manifest.tsv	cross-method run coverage	complete, incomplete, and failed configurations
+Source Data 7	results/cross_method_boundary/global_characterization.tsv	internal map characteristics	spatial coherence, marker coherence, and stability by section and K
+Source Data 8	results/cross_method_boundary/stability_pairwise.tsv	partition stability	pairwise ARI under declared perturbations
+Source Data 9	results/cross_method_boundary/switching_boundary_relationship.tsv	boundary localization	switching fractions and enrichment near inferred boundaries
+Source Data 10	results/cross_method_boundary/histology_gradient_localization.tsv	image-gradient context	switching-versus-stable image-gradient comparisons
+Source Data 11	results/cross_method_boundary/downstream_contrasts.tsv	downstream robustness	boundary-minus-interior feature contrasts by partition
+Source Data 12	results/cross_method_boundary/computational_sensitivity.tsv	computational sensitivity	method-relevant settings and sensitivity metrics
+Source Data 13	results/cross_method_boundary/switching_spots.tsv.gz	representative and aggregate switching maps	spot-level aligned switching indicators

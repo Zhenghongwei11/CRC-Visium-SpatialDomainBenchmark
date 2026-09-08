@@ -1,7 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software and dataset-derived tables, please cite the associated study and this repository."
-title: "Benchmarking spatial domain identification in colorectal cancer Visium data"
+message: "If you use this software or its dataset-derived tables, please cite this version of the repository."
+title: "Boundary sensitivity of spatial-domain maps in colorectal cancer Visium data"
 type: software
+version: 1.0.15
+date-released: 2026-09-08
 authors:
   - family-names: Zheng
     given-names: Hongwei
@@ -18,5 +20,6 @@ keywords:
   - spatial transcriptomics
   - colorectal cancer
   - Visium
-  - benchmarking
-  - BayesSpace
+  - boundary sensitivity
+  - partition stability
+  - downstream robustness

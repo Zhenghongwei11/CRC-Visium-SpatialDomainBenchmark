@@ -34,7 +34,7 @@ planning_dir="open""spec"
 workflow_dir="con""ductor"
 staging_dir="release""_staging"
 submission_dir="sub""missions"
-forbidden_rg="(^|/)(${planning_dir}|${workflow_dir}|${staging_dir})/|(^|/)docs/${submission_dir}/|\\.(docx|pdf)$|(^|/)\\.env|token|id_rsa|BEGIN (RSA|OPENSSH) PRIVATE KEY"
+forbidden_rg="(^|/)(${planning_dir}|${workflow_dir}|${staging_dir})/|(^|/)docs/${submission_dir}/|\\.docx$|(^|/)\\.env|token|id_rsa|BEGIN (RSA|OPENSSH) PRIVATE KEY"
 if rg -n --glob '!scripts/preflight_release.sh' "${forbidden_rg}" . >/dev/null 2>&1; then
   echo "[preflight] FAILED: forbidden patterns found (showing matches)"
   rg -n --glob '!scripts/preflight_release.sh' "${forbidden_rg}" . | head -n 200

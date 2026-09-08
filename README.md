@@ -1,57 +1,70 @@
-# Benchmarking spatial domain identification in CRC Visium data
+# Boundary sensitivity of spatial-domain maps in CRC Visium data
 
-We benchmark spatial domain identification methods in colorectal cancer (CRC) 10x Genomics Visium spatial transcriptomics datasets and provide scripts plus derived tables to reproduce the key results. The benchmark emphasizes fixed-configuration comparisons, stability across random seeds and MCMC depth, localized assignment uncertainty, and downstream sensitivity of boundary-focused summaries.
+This repository contains code, derived tables, and publication figures for evaluating how spatial-domain assignments respond to plausible analytic perturbations in colorectal cancer (CRC) 10x Genomics Visium data.
 
-## Why this study matters
-Spatial transcriptomics makes it possible to see how tumor cells, stroma, and immune compartments are organized in situ, but many downstream analyses depend on an upstream “spatial domain” map. In colorectal cancer, domain boundaries can be gradual and mixed, so small analytic choices can change the apparent tissue structure. This project evaluates BayesSpace against graph-based and classical baselines under fixed settings, then follows an unstable CRC interface into spot-level localization and boundary-summary sensitivity.
+The analysis compares seven approaches across 13 sections from three public cohorts at `K=4` and `K=6`. Expression-only and coordinate-augmented k-means were stable under the tested seeds. BayesSpace, spatial Ward, spatial Leiden, SpaGCN-style, and STAGATE-style maps showed varying degrees of assignment sensitivity. Switching spots were repeatedly enriched near inferred domain boundaries, but their image-gradient context was mixed. Boundary-focused expression summaries could attenuate, disappear, or change direction for selected method-setting combinations.
 
-Zenodo DOIs:
-- After a GitHub Release is published, Zenodo will automatically archive that version and mint (i) a **version DOI** and (ii) a **concept DOI** for the record family. Cite the **version DOI** corresponding to the exact release tag used.
+These results describe reliability under the specified perturbations. Spatial coherence and marker coherence are internal map properties rather than external accuracy measures, and inferred boundaries are not pathology annotations.
 
-## Quick start (reproduce key tables)
-Prerequisites: Python (3.x) and R (with `Rscript`) available on PATH.
+## Repository contents
 
-Run the minimal stages (these scripts will download public GEO data and create isolated environments automatically where needed):
-- `bash scripts/run_crc_stage2_local.sh`
-- `bash scripts/run_crc_stage3_full_replication.sh`
-- `PYTHON_BIN=python3.11 bash scripts/run_crc_stage3e_spagcn_baseline.sh` (optional; SpaGCN baseline)
-- `PYTHON_BIN=python3.11 bash scripts/run_crc_stage3f_stagate_baseline.sh` (optional; STAGATE-style baseline)
-- `BAYES_INSTALL=1 bash scripts/run_crc_stage4_bayesspace.sh`
-- `bash scripts/run_crc_stage10_bayesspace_rigor_backfill.sh`
+- `results/cross_method_boundary/`: analysis-ready evidence tables, coverage records, and compressed switching-spot data.
+- `figures/cross_method_boundary/`: main and supplementary figures in PNG and PDF formats.
+- `scripts/`: data preparation, domain analysis, sensitivity analysis, evidence-table, and figure-generation code.
+- `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`: consolidated workbook containing supplementary tables S1-S37.
+- `docs/BOUNDARY_RELIABILITY_PROTOCOL.md`: fixed analysis definitions and interpretation rules.
+- `docs/DATA_MANIFEST.tsv`: public data sources and download information.
+- `docs/FIGURE_PROVENANCE.tsv` and `docs/SOURCE_DATA_MAP.tsv`: links from figures and reported results to machine-readable tables.
 
-Then rebuild the claim-gate table and derived artifacts:
-- `Rscript scripts/build_statistical_gate_summary.R`
-- `python3 scripts/build_required_artifacts.py`
-
-Optional targeted sensitivity (BayesSpace MCMC depth):
-- `bash scripts/run_crc_stage3g_bayesspace_nrep_sensitivity.sh` (nrep=1000 on two representative sections)
-- `python3 scripts/build_bayesspace_nrep_sensitivity.py` (writes `results/benchmarks/bayesspace_nrep_sensitivity_summary.tsv`)
-
-### One-click (end-to-end)
-To run the full pipeline (tables + figures) with a single command:
-- `bash scripts/reproduce_one_click.sh`
-
-## Regenerating figures (optional)
-If you want to regenerate publication figures locally, install the Python dependencies and rerun figure scripts:
-- `python3 -m venv .venv && source .venv/bin/activate`
-- `python -m pip install -r requirements.txt`
-- `python scripts/make_publication_figures_v2.py`
-- `python scripts/make_supplementary_figures.py`
+Large raw data and intermediate domain maps are not redistributed. They can be regenerated from the public GEO records and the scripts in this repository.
 
 ## Data sources
-Public GEO accessions used in this benchmark:
+
+CRC Visium data:
+
 - GSE267401
 - GSE311294
 - GSE285505
-- GSE289934 (optional portability demo; mouse brain)
 
-The download URLs and file sizes are recorded in `docs/DATA_MANIFEST.tsv`.
+An optional non-CRC portability example uses GSE289934 (mouse brain).
 
-## Supplementary tables
-The repository includes a consolidated supplementary-table workbook at `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`. The workbook provides reader-facing sheets for the supplementary data tables. The same machine-readable source tables are also available as TSV files under `results/`, with figure/table provenance recorded in `docs/FIGURE_PROVENANCE.tsv` and source-data links recorded in `docs/SOURCE_DATA_MAP.tsv`.
+## Reproduce the analysis
 
-## Optional portability demo (non-CRC)
-To demonstrate that the evaluation framework can be applied outside CRC, we include a small non-CRC Visium dataset (GSE289934; mouse brain; 2 sections). If the dataset is downloaded and the STAGATE environment is available, you can build a descriptive portability summary and an image-based weak anchor (edge-alignment) table:
+Prerequisites are Python 3 and R with `Rscript` available on `PATH`. Individual method environments and public GEO downloads are prepared by the stage scripts where needed.
 
-- `bash scripts/build_portability_edge_alignment.sh` (writes `results/benchmarks/portability_histology_edge_alignment.tsv`)
-- `python3 scripts/build_portability_demo_summary.py` (writes `results/benchmarks/portability_demo_noncrc_summary.tsv`)
+Run the established end-to-end benchmark pipeline:
+
+```bash
+bash scripts/reproduce_one_click.sh
+```
+
+Generate the cross-method figures directly from the released evidence tables:
+
+```bash
+python3 scripts/make_cross_method_boundary_figures.py
+```
+
+Intermediate partitions for the extended boundary analysis can be generated with:
+
+```bash
+bash scripts/run_bayesspace_partition_replicates.sh
+python3 scripts/run_spatial_ward_perturbations.py --help
+python3 scripts/run_spatial_leiden_perturbations.py --help
+python3 scripts/run_crc_spatial_smoketest.py --help
+```
+
+After the intermediate maps are present under `results/cross_method_boundary/domain_maps/`, rebuild the evidence tables with:
+
+```bash
+python3 scripts/build_cross_method_boundary_evidence.py
+python3 scripts/build_cross_method_computational_sensitivity.py
+python3 scripts/make_cross_method_boundary_figures.py
+```
+
+## Citation
+
+Use the version-specific Zenodo DOI shown on the GitHub release for the exact archived code and data-derived tables. Citation metadata are provided in `CITATION.cff`.
+
+## License
+
+Code is released under the MIT License. Source datasets remain subject to their original repository terms.

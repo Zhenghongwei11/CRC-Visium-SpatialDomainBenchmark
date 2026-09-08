@@ -1,0 +1,183 @@
+dataset_id	sample_id	method_id	method_label	K	expected_replicates	successful_replicates	replicate_ids	invalid_replicates	observed_domain_counts	n_spots	reference_id	status	source_file	failure_reason	failed_replicates
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4690	seed_11	complete	GSE267401_bayes_GSM8265211_CTC21P.tsv		
+GSE267401	GSM8265211_CTC21P	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4690	seed_11	complete	GSE267401_bayes_GSM8265211_CTC21P.tsv		
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_bayes_GSM8265212_CTC21M.tsv		
+GSE267401	GSM8265212_CTC21M	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_bayes_GSM8265212_CTC21M.tsv		
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_bayes_GSM8265213_CTC17P.tsv		
+GSE267401	GSM8265213_CTC17P	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3721	seed_11	complete	GSE267401_bayes_GSM8265213_CTC17P.tsv		
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_bayes_GSM8265214_CTC17M.tsv		
+GSE267401	GSM8265214_CTC17M	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4757	seed_11	complete	GSE267401_bayes_GSM8265214_CTC17M.tsv		
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3493	seed_11	complete	GSE285505_bayes_GSM8703563_Tumor19.tsv		
+GSE285505	GSM8703563_Tumor19	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3493	seed_11	complete	GSE285505_bayes_GSM8703563_Tumor19.tsv		
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_bayes_GSM8703564_Tumor20.tsv		
+GSE285505	GSM8703564_Tumor20	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_bayes_GSM8703564_Tumor20.tsv		
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_bayes_GSM8703565_Tumor24.tsv		
+GSE285505	GSM8703565_Tumor24	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3563	seed_11	complete	GSE285505_bayes_GSM8703565_Tumor24.tsv		
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3415	seed_11	complete	GSE285505_bayes_GSM8703566_Tumor26.tsv		
+GSE285505	GSM8703566_Tumor26	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3415	seed_11	complete	GSE285505_bayes_GSM8703566_Tumor26.tsv		
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3742	seed_11	complete	GSE311294_bayes_GSM9322957_TR11_206.tsv		
+GSE311294	GSM9322957_TR11_206	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_bayes_GSM9322957_TR11_206.tsv		
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_bayes_GSM9322958_TR11_16184.tsv		
+GSE311294	GSM9322958_TR11_16184	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4732	seed_11	complete	GSE311294_bayes_GSM9322958_TR11_16184.tsv		
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_bayes_GSM9322959_TR11_18105.tsv		
+GSE311294	GSM9322959_TR11_18105	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3673	seed_11	complete	GSE311294_bayes_GSM9322959_TR11_18105.tsv		
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_bayes_GSM9322960_TR11_21723.tsv		
+GSE311294	GSM9322960_TR11_21723	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4362	seed_11	complete	GSE311294_bayes_GSM9322960_TR11_21723.tsv		
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_bayes_GSM9322961_TR16_23542.tsv		
+GSE311294	GSM9322961_TR16_23542	BayesSpace	BayesSpace	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_bayes_GSM9322961_TR16_23542.tsv		
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4690	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265211_CTC21P	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4690	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265212_CTC21M	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3721	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265214_CTC17M	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4757	seed_11	complete	GSE267401_core.tsv		
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3493	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703563_Tumor19	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3493	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3563	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3415	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703566_Tumor26	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3415	seed_11	complete	GSE285505_core.tsv		
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3742	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322957_TR11_206	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4732	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322959_TR11_18105	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3673	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322960_TR11_21723	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4362	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322961_TR16_23542	M0_expr_kmeans	expression-only k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_core.tsv		
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4690	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265211_CTC21P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4690	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265212_CTC21M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3721	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265214_CTC17M	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4757	seed_11	complete	GSE267401_core.tsv		
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3493	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703563_Tumor19	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3493	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3563	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3415	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703566_Tumor26	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3415	seed_11	complete	GSE285505_core.tsv		
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3742	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322957_TR11_206	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4732	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322959_TR11_18105	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3673	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322960_TR11_21723	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4362	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322961_TR16_23542	M1_spatial_concat_kmeans	coordinate-augmented k-means	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_core.tsv		
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	4690	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265211_CTC21P	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	4690	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3884	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265212_CTC21M	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3884	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3721	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265213_CTC17P	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3721	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	4757	neighbors_6	complete	GSE267401_ward.tsv		
+GSE267401	GSM8265214_CTC17M	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	4757	neighbors_6	complete	GSE267401_ward.tsv		
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3493	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703563_Tumor19	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3493	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	2473	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703564_Tumor20	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	2473	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3563	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703565_Tumor24	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3563	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3415	neighbors_6	complete	GSE285505_ward.tsv		
+GSE285505	GSM8703566_Tumor26	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3415	neighbors_6	complete	GSE285505_ward.tsv		
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3742	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322957_TR11_206	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3742	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	4732	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322958_TR11_16184	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	4732	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	3673	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322959_TR11_18105	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	3673	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	4362	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322960_TR11_21723	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	4362	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	4	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:4;neighbors_6:4;neighbors_8:4	4564	neighbors_6	complete	GSE311294_ward.tsv		
+GSE311294	GSM9322961_TR16_23542	M2_spatial_ward	spatial Ward	6	3	3	neighbors_4,neighbors_6,neighbors_8		neighbors_4:6;neighbors_6:6;neighbors_8:6	4564	neighbors_6	complete	GSE311294_ward.tsv		
+GSE267401	GSM8265211_CTC21P	M3_spatial_leiden	spatial Leiden	4	3	2	seed_11,seed_37		seed_11:4;seed_37:4	4690	seed_11	incomplete	GSE267401_core.tsv	Leiden produced 3 clusters (target K=4)	seed_23
+GSE267401	GSM8265211_CTC21P	M3_spatial_leiden	spatial Leiden	6	3	1	seed_11		seed_11:6	4690	seed_11	incomplete	GSE267401_core.tsv	Leiden produced 5 clusters (target K=6)	seed_23,seed_37
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265212_CTC21M	M3_spatial_leiden	spatial Leiden	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265213_CTC17P	M3_spatial_leiden	spatial Leiden	6	3	2	seed_11,seed_23		seed_11:6;seed_23:6	3721	seed_11	incomplete	GSE267401_core.tsv	Leiden produced 7 clusters (target K=6)	seed_37
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_core.tsv		
+GSE267401	GSM8265214_CTC17M	M3_spatial_leiden	spatial Leiden	6	3	2	seed_11,seed_23		seed_11:6;seed_23:6	4757	seed_11	incomplete	GSE267401_core.tsv	Leiden produced 7 clusters (target K=6)	seed_37
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	spatial Leiden	4	3	2	seed_11,seed_23		seed_11:4;seed_23:4	3493	seed_11	incomplete	GSE285505_core.tsv	Leiden produced 5 clusters (target K=4)	seed_37
+GSE285505	GSM8703563_Tumor19	M3_spatial_leiden	spatial Leiden	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3493	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703564_Tumor20	M3_spatial_leiden	spatial Leiden	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_core.tsv		
+GSE285505	GSM8703565_Tumor24	M3_spatial_leiden	spatial Leiden	6	3	1	seed_11		seed_11:6	3563	seed_11	incomplete	GSE285505_core.tsv	Leiden produced 7 clusters (target K=6); Leiden produced 9 clusters (target K=6)	seed_23,seed_37
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	spatial Leiden	4	3	2	seed_11,seed_23		seed_11:4;seed_23:4	3415	seed_11	incomplete	GSE285505_core.tsv	Leiden produced 3 clusters (target K=4)	seed_37
+GSE285505	GSM8703566_Tumor26	M3_spatial_leiden	spatial Leiden	6	3	0					seed_11	failed		Leiden resolution search did not find exact K for this sample	seed_11,seed_23,seed_37
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	spatial Leiden	4	3	2	seed_11,seed_23		seed_11:4;seed_23:4	3742	seed_11	incomplete	GSE311294_core.tsv	Leiden produced 5 clusters (target K=4)	seed_37
+GSE311294	GSM9322957_TR11_206	M3_spatial_leiden	spatial Leiden	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322958_TR11_16184	M3_spatial_leiden	spatial Leiden	6	3	1	seed_11		seed_11:6	4732	seed_11	incomplete	GSE311294_core.tsv	Leiden produced 5 clusters (target K=6)	seed_23,seed_37
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322959_TR11_18105	M3_spatial_leiden	spatial Leiden	6	3	1	seed_11		seed_11:6	3673	seed_11	incomplete	GSE311294_core.tsv	Leiden produced 7 clusters (target K=6)	seed_23,seed_37
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322960_TR11_21723	M3_spatial_leiden	spatial Leiden	6	3	2	seed_11,seed_37		seed_11:6;seed_37:6	4362	seed_11	incomplete	GSE311294_core.tsv	Leiden produced 7 clusters (target K=6)	seed_23
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_core.tsv		
+GSE311294	GSM9322961_TR16_23542	M3_spatial_leiden	spatial Leiden	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_core.tsv		
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4690	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265211_CTC21P	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4690	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265212_CTC21M	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265213_CTC17P	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3721	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265214_CTC17M	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265214_CTC17M	M4_spagcn	SpaGCN-style	6	3	2	seed_11,seed_37		seed_11:6;seed_37:6	4757	seed_11	incomplete	GSE267401_deep.tsv	SpaGCN produced 5 clusters (target K=6)	seed_23
+GSE285505	GSM8703563_Tumor19	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3493	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703563_Tumor19	M4_spagcn	SpaGCN-style	6	3	2	seed_11,seed_23		seed_11:6;seed_23:6	3493	seed_11	incomplete	GSE285505_deep.tsv	SpaGCN produced 5 clusters (target K=6)	seed_37
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703564_Tumor20	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703565_Tumor24	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3563	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3415	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703566_Tumor26	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3415	seed_11	complete	GSE285505_deep.tsv		
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3742	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322957_TR11_206	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322958_TR11_16184	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4732	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322959_TR11_18105	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3673	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322960_TR11_21723	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4362	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322961_TR16_23542	M4_spagcn	SpaGCN-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_deep.tsv		
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4690	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265211_CTC21P	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4690	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3884	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265212_CTC21M	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3884	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3721	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265213_CTC17P	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3721	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4757	seed_11	complete	GSE267401_deep.tsv		
+GSE267401	GSM8265214_CTC17M	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4757	seed_11	complete	GSE267401_deep.tsv		
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3493	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703563_Tumor19	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3493	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	2473	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703564_Tumor20	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	2473	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3563	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703565_Tumor24	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3563	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3415	seed_11	complete	GSE285505_deep.tsv		
+GSE285505	GSM8703566_Tumor26	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3415	seed_11	complete	GSE285505_deep.tsv		
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3742	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322957_TR11_206	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3742	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4732	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322958_TR11_16184	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4732	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	3673	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322959_TR11_18105	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	3673	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4362	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322960_TR11_21723	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4362	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	4	3	3	seed_11,seed_23,seed_37		seed_11:4;seed_23:4;seed_37:4	4564	seed_11	complete	GSE311294_deep.tsv		
+GSE311294	GSM9322961_TR16_23542	M5_stagate	STAGATE-style	6	3	3	seed_11,seed_23,seed_37		seed_11:6;seed_23:6;seed_37:6	4564	seed_11	complete	GSE311294_deep.tsv		

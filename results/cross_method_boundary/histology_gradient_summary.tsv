@@ -1,0 +1,8 @@
+method_id	method_label	n_comparisons	median_gradient_delta	fraction_positive_gradient_delta	fraction_fdr_below_0_05
+BayesSpace	BayesSpace	52	0.0	0.2692307692307692	0.34615384615384615
+M0_expr_kmeans	expression-only k-means	44	0.0	0.2727272727272727	0.022727272727272728
+M1_spatial_concat_kmeans	coordinate-augmented k-means	41	0.0	0.34146341463414637	0.12195121951219512
+M2_spatial_ward	spatial Ward	52	0.0	0.25	0.5192307692307693
+M3_spatial_leiden	spatial Leiden	35	0.0	0.22857142857142856	0.5142857142857142
+M4_spagcn	SpaGCN-style	50	0.0	0.24	0.32
+M5_stagate	STAGATE-style	52	0.0	0.36538461538461536	0.34615384615384615

@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_DIR="${ROOT_DIR}/docs/reproducibility_bundle"
-ZIP_NAME="${ZIP_NAME:-crc_spatial_benchmark_reproducibility_bundle.zip}"
+ZIP_NAME="${ZIP_NAME:-crc_visium_boundary_reliability_v1.0.15.zip}"
 export LC_ALL=C
 export LANG=C
 
@@ -22,20 +22,21 @@ Provide a clean package for reproducing the analysis tables and figures from pub
 ## Included (high level)
 - `scripts/`: analysis entrypoints and helper scripts
 - `results/`: benchmark tables and derived summary tables
+- `figures/`: publication figures
 - `docs/`: data manifest, figure provenance, source-data map, and statistical decision rules
 - `supplementary_tables/`: consolidated supplementary-table workbook
 
 ## Excluded (by default)
 - Writing and administrative materials: drafts, letters, forms, and checklist files
 - Development-only tooling and local configuration: editor metadata, local planning notes, temporary files, and workflow notes
-- Raw data and large intermediates: `data/` (reviewers can download public data separately)
+- Raw data and large intermediates: `data/` (downloadable from the public repositories listed in the data manifest)
 - Local environments/caches: `.venv/`, `__pycache__/`, OS/editor metadata
 
 ## Rationale
 Readers should see the data-processing and figure/table reproduction materials, not internal writing or project-management scaffolding.
 MD
 
-cat > "${OUT_DIR}/REVIEWER_GUIDE.md" <<'MD'
+cat > "${OUT_DIR}/REPRODUCTION_GUIDE.md" <<'MD'
 # Reproduction guide
 
 ## Minimal reproduction
@@ -71,6 +72,7 @@ out_dir = Path(sys.argv[2]).resolve()
 include_roots = [
     root / "scripts",
     root / "results",
+    root / "figures",
     root / "supplementary_tables",
 ]
 
@@ -79,6 +81,10 @@ include_docs_files = [
     root / "docs" / "FIGURE_PROVENANCE.tsv",
     root / "docs" / "STATISTICAL_DECISION_RULES.md",
     root / "docs" / "SOURCE_DATA_MAP.tsv",
+    root / "docs" / "BOUNDARY_RELIABILITY_PROTOCOL.md",
+    root / "README.md",
+    root / "CITATION.cff",
+    root / "LICENSE",
 ]
 
 exclude_dir_prefixes = [

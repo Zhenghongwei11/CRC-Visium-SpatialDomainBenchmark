@@ -297,7 +297,7 @@ for (q in k_values) {
           stringsAsFactors = FALSE
         )
         out_path <- args$output_domain_map_tsv
-        append_mode <- file.exists(out_path)
+        append_mode <- file.exists(out_path) && !is.na(file.info(out_path)$size) && file.info(out_path)$size > 0
         write.table(
           map_out,
           file = out_path,
