@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or its dataset-derived tables, please cite this version of the repository."
 title: "Boundary sensitivity of spatial-domain maps in colorectal cancer Visium data"
 type: software
-version: 1.0.15
+version: 1.0.16
 date-released: 2026-09-08
 authors:
   - family-names: Zheng
@@ -12,7 +12,6 @@ authors:
     given-names: Wanping
     affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
 repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
-doi: "10.5281/zenodo.22657617"
 contact:
   - family-names: Zheng
     given-names: Hongwei

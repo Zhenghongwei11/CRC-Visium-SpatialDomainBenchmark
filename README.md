@@ -2,7 +2,7 @@
 
 This repository contains code, derived tables, and publication figures for evaluating how spatial-domain assignments respond to plausible analytic perturbations in colorectal cancer (CRC) 10x Genomics Visium data.
 
-The analysis compares seven approaches across 13 sections from three public cohorts at `K=4` and `K=6`. Expression-only and coordinate-augmented k-means were stable under the tested seeds. BayesSpace, spatial Ward, spatial Leiden, SpaGCN-style, and STAGATE-style maps showed varying degrees of assignment sensitivity. Switching spots were repeatedly enriched near inferred domain boundaries, but their image-gradient context was mixed. Boundary-focused expression summaries could attenuate, disappear, or change direction for selected method-setting combinations.
+The analysis compares seven approaches across 13 sections from three public cohorts at `K=4` and `K=6`. Expression-only and coordinate-augmented k-means were stable under the tested seeds. BayesSpace, spatial Ward, spatial Leiden, SpaGCN-style, and STAGATE-style maps showed varying degrees of assignment sensitivity. Switching spots were repeatedly enriched near inferred domain boundaries, but their image-gradient context was mixed. Boundary-focused expression summaries produced opposite-sign point estimates for selected method-setting combinations; the smaller subset in which both intervals excluded zero is reported separately.
 
 These results describe reliability under the specified perturbations. Spatial coherence and marker coherence are internal map properties rather than external accuracy measures, and inferred boundaries are not pathology annotations.
 
@@ -11,7 +11,7 @@ These results describe reliability under the specified perturbations. Spatial co
 - `results/cross_method_boundary/`: analysis-ready evidence tables, coverage records, and compressed switching-spot data.
 - `figures/cross_method_boundary/`: main and supplementary figures in PNG and PDF formats.
 - `scripts/`: data preparation, domain analysis, sensitivity analysis, evidence-table, and figure-generation code.
-- `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`: consolidated workbook containing supplementary tables S1-S37.
+- `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`: focused workbook containing the current cross-method supplementary tables S1-S13.
 - `docs/BOUNDARY_RELIABILITY_PROTOCOL.md`: fixed analysis definitions and interpretation rules.
 - `docs/DATA_MANIFEST.tsv`: public data sources and download information.
 - `docs/FIGURE_PROVENANCE.tsv` and `docs/SOURCE_DATA_MAP.tsv`: links from figures and reported results to machine-readable tables.
@@ -25,8 +25,6 @@ CRC Visium data:
 - GSE267401
 - GSE311294
 - GSE285505
-
-An optional non-CRC portability example uses GSE289934 (mouse brain).
 
 ## Reproduce the analysis
 
@@ -58,12 +56,13 @@ After the intermediate maps are present under `results/cross_method_boundary/dom
 ```bash
 python3 scripts/build_cross_method_boundary_evidence.py
 python3 scripts/build_cross_method_computational_sensitivity.py
+python3 scripts/build_cross_method_opposite_sign_evidence.py
 python3 scripts/make_cross_method_boundary_figures.py
 ```
 
 ## Citation
 
-The archived `v1.0.15` code and data-derived tables are available at [Zenodo](https://doi.org/10.5281/zenodo.22657617). Citation metadata are provided in `CITATION.cff`.
+Use the version-specific Zenodo DOI shown on the GitHub release for the exact archived code and data-derived tables. Citation metadata are provided in `CITATION.cff`.
 
 ## License
 

@@ -38,6 +38,8 @@ python3 scripts/build_required_artifacts.py
 if [[ "${SKIP_FIGURES}" != "1" ]]; then
   python3 scripts/make_publication_figures_v2.py
   python3 scripts/make_supplementary_figures.py
+  python3 scripts/build_cross_method_opposite_sign_evidence.py
+  python3 scripts/make_cross_method_boundary_figures.py
 fi
 
 echo "[ok] reproduction complete"

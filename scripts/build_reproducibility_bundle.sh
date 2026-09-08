@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_DIR="${ROOT_DIR}/docs/reproducibility_bundle"
-ZIP_NAME="${ZIP_NAME:-crc_visium_boundary_reliability_v1.0.15.zip}"
+ZIP_NAME="${ZIP_NAME:-crc_visium_boundary_reliability_v1.0.16.zip}"
 export LC_ALL=C
 export LANG=C
 

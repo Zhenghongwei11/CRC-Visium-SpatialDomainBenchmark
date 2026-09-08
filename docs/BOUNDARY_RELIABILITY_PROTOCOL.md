@@ -57,14 +57,14 @@ Image gradient will be sampled from GEO-provided detected-tissue images at Visiu
 
 The same declared feature set will be used across methods and partitions where genes are available: EPCAM, COL1A1, FAP, SPP1, PTPRC, CAF/FAP-associated, SPP1-myeloid-associated, T-cell-associated, TGF-beta/CXCL12 myofibroblast-barrier, cytotoxic-lymphocyte, and CAF-plus-SPP1-myeloid-minus-T-cell contrast scores.
 
-Primary reporting will use boundary-minus-interior median differences with bootstrap 95% intervals. A spatial-block analysis based on a fixed 6x6 array-coordinate grid will be reported where at least five spots from each comparison group occur in enough mixed blocks to estimate a contrast.
+Primary reporting uses boundary-minus-interior median differences with bootstrap 95% intervals. Opposite-sign point estimates are retained in full. A post-review descriptive table additionally records whether the reference and at least one opposite-sign alternative both have intervals excluding zero in the direction of their point estimates. This added classification is not a new confirmatory gate. A spatial-block analysis based on a fixed 6x6 array-coordinate grid is reported where at least five spots from each comparison group occur in enough mixed blocks to estimate a contrast.
 
 ## Statistical interpretation
 
 - ARI is continuous; 0.60 is a descriptive screen only.
 - Localization and downstream results will be summarized per method and section before any cross-method statement.
-- Direction change is defined relative to the reference partition and will be reported for every declared alternative, not selected examples alone.
-- Spot-level P values will not be treated as independent-sample confirmation because neighboring Visium spots are spatially correlated.
+- Direction change is defined from opposite signs in nonzero point estimates relative to the reference partition and is reported for every declared alternative, not selected examples alone.
+- Spot-level P values and bootstrap intervals are not treated as independent-sample confirmation because neighboring Visium spots are spatially correlated.
 - A cross-method conclusion requires recurrence across substantially different algorithmic families and adequate coverage. Otherwise, the conclusion will remain method- or setting-specific.
 
 ## Failure and missingness handling

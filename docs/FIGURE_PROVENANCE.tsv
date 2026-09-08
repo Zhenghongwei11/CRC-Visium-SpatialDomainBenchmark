@@ -1,24 +1,17 @@
 figure_id	panel_id	generating_script	anchor_tables	notes
-Fig1	Fig1A	scripts/make_publication_figures_v2.py	results/dataset_summary.tsv	Total samples vs BayesSpace-covered samples per cohort.
-Fig1	Fig1B	scripts/make_publication_figures_v2.py	results/figures/fig1_domain_maps.tsv	Representative baseline domain map (expression-only k-means), fixed K, one sample.
-Fig1	Fig1C	scripts/make_publication_figures_v2.py	results/figures/fig1_domain_maps.tsv	Representative baseline domain map (expression+coordinates k-means), fixed K, one sample.
-Fig1	Fig1D	scripts/make_publication_figures_v2.py	results/figures/fig1_domain_maps.tsv	Representative BayesSpace domain map, fixed K, one sample (exported via scripts/run_bayesspace_baseline.R domain-map option).
-Fig2	Fig2A	scripts/make_publication_figures_v2.py	results/replication/domain_quality_deltas_by_sample.tsv	Per-sample delta spatial coherence (BayesSpace - baseline) across K in {4,6}.
-Fig2	Fig2B	scripts/make_publication_figures_v2.py	results/replication/domain_quality_deltas_by_sample.tsv	Per-sample delta marker coherence (BayesSpace - baseline) across K in {4,6}.
-Fig2	Fig2C	scripts/make_publication_figures_v2.py	results/benchmarks/statistical_gate_summary.tsv	Claim-level paired effect sizes with bootstrap 95% CI and BH-FDR.
-Fig3	Fig3A	scripts/make_publication_figures_v2.py	results/replication/bayesspace_stability_by_sample.tsv	Multiseed stability by sample and K with prespecified threshold.
-Fig3	Fig3B	scripts/make_publication_figures_v2.py	results/benchmarks/statistical_gate_summary.tsv	Claim-level stability gate summary (median ARI with CI).
-Fig4	Fig4A	scripts/make_publication_figures_v2.py	results/benchmarks/runtime_memory.tsv;results/benchmarks/method_benchmark.tsv	Runtime distributions for baselines (runtime_memory) and BayesSpace (method_benchmark), with heterogeneity across runs.
-Fig4	Fig4B	scripts/make_publication_figures_v2.py	results/benchmarks/statistical_gate_summary.tsv	Scope-limited compute gate summary (median runtime with CI).
-FigS1	FigS1A	scripts/make_supplementary_figures.py	results/figures/figS1_domain_marker_heatmap.tsv;results/figures/fig1_domain_maps.tsv	Representative marker expression heatmap for the Figure 1 BayesSpace example.
-FigS2	FigS2A	scripts/make_supplementary_figures.py	docs/STATISTICAL_DECISION_RULES.md;results/dataset_summary.tsv;results/benchmarks/statistical_gate_summary.tsv	Workflow schematic summarizing cohort selection, preprocessing, domain calling, prespecified gates, and reporting artifacts.
-FigS3	FigS3A	scripts/make_supplementary_figures.py	results/figures/figS3_instability_case_study.tsv	Instability case study: spot-level BayesSpace labels across multiple seeds with marker overlays for an unstable sample×K unit.
-Boundary Fig1	A-D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/coverage_manifest.tsv;results/cross_method_boundary/global_characterization.tsv	Study design, coverage, and internal map characteristics across seven approaches.
-Boundary Fig2	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/stability_pairwise.tsv;results/cross_method_boundary/stability_summary.tsv	Alternative-partition stability and switching fractions.
-Boundary Fig3	A-D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_boundary_relationship.tsv;results/cross_method_boundary/histology_gradient_localization.tsv	Boundary localization and image-gradient context.
-Boundary Fig4	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/downstream_contrasts.tsv;results/cross_method_boundary/downstream_method_summary.tsv	Downstream boundary-summary sensitivity.
-Boundary FigS1	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/global_characterization.tsv	Method-level distributions of coherence and stability.
-Boundary FigS2	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/stability_pairwise.tsv;results/cross_method_boundary/coverage_manifest.tsv	Stability distributions and run coverage.
-Boundary FigS3	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_boundary_relationship.tsv	Switching-boundary enrichment summaries.
-Boundary FigS4	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_spots.tsv.gz	Representative TR11_206 switching maps at K=4.
-Boundary FigS5	A-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/computational_sensitivity.tsv	Method-relevant computational sensitivity.
+Fig1	Fig1A-D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/coverage_manifest.tsv;results/cross_method_boundary/stability_summary.tsv;results/cross_method_boundary/switching_boundary_relationship.tsv;results/cross_method_boundary/downstream_robustness_summary.tsv	Four-stage evidence sequence and operational definitions.
+Fig2	Fig2A	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/global_characterization.tsv	Spatial coherence and marker separation by method-section-resolution setting.
+Fig2	Fig2B-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/stability_summary.tsv	Repeated-seed or fixed graph-perturbation ARI and the descriptive ARI screen.
+Fig2	Fig2D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/coverage_manifest.tsv	Complete, incomplete, and failed exact-K analysis coverage.
+Fig3	Fig3A-B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_boundary_relationship.tsv	Switching fractions and direct association with inferred boundaries.
+Fig3	Fig3C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/histology_gradient_localization.tsv	Image-gradient context for switching and stable spots.
+Fig3	Fig3D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_spots.tsv.gz	Representative TR11_206 switching-spot map.
+Fig4	Fig4A	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/downstream_opposite_sign_method_summary.tsv	Opposite-sign point-estimate frequency and interval-supported subset.
+Fig4	Fig4B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/downstream_opposite_sign_method_summary.tsv	Median range of boundary-minus-interior effects.
+Fig4	Fig4C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/downstream_contrasts.tsv	Selected per-partition TR11_206 effects.
+Fig4	Fig4D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/downstream_robustness_summary.tsv	TR11_206 point-estimate direction changes and fixed-block sensitivity.
+FigS1	FigS1A-B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/global_characterization.tsv	Full global-characterization distributions.
+FigS2	FigS2A-B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/stability_summary.tsv	Stability distributions at K=4 and K=6.
+FigS3	FigS3A-B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_boundary_relationship.tsv	Switching-boundary association at K=4 and K=6.
+FigS4	FigS4A-E	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/switching_spots.tsv.gz	TR11_206 switching patterns for five spatial methods.
+FigS5	FigS5A-B	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/computational_sensitivity.tsv;results/cross_method_boundary/computational_sensitivity_summary.tsv	Random-seed and graph-neighbor sensitivity.

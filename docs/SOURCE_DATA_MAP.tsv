@@ -1,14 +1,14 @@
-source_data_label	internal_table_path	report_usage	notes
-Source Data 1	results/benchmarks/method_benchmark.tsv	Fig2 benchmark summary	primary benchmark rows
-Source Data 2	results/benchmarks/bayesspace_rigor_backfill.tsv	Fig2R/Fig4R rigor panel	multiseed BayesSpace backfill
-Source Data 3	results/benchmarks/statistical_gate_summary.tsv	claim gate outcomes	overall_gate_status and support_tier
-Source Data 4	results/benchmarks/failure_log.tsv	compute reliability appendix	explicit runtime failures
-Source Data 5	results/dataset_summary.tsv	dataset coverage and scale	datasets used, sample counts, and BayesSpace coverage
-Source Data 6	results/cross_method_boundary/coverage_manifest.tsv	cross-method run coverage	complete, incomplete, and failed configurations
-Source Data 7	results/cross_method_boundary/global_characterization.tsv	internal map characteristics	spatial coherence, marker coherence, and stability by section and K
-Source Data 8	results/cross_method_boundary/stability_pairwise.tsv	partition stability	pairwise ARI under declared perturbations
-Source Data 9	results/cross_method_boundary/switching_boundary_relationship.tsv	boundary localization	switching fractions and enrichment near inferred boundaries
-Source Data 10	results/cross_method_boundary/histology_gradient_localization.tsv	image-gradient context	switching-versus-stable image-gradient comparisons
-Source Data 11	results/cross_method_boundary/downstream_contrasts.tsv	downstream robustness	boundary-minus-interior feature contrasts by partition
-Source Data 12	results/cross_method_boundary/computational_sensitivity.tsv	computational sensitivity	method-relevant settings and sensitivity metrics
-Source Data 13	results/cross_method_boundary/switching_spots.tsv.gz	representative and aggregate switching maps	spot-level aligned switching indicators
+source_data_label	internal_table_path	manuscript_usage
+S1 Data	results/cross_method_boundary/coverage_manifest.tsv	Fig 2D and retained analysis coverage
+S2 Data	results/cross_method_boundary/global_characterization.tsv	Fig 2A and global map characteristics
+S3 Data	results/cross_method_boundary/stability_pairwise.tsv	Pairwise repeatability details
+S4 Data	results/cross_method_boundary/stability_summary.tsv	Fig 2B-C and section-resolution stability
+S5 Data	results/cross_method_boundary/switching_boundary_relationship.tsv	Fig 3A-B and direct boundary association
+S6 Data	results/cross_method_boundary/histology_gradient_localization.tsv	Fig 3C and mixed image-gradient context
+S7 Data	results/cross_method_boundary/downstream_contrasts.tsv	Fig 4C and per-partition boundary contrasts
+S8 Data	results/cross_method_boundary/downstream_robustness_summary.tsv	Fig 4D and point-estimate direction changes
+S9 Data	results/cross_method_boundary/downstream_opposite_sign_evidence.tsv	Unit-level point-estimate and interval-support classification
+S10 Data	results/cross_method_boundary/downstream_opposite_sign_method_summary.tsv	Fig 4A-B method summaries
+S11 Data	results/cross_method_boundary/computational_sensitivity.tsv	S5 Fig and sensitivity details
+S12 Data	results/cross_method_boundary/computational_sensitivity_summary.tsv	S5 Fig method-factor summaries
+S13 Data	results/cross_method_boundary/switching_spots.tsv.gz	Fig 3D and S4 Fig switching coordinates

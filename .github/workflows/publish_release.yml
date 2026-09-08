@@ -22,7 +22,7 @@ jobs:
       - name: Create GitHub release and upload assets
         uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true
+          body_path: RELEASE_NOTES_v1.0.16.md
           files: |
-            docs/reproducibility_bundle/crc_visium_boundary_reliability_v1.0.15.zip
+            docs/reproducibility_bundle/crc_visium_boundary_reliability_v1.0.16.zip
             docs/reproducibility_bundle/CHECKSUMS.sha256

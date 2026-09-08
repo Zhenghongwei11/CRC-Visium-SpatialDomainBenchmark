@@ -255,19 +255,38 @@ def figure3() -> None:
 
 
 def figure4() -> None:
-    method_summary = pd.read_csv(DATA / "downstream_method_summary.tsv", sep="\t").set_index("method_id").reindex(METHOD_ORDER)
+    effect_summary = pd.read_csv(DATA / "downstream_method_summary.tsv", sep="\t").set_index("method_id").reindex(METHOD_ORDER)
+    sign_summary = pd.read_csv(DATA / "downstream_opposite_sign_method_summary.tsv", sep="\t").set_index("method_id").reindex(METHOD_ORDER)
     detail = pd.read_csv(DATA / "downstream_contrasts.tsv", sep="\t")
     robust = pd.read_csv(DATA / "downstream_robustness_summary.tsv", sep="\t")
     fig, axes = plt.subplots(2, 2, figsize=(9.2, 7.3))
     x, labels, colors = method_positions()
-    axes[0, 0].bar(x, method_summary["fraction_with_direction_reversal"], color=colors)
+    axes[0, 0].bar(
+        x,
+        sign_summary["fraction_with_opposite_sign_point_estimate"],
+        width=0.66,
+        color=colors,
+        alpha=0.35,
+        edgecolor=colors,
+        label="Opposite-sign point estimate",
+    )
+    axes[0, 0].bar(
+        x,
+        sign_summary["fraction_with_interval_supported_opposite_sign_estimate"],
+        width=0.34,
+        color=colors,
+        edgecolor="#374151",
+        linewidth=0.5,
+        label="Both intervals exclude zero",
+    )
     axes[0, 0].set_xticks(x)
     axes[0, 0].set_xticklabels(labels, rotation=35, ha="right")
     axes[0, 0].set_ylabel("Fraction of feature-settings")
-    axes[0, 0].set_title("True direction reversals", loc="left")
+    axes[0, 0].set_title("Opposite-sign downstream estimates", loc="left")
+    axes[0, 0].legend(frameon=False, fontsize=6.5)
     axes[0, 0].grid(axis="y", color="#E5E7EB", lw=0.5)
     panel(axes[0, 0], "A")
-    axes[0, 1].bar(x, method_summary["median_effect_range"], color=colors)
+    axes[0, 1].bar(x, effect_summary["median_effect_range"], color=colors)
     axes[0, 1].set_xticks(x)
     axes[0, 1].set_xticklabels(labels, rotation=35, ha="right")
     axes[0, 1].set_ylabel("Median max-min effect")
@@ -311,13 +330,13 @@ def figure4() -> None:
     counts = tr.groupby("method_id").size().reindex(METHOD_ORDER, fill_value=0)
     block = tr.groupby("method_id")["any_block_direction_reversal_vs_reference"].sum().reindex(METHOD_ORDER, fill_value=0)
     width = 0.36
-    axes[1, 1].bar(x - width / 2, counts, width, color=colors, alpha=0.85, label="Spot-level")
-    axes[1, 1].bar(x + width / 2, block, width, color=colors, alpha=0.38, hatch="//", label="Also reversed by blocks")
+    axes[1, 1].bar(x - width / 2, counts, width, color=colors, alpha=0.85, label="Spot-level point estimate")
+    axes[1, 1].bar(x + width / 2, block, width, color=colors, alpha=0.38, hatch="//", label="Also opposite by blocks")
     axes[1, 1].set_xticks(x)
     axes[1, 1].set_xticklabels(labels, rotation=35, ha="right")
-    axes[1, 1].set_ylabel("Features with a reversal")
+    axes[1, 1].set_ylabel("Features with opposite signs")
     axes[1, 1].set_title("TR11_206 across K=4 and K=6", loc="left")
-    axes[1, 1].legend(frameon=False)
+    axes[1, 1].legend(frameon=False, loc="upper left")
     axes[1, 1].grid(axis="y", color="#E5E7EB", lw=0.5)
     panel(axes[1, 1], "D")
     fig.tight_layout(h_pad=2.1, w_pad=1.5)
