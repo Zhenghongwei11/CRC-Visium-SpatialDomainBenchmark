@@ -1,0 +1,25 @@
+time	step	series_id	status	path	n_files	include_pyg	method	dataset_id	sample_id	K	seed
+2026-09-09T02:02:16Z	download_geo_tar	GSE267401	success	/content/jbcb_official_sensitivity/geo_raw/GSE267401_RAW.tar							
+2026-09-09T02:02:16Z	extract_geo_members	GSE267401	success		6.0						
+2026-09-09T02:02:22Z	download_geo_tar	GSE311294	success	/content/jbcb_official_sensitivity/geo_raw/GSE311294_RAW.tar							
+2026-09-09T02:02:22Z	extract_geo_members	GSE311294	success		12.0						
+2026-09-09T02:05:41Z	install_python_stack		success			False					
+2026-09-09T02:06:10Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	4.0	11.0
+2026-09-09T02:06:16Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	4.0	23.0
+2026-09-09T02:06:20Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	4.0	37.0
+2026-09-09T02:06:31Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	6.0	11.0
+2026-09-09T02:06:38Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	6.0	23.0
+2026-09-09T02:06:46Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	6.0	37.0
+2026-09-09T02:07:01Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	4.0	11.0
+2026-09-09T02:07:13Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	4.0	23.0
+2026-09-09T02:07:30Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	4.0	37.0
+2026-09-09T02:07:39Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	6.0	11.0
+2026-09-09T02:07:52Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	6.0	23.0
+2026-09-09T02:08:07Z			success				Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	6.0	37.0
+2026-09-09T02:08:15Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	4.0	11.0
+2026-09-09T02:08:23Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	4.0	23.0
+2026-09-09T02:08:34Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	4.0	37.0
+2026-09-09T02:08:44Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	6.0	11.0
+2026-09-09T02:08:50Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	6.0	23.0
+2026-09-09T02:08:56Z			success				Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	6.0	37.0
+2026-09-09T02:08:57Z	bayesspace		skipped_default_use_run_bayesspace_for_r_task								

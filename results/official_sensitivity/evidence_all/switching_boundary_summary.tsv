@@ -1,0 +1,4 @@
+method_id	method_label	n_comparisons	median_switching_fraction	median_fraction_switching_in_boundary	median_fraction_stable_in_boundary	median_risk_ratio	median_odds_ratio	median_jaccard	fraction_rr_above_one
+Official_BayesSpace_nrep1000	Official_BayesSpace_nrep1000	12	0.18590829060330177	0.7673973556019485	0.3501300409666629	1.7263567544613037	4.279322164508218	0.22335962841335527	1.0
+Official_STAGATE_pyG	Official_STAGATE_pyG	12	0.007215392838054516	1.0	0.4915066508580168	2.0575826660939605	44.36621927875691	0.014294005711596157	1.0
+Official_SpaGCN_v1_2_7	Official_SpaGCN_v1_2_7	12	0.24616204690831556	0.9706520831593888	0.7267856527629439	1.320977026681684	13.509494804929641	0.29193382456542816	1.0

@@ -1,0 +1,4 @@
+method_id	method_label	n_section_k_features	fraction_with_direction_reversal	fraction_with_sign_state_change	fraction_with_block_direction_reversal	median_effect_range	fraction_all_partitions_same_direction
+Official_BayesSpace_nrep1000	Official_BayesSpace_nrep1000	66	0.12121212121212122	0.12121212121212122	0.15151515151515152	0.007045359577680328	0.8787878787878788
+Official_STAGATE_pyG	Official_STAGATE_pyG	66	0.0	0.0	0.0	0.0011636160626667114	1.0
+Official_SpaGCN_v1_2_7	Official_SpaGCN_v1_2_7	66	0.045454545454545456	0.045454545454545456	0.18181818181818182	0.009496198343343698	0.9545454545454546

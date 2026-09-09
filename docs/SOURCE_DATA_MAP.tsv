@@ -12,3 +12,5 @@ S10 Data	results/cross_method_boundary/downstream_opposite_sign_method_summary.t
 S11 Data	results/cross_method_boundary/computational_sensitivity.tsv	S5 Fig and sensitivity details
 S12 Data	results/cross_method_boundary/computational_sensitivity_summary.tsv	S5 Fig method-factor summaries
 S13 Data	results/cross_method_boundary/switching_spots.tsv.gz	Fig 3D and S4 Fig switching coordinates
+S14 Data	results/cross_method_boundary/targeted_official_sensitivity.tsv	Targeted official-implementation sensitivity check for SpaGCN, STAGATE_pyG, and BayesSpace nrep=1,000
+S15 Data	results/cross_method_boundary/stability_stratified_downstream_sensitivity.tsv	Stability-stratified downstream sensitivity summary separating low-, moderate-, and high-ARI settings

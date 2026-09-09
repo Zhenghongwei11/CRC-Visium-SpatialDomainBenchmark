@@ -1,0 +1,4 @@
+official_method_id	current_method_id	n_feature_units	fraction_reference_delta_sign_agrees	official_fraction_direction_reversal	current_fraction_direction_reversal	official_fraction_sign_state_change	current_fraction_sign_state_change
+Official_BayesSpace_nrep1000	BayesSpace	66	1.0	0.12121212121212122	0.10606060606060606	0.12121212121212122	0.10606060606060606
+Official_STAGATE_pyG	M5_stagate	66	0.9545454545454546	0.0	0.15151515151515152	0.0	0.15151515151515152
+Official_SpaGCN_v1_2_7	M4_spagcn	66	0.8181818181818182	0.045454545454545456	0.15151515151515152	0.045454545454545456	0.15151515151515152

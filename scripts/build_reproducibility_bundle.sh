@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_DIR="${ROOT_DIR}/docs/reproducibility_bundle"
-ZIP_NAME="${ZIP_NAME:-crc_visium_boundary_reliability_v1.0.16.zip}"
+ZIP_NAME="${ZIP_NAME:-crc_visium_boundary_reliability_v1.0.17.zip}"
 export LC_ALL=C
 export LANG=C
 
@@ -82,9 +82,11 @@ include_docs_files = [
     root / "docs" / "STATISTICAL_DECISION_RULES.md",
     root / "docs" / "SOURCE_DATA_MAP.tsv",
     root / "docs" / "BOUNDARY_RELIABILITY_PROTOCOL.md",
+    root / "docs" / "OFFICIAL_IMPLEMENTATION_SENSITIVITY.md",
     root / "README.md",
     root / "CITATION.cff",
     root / "LICENSE",
+    root / "RELEASE_NOTES_v1.0.17.md",
 ]
 
 exclude_dir_prefixes = [

@@ -1,0 +1,4 @@
+method_id	method_label	n_comparisons	median_gradient_delta	fraction_positive_gradient_delta	fraction_fdr_below_0_05
+Official_BayesSpace_nrep1000	Official_BayesSpace_nrep1000	12	0.0	0.3333333333333333	0.25
+Official_STAGATE_pyG	Official_STAGATE_pyG	12	0.0	0.25	0.3333333333333333
+Official_SpaGCN_v1_2_7	Official_SpaGCN_v1_2_7	12	0.0	0.4166666666666667	0.3333333333333333

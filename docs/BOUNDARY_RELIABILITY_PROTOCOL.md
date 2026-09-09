@@ -73,3 +73,12 @@ Primary reporting uses boundary-minus-interior median differences with bootstrap
 - No section or method will be removed because its result weakens the proposed narrative.
 - Units with fewer than two successful alternatives cannot support switching or downstream robustness and will be labeled not evaluable.
 - Derived tables are written under `results/cross_method_boundary/`; intermediate domain maps and run logs are generated locally and are not required to inspect the reported results.
+
+## Final-revision sensitivity additions
+
+The `v1.0.17` release adds two post-review sensitivity outputs:
+
+- Targeted official-implementation sensitivity checks for official SpaGCN 1.2.7, STAGATE-linked PyG, and BayesSpace nrep=1,000 on TR11_206, CTC21P, and TR11_18105 at K=4 and K=6.
+- A stability-stratified downstream summary that separates opposite-sign downstream estimates in low-, moderate-, and high-ARI settings.
+
+These additions calibrate implementation scope and stability dependence. They do not replace the full 13-section matched-input analysis and do not upgrade opposite-sign point estimates into pathology-validated biological reversals.

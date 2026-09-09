@@ -1,0 +1,7 @@
+dataset_id	sample_id	method_id	K	seed_count	stability_ari_median	stability_ari_iqr	wall_time_sec_median	failure_rate	notes
+GSE311294	GSM9322957_TR11_206	Official_BayesSpace_nrep1000	4	3	0.45181068349637	0.261408374681633	46.07	0	official_bayesspace_nrep1000
+GSE311294	GSM9322957_TR11_206	Official_BayesSpace_nrep1000	6	3	0.564646867941706	0.0330835198797481	45.815	0	official_bayesspace_nrep1000
+GSE267401	GSM8265211_CTC21P	Official_BayesSpace_nrep1000	4	3	0.974820629438609	0.00150681607833114	55.4	0	official_bayesspace_nrep1000
+GSE267401	GSM8265211_CTC21P	Official_BayesSpace_nrep1000	6	3	0.788791915113407	0.0949478936765643	55.757	0	official_bayesspace_nrep1000
+GSE311294	GSM9322959_TR11_18105	Official_BayesSpace_nrep1000	4	3	0.655631058447815	0.156392456997649	47.878	0	official_bayesspace_nrep1000
+GSE311294	GSM9322959_TR11_18105	Official_BayesSpace_nrep1000	6	3	0.523696843320841	0.0598955127655565	48.955	0	official_bayesspace_nrep1000

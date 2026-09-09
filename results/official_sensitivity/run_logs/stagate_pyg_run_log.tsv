@@ -1,0 +1,72 @@
+time	step	series_id	status	path	n_files	wheel_url	repo	method	dataset_id	sample_id	error	traceback	K	seed
+2026-09-09T00:55:17Z	download_geo_tar	GSE267401	success	/content/jbcb_official_sensitivity/geo_raw/GSE267401_RAW.tar										
+2026-09-09T00:55:17Z	extract_geo_members	GSE267401	success		6.0									
+2026-09-09T00:55:22Z	download_geo_tar	GSE311294	success	/content/jbcb_official_sensitivity/geo_raw/GSE311294_RAW.tar										
+2026-09-09T00:55:22Z	extract_geo_members	GSE311294	success		12.0									
+2026-09-09T00:58:55Z	install_pyg_optional_deps		success			https://data.pyg.org/whl/torch-2.11.0+cu128.html								
+2026-09-09T00:58:55Z	install_python_stack		success											
+2026-09-09T00:59:00Z	install_stagate_pyg		success				/content/jbcb_official_sensitivity/external/STAGATE_pyG							
+2026-09-09T00:59:11Z			sample_failed					Official_SpaGCN_v1_2_7	GSE311294	GSM9322957_TR11_206	slice indices must be integers or None or have an __index__ method	"Traceback (most recent call last):
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 579, in main
+    run_spagcn(dataset_id, sample_id, root, map_rows, log_rows)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 409, in run_spagcn
+    adj = spg.calculate_adj_matrix(
+        x=x_pixel,
+    ...<6 lines>...
+        histology=histology,
+    )
+  File ""/usr/local/lib/python3.13/dist-packages/SpaGCN/calculate_adj.py"", line 57, in calculate_adj_matrix
+    nbs=image[max(0,x_pixel[i]-beta_half):min(max_x,x_pixel[i]+beta_half+1),max(0,y_pixel[i]-beta_half):min(max_y,y_pixel[i]+beta_half+1)]
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
+"		
+2026-09-09T00:59:53Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			4.0	11.0
+2026-09-09T00:59:54Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			6.0	11.0
+2026-09-09T01:00:22Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			4.0	23.0
+2026-09-09T01:00:22Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			6.0	23.0
+2026-09-09T01:00:50Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			4.0	37.0
+2026-09-09T01:00:51Z			success					Official_STAGATE_pyG	GSE311294	GSM9322957_TR11_206			6.0	37.0
+2026-09-09T01:00:55Z			sample_failed					Official_SpaGCN_v1_2_7	GSE267401	GSM8265211_CTC21P	slice indices must be integers or None or have an __index__ method	"Traceback (most recent call last):
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 579, in main
+    run_spagcn(dataset_id, sample_id, root, map_rows, log_rows)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 409, in run_spagcn
+    adj = spg.calculate_adj_matrix(
+        x=x_pixel,
+    ...<6 lines>...
+        histology=histology,
+    )
+  File ""/usr/local/lib/python3.13/dist-packages/SpaGCN/calculate_adj.py"", line 57, in calculate_adj_matrix
+    nbs=image[max(0,x_pixel[i]-beta_half):min(max_x,x_pixel[i]+beta_half+1),max(0,y_pixel[i]-beta_half):min(max_y,y_pixel[i]+beta_half+1)]
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
+"		
+2026-09-09T01:01:37Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			4.0	11.0
+2026-09-09T01:01:38Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			6.0	11.0
+2026-09-09T01:02:18Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			4.0	23.0
+2026-09-09T01:02:19Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			6.0	23.0
+2026-09-09T01:03:02Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			4.0	37.0
+2026-09-09T01:03:03Z			success					Official_STAGATE_pyG	GSE267401	GSM8265211_CTC21P			6.0	37.0
+2026-09-09T01:03:04Z			sample_failed					Official_SpaGCN_v1_2_7	GSE311294	GSM9322959_TR11_18105	slice indices must be integers or None or have an __index__ method	"Traceback (most recent call last):
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 579, in main
+    run_spagcn(dataset_id, sample_id, root, map_rows, log_rows)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File ""/tmp/ipykernel_1470/2850092641.py"", line 409, in run_spagcn
+    adj = spg.calculate_adj_matrix(
+        x=x_pixel,
+    ...<6 lines>...
+        histology=histology,
+    )
+  File ""/usr/local/lib/python3.13/dist-packages/SpaGCN/calculate_adj.py"", line 57, in calculate_adj_matrix
+    nbs=image[max(0,x_pixel[i]-beta_half):min(max_x,x_pixel[i]+beta_half+1),max(0,y_pixel[i]-beta_half):min(max_y,y_pixel[i]+beta_half+1)]
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: slice indices must be integers or None or have an __index__ method
+"		
+2026-09-09T01:03:36Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			4.0	11.0
+2026-09-09T01:03:37Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			6.0	11.0
+2026-09-09T01:04:10Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			4.0	23.0
+2026-09-09T01:04:10Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			6.0	23.0
+2026-09-09T01:04:42Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			4.0	37.0
+2026-09-09T01:04:42Z			success					Official_STAGATE_pyG	GSE311294	GSM9322959_TR11_18105			6.0	37.0
+2026-09-09T01:04:43Z	bayesspace		skipped_default_use_run_bayesspace_for_r_task											

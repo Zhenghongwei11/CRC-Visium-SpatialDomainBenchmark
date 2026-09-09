@@ -1,0 +1,7 @@
+time	step	series_id	n_files	status	env	method	dataset_id	sample_id
+2026-09-09T02:17:01Z	extract_geo_members	GSE267401	4.0	success				
+2026-09-09T02:17:05Z	extract_geo_members	GSE311294	8.0	success				
+2026-09-09T02:19:05Z	install_bayesspace_env			success	/content/jbcb_bayesspace_sensitivity/mamba_env			
+2026-09-09T02:24:45Z				success		Official_BayesSpace_nrep1000	GSE311294	GSM9322957_TR11_206
+2026-09-09T02:33:03Z				success		Official_BayesSpace_nrep1000	GSE267401	GSM8265211_CTC21P
+2026-09-09T02:38:38Z				success		Official_BayesSpace_nrep1000	GSE311294	GSM9322959_TR11_18105

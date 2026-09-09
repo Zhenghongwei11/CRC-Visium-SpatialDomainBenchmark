@@ -1,7 +1,7 @@
 {
-  "title": "Boundary sensitivity of spatial-domain maps in colorectal cancer Visium data",
+  "title": "Boundary sensitivity of spatial-domain maps can alter downstream summaries in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "Code and derived evidence for evaluating boundary sensitivity across seven spatial-domain approaches in 13 colorectal cancer Visium sections. The release includes coverage and stability tables, switching-boundary localization, histology-gradient context, downstream robustness summaries, computational sensitivity results, publication figures, and a consolidated supplementary-table workbook.",
+  "description": "Code and derived evidence for evaluating boundary sensitivity across seven spatial-domain approaches in 13 colorectal cancer Visium sections. The release includes coverage and stability tables, switching-boundary localization, histology-gradient context, downstream robustness summaries, computational sensitivity results, targeted official-implementation sensitivity checks, stability-stratified downstream summaries, publication figures, and a consolidated supplementary-table workbook.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
