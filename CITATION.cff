@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software or its dataset-derived tables, please cite this version of the repository."
 title: "Boundary sensitivity of spatial-domain maps can alter downstream summaries in colorectal cancer Visium data"
 type: software
-version: 1.0.17
-date-released: 2026-09-09
+version: 1.0.18
+date-released: 2026-09-12
 authors:
   - family-names: Zheng
     given-names: Hongwei

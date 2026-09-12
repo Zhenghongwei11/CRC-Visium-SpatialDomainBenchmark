@@ -2,8 +2,8 @@
 set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-OUT_DIR="${ROOT_DIR}/results/cross_method_boundary/domain_maps"
-SUMMARY_DIR="${ROOT_DIR}/results/cross_method_boundary/runs/bayesspace"
+OUT_DIR="${ROOT_DIR}/results/r3_cross_method/domain_maps"
+SUMMARY_DIR="${ROOT_DIR}/results/r3_cross_method/runs/bayesspace"
 SEEDS="${SEEDS:-11,23,37}"
 K_GRID="${K_GRID:-4,6}"
 NREP="${NREP:-100}"
@@ -39,7 +39,7 @@ run_sample() {
     --nrep "${NREP}" \
     --output-domain-map-tsv "${tmp_map}" \
     --output-tsv "${tmp_summary}" \
-    --note "cross-method-boundary"; then
+    --note "r3-cross-method"; then
     mv "${tmp_map}" "${final_map}"
     mv "${tmp_summary}" "${final_summary}"
     echo "[bayes] complete ${dataset_id} ${sample_id}"
@@ -74,4 +74,4 @@ run_dataset "GSE311294" "data/raw/GSE311294/extracted" \
 run_dataset "GSE285505" "data/raw/GSE285505/extracted" \
   "GSM8703563_Tumor19" "GSM8703564_Tumor20" "GSM8703565_Tumor24" "GSM8703566_Tumor26"
 
-echo "BayesSpace partition export complete."
+echo "R3 BayesSpace partition export complete."

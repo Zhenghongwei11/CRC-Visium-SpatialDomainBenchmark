@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build cross-method boundary-reliability evidence tables."""
+"""Build the JBCB R3 cross-method boundary-reliability evidence tables."""
 
 from __future__ import annotations
 
@@ -17,13 +17,13 @@ from sklearn.metrics import adjusted_rand_score
 from sklearn.neighbors import NearestNeighbors
 
 from build_histology_edge_alignment import load_detected_tissue_image_grad, sample_grad_at_points
-from boundary_feature_vectors import feature_vectors
+from build_jbcb_robustness_tables import _feature_vectors
 from build_figS3_boundary_signatures import _load_flat_visium_sample
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MAP_DIR = ROOT / "results" / "cross_method_boundary" / "domain_maps"
-DEFAULT_OUT_DIR = ROOT / "results" / "cross_method_boundary"
+DEFAULT_MAP_DIR = ROOT / "results" / "r3_cross_method" / "domain_maps"
+DEFAULT_OUT_DIR = ROOT / "results" / "r3_cross_method"
 
 METHOD_ORDER = [
     "BayesSpace",
@@ -86,6 +86,7 @@ def _read_map(path: Path) -> pd.DataFrame:
     missing = required - set(table.columns)
     if missing:
         raise ValueError(f"{path} is missing columns: {', '.join(sorted(missing))}")
+    table["dataset_id"] = table["dataset_id"].replace({"GSE280318": "GSE285505"})
     table = table[table["dataset_id"].isin(DATASET_ROOTS)].copy()
     table["K"] = table["K"].astype(int)
     table["domain_label"] = table["domain_label"].astype(int)
@@ -161,7 +162,7 @@ def _sample_data(dataset_id: str, sample_id: str, cache: dict[tuple[str, str], S
     if key in cache:
         return cache[key]
     counts, genes, coords_table = _load_flat_visium_sample(_dataset_image_root(dataset_id), sample_id)
-    vectors = feature_vectors(counts, genes)
+    vectors = _feature_vectors(counts, genes)
     features = {
         vector.feature_id: (vector.feature_type, vector.genes_used, vector.values.astype(float, copy=False))
         for vector in vectors
@@ -239,23 +240,26 @@ def _global_characterization(out_dir: Path) -> None:
     locked_path = ROOT / "results" / "benchmarks" / "method_benchmark_locked.tsv"
     locked = pd.read_csv(locked_path, sep="\t")
     locked["source_origin"] = str(locked_path.relative_to(ROOT))
-    extended_parts: list[pd.DataFrame] = []
-    extended_paths = sorted((out_dir / "runs").glob("*/*/bench/method_benchmark.tsv"))
-    extended_paths += sorted((out_dir / "runs" / "bayesspace").glob("*.tsv"))
-    for path in extended_paths:
+    r3_parts: list[pd.DataFrame] = []
+    r3_paths = sorted((out_dir / "runs").glob("*/*/bench/method_benchmark.tsv"))
+    r3_paths += sorted((out_dir / "runs" / "bayesspace").glob("*.tsv"))
+    for path in r3_paths:
         part = pd.read_csv(path, sep="\t")
         if not {"dataset_id", "sample_id", "method_id", "K"}.issubset(part.columns):
             continue
         part["source_origin"] = str(path.relative_to(ROOT))
-        extended_parts.append(part)
-    if extended_parts:
-        extended = pd.concat(extended_parts, ignore_index=True, sort=False)
+        r3_parts.append(part)
+    if r3_parts:
+        r3 = pd.concat(r3_parts, ignore_index=True, sort=False)
         keys = ["dataset_id", "sample_id", "method_id", "K"]
-        extended_keys = set(map(tuple, extended[keys].itertuples(index=False, name=None)))
-        keep_locked = ~locked[keys].apply(tuple, axis=1).isin(extended_keys)
-        source = pd.concat([locked[keep_locked], extended], ignore_index=True, sort=False)
+        r3["dataset_id"] = r3["dataset_id"].replace({"GSE280318": "GSE285505"})
+        locked["dataset_id"] = locked["dataset_id"].replace({"GSE280318": "GSE285505"})
+        r3_keys = set(map(tuple, r3[keys].itertuples(index=False, name=None)))
+        keep_locked = ~locked[keys].apply(tuple, axis=1).isin(r3_keys)
+        source = pd.concat([locked[keep_locked], r3], ignore_index=True, sort=False)
     else:
         source = locked
+    source["dataset_id"] = source["dataset_id"].replace({"GSE280318": "GSE285505"})
     source = source[source["dataset_id"].isin(DATASET_ROOTS)].copy()
     source = source[source["method_id"].isin(METHOD_ORDER)].copy()
     units = source[["dataset_id", "sample_id", "K"]].drop_duplicates()
@@ -273,6 +277,7 @@ def _global_characterization(out_dir: Path) -> None:
     failed_replicates: dict[tuple[str, str, str, int], str] = {}
     if failure_path.exists():
         failures = pd.read_csv(failure_path, sep="\t")
+        failures["dataset_id"] = failures["dataset_id"].replace({"GSE280318": "GSE285505"})
         failures = failures[
             failures["dataset_id"].isin(DATASET_ROOTS)
             & failures["method_id"].isin(METHOD_ORDER)
@@ -606,6 +611,7 @@ def _write_summaries(
         failures = pd.read_csv(failure_path, sep="\t")
         if not {"dataset_id", "sample_id", "method_id", "K", "failure_type"}.issubset(failures.columns):
             continue
+        failures["dataset_id"] = failures["dataset_id"].replace({"GSE280318": "GSE285505"})
         failures = failures[
             failures["method_id"].isin(METHOD_ORDER)
             & ~failures["failure_type"].astype(str).eq("none")
@@ -872,7 +878,7 @@ def main() -> int:
         histology_rows,
         downstream_rows,
     )
-    print(f"Wrote cross-method evidence tables under {out_dir}")
+    print(f"Wrote R3 evidence tables under {out_dir}")
     return 0
 
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run targeted official SpaGCN/STAGATE/BayesSpace sensitivity on Colab."""
+"""Run official SpaGCN/STAGATE/BayesSpace sensitivity on Colab."""
 
 from __future__ import annotations
 
@@ -34,14 +34,66 @@ ALLOWED_SUFFIXES = (
     "_tissue_positions.csv.gz",
     "_tissue_positions_list.csv.gz",
     "_tissue_lowres_image.png.gz",
+    "_tissue_hires_image.png.gz",
+    "_detected_tissue_image.jpg.gz",
     "_scalefactors.json.gz",
     "_scalefactors_json.json.gz",
+    "_filtered_feature_bc_matrix.h5",
 )
 REMOTE_SERIES = {
     "GSE267401": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE267nnn/GSE267401/suppl/GSE267401_RAW.tar",
     "GSE311294": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE311nnn/GSE311294/suppl/GSE311294_RAW.tar",
+    "GSE285505": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE285nnn/GSE285505/suppl/GSE285505_RAW.tar",
 }
 REMOTE_SAMPLES = [
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265211_CTC21P",
+        "series_id": "GSE267401",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265212_CTC21M",
+        "series_id": "GSE267401",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265213_CTC17P",
+        "series_id": "GSE267401",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265214_CTC17M",
+        "series_id": "GSE267401",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703563_Tumor19",
+        "series_id": "GSE285505",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703564_Tumor20",
+        "series_id": "GSE285505",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703565_Tumor24",
+        "series_id": "GSE285505",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703566_Tumor26",
+        "series_id": "GSE285505",
+        "rationale": "full_cohort_crc_section",
+    },
     {
         "dataset_id": "GSE311294",
         "sample_id": "GSM9322957_TR11_206",
@@ -49,16 +101,28 @@ REMOTE_SAMPLES = [
         "rationale": "reviewer_focal_TR11_206",
     },
     {
-        "dataset_id": "GSE267401",
-        "sample_id": "GSM8265211_CTC21P",
-        "series_id": "GSE267401",
-        "rationale": "high_interval_supported_opposite_sign_count",
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322958_TR11_16184",
+        "series_id": "GSE311294",
+        "rationale": "full_cohort_crc_section",
     },
     {
         "dataset_id": "GSE311294",
         "sample_id": "GSM9322959_TR11_18105",
         "series_id": "GSE311294",
-        "rationale": "low_stability_high_switching_representative",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322960_TR11_21723",
+        "series_id": "GSE311294",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322961_TR16_23542",
+        "series_id": "GSE311294",
+        "rationale": "full_cohort_crc_section",
     },
 ]
 
@@ -119,6 +183,18 @@ def install_python_stack(log_rows: list[dict[str, object]], *, include_pyg: bool
         except Exception as exc:
             log_event(log_rows, step="install_pyg_optional_deps", status="failed", error=str(exc))
     log_event(log_rows, step="install_python_stack", status="success", include_pyg=include_pyg)
+
+
+def install_h5_reader_stack(log_rows: list[dict[str, object]]) -> None:
+    packages = [
+        "numpy",
+        "scipy",
+        "pandas>=2.2,<2.3",
+        "anndata>=0.10,<0.12",
+        "scanpy>=1.10,<1.11",
+    ]
+    run([sys.executable, "-m", "pip", "install", "-q", *packages], timeout=1800)
+    log_event(log_rows, step="install_h5_reader_stack", status="success")
 
 
 def read_scalefactors(root: Path, sample_id: str) -> dict[str, float]:
@@ -284,6 +360,37 @@ write.table(do.call(rbind, bench_rows), file=args$output_tsv, sep="\t", quote=FA
     )
 
 
+def ensure_flat_matrix_for_bayesspace(root: Path, sample_id: str, log_rows: list[dict[str, object]]) -> None:
+    matrix_file = root / f"{sample_id}_matrix.mtx.gz"
+    barcodes_file = root / f"{sample_id}_barcodes.tsv.gz"
+    features_file = root / f"{sample_id}_features.tsv.gz"
+    if matrix_file.exists() and barcodes_file.exists() and features_file.exists():
+        return
+    h5_file = root / f"{sample_id}_filtered_feature_bc_matrix.h5"
+    if not h5_file.exists():
+        raise FileNotFoundError(f"Missing flat 10x matrix files and H5 fallback for {sample_id}")
+    import scipy.io
+    from scipy import sparse
+    import scanpy as sc
+
+    adata = sc.read_10x_h5(str(h5_file), gex_only=True)
+    counts = sparse.coo_matrix(adata.X.T)
+    plain_matrix = matrix_file.with_suffix("")
+    scipy.io.mmwrite(str(plain_matrix), counts)
+    with plain_matrix.open("rb") as src, gzip.open(matrix_file, "wb") as dst:
+        shutil.copyfileobj(src, dst)
+    plain_matrix.unlink()
+    with gzip.open(barcodes_file, "wt", encoding="utf-8") as handle:
+        for barcode in adata.obs_names.astype(str):
+            handle.write(f"{barcode}\n")
+    gene_ids = adata.var.get("gene_ids", adata.var_names).astype(str)
+    feature_types = adata.var.get("feature_types", pd.Series(["Gene Expression"] * adata.n_vars, index=adata.var_names)).astype(str)
+    with gzip.open(features_file, "wt", encoding="utf-8") as handle:
+        for gene_id, gene_name, feature_type in zip(gene_ids, adata.var_names.astype(str), feature_types):
+            handle.write(f"{gene_id}\t{gene_name}\t{feature_type}\n")
+    log_event(log_rows, step="materialize_h5_for_bayesspace", dataset_root=str(root), sample_id=sample_id, status="success")
+
+
 def build_input_from_geo(extracted: Path, log_rows: list[dict[str, object]]) -> pd.DataFrame:
     raw_dir = WORK / "geo_raw"
     raw_dir.mkdir(parents=True, exist_ok=True)
@@ -325,6 +432,7 @@ def read_lines(path: Path) -> list[str]:
 
 def read_visium_flat(root: Path, sample_id: str):
     import anndata as ad
+    import scanpy as sc
     from scipy import sparse
     from scipy.io import mmread
 
@@ -334,9 +442,22 @@ def read_visium_flat(root: Path, sample_id: str):
     coords_path = root / f"{sample_id}_tissue_positions.csv.gz"
     if not coords_path.exists():
         coords_path = root / f"{sample_id}_tissue_positions_list.csv.gz"
-    counts = mmread(matrix_path).tocsr().transpose().tocsr()
-    barcodes = read_lines(barcodes_path)
-    features = pd.read_csv(features_path, sep="\t", header=None, compression="infer")
+    h5_path = root / f"{sample_id}_filtered_feature_bc_matrix.h5"
+    if matrix_path.exists():
+        counts = mmread(matrix_path).tocsr().transpose().tocsr()
+        barcodes = read_lines(barcodes_path)
+        features = pd.read_csv(features_path, sep="\t", header=None, compression="infer")
+        genes = features.iloc[:, 1].astype(str).tolist()
+        obs_names = [str(value) for value in barcodes]
+    elif h5_path.exists():
+        h5 = sc.read_10x_h5(str(h5_path))
+        h5.var_names_make_unique()
+        counts = sparse.csr_matrix(h5.X)
+        obs_names = h5.obs_names.astype(str).tolist()
+        barcodes = obs_names
+        genes = h5.var_names.astype(str).tolist()
+    else:
+        raise FileNotFoundError(f"Missing flat matrix or 10x H5 for {sample_id} under {root}")
     coords = pd.read_csv(coords_path, header=None, compression="infer")
     if str(coords.iloc[0, 0]) == "barcode":
         coords = pd.read_csv(coords_path, compression="infer")
@@ -355,7 +476,6 @@ def read_visium_flat(root: Path, sample_id: str):
     mask = coords["in_tissue"].astype(int).to_numpy() == 1
     coords = coords.loc[mask].reset_index(drop=True)
     counts = counts[mask, :]
-    genes = features.iloc[:, 1].astype(str).tolist()
     obs = pd.DataFrame(index=pd.Index([str(value) for value in coords["barcode"].tolist()], dtype="object"))
     var = pd.DataFrame(index=pd.Index([str(value) for value in genes], dtype="object"))
     adata = ad.AnnData(X=sparse.csr_matrix(counts), obs=obs, var=var)
@@ -522,6 +642,7 @@ def run_bayesspace(manifest: pd.DataFrame, extracted: Path, map_path: Path, log_
         dataset_id = str(row.dataset_id)
         sample_id = str(row.sample_id)
         root = extracted / str(row.bundle_root)
+        ensure_flat_matrix_for_bayesspace(root, sample_id, log_rows)
         try:
             bench = tmp_bench.with_name(f"bayesspace_{dataset_id}_{sample_id}_benchmark.tsv")
             run(
@@ -574,17 +695,23 @@ def main() -> int:
     parser.add_argument("--output-dir", default="colab_official_output")
     parser.add_argument("--bayesspace-nrep", type=int, default=1000)
     parser.add_argument("--run-bayesspace", action="store_true")
-    parser.add_argument("--run-mode", choices=["spagcn", "stagate", "all"], default="spagcn")
+    parser.add_argument("--run-mode", choices=["none", "spagcn", "stagate", "all"], default="spagcn")
+    parser.add_argument("--reuse-extracted", action="store_true")
+    parser.add_argument("--skip-python-install", action="store_true")
+    parser.add_argument("--sample-filter", default="")
     args, _unknown = parser.parse_known_args()
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     extracted = WORK / "input" / "bundle"
-    if extracted.exists():
+    if extracted.exists() and not args.reuse_extracted:
         shutil.rmtree(extracted)
     extracted.mkdir(parents=True, exist_ok=True)
     log_rows: list[dict[str, object]] = []
-    if Path(args.input_tar).exists():
+    if args.reuse_extracted and (extracted / "sample_manifest.tsv").exists():
+        manifest = pd.read_csv(extracted / "sample_manifest.tsv", sep="\t")
+        log_event(log_rows, step="reuse_extracted_input", status="success", n_samples=int(manifest.shape[0]))
+    elif Path(args.input_tar).exists():
         with tarfile.open(args.input_tar, "r:gz") as handle:
             handle.extractall(extracted)
         manifest = pd.read_csv(extracted / "sample_manifest.tsv", sep="\t")
@@ -594,9 +721,19 @@ def main() -> int:
     map_rows: list[pd.DataFrame] = []
     if not (extracted / "sample_manifest.tsv").exists():
         manifest.to_csv(extracted / "sample_manifest.tsv", sep="\t", index=False)
+    if args.sample_filter.strip():
+        selected = {value.strip() for value in args.sample_filter.split(",") if value.strip()}
+        manifest = manifest[manifest["sample_id"].astype(str).isin(selected)].copy()
+        log_event(log_rows, step="sample_filter", status="success", n_samples=int(manifest.shape[0]), sample_filter=",".join(sorted(selected)))
 
     try:
-        install_python_stack(log_rows, include_pyg=args.run_mode in {"stagate", "all"})
+        if not args.skip_python_install:
+            if args.run_mode == "none":
+                install_h5_reader_stack(log_rows)
+            else:
+                install_python_stack(log_rows, include_pyg=args.run_mode in {"stagate", "all"})
+        else:
+            log_event(log_rows, step="install_python_stack", status="skipped_by_wrapper")
         if args.run_mode in {"stagate", "all"}:
             install_stagate(log_rows)
     except Exception as exc:

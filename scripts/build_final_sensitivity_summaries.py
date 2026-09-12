@@ -14,7 +14,7 @@ CROSS = ROOT / "results" / "cross_method_boundary"
 OFFICIAL = ROOT / "results" / "official_sensitivity"
 
 
-def build_targeted_official_sensitivity_table() -> None:
+def build_full13_official_sensitivity_table() -> None:
     stability = pd.read_csv(OFFICIAL / "evidence_all" / "stability_summary.tsv", sep="\t")
     switching = pd.read_csv(OFFICIAL / "evidence_all" / "switching_boundary_relationship.tsv", sep="\t")
     downstream = pd.read_csv(OFFICIAL / "evidence_all" / "downstream_robustness_summary.tsv", sep="\t")
@@ -73,12 +73,9 @@ def build_targeted_official_sensitivity_table() -> None:
     }
     table.insert(
         table.columns.get_loc("method_label") + 1,
-        "targeted_run_scope",
+        "implementation_setting",
         table["method_id"].map(method_scope),
     )
-    table["representative_slice_set"] = "TR11_206, CTC21P, TR11_18105"
-    table["execution_environment"] = "Colab T4 GPU where needed; no heavy graph-neural-network or high-nrep BayesSpace training was run locally."
-    table["interpretive_scope"] = "Targeted sensitivity check only; not a replacement for the full 13-section matched-input analysis."
 
     ordered = [
         "dataset_id",
@@ -86,7 +83,7 @@ def build_targeted_official_sensitivity_table() -> None:
         "K",
         "method_id",
         "method_label",
-        "targeted_run_scope",
+        "implementation_setting",
         "n_alternatives",
         "median_ari",
         "min_ari",
@@ -111,12 +108,9 @@ def build_targeted_official_sensitivity_table() -> None:
         "current_fraction_direction_reversal",
         "official_fraction_sign_state_change",
         "current_fraction_sign_state_change",
-        "representative_slice_set",
-        "execution_environment",
-        "interpretive_scope",
     ]
     table = table[ordered].sort_values(["method_id", "dataset_id", "sample_id", "K"])
-    table.to_csv(CROSS / "targeted_official_sensitivity.tsv", sep="\t", index=False)
+    table.to_csv(CROSS / "full13_official_sensitivity.tsv", sep="\t", index=False)
 
 
 def build_stability_stratified_downstream_table() -> None:
@@ -130,14 +124,7 @@ def build_stability_stratified_downstream_table() -> None:
         labels=["ARI_lt_0_60", "ARI_0_60_to_0_80", "ARI_gt_0_80"],
         right=False,
     )
-    df["stability_band_note"] = df["stability_band"].map(
-        {
-            "ARI_lt_0_60": "Below the author-defined descriptive stability screen.",
-            "ARI_0_60_to_0_80": "Above the screen but not a high-stability setting.",
-            "ARI_gt_0_80": "High-stability setting in this descriptive stratification.",
-        }
-    ).astype(str)
-    group_cols = ["method_id", "method_label", "stability_band", "stability_band_note"]
+    group_cols = ["method_id", "method_label", "stability_band"]
     by_method = (
         df.groupby(group_cols, observed=True)
         .agg(
@@ -152,7 +139,7 @@ def build_stability_stratified_downstream_table() -> None:
         .reset_index()
     )
     combined = (
-        df.groupby(["stability_band", "stability_band_note"], observed=True)
+        df.groupby(["stability_band"], observed=True)
         .agg(
             n_feature_settings=("feature_id", "size"),
             n_distinct_section_k_settings=("sample_id", lambda x: int(df.loc[x.index, keys].drop_duplicates().shape[0])),
@@ -167,14 +154,11 @@ def build_stability_stratified_downstream_table() -> None:
     combined.insert(0, "method_id", "All_methods_combined")
     combined.insert(1, "method_label", "All methods combined")
     table = pd.concat([combined, by_method], ignore_index=True)
-    table["interpretation_note"] = (
-        "Post-review descriptive stratification; ARI bands do not define validity thresholds and spot-bootstrap intervals do not resolve spatial dependence."
-    )
     table.to_csv(CROSS / "stability_stratified_downstream_sensitivity.tsv", sep="\t", index=False)
 
 
 def main() -> None:
-    build_targeted_official_sensitivity_table()
+    build_full13_official_sensitivity_table()
     build_stability_stratified_downstream_table()
 
 

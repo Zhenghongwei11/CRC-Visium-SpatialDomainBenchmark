@@ -1,0 +1,11 @@
+row_type	method_id	sample_id	K	partition_id	feature_id	reference_delta	median_delta	bootstrap_ci_lower	bootstrap_ci_upper	n_nonreference_feature_partition_units	n_opposite_sign_point_estimates	fraction_opposite_sign_point_estimates	n_interval_supported_opposite_sign	fraction_interval_supported_opposite_sign	n_attenuated_below_25pct_reference	fraction_attenuated_below_25pct_reference	n_evaluable_method_section_k_settings
+method_summary	Official_BayesSpace_nrep1000									341.0	28.0	0.08211143695014662	0.0	0.0	12.0	0.03519061583577713	20.0
+method_summary	Official_STAGATE_pyG									330.0	4.0	0.012121212121212121	0.0	0.0	1.0	0.0030303030303030303	15.0
+method_summary	Official_SpaGCN_v1_2_7									330.0	41.0	0.12424242424242424	7.0	0.021212121212121213	25.0	0.07575757575757576	18.0
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_23	COL1A1	0.4802327133151243	-0.419565520655099	-0.4955921921011565	-0.2073809373228545								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_23	SIG_CAF_FAP	0.2725565474381528	-0.1845641094727428	-0.2610860512539943	-0.0988813777277252								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_23	SIG_EXCLUSION_CONTRAST	0.3571511731674763	-0.1540814319531764	-0.283252583141758	-0.0048417607477288								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_23	SIG_EXCLUSION_TGFB_CXCL12	0.2338137563586613	-0.118402630460378	-0.1893814356922821	-0.0325892367172574								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_37	COL1A1	0.4802327133151243	-0.4473019193379537	-0.5632521982808961	-0.158920255624273								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_37	SIG_CAF_FAP	0.2725565474381528	-0.25194807684466	-0.347673089927469	-0.1787246963927437								
+interval_supported_example	Official_SpaGCN_v1_2_7	GSM9322960_TR11_21723	6	seed_37	SIG_EXCLUSION_CONTRAST	0.3571511731674763	-0.2100137465765832	-0.3181442499745175	-0.0268301222808772								

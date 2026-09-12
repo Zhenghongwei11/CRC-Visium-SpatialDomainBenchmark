@@ -57,7 +57,7 @@ Image gradient will be sampled from GEO-provided detected-tissue images at Visiu
 
 The same declared feature set will be used across methods and partitions where genes are available: EPCAM, COL1A1, FAP, SPP1, PTPRC, CAF/FAP-associated, SPP1-myeloid-associated, T-cell-associated, TGF-beta/CXCL12 myofibroblast-barrier, cytotoxic-lymphocyte, and CAF-plus-SPP1-myeloid-minus-T-cell contrast scores.
 
-Primary reporting uses boundary-minus-interior median differences with bootstrap 95% intervals. Opposite-sign point estimates are retained in full. A post-review descriptive table additionally records whether the reference and at least one opposite-sign alternative both have intervals excluding zero in the direction of their point estimates. This added classification is not a new confirmatory gate. A spatial-block analysis based on a fixed 6x6 array-coordinate grid is reported where at least five spots from each comparison group occur in enough mixed blocks to estimate a contrast.
+Primary reporting uses boundary-minus-interior median differences with bootstrap 95% intervals. Opposite-sign point estimates are retained in full. A post-review descriptive table additionally records whether the reference and at least one opposite-sign alternative both have intervals excluding zero in the direction of their point estimates. This added classification is an interpretation aid, not an independent validation gate. A spatial-block analysis based on a fixed 6x6 array-coordinate grid is reported where at least five spots from each comparison group occur in enough mixed blocks to estimate a contrast.
 
 ## Statistical interpretation
 
@@ -76,9 +76,10 @@ Primary reporting uses boundary-minus-interior median differences with bootstrap
 
 ## Final-revision sensitivity additions
 
-The `v1.0.17` release adds two post-review sensitivity outputs:
+The final R3 release update adds three post-review sensitivity outputs:
 
-- Targeted official-implementation sensitivity checks for official SpaGCN 1.2.7, STAGATE-linked PyG, and BayesSpace nrep=1,000 on TR11_206, CTC21P, and TR11_18105 at K=4 and K=6.
+- Full-13 official-implementation sensitivity checks for official SpaGCN 1.2.7, STAGATE-linked PyG, and BayesSpace nrep=1,000 at K=4 and K=6.
 - A stability-stratified downstream summary that separates opposite-sign downstream estimates in low-, moderate-, and high-ARI settings.
+- A molecular tumor-stroma proxy interface analysis using EPCAM-high and COL1A1/FAP-high inferred domains.
 
-These additions calibrate implementation scope and stability dependence. They do not replace the full 13-section matched-input analysis and do not upgrade opposite-sign point estimates into pathology-validated biological reversals.
+These additions calibrate implementation scope and stability dependence. They do not replace the full 13-section matched-input analysis and do not upgrade opposite-sign point estimates into pathology-validated biological reversals. The proxy-interface analysis explicitly treats COL1A1/FAP as part of the proxy definition, so the TGF-beta/CXCL12 and immune-exclusion contrast readouts carry the less direct downstream interpretation.

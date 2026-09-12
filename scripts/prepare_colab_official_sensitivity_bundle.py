@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare the targeted Colab input bundle for official-method sensitivity runs."""
+"""Prepare the Colab input bundle for official-method sensitivity runs."""
 
 from __future__ import annotations
 
@@ -26,22 +26,82 @@ ALLOWED_SUFFIXES = (
 
 SAMPLES = [
     {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265211_CTC21P",
+        "source_root": ROOT / "data" / "raw" / "GSE267401" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265212_CTC21M",
+        "source_root": ROOT / "data" / "raw" / "GSE267401" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265213_CTC17P",
+        "source_root": ROOT / "data" / "raw" / "GSE267401" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE267401",
+        "sample_id": "GSM8265214_CTC17M",
+        "source_root": ROOT / "data" / "raw" / "GSE267401" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703563_Tumor19",
+        "source_root": ROOT / "data" / "raw" / "GSE285505" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703564_Tumor20",
+        "source_root": ROOT / "data" / "raw" / "GSE285505" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703565_Tumor24",
+        "source_root": ROOT / "data" / "raw" / "GSE285505" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE285505",
+        "sample_id": "GSM8703566_Tumor26",
+        "source_root": ROOT / "data" / "raw" / "GSE285505" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
         "dataset_id": "GSE311294",
         "sample_id": "GSM9322957_TR11_206",
         "source_root": ROOT / "data" / "raw" / "GSE311294" / "extracted",
         "rationale": "reviewer_focal_TR11_206",
     },
     {
-        "dataset_id": "GSE267401",
-        "sample_id": "GSM8265211_CTC21P",
-        "source_root": ROOT / "data" / "raw" / "GSE267401" / "extracted",
-        "rationale": "high_interval_supported_opposite_sign_count",
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322958_TR11_16184",
+        "source_root": ROOT / "data" / "raw" / "GSE311294" / "extracted",
+        "rationale": "full_cohort_crc_section",
     },
     {
         "dataset_id": "GSE311294",
         "sample_id": "GSM9322959_TR11_18105",
         "source_root": ROOT / "data" / "raw" / "GSE311294" / "extracted",
-        "rationale": "low_stability_high_switching_representative",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322960_TR11_21723",
+        "source_root": ROOT / "data" / "raw" / "GSE311294" / "extracted",
+        "rationale": "full_cohort_crc_section",
+    },
+    {
+        "dataset_id": "GSE311294",
+        "sample_id": "GSM9322961_TR16_23542",
+        "source_root": ROOT / "data" / "raw" / "GSE311294" / "extracted",
+        "rationale": "full_cohort_crc_section",
     },
 ]
 

@@ -4,7 +4,7 @@ Publication-quality figures for the CRC Visium spatial-clustering benchmark.
 
 Design rationale
 ================
-* Restrained benchmark style: high information
+* Nature Methods / Genome Biology benchmark style: restrained, high information
   density, fine grid lines, Okabe–Ito palette, matched panel labelling.
 * Every numeric value is read from the locked TSV tables – nothing is hard-coded.
 * No "uninformative bar charts": paired dot-line for per-sample deltas, strip +
@@ -244,15 +244,15 @@ def figure2(root: Path) -> None:
     gates  = pd.read_csv(root / "results" / "benchmarks" /
                          "statistical_gate_summary.tsv", sep="\t")
 
-    # Common full-width figure limit is about 7.5 in (2250 px at 300 dpi). Because we use
+    # PLOS ONE max width is 7.5 in (2250 px at 300 dpi). Because we use
     # savefig.bbox='tight', the rendered pixel width can exceed fig.width*dpi.
     # Keep Fig 2 slightly narrower to stay within the pixel constraint.
-    fig = plt.figure(figsize=(6.25, 7.5))
+    fig = plt.figure(figsize=(6.65, 8.15))
     gs = gridspec.GridSpec(
         2, 2, figure=fig,
-        height_ratios=[1, 0.8],
-        wspace=0.38, hspace=0.50,
-        left=0.18, right=0.95, top=0.94, bottom=0.08,
+        height_ratios=[1, 1.05],
+        wspace=0.42, hspace=0.58,
+        left=0.18, right=0.96, top=0.94, bottom=0.075,
     )
 
     # ── Panel A: paired dot-line for Δ spatial coherence ─────────────────
@@ -274,7 +274,7 @@ def figure2(root: Path) -> None:
                  title="Pre-specified effect sizes (paired median Δ, 95% CI)")
     _panel_label(ax_c, "C", x=0.01, y=1.02)
 
-    # Figure numbering is aligned to the analysis figure set.
+    # NOTE: Manuscript figure numbering is aligned to first-callout order.
     # Domain-quality summary appears after the workflow schematic, so it is Fig 3.
     _save(fig, root, "figure3")
 
@@ -369,10 +369,11 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
         metric = str(row["metric_id"]).replace("_median", "").replace("_", " ")
         baseline_short = comp.split("_vs_")[-1][:25] if "_vs_" in comp else comp
         label_txt = f"{metric}"
-        ax.text(hi + 0.015, i + 0.05, f"Δ = {est:.3f}  [{lo:.3f}, {hi:.3f}]",
-                fontsize=6, va="center", color=OI["dark_gray"])
-        ax.text(hi + 0.015, i - 0.25, f"adjusted q = {q:.4f}",
-                fontsize=5.5, va="center", color=OI["blue"],
+        label_x = hi + 0.018
+        ax.text(label_x, i + 0.14, f"Δ = {est:.3f} [{lo:.3f}, {hi:.3f}]",
+                fontsize=5.6, va="center", color=OI["dark_gray"])
+        ax.text(label_x, i - 0.18, f"q = {q:.4f}",
+                fontsize=5.2, va="center", color=OI["blue"],
                 fontstyle="italic")
 
     ax.axvline(null_value, color=OI["black"], linewidth=0.7, linestyle="--", zorder=1)
@@ -394,6 +395,7 @@ def _plot_forest(ax: mpl.axes.Axes, gate_df: pd.DataFrame,
     ax.set_yticklabels(y_labels, fontsize=6.5, linespacing=1.1)
     ax.set_xlabel("Paired median Δ (bootstrap 95% CI)", fontsize=7.5)
     ax.set_title(title, fontsize=8, pad=6)
+    ax.set_ylim(-0.65, n_rows - 0.15)
     ax.invert_yaxis()
     _add_fine_grid(ax, axis="x")
 
@@ -413,7 +415,7 @@ def figure3(root: Path) -> None:
         1, 2, figure=fig,
         width_ratios=[1.4, 1],
         wspace=0.40,
-        # Extra bottom margin prevents x-label collisions after downscaling.
+        # Extra bottom margin prevents x-label collisions after downscaling in DOCX.
         left=0.10, right=0.95, top=0.90, bottom=0.28,
     )
 
@@ -584,7 +586,7 @@ def figure4(root: Path) -> None:
         ax_a.scatter(np.full(len(vals), pos) + jitter, vals,
                      s=8, c=color, alpha=0.55, edgecolors="none", zorder=5)
         # NOTE: Avoid per-group n annotations under the x-axis; these routinely collide
-        # with multi-line tick labels after downscaling.
+        # with multi-line tick labels after downscaling in DOCX.
 
     ax_a.set_xticks(positions)
     ax_a.set_xticklabels([g[0] for g in groups], fontsize=7)
