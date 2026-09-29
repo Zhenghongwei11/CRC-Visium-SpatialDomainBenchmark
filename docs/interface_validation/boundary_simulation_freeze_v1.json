@@ -1,0 +1,19 @@
+{
+  "frozen_utc": "2026-09-28T09:01:54.538714+00:00",
+  "manifest_sha256": "38305dfedf76d4e029efb6a64a587862ac2e97a9a7b5d0ef0bb99b61217ded1d",
+  "case_count": 52,
+  "file_sha256": {
+    "docs/interface_validation/reframed_protocol.md": "373c5434273ef139591bf0a82526478ad8d2994b1def28f9f38897f54a270498",
+    "docs/interface_validation/boundary_simulation_design.md": "894ecb298bb767073b8690859c5c900105da14d4f4342c0ce142a1af4acdb4b4",
+    "scripts/tissue_anchor_simulation.py": "962be665e95fe5f3f0de111b7053a7682c3e9dfbac902898b6b1d4f6ba7e51f4",
+    "scripts/colab_interface_validation_full.py": "39abbedd4cada4c428ffb92d4315174138ff1adf8daf91a7c5b6267ad21757e2"
+  },
+  "python": "3.13.7",
+  "numpy": "2.4.2",
+  "scipy": "1.17.0",
+  "pandas": "3.0.0",
+  "sklearn": "1.8.0",
+  "historical_outcomes_visible": true,
+  "new_calibration_outcomes_visible": false,
+  "structural_unit_tests_executed": true
+}

@@ -1,82 +1,53 @@
-# Boundary sensitivity of spatial-domain maps in CRC Visium data
+# Tissue-anchored regional expression contrasts in colorectal cancer Visium data
 
-This repository contains code, derived tables, and publication figures for evaluating how spatial-domain assignments respond to plausible analytic perturbations in colorectal cancer (CRC) 10x Genomics Visium data.
+This repository contains analysis code and derived evidence for a near-versus-far stromal expression comparison in colorectal cancer Visium sections. The current release adds a frozen known-boundary calibration and a patient-aware application to two public resources. The earlier cross-method boundary analysis remains available in its original directories and prior tagged releases.
 
-The analysis compares seven approaches across 13 sections from three public cohorts at `K=4` and `K=6`. Expression-only and coordinate-augmented k-means were stable under the tested seeds. BayesSpace, spatial Ward, spatial Leiden, SpaGCN-style, and STAGATE-style maps showed varying degrees of assignment sensitivity. Switching spots were repeatedly enriched near inferred domain boundaries, but their image-gradient context was mixed. Boundary-focused expression summaries produced opposite-sign point estimates for selected method-setting combinations; the smaller subset in which both intervals excluded zero is reported separately. The current release adds full-13 official-implementation sensitivity results, a stability-stratified downstream summary, and a molecular tumor-stroma proxy interface analysis.
+## Main result
 
-These results describe reliability under the specified perturbations. Spatial coherence and marker coherence are internal map properties, not external accuracy measures, and inferred boundaries are not pathology annotations.
+The known-boundary simulation shows that global map agreement and the fraction of retained near-tumor spots do not, by themselves, order fidelity to a regional expression contrast. Calibration varies across simulated conditions. In the public colorectal cancer resources, some map-selected regions did not retain a contrast supported by deposited morphology-based spot labels. No eligible primary comparison showed a supported direction reversal. These real-resource results are descriptive; they do not establish that a histological boundary moved or that a biological program disappeared.
 
-## Repository contents
+## Current release contents
 
-- `results/cross_method_boundary/`: analysis-ready evidence tables, coverage records, compressed switching-spot data, full-13 official-sensitivity summaries, stability-stratified downstream summaries, and molecular proxy-interface summaries.
-- `results/official_sensitivity/`: Colab-generated official SpaGCN, STAGATE_pyG, and BayesSpace nrep=1,000 result tables.
-- `figures/cross_method_boundary/`: main and supplementary figures in PNG and PDF formats.
-- `scripts/`: data preparation, domain analysis, sensitivity analysis, Colab official-implementation checks, evidence-table, and figure-generation code.
-- `supplementary_tables/SUPPLEMENTARY_TABLES.xlsx`: focused workbook containing the current supplementary tables S1-S17.
-- `docs/BOUNDARY_RELIABILITY_PROTOCOL.md`: fixed analysis definitions and interpretation rules.
-- `docs/DATA_MANIFEST.tsv`: public data sources and download information.
-- `docs/FIGURE_PROVENANCE.tsv` and `docs/SOURCE_DATA_MAP.tsv`: links from figures and reported results to machine-readable tables.
+- `docs/interface_validation/reframed_protocol.md`: tissue anchor, fixed score, eligibility and interpretation rules.
+- `docs/interface_validation/boundary_simulation_manifest.json` and `boundary_simulation_freeze_v1.json`: frozen 52-condition simulation and source fingerprints.
+- `scripts/tissue_anchor_simulation.py`: known-boundary generator, estimation and summary export.
+- `scripts/tissue_anchor_real_application.py`: application to registered spot inputs and saved maps.
+- `scripts/make_tissue_anchor_figures.py`: regeneration of the four-panel figure from released derived tables.
+- `results/interface_validation/reframed/simulation_full_v1/`: aggregate cell metrics, calibration summaries, threshold sensitivity and run status.
+- `results/interface_validation/reframed/real_application_v1/`: section, patient and cohort results, non-evaluable settings, marker-sensitivity gate and independent audit.
+- `results/interface_validation/reframed/figures/`: figure PNG and PDF.
 
-Large raw data and intermediate domain maps are not redistributed. They can be regenerated from the public GEO records and the scripts in this repository.
+The release does not redistribute raw expression matrices, full per-section replay inputs or 5,200 simulation checkpoint pairs. The aggregate simulation tables and checksums, as well as the derived real-resource effects, are included. Replaying the full real-resource stage requires source-compatible registered spot inputs and saved maps at the paths described in `docs/interface_validation/real_resource_application_v1.json`. Those inputs were derived from the public Valdeolivas release and GSE294385; source accessions and acquisition information are in `docs/DATA_MANIFEST.tsv`. Figure regeneration and examination of all reported numerical summaries work directly from the released tables.
 
-## Data sources
+## Reproduce the figures and simulation
 
-CRC Visium data:
-
-- GSE267401
-- GSE311294
-- GSE285505
-
-## Reproduce the analysis
-
-Prerequisites are Python 3 and R with `Rscript` available on `PATH`. Individual method environments and public GEO downloads are prepared by the stage scripts where needed.
-
-Run the established end-to-end benchmark pipeline:
+Use Python 3.13 and install the core packages in `requirements.txt` (the simulation run recorded Python 3.13.7 and the exact numerical-library versions in `RUN.json`). The legacy workflows also use `psutil` and `h5py`, for which the requirements file specifies compatible major-version ranges. Then run:
 
 ```bash
-bash scripts/reproduce_one_click.sh
+python3 scripts/make_tissue_anchor_figures.py
 ```
 
-Generate the cross-method figures directly from the released evidence tables:
+For a full simulation replay, use the frozen manifest and source files in this version:
 
 ```bash
-python3 scripts/make_cross_method_boundary_figures.py
+python3 scripts/tissue_anchor_simulation.py full \
+  --manifest docs/interface_validation/boundary_simulation_manifest.json \
+  --freeze docs/interface_validation/boundary_simulation_freeze_v1.json \
+  --output-dir results/interface_validation/reframed/simulation_replay
 ```
 
-The official-implementation sensitivity check can be run on Google Colab with:
+The full simulation comprises 5,200 realizations and may require multiple bounded invocations to finish. The original aggregate output hashes are recorded in `results/interface_validation/reframed/simulation_full_v1/STATUS.json`.
 
-```bash
-colab new --gpu T4 --session jbcb-official-sensitivity
-colab exec --session jbcb-official-sensitivity --file scripts/colab_official_sensitivity.py
-colab exec --session jbcb-official-sensitivity --file scripts/colab_bayesspace_sensitivity.py
-colab stop --session jbcb-official-sensitivity
-```
+The prior 13-section benchmark can still be run with `bash scripts/reproduce_one_click.sh`; its intermediate maps and raw GEO data are downloaded or generated by its stage scripts. It is distinct from the tissue-anchored revision analysis. Full real-resource replay requires the source-compatible registered inputs and historical saved maps described above; the archive provides the derived patient, section and map tables needed to inspect the reported results.
 
-The released results from those runs are under `results/official_sensitivity/`.
+## Data and interpretation
 
-Intermediate partitions for the extended boundary analysis can be generated with:
+The original computational screen used GSE267401, GSE311294 and GSE285505. The tissue-anchored application used the public Valdeolivas CRC Visium release and eight GSE294385 Primary Colon sections. The fixed real-resource score is the mean log-normalized expression of `TGFB1`, `CXCL12`, `ACTA2` and `TAGLN`. It is a regional composite, not a fibroblast-specific or functional assay. Compatible component-gene inputs for the prespecified score sensitivity were unavailable in the retained replay inputs, so that analysis is recorded as non-evaluable.
 
-```bash
-bash scripts/run_bayesspace_partition_replicates.sh
-python3 scripts/run_spatial_ward_perturbations.py --help
-python3 scripts/run_spatial_leiden_perturbations.py --help
-python3 scripts/run_crc_spatial_smoketest.py --help
-```
+Repeated methods, maps, seeds and serial sections are nested within patients. The released map counts are not patient prevalence estimates. The real-resource intervals are descriptive because the fixed-map simulation does not calibrate maps learned from the same expression matrix.
 
-After the intermediate maps are present under `results/cross_method_boundary/domain_maps/`, rebuild the evidence tables with:
+## Citation and license
 
-```bash
-python3 scripts/build_cross_method_boundary_evidence.py
-python3 scripts/build_cross_method_computational_sensitivity.py
-python3 scripts/build_cross_method_opposite_sign_evidence.py
-python3 scripts/build_r3_tumor_stroma_proxy_interface.py
-python3 scripts/make_cross_method_boundary_figures.py
-```
+Cite the version DOI for the exact archived release. The family concept DOI is [10.5281/zenodo.19682586](https://doi.org/10.5281/zenodo.19682586). Version and authorship metadata are in `CITATION.cff`.
 
-## Citation
-
-The archived `v1.0.18` code and data-derived tables are available through the Zenodo record family [10.5281/zenodo.19682586](https://doi.org/10.5281/zenodo.19682586). Citation metadata are provided in `CITATION.cff`.
-
-## License
-
-Code is released under the MIT License. Source datasets remain subject to their original repository terms.
+Code is released under the MIT License. Source data remain under their original repository terms.

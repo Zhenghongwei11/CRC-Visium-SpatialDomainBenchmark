@@ -1,4 +1,8 @@
 figure_id	panel_id	generating_script	anchor_tables	notes
+Revision_Fig1	A	scripts/make_tissue_anchor_figures.py	results/interface_validation/reframed/real_application_v1/cohort_summary.tsv	Attempted, anchor-eligible and anchor-supported sections in each public resource.
+Revision_Fig1	B	scripts/make_tissue_anchor_figures.py	results/interface_validation/reframed/real_application_v1/real_cohort_effects.tsv	M-ST-13 Patient1 repeated BayesSpace maps; descriptive intervals.
+Revision_Fig1	C	scripts/make_tissue_anchor_figures.py	results/interface_validation/reframed/simulation_full_v1/simulation_summary.tsv	Condition-specific known-boundary interval coverage.
+Revision_Fig1	D	scripts/make_tissue_anchor_figures.py	results/interface_validation/reframed/simulation_review_v1.json	Preselected simulated example with known population contrast.
 Fig1	Fig1A-D	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/coverage_manifest.tsv;results/cross_method_boundary/stability_summary.tsv;results/cross_method_boundary/switching_boundary_relationship.tsv;results/cross_method_boundary/downstream_robustness_summary.tsv	Four-stage evidence sequence and operational definitions.
 Fig2	Fig2A	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/global_characterization.tsv	Spatial coherence and marker separation by method-section-resolution setting.
 Fig2	Fig2B-C	scripts/make_cross_method_boundary_figures.py	results/cross_method_boundary/stability_summary.tsv	Repeated-seed or fixed graph-perturbation ARI and the descriptive ARI screen.

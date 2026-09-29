@@ -1,0 +1,128 @@
+{
+  "input_sha256": {
+    "simulation_cell_metrics.tsv": "413315300a86061fd51fa5cbe96201b32ddfb7db2f7cf9e024caa8a140c59caa",
+    "simulation_summary.tsv": "3e019f93e6cbf54f301dff4c98ace0230638aec13ee9c796a9ab3e21b758fc15",
+    "simulation_threshold_sensitivity.tsv": "1eecb5e348644fa7c459b52e36c7eca7bdb760493dcf1b54df1875f45af0e272"
+  },
+  "audit": {
+    "audit_pass": true,
+    "mode": "full",
+    "run_state": "complete",
+    "sections_attempted": 5200,
+    "sections_expected": 5200,
+    "rows": 31200,
+    "successful_rows": 28800,
+    "not_evaluable_rows": 2400,
+    "identity_control_rows": 5200,
+    "exact_zero_paired_controls": 10400,
+    "failed_checks": []
+  },
+  "calibration": {
+    "anchor": {
+      "condition_groups": 52,
+      "evaluable_groups": 52,
+      "gate_counts": {
+        "pass": 33,
+        "fail": 19
+      },
+      "coverage_min": 0.89,
+      "coverage_median": 0.97,
+      "coverage_max": 1.0,
+      "max_absolute_bias_noise_sd": 0.0729896694752481,
+      "coverage_upper_below_0p90": 0,
+      "coverage_upper_below_0p95_pointwise": 3
+    },
+    "contrast": {
+      "condition_groups": 312,
+      "evaluable_groups": 288,
+      "gate_counts": {
+        "pass": 164,
+        "fail": 124,
+        "not_evaluable": 24
+      },
+      "coverage_min": 0.88,
+      "coverage_median": 0.96,
+      "coverage_max": 1.0,
+      "max_absolute_bias_noise_sd": 0.0992611445610168,
+      "coverage_upper_below_0p90": 0,
+      "coverage_upper_below_0p95_pointwise": 18
+    },
+    "paired": {
+      "condition_groups": 312,
+      "evaluable_groups": 184,
+      "gate_counts": {
+        "pass": 146,
+        "not_evaluable": 128,
+        "fail": 38
+      },
+      "coverage_min": 0.89,
+      "coverage_median": 0.97,
+      "coverage_max": 1.0,
+      "max_absolute_bias_noise_sd": 0.0427327706250542,
+      "coverage_upper_below_0p90": 0,
+      "coverage_upper_below_0p95_pointwise": 3
+    }
+  },
+  "reference_maps_nonzero_signal": {
+    "global_ari_range": [
+      0.9429338777277232,
+      0.9451843518551528
+    ],
+    "near_retention_range": [
+      0.6527777777777778,
+      0.6666666666666666
+    ],
+    "far_retention_range": [
+      1.0,
+      1.0
+    ],
+    "relative_attenuation_range": [
+      0.20313684836913115,
+      0.36018986274436227
+    ]
+  },
+  "prespecified_illustration_case_051": [
+    {
+      "map": "identity_control",
+      "latent_anchor_truth": 0.3097368621488391,
+      "measured_anchor_truth": 0.2234560626402663,
+      "map_truth": 0.2234560626402663,
+      "global_ari": 1.0,
+      "near_retention": 1.0,
+      "far_retention": 1.0,
+      "relative_selection_attenuation": -0.0
+    },
+    {
+      "map": "reference_shift",
+      "latent_anchor_truth": 0.3097368621488391,
+      "measured_anchor_truth": 0.2234560626402663,
+      "map_truth": 0.155853537917221,
+      "global_ari": 0.9429338777277232,
+      "near_retention": 0.6527777777777778,
+      "far_retention": 1.0,
+      "relative_selection_attenuation": 0.302531620419161
+    },
+    {
+      "map": "alternative_shift",
+      "latent_anchor_truth": 0.3097368621488391,
+      "measured_anchor_truth": 0.2234560626402663,
+      "map_truth": 0.1841546049112916,
+      "global_ari": 0.925026588505794,
+      "near_retention": 0.5416666666666666,
+      "far_retention": 1.0,
+      "relative_selection_attenuation": 0.17588002430815525
+    }
+  ],
+  "decisions": {
+    "all_conditions_pass_calibration": false,
+    "scope": "Fixed outcome-independent maps; declared Gaussian signal/noise and geometry grid only",
+    "real_cohort_interval_language": "Descriptive pending transportability and patient-level review",
+    "demonstrated_result": "A controlled counterexample to ordering regional fidelity by global ARI",
+    "mechanisms_not_demonstrated": [
+      "CRC biological reversal",
+      "Potts/MCMC mode hopping",
+      "smooth-muscle causation"
+    ],
+    "publication_claim_approval": false
+  }
+}

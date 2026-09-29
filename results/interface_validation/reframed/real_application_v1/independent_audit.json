@@ -1,0 +1,92 @@
+{
+  "audit_script_sha256": "824aa34dd396f8de13c6f737e4f6b507bf97500fabf2ade29c72110c775e277e",
+  "audited_utc": "2026-09-28T10:23:48.959990+00:00",
+  "category_fields_checked": 10654,
+  "intentional_changes": [
+    "All attempted sections retained: Valdeolivas two sections without pure tumor/stroma anchors add 144 non-evaluable estimator-map rows",
+    "GSE declared grid includes seven absent saved maps, adding 14 non-evaluable estimator-map rows",
+    "Label eligibility, anchor support eligibility, own-map eligibility and historical reference-comparison eligibility separated",
+    "Additional-loss denominator restricted to anchor/reference-supported eligible alternatives",
+    "Continuous effects standardized by section MAD; intervals retain descriptive interpretation",
+    "Available method-resolution settings summarized within sections before equal-section patient summaries",
+    "Score and estimator display labels may be clarified; historical numeric results and classifications retained"
+  ],
+  "numeric_fields_checked": 38050,
+  "resources": [
+    {
+      "added_non_evaluable_rows": 14,
+      "anchor_eligible_sections": 8,
+      "estimators": [
+        {
+          "additional_loss_eligible_rows": 28,
+          "additional_loss_rows": 6,
+          "all_rows": 329,
+          "declared_rows": 336,
+          "estimator": "anchor_retention",
+          "flagged_additional_loss_patients": [
+            "Patient1"
+          ],
+          "independent_patients": 5,
+          "map_to_anchor_loss_nonreference_rows": 39,
+          "material_paired_additional_loss_rows": 2,
+          "successful_nonreference_rows": 155,
+          "successful_rows": 240
+        },
+        {
+          "additional_loss_eligible_rows": 20,
+          "additional_loss_rows": 4,
+          "all_rows": 329,
+          "declared_rows": 336,
+          "estimator": "strict_computational_interface",
+          "flagged_additional_loss_patients": [],
+          "independent_patients": 5,
+          "map_to_anchor_loss_nonreference_rows": 24,
+          "material_paired_additional_loss_rows": 0,
+          "successful_nonreference_rows": 108,
+          "successful_rows": 173
+        }
+      ],
+      "historical_effects_sha256": "4929fb2990a261235dfd36795ed59f99cda0578a998b6b4d5bb98b7316d8fa64",
+      "historical_rows": 658,
+      "resource": "GSE294385"
+    },
+    {
+      "added_non_evaluable_rows": 144,
+      "anchor_eligible_sections": 9,
+      "estimators": [
+        {
+          "additional_loss_eligible_rows": 0,
+          "additional_loss_rows": 0,
+          "all_rows": 432,
+          "declared_rows": 504,
+          "estimator": "anchor_retention",
+          "flagged_additional_loss_patients": [],
+          "independent_patients": 7,
+          "map_to_anchor_loss_nonreference_rows": 11,
+          "material_paired_additional_loss_rows": 0,
+          "successful_nonreference_rows": 75,
+          "successful_rows": 116
+        },
+        {
+          "additional_loss_eligible_rows": 0,
+          "additional_loss_rows": 0,
+          "all_rows": 432,
+          "declared_rows": 504,
+          "estimator": "strict_computational_interface",
+          "flagged_additional_loss_patients": [],
+          "independent_patients": 7,
+          "map_to_anchor_loss_nonreference_rows": 4,
+          "material_paired_additional_loss_rows": 0,
+          "successful_nonreference_rows": 33,
+          "successful_rows": 53
+        }
+      ],
+      "historical_effects_sha256": "fd87922bf06d13280f200da3096edc6f44d0ec5700279130cc00f414af2677d7",
+      "historical_rows": 864,
+      "resource": "Valdeolivas"
+    }
+  ],
+  "run_manifest_sha256": "2495aee85041f4e36c538a02d9ac41ebae5368dc439a2e4c71979e264daa681b",
+  "schema_version": "tissue_anchor_application_audit_v1",
+  "status": "pass"
+}

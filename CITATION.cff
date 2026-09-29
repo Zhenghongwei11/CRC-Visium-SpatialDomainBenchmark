@@ -1,9 +1,9 @@
 cff-version: 1.2.0
 message: "If you use this software or its dataset-derived tables, please cite this version of the repository."
-title: "Boundary sensitivity of spatial-domain maps can alter downstream summaries in colorectal cancer Visium data"
+title: "Tissue-anchored regional expression contrasts in colorectal cancer Visium data"
 type: software
-version: 1.0.18
-date-released: 2026-09-12
+version: 1.0.19
+date-released: 2026-09-29
 authors:
   - family-names: Zheng
     given-names: Hongwei
@@ -12,7 +12,6 @@ authors:
     given-names: Wanping
     affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
 repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
-doi: "10.5281/zenodo.19682586"
 contact:
   - family-names: Zheng
     given-names: Hongwei
@@ -21,6 +20,6 @@ keywords:
   - spatial transcriptomics
   - colorectal cancer
   - Visium
-  - boundary sensitivity
-  - partition stability
-  - downstream robustness
+  - regional expression
+  - tissue annotation
+  - known-boundary simulation

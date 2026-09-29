@@ -1,0 +1,17 @@
+{
+  "mode": "full",
+  "state": "complete",
+  "sections_expected": 5200,
+  "sections_attempted": 5200,
+  "rows": 31200,
+  "invocation_seconds": 328.26656290199026,
+  "completed_utc": "2026-09-28T09:51:23.708549+00:00",
+  "output_sha256": {
+    "simulation_cell_metrics.tsv": "413315300a86061fd51fa5cbe96201b32ddfb7db2f7cf9e024caa8a140c59caa",
+    "simulation_summary.tsv": "3e019f93e6cbf54f301dff4c98ace0230638aec13ee9c796a9ab3e21b758fc15",
+    "simulation_threshold_sensitivity.tsv": "1eecb5e348644fa7c459b52e36c7eca7bdb760493dcf1b54df1875f45af0e272"
+  },
+  "ready_for_claim_review": true,
+  "claim_eligible": false,
+  "freeze_sha256": "06c18fdc5c7ead1e80f1c7b27a023abe54480c9cfd3ea5b5461c0fc4be3772e9"
+}

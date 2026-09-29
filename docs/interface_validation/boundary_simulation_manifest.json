@@ -1,0 +1,79 @@
+{
+  "schema_version": "tissue_anchor_simulation_v1",
+  "analysis_role": "revision_stage_controlled_estimator_calibration",
+  "core_grid": {
+    "rows": [36, 72],
+    "mixing_max": [0.0, 0.5],
+    "boundary_width_um": [55.0, 200.0],
+    "signal_amplitude": [0.0, 0.75, 1.5],
+    "correlation_length_um": [0.0, 150.0]
+  },
+  "topology_grid": {
+    "base": {"rows": 72, "mixing_max": 0.5, "boundary_width_um": 55.0, "signal_amplitude": 0.75, "correlation_length_um": 150.0},
+    "graph_neighbors": [4, 8],
+    "smoothing_steps": [0, 1]
+  },
+  "geometry": {
+    "columns": 24,
+    "spot_pitch_um": 100.0,
+    "spot_diameter_um": 55.0,
+    "boundary_column": 11,
+    "boundary_offset_um": 25.0,
+    "boundary_wave_amplitude_um": 40.0,
+    "boundary_wave_period_rows": 18.0,
+    "near_max_um": 100.0,
+    "far_min_um": 200.0,
+    "far_max_um": 400.0,
+    "block_grid": 6
+  },
+  "signal": {
+    "noise_sd": 1.0,
+    "nugget_variance_fraction": 0.25,
+    "tangential_heterogeneity_amplitude": 0.6,
+    "tangential_period_rows": 18.0,
+    "mixing_decay_um": 55.0,
+    "tumor_mean": 0.0,
+    "baseline_mean": 0.0
+  },
+  "maps": {
+    "core_graph_neighbors": 6,
+    "core_smoothing_steps": 0,
+    "reference_max_shift_um": 75.0,
+    "reference_shift_period_rows": 18.0,
+    "alternative_wave_amplitude_um": 50.0,
+    "alternative_wave_period_rows": 12.0,
+    "alternative_phase_radians": 1.5707963267948966,
+    "map_names": ["identity_control", "reference_shift", "alternative_shift"]
+  },
+  "estimation": {
+    "estimators": ["anchor_retention", "strict_computational_interface"],
+    "bootstrap_replicates": 1000,
+    "min_group_spots": 20,
+    "min_blocks": 3,
+    "legacy_support_margins_mad": [0.0, 0.25, 0.5, 0.75],
+    "paired_change_margins_mad": [0.0, 0.1, 0.25, 0.5],
+    "population_root_tolerance": 1e-10,
+    "numeric_tolerance": 1e-10
+  },
+  "replication": {
+    "seed_start": 28092026,
+    "independent_replicates_per_case": 100,
+    "smoke_case_indices": [0, 1, 46, 51],
+    "smoke_replicate_indices": [0, 1]
+  },
+  "calibration_gates": {
+    "nominal_coverage": 0.95,
+    "minimum_wilson_coverage_lower_95": 0.9,
+    "maximum_absolute_bias_noise_sd": 0.1,
+    "maximum_wilson_null_rejection_upper_95": 0.1,
+    "minimum_evaluable_fraction": 0.8,
+    "minimum_independent_replicates": 100,
+    "familywise_claims": false
+  },
+  "resources": {
+    "workers": 1,
+    "max_wall_seconds_per_invocation": 300,
+    "max_output_megabytes": 150,
+    "cloud_training": false
+  }
+}

@@ -1,0 +1,309 @@
+resource	patient_id	estimator_id	method_id	K	n_sections	n_reference_eligible_sections	reference_mismatch_standardized	alternative_median_paired_change_standardized	n_additional_support_loss	n_flagged_paired_additional_loss
+GSE294385	Patient1	anchor_retention	M0_expr_kmeans	4	1	1	0.3565838671285262	-0.007900274121650603	0	0
+GSE294385	Patient1	anchor_retention	M0_expr_kmeans	6	1	1	0.3249827706419238	0.0	0	0
+GSE294385	Patient1	anchor_retention	M1_spatial_concat_kmeans	4	1	1	0.3565838671285262	0.0	0	0
+GSE294385	Patient1	anchor_retention	M1_spatial_concat_kmeans	6	1	1	0.3249827706419238	0.0	0	0
+GSE294385	Patient1	anchor_retention	M2_spatial_ward	4	1	1	-0.08240720327203936	0.22833283337888147	1	0
+GSE294385	Patient1	anchor_retention	M2_spatial_ward	6	1	1	0.37930337220638294	-0.11775269362903944	0	0
+GSE294385	Patient1	anchor_retention	M3_spatial_leiden	4	1	1	-0.0978743317822094	0.018490297135483003	0	0
+GSE294385	Patient1	anchor_retention	M3_spatial_leiden	6	1	1	-0.07691817319433021	-0.12628561063311414	0	0
+GSE294385	Patient1	anchor_retention	M4_spagcn_official	4	1	1	0.1424147254287147	0.02679327932739071	1	0
+GSE294385	Patient1	anchor_retention	M4_spagcn_official	6	1	1	0.43084576351396137	-0.06441830844469917	0	0
+GSE294385	Patient1	anchor_retention	M5_stagate_official	4	1	1	0.45846355067085937	-0.006733342738126971	0	0
+GSE294385	Patient1	anchor_retention	M5_stagate_official	6	1	1	0.4978068947617583	0.03726401340583526	0	0
+GSE294385	Patient1	anchor_retention	M6_bayesspace_official	4	1	1	-0.17097524784989204	0.5292733634034089	2	2
+GSE294385	Patient1	anchor_retention	M6_bayesspace_official	6	1	1	0.38551300190094423	0.0326536470031903	0	0
+GSE294385	Patient1	strict_computational_interface	M0_expr_kmeans	4	1	1	0.3679340764006308	-0.007900274121650603	0	0
+GSE294385	Patient1	strict_computational_interface	M0_expr_kmeans	6	1	1	-0.24998010811354235	0.0	0	0
+GSE294385	Patient1	strict_computational_interface	M1_spatial_concat_kmeans	4	1	1	0.3679340764006308	0.0	0	0
+GSE294385	Patient1	strict_computational_interface	M1_spatial_concat_kmeans	6	1	1	-0.24998010811354235	0.0	0	0
+GSE294385	Patient1	strict_computational_interface	M2_spatial_ward	4	1	1	-0.6682494478400258	0.9307535634804964	1	0
+GSE294385	Patient1	strict_computational_interface	M2_spatial_ward	6	1	1	-0.3204518525759423		0	0
+GSE294385	Patient1	strict_computational_interface	M3_spatial_leiden	4	1	0			0	0
+GSE294385	Patient1	strict_computational_interface	M3_spatial_leiden	6	1	0			0	0
+GSE294385	Patient1	strict_computational_interface	M4_spagcn_official	4	1	1	0.16524453903420647		0	0
+GSE294385	Patient1	strict_computational_interface	M4_spagcn_official	6	1	0			0	0
+GSE294385	Patient1	strict_computational_interface	M5_stagate_official	4	1	1	0.467318882598825	-0.017710663855930283	0	0
+GSE294385	Patient1	strict_computational_interface	M5_stagate_official	6	1	1	0.4990565780333821	-0.03958271359945471	0	0
+GSE294385	Patient1	strict_computational_interface	M6_bayesspace_official	4	1	1	0.23207458274321247	0.12573387009981007	2	0
+GSE294385	Patient1	strict_computational_interface	M6_bayesspace_official	6	1	1	-0.4065601917640997	0.08612784403998616	1	0
+GSE294385	Patient10	anchor_retention	M0_expr_kmeans	4	2	2	0.9597977066702905	0.003291960244177578	0	0
+GSE294385	Patient10	anchor_retention	M0_expr_kmeans	6	2	1	0.9854980656468694	-0.017253368899561312	0	0
+GSE294385	Patient10	anchor_retention	M1_spatial_concat_kmeans	4	2	2	0.9630653695945438	0.0035078714849061925	0	0
+GSE294385	Patient10	anchor_retention	M1_spatial_concat_kmeans	6	2	1	0.9590149492911973	0.005538006855102519	0	0
+GSE294385	Patient10	anchor_retention	M2_spatial_ward	4	2	2	0.32324775906622066	-0.3327790342157355	0	0
+GSE294385	Patient10	anchor_retention	M2_spatial_ward	6	2	2	0.4402710141843752	-0.4998503053876191	0	0
+GSE294385	Patient10	anchor_retention	M3_spatial_leiden	4	2	1	0.7919820543912061	-0.9679722508982247	0	0
+GSE294385	Patient10	anchor_retention	M3_spatial_leiden	6	2	2	-0.08023766913368745	-0.1285280963479527	0	0
+GSE294385	Patient10	anchor_retention	M4_spagcn_official	4	2	2	0.6577180830822665	0.2934823691039321	0	0
+GSE294385	Patient10	anchor_retention	M4_spagcn_official	6	2	2	0.4150848763744222	0.7419203083788981	0	0
+GSE294385	Patient10	anchor_retention	M5_stagate_official	4	2	2	1.0507423721561235	-0.27851930239451383	0	0
+GSE294385	Patient10	anchor_retention	M5_stagate_official	6	2	1	0.6979159887321305	-0.017153024030057237	0	0
+GSE294385	Patient10	anchor_retention	M6_bayesspace_official	4	2	2	0.7881857599618757	-0.07359549323473234	0	0
+GSE294385	Patient10	anchor_retention	M6_bayesspace_official	6	2	1	0.3333616096417314	0.036494283683478616	0	0
+GSE294385	Patient10	strict_computational_interface	M0_expr_kmeans	4	2	2	0.9426541853509073	-0.00014524503435447023	0	0
+GSE294385	Patient10	strict_computational_interface	M0_expr_kmeans	6	2	1	1.0583779388348264	-0.017111628730867905	0	0
+GSE294385	Patient10	strict_computational_interface	M1_spatial_concat_kmeans	4	2	2	0.9454773317852627	0.0006199113490861336	0	0
+GSE294385	Patient10	strict_computational_interface	M1_spatial_concat_kmeans	6	2	1	1.0321171606095705	0.00603409009353745	0	0
+GSE294385	Patient10	strict_computational_interface	M2_spatial_ward	4	2	1	0.13298644207957525	0.0089106045030375	0	0
+GSE294385	Patient10	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+GSE294385	Patient10	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+GSE294385	Patient10	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+GSE294385	Patient10	strict_computational_interface	M4_spagcn_official	4	2	2	0.6977342046664635	0.2596600442301087	0	0
+GSE294385	Patient10	strict_computational_interface	M4_spagcn_official	6	2	2	0.5879006534742189	0.42175408670188436	0	0
+GSE294385	Patient10	strict_computational_interface	M5_stagate_official	4	2	2	1.0346720659246484	-0.2822453947038291	0	0
+GSE294385	Patient10	strict_computational_interface	M5_stagate_official	6	2	1	0.5972269649451425	-0.047575138604544494	0	0
+GSE294385	Patient10	strict_computational_interface	M6_bayesspace_official	4	2	1	0.269527434525595	-0.12629094209123606	0	0
+GSE294385	Patient10	strict_computational_interface	M6_bayesspace_official	6	2	1	0.3813368002391487	-0.0014654638197853925	0	0
+GSE294385	Patient11	anchor_retention	M0_expr_kmeans	4	2	2	0.3233091906950216	-0.0014468881311702588	0	0
+GSE294385	Patient11	anchor_retention	M0_expr_kmeans	6	2	1	0.1578899676543723	0.00019087535913155099	0	0
+GSE294385	Patient11	anchor_retention	M1_spatial_concat_kmeans	4	2	2	0.32410885112905014	-0.000869675938599859	0	0
+GSE294385	Patient11	anchor_retention	M1_spatial_concat_kmeans	6	2	1	0.1578899676543723	0.0	0	0
+GSE294385	Patient11	anchor_retention	M2_spatial_ward	4	2	2	0.004540874378189508	-0.0438213246591987	0	0
+GSE294385	Patient11	anchor_retention	M2_spatial_ward	6	2	1	-0.3592401417253577	0.052174020035321435	0	0
+GSE294385	Patient11	anchor_retention	M3_spatial_leiden	4	2	0			0	0
+GSE294385	Patient11	anchor_retention	M3_spatial_leiden	6	2	1	0.24181035979136312	-0.15304439339407033	0	0
+GSE294385	Patient11	anchor_retention	M4_spagcn_official	4	2	2	0.28097424974910656	0.2434485577207426	0	0
+GSE294385	Patient11	anchor_retention	M4_spagcn_official	6	2	1	0.9827415842039408	-0.52223155868844	0	0
+GSE294385	Patient11	anchor_retention	M5_stagate_official	4	2	2	0.45940462164059637	0.006856183861832609	0	0
+GSE294385	Patient11	anchor_retention	M5_stagate_official	6	2	2	0.2916192308479555	0.07082609681143215	0	0
+GSE294385	Patient11	anchor_retention	M6_bayesspace_official	4	2	2	0.17782503206678799	0.06836694729665982	0	0
+GSE294385	Patient11	anchor_retention	M6_bayesspace_official	6	2	2	0.9068861154159339	-0.19882412612760889	0	0
+GSE294385	Patient11	strict_computational_interface	M0_expr_kmeans	4	2	2	0.24443453736228765	-0.0037037121407697887	0	0
+GSE294385	Patient11	strict_computational_interface	M0_expr_kmeans	6	2	1	-0.14908747736581182	0.0	0	0
+GSE294385	Patient11	strict_computational_interface	M1_spatial_concat_kmeans	4	2	2	0.24454531395965728	-0.0002128147185780055	0	0
+GSE294385	Patient11	strict_computational_interface	M1_spatial_concat_kmeans	6	2	1	-0.14908747736581182	0.0	0	0
+GSE294385	Patient11	strict_computational_interface	M2_spatial_ward	4	2	1	0.35898209269510956	-0.3038617059233118	0	0
+GSE294385	Patient11	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+GSE294385	Patient11	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+GSE294385	Patient11	strict_computational_interface	M3_spatial_leiden	6	2	1	1.1613845938914589	-0.9339695437479789	0	0
+GSE294385	Patient11	strict_computational_interface	M4_spagcn_official	4	2	2	0.1437874631381528	0.25980334396292043	0	0
+GSE294385	Patient11	strict_computational_interface	M4_spagcn_official	6	2	1	1.0421330979969579	-0.6684366696692482	0	0
+GSE294385	Patient11	strict_computational_interface	M5_stagate_official	4	2	2	0.4393538323294136	-0.0026312570011021007	0	0
+GSE294385	Patient11	strict_computational_interface	M5_stagate_official	6	2	2	0.3277888646433372	0.003627177411663518	0	0
+GSE294385	Patient11	strict_computational_interface	M6_bayesspace_official	4	2	2	0.14329303189594905	-0.597132004741232	0	0
+GSE294385	Patient11	strict_computational_interface	M6_bayesspace_official	6	2	2	0.5965895834169821	-0.2630363086672298	0	0
+GSE294385	Patient6	anchor_retention	M0_expr_kmeans	4	1	1	1.1106793269058222	0.0	0	0
+GSE294385	Patient6	anchor_retention	M0_expr_kmeans	6	1	0			0	0
+GSE294385	Patient6	anchor_retention	M1_spatial_concat_kmeans	4	1	1	1.1106793269058222	0.0	0	0
+GSE294385	Patient6	anchor_retention	M1_spatial_concat_kmeans	6	1	0			0	0
+GSE294385	Patient6	anchor_retention	M2_spatial_ward	4	1	0			0	0
+GSE294385	Patient6	anchor_retention	M2_spatial_ward	6	1	0			0	0
+GSE294385	Patient6	anchor_retention	M3_spatial_leiden	4	1	0			0	0
+GSE294385	Patient6	anchor_retention	M3_spatial_leiden	6	1	0			0	0
+GSE294385	Patient6	anchor_retention	M4_spagcn_official	4	1	0			0	0
+GSE294385	Patient6	anchor_retention	M4_spagcn_official	6	1	1	1.223369659754614	0.09758481699064768	2	0
+GSE294385	Patient6	anchor_retention	M5_stagate_official	4	1	0			0	0
+GSE294385	Patient6	anchor_retention	M5_stagate_official	6	1	1	1.1241919465616854	0.0	0	0
+GSE294385	Patient6	anchor_retention	M6_bayesspace_official	4	1	1	1.0963276428562851	-0.7928481917972752	0	0
+GSE294385	Patient6	anchor_retention	M6_bayesspace_official	6	1	1	1.1013792336946737	-0.744687713851061	0	0
+GSE294385	Patient6	strict_computational_interface	M0_expr_kmeans	4	1	1	0.9542756515701255	0.0	0	0
+GSE294385	Patient6	strict_computational_interface	M0_expr_kmeans	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M1_spatial_concat_kmeans	4	1	1	0.9542756515701255	0.0	0	0
+GSE294385	Patient6	strict_computational_interface	M1_spatial_concat_kmeans	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M2_spatial_ward	4	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M2_spatial_ward	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M3_spatial_leiden	4	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M3_spatial_leiden	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M4_spagcn_official	4	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M4_spagcn_official	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M5_stagate_official	4	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M5_stagate_official	6	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M6_bayesspace_official	4	1	0			0	0
+GSE294385	Patient6	strict_computational_interface	M6_bayesspace_official	6	1	0			0	0
+GSE294385	Patient9	anchor_retention	M0_expr_kmeans	4	2	2	0.30449072782727377	-0.011182077530866637	0	0
+GSE294385	Patient9	anchor_retention	M0_expr_kmeans	6	2	1	0.31747523901801783	-0.008495375845301406	0	0
+GSE294385	Patient9	anchor_retention	M1_spatial_concat_kmeans	4	2	2	0.30867781458020327	0.02374385739517307	0	0
+GSE294385	Patient9	anchor_retention	M1_spatial_concat_kmeans	6	2	1	0.3061480712242825	-0.001663368399754805	0	0
+GSE294385	Patient9	anchor_retention	M2_spatial_ward	4	2	2	-0.1757157851683113	-0.1293739950387334	0	0
+GSE294385	Patient9	anchor_retention	M2_spatial_ward	6	2	0			0	0
+GSE294385	Patient9	anchor_retention	M3_spatial_leiden	4	2	1	0.5099267707785369		0	0
+GSE294385	Patient9	anchor_retention	M3_spatial_leiden	6	2	2	0.49264028756065875	-0.8546956673624284	0	0
+GSE294385	Patient9	anchor_retention	M4_spagcn_official	4	2	2	0.6892187321203396	-0.709622335351557	0	0
+GSE294385	Patient9	anchor_retention	M4_spagcn_official	6	2	2	-0.16147855692951277	-0.1810491517731212	0	0
+GSE294385	Patient9	anchor_retention	M5_stagate_official	4	2	1	-0.009183177793544823	0.07870014423453728	0	0
+GSE294385	Patient9	anchor_retention	M5_stagate_official	6	2	1	-0.20526716692719432	0.004285404421477245	0	0
+GSE294385	Patient9	anchor_retention	M6_bayesspace_official	4	2	2	-0.23160461496181559	-0.1494492863688766	0	0
+GSE294385	Patient9	anchor_retention	M6_bayesspace_official	6	2	2	-0.22800046243319677	-0.009704273974747444	0	0
+GSE294385	Patient9	strict_computational_interface	M0_expr_kmeans	4	2	2	0.4052098701766532	-0.01260744171703169	0	0
+GSE294385	Patient9	strict_computational_interface	M0_expr_kmeans	6	2	1	0.2799177461351131	0.0318939089860372	0	0
+GSE294385	Patient9	strict_computational_interface	M1_spatial_concat_kmeans	4	2	2	0.40631887565435354	0.02374385739517307	0	0
+GSE294385	Patient9	strict_computational_interface	M1_spatial_concat_kmeans	6	2	1	0.3061480712242825	0.002831791948433753	0	0
+GSE294385	Patient9	strict_computational_interface	M2_spatial_ward	4	2	2	-0.20053525138857772	0.21461812363876234	0	0
+GSE294385	Patient9	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+GSE294385	Patient9	strict_computational_interface	M3_spatial_leiden	4	2	1	0.024832333698208083		0	0
+GSE294385	Patient9	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+GSE294385	Patient9	strict_computational_interface	M4_spagcn_official	4	2	2	0.5771852975927425	-0.2931253316826838	0	0
+GSE294385	Patient9	strict_computational_interface	M4_spagcn_official	6	2	2	-0.12944187828544157	-0.40420802293265606	0	0
+GSE294385	Patient9	strict_computational_interface	M5_stagate_official	4	2	1	-0.054306952430955666	0.12081051472561243	0	0
+GSE294385	Patient9	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+GSE294385	Patient9	strict_computational_interface	M6_bayesspace_official	4	2	2	-0.09690343448499003	-0.13814221153689138	0	0
+GSE294385	Patient9	strict_computational_interface	M6_bayesspace_official	6	2	1	0.2502137777760772	-0.15750993407749525	0	0
+Valdeolivas	A120838	anchor_retention	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A120838	anchor_retention	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A120838	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A121573	anchor_retention	M0_expr_kmeans	4	2	2	-0.11607866672482274	0.011011977150319478	0	0
+Valdeolivas	A121573	anchor_retention	M0_expr_kmeans	6	2	2	0.3211500652350886	0.0	0	0
+Valdeolivas	A121573	anchor_retention	M1_spatial_concat_kmeans	4	2	2	-0.10124513300264866	-0.014833533722174084	0	0
+Valdeolivas	A121573	anchor_retention	M1_spatial_concat_kmeans	6	2	2	0.3211500652350886	-0.0142369470580706	0	0
+Valdeolivas	A121573	anchor_retention	M2_spatial_ward	4	2	1	0.4225312493109646	0.07988269967391745	0	0
+Valdeolivas	A121573	anchor_retention	M2_spatial_ward	6	2	1	0.4225312493109646	0.2549427515403867	0	0
+Valdeolivas	A121573	anchor_retention	M3_spatial_leiden	4	2	1	-0.32623407855213754	-0.23699085872680942	0	0
+Valdeolivas	A121573	anchor_retention	M3_spatial_leiden	6	2	1	-0.20357297983777947	0.11097846063680643	0	0
+Valdeolivas	A121573	anchor_retention	M4_spagcn_official	4	2	2	0.12189383723080485	0.22697629783709697	0	0
+Valdeolivas	A121573	anchor_retention	M4_spagcn_official	6	2	2	0.3156868357034566	-0.019127318687524694	0	0
+Valdeolivas	A121573	anchor_retention	M5_stagate_official	4	2	2	0.5011911445725667	-0.20423226497473387	0	0
+Valdeolivas	A121573	anchor_retention	M5_stagate_official	6	2	1	0.45662566995323983	0.0	0	0
+Valdeolivas	A121573	strict_computational_interface	M0_expr_kmeans	4	2	2	-0.055881762915056685	0.011011977150319478	0	0
+Valdeolivas	A121573	strict_computational_interface	M0_expr_kmeans	6	2	1	0.8897083691541523	0.0	0	0
+Valdeolivas	A121573	strict_computational_interface	M1_spatial_concat_kmeans	4	2	2	-0.06542531116956615	0.009543548254509255	0	0
+Valdeolivas	A121573	strict_computational_interface	M1_spatial_concat_kmeans	6	2	1	0.8897083691541523	0.0	0	0
+Valdeolivas	A121573	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A121573	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A121573	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A121573	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A121573	strict_computational_interface	M4_spagcn_official	4	2	2	0.09181710085174152	0.1283361531030218	0	0
+Valdeolivas	A121573	strict_computational_interface	M4_spagcn_official	6	2	2	0.2322716764448742	-0.14807632846937388	0	0
+Valdeolivas	A121573	strict_computational_interface	M5_stagate_official	4	2	2	0.547593570604405	-0.035899118401419336	0	0
+Valdeolivas	A121573	strict_computational_interface	M5_stagate_official	6	2	1	0.44333065236093233	0.0	0	0
+Valdeolivas	A416371	anchor_retention	M0_expr_kmeans	4	2	1	-0.10883894617311025	0.0	0	0
+Valdeolivas	A416371	anchor_retention	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A416371	anchor_retention	M1_spatial_concat_kmeans	4	2	1	-0.10883894617311025	0.0	0	0
+Valdeolivas	A416371	anchor_retention	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A416371	anchor_retention	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A416371	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A416371	anchor_retention	M3_spatial_leiden	4	2	2	0.4110471242051693	-0.06156388433434012	0	0
+Valdeolivas	A416371	anchor_retention	M3_spatial_leiden	6	2	1	0.3900826676812927	-0.028895549965822387	0	0
+Valdeolivas	A416371	anchor_retention	M4_spagcn_official	4	2	1	-0.2522109341250085	0.5599757267761326	0	0
+Valdeolivas	A416371	anchor_retention	M4_spagcn_official	6	2	2	0.2912434170012134	-0.08094691418856036	0	0
+Valdeolivas	A416371	anchor_retention	M5_stagate_official	4	2	2	-0.1243813375110895	0.0	0	0
+Valdeolivas	A416371	anchor_retention	M5_stagate_official	6	2	2	-0.06514067944388355	-0.009792187822408658	0	0
+Valdeolivas	A416371	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M4_spagcn_official	6	2	1	-0.10201882355760744		0	0
+Valdeolivas	A416371	strict_computational_interface	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A416371	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A551763	anchor_retention	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A551763	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M3_spatial_leiden	6	2	1	-0.46717845549672105		0	0
+Valdeolivas	A595688	anchor_retention	M4_spagcn_official	4	2	1	-1.3958629885224385	0.9848607760432121	0	0
+Valdeolivas	A595688	anchor_retention	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A595688	anchor_retention	M5_stagate_official	4	2	1	0.2709702899129696	-0.18638169025378903	0	0
+Valdeolivas	A595688	anchor_retention	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M4_spagcn_official	4	2	1	-1.5380592226099645	1.035427086240876	0	0
+Valdeolivas	A595688	strict_computational_interface	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A595688	strict_computational_interface	M5_stagate_official	4	2	1	0.1956660870452595	-0.18936288223308412	0	0
+Valdeolivas	A595688	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A798015	anchor_retention	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M0_expr_kmeans	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M1_spatial_concat_kmeans	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M4_spagcn_official	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M4_spagcn_official	6	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A798015	strict_computational_interface	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A938797	anchor_retention	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A938797	anchor_retention	M0_expr_kmeans	6	2	1	0.6054503937466689	-0.054065156113327247	0	0
+Valdeolivas	A938797	anchor_retention	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A938797	anchor_retention	M1_spatial_concat_kmeans	6	2	1	0.6054503937466689	-0.018408860962964763	0	0
+Valdeolivas	A938797	anchor_retention	M2_spatial_ward	4	2	1	0.5443866174822373	0.06254886332235611	0	0
+Valdeolivas	A938797	anchor_retention	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A938797	anchor_retention	M3_spatial_leiden	4	2	1	0.7667769641567532	-0.1455132216857021	0	0
+Valdeolivas	A938797	anchor_retention	M3_spatial_leiden	6	2	1	0.45470192139642707		0	0
+Valdeolivas	A938797	anchor_retention	M4_spagcn_official	4	2	1	0.5856517892577924	0.3199526653743988	0	0
+Valdeolivas	A938797	anchor_retention	M4_spagcn_official	6	2	1	0.18559908302167938	0.5352931318694744	0	0
+Valdeolivas	A938797	anchor_retention	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A938797	anchor_retention	M5_stagate_official	6	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M0_expr_kmeans	4	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M0_expr_kmeans	6	2	1	0.5571524298428991	-0.035656295150362484	0	0
+Valdeolivas	A938797	strict_computational_interface	M1_spatial_concat_kmeans	4	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M1_spatial_concat_kmeans	6	2	1	0.5571524298428991	-0.005740120988919843	0	0
+Valdeolivas	A938797	strict_computational_interface	M2_spatial_ward	4	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M2_spatial_ward	6	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M3_spatial_leiden	4	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M3_spatial_leiden	6	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M4_spagcn_official	4	2	1	0.4705191160099296		0	0
+Valdeolivas	A938797	strict_computational_interface	M4_spagcn_official	6	2	1	0.005955630239790741		0	0
+Valdeolivas	A938797	strict_computational_interface	M5_stagate_official	4	2	0			0	0
+Valdeolivas	A938797	strict_computational_interface	M5_stagate_official	6	2	0			0	0

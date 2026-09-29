@@ -1,0 +1,11 @@
+{
+  "mode": "full",
+  "freeze_sha256": "06c18fdc5c7ead1e80f1c7b27a023abe54480c9cfd3ea5b5461c0fc4be3772e9",
+  "manifest_sha256": "38305dfedf76d4e029efb6a64a587862ac2e97a9a7b5d0ef0bb99b61217ded1d",
+  "python": "3.13.7",
+  "numpy": "2.4.2",
+  "scipy": "1.17.0",
+  "pandas": "3.0.0",
+  "sklearn": "1.8.0",
+  "started_utc": "2026-09-28T09:03:34.376226+00:00"
+}

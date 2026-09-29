@@ -3,6 +3,8 @@
 ## Scope
 This rulebook defines claim-eligibility gates for the CRC spatial-domain benchmark project and must be locked before claim-upgrading analyses.
 
+The revision-stage tissue-anchored analysis has a separate scientific contract in `docs/interface_validation/reframed_protocol.md`. Its 0.50-MAD contrast-support and 0.25-MAD paired-change criteria were retained from the earlier external analysis for comparability; they are descriptive classifications, not biological effect thresholds. The section-level near-minus-far contrast and paired map differences are continuous primary outputs. Spatial-block intervals use 1,000 resamples. The patient is the independent biological unit; maps and serial sections remain nested. The known-boundary simulation uses `boundary_simulation_manifest.json` and the timestamped `boundary_simulation_freeze_v1.json`. Its condition-specific coverage does not validate intervals for expression-trained real maps. The real-resource application plan was written after historical results were viewed, as the protocol states.
+
 ## Claims covered
 - `C1_domain_quality`
 - `C2_sensitivity`

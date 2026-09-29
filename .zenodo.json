@@ -1,7 +1,7 @@
 {
-  "title": "Boundary sensitivity of spatial-domain maps can alter downstream summaries in colorectal cancer Visium data",
+  "title": "Tissue-anchored regional expression contrasts in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "Code and derived evidence for evaluating boundary sensitivity across seven spatial-domain approaches in 13 colorectal cancer Visium sections. The release includes coverage and stability tables, switching-boundary localization, histology-gradient context, downstream robustness summaries, computational sensitivity results, full-13 official-implementation sensitivity checks, stability-stratified downstream summaries, molecular tumor-stroma proxy-interface tables, publication figures, and a consolidated supplementary-table workbook.",
+  "description": "Analysis code, frozen known-boundary simulation manifest and derived results for a morphology-defined near-versus-far stromal expression comparison in two public colorectal cancer Visium resources. This version includes patient-aware real-resource summaries, conditional simulation calibration, figure source tables and provenance. Earlier cross-method benchmark outputs remain available. The real-resource results are descriptive and do not demonstrate local histological-boundary movement or a supported primary direction reversal.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
@@ -17,9 +17,9 @@
     "colorectal cancer",
     "Visium",
     "spatial domain identification",
-    "boundary sensitivity",
-    "partition stability",
-    "downstream robustness"
+    "regional expression",
+    "tissue annotation",
+    "known-boundary simulation"
   ],
   "related_identifiers": [
     {
