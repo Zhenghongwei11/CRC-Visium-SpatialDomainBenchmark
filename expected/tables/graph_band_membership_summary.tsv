@@ -1,0 +1,23 @@
+resource	patient_id	sample_id	section_id	n_near_members_different	n_far_members_different
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	0	0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	0	0
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	0	5
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	0	1
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	0	0
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	0	1
+Valdeolivas	A798015	SN123_A798015_Rep1	S7_Rec/Sig	0	0
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	0	0
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	0	1
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	0	0
+Valdeolivas	A798015	SN124_A798015_Rep2	S7_Rec/Sig	0	0
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	0	0
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	0	0
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	0	0
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	0	0
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	0	2
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	0	0
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	0	1
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	0	5
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	0	0
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	0	2
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	0	0

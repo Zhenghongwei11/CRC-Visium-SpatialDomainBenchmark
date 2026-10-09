@@ -1,0 +1,157 @@
+{
+  "schema_version": "study_original_sources_v1",
+  "packages": {
+    "SN048_A121573_Rep1": {
+      "filename": "SN048_A121573_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep1.zip/content",
+      "bytes": 149798389,
+      "sha256": "dc9dc9840d4d0a22230790350a615491f5c58aab26970c98d69a5047e0873d77"
+    },
+    "SN048_A121573_Rep2": {
+      "filename": "SN048_A121573_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep2.zip/content",
+      "bytes": 153572136,
+      "sha256": "227b1a5bbf9d8e6148da64b21acdeddcdeea2a1e0c082b9a0b0a617b8effac34"
+    },
+    "SN048_A416371_Rep1": {
+      "filename": "SN048_A416371_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep1.zip/content",
+      "bytes": 155662933,
+      "sha256": "6fd8b1888b63b9abc3e17fc8c6493080f5815bb18425645131c579e77a325c18"
+    },
+    "SN048_A416371_Rep2": {
+      "filename": "SN048_A416371_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep2.zip/content",
+      "bytes": 133062616,
+      "sha256": "91368a8bffd3bb5c7a94795ffbb9b69e0bbe073a62ae00df7dcc3f117824ebf3"
+    },
+    "SN123_A551763_Rep1": {
+      "filename": "SN123_A551763_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A551763_Rep1.zip/content",
+      "bytes": 77094190,
+      "sha256": "77b5fb988aec1803ed5b2376e0d1975b284dcd970cf770176dbef35e235d51c6"
+    },
+    "SN123_A595688_Rep1": {
+      "filename": "SN123_A595688_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A595688_Rep1.zip/content",
+      "bytes": 99165165,
+      "sha256": "d02a3ae47abc6926352cb0fa5f66a897acb4f253291fa7eb1d3a4365768ce4d7"
+    },
+    "SN123_A798015_Rep1": {
+      "filename": "SN123_A798015_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A798015_Rep1.zip/content",
+      "bytes": 81914465,
+      "sha256": "d6bd4168891d9c2a94b5f3fe7cb35e7a3e1c49fe6ac7df16af29aeea346aa282"
+    },
+    "SN123_A938797_Rep1_X": {
+      "filename": "SN123_A938797_Rep1_X.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A938797_Rep1_X.zip/content",
+      "bytes": 108570769,
+      "sha256": "4f05a50826e0f3898a5101274fb21293304d0c265e8831b70507112e35547366"
+    },
+    "SN124_A551763_Rep2": {
+      "filename": "SN124_A551763_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A551763_Rep2.zip/content",
+      "bytes": 61982650,
+      "sha256": "b884bc451ee05645e7777a1239c1a64d5416ae79dbc7010b58b843a8c4186e5e"
+    },
+    "SN124_A595688_Rep2": {
+      "filename": "SN124_A595688_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A595688_Rep2.zip/content",
+      "bytes": 56124799,
+      "sha256": "2510c1e854126ca227dc1dee8ab8a5763658867deb0f0f1abb9354f78aefd552"
+    },
+    "SN124_A798015_Rep2": {
+      "filename": "SN124_A798015_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A798015_Rep2.zip/content",
+      "bytes": 93813784,
+      "sha256": "e75f9b4a39e9daac4682c7c090ce92490c7b40b88b9825e1b38eaa3ae525c083"
+    },
+    "SN124_A938797_Rep2": {
+      "filename": "SN124_A938797_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A938797_Rep2.zip/content",
+      "bytes": 141363392,
+      "sha256": "56591bb9a91568df9647c14165b57987d366e71d536fba88b658c11eb45f0b1b"
+    },
+    "SN84_A120838_Rep1": {
+      "filename": "SN84_A120838_Rep1.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep1.zip/content",
+      "bytes": 53827477,
+      "sha256": "d982693f971b6eda7fa8c4c3b49afe487a8cd009cfcf5d0900db8c4d93770b10"
+    },
+    "SN84_A120838_Rep2": {
+      "filename": "SN84_A120838_Rep2.zip",
+      "url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep2.zip/content",
+      "bytes": 83617743,
+      "sha256": "a36c4832698aac572c501b36c3cc5cd422d87ebc543b4c858b0d1adb291429ae"
+    },
+    "M-ST-13": {
+      "filename": "GSM8903668_M-ST-13.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903668/suppl/GSM8903668_M-ST-13.tar.gz",
+      "bytes": 162904031,
+      "sha256": "0da1f98fae9141bae4049af394063dd251c3e79ab12919e8a832d6677333e079"
+    },
+    "M-ST-15": {
+      "filename": "GSM8903670_M-ST-15.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903670/suppl/GSM8903670_M-ST-15.tar.gz",
+      "bytes": 171494310,
+      "sha256": "01fc382f4a2f17aebd4daa4e047d4d59cfec1dfc097df56fa08efb9eb68fa1af"
+    },
+    "M-ST-29": {
+      "filename": "GSM8903684_M-ST-29.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903684/suppl/GSM8903684_M-ST-29.tar.gz",
+      "bytes": 312268838,
+      "sha256": "86edf8e3f87e4d2a1965a81f61b2ad1f1168419b7f949ec9598cbc05709bd760"
+    },
+    "M-ST-30": {
+      "filename": "GSM8903685_M-ST-30.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903685/suppl/GSM8903685_M-ST-30.tar.gz",
+      "bytes": 189212232,
+      "sha256": "be631663c895e2191873a537bbcddbc18ca09d17e34f1f7b76c61b1c0ff5f74b"
+    },
+    "M-ST-31": {
+      "filename": "GSM8903686_M-ST-31.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903686/suppl/GSM8903686_M-ST-31.tar.gz",
+      "bytes": 130266896,
+      "sha256": "ce520c241588786a58c0bd9b6dc398c09e1e9646acfa9014605e6f705fa1288d"
+    },
+    "M-ST-32": {
+      "filename": "GSM8903687_M-ST-32.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903687/suppl/GSM8903687_M-ST-32.tar.gz",
+      "bytes": 156279360,
+      "sha256": "eb826c63a383ae0f193a3e60fafde3b7e4dbe29664b7237442e319f61d34c099"
+    },
+    "M-ST-33": {
+      "filename": "GSM8903688_M-ST-33.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903688/suppl/GSM8903688_M-ST-33.tar.gz",
+      "bytes": 278967080,
+      "sha256": "9d7b45ef12bf63251ceec6a52e9db581d56c7e5aef7d8f33e332d75cc83da08c"
+    },
+    "M-ST-34": {
+      "filename": "GSM8903689_M-ST-34.tar.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903689/suppl/GSM8903689_M-ST-34.tar.gz",
+      "bytes": 192681799,
+      "sha256": "c5dc766b0b3c628632baf085ca8c0e0b902ca9260f2cfa3979cc83de7f6bd6db"
+    }
+  },
+  "annotations": {
+    "Valdeolivas": {
+      "filename": "Pathology_SpotAnnotations.zip",
+      "url": "https://zenodo.org/records/7760264/files/Pathology_SpotAnnotations.zip?download=1",
+      "bytes": 702660,
+      "sha256": "2468ad1208468277eaa7693cbaf92735e76d52207e87d534e0ac8fe77fcacb47"
+    },
+    "GSE294385": {
+      "filename": "visium_meta_after_qc.rds",
+      "url": "https://raw.githubusercontent.com/yliuup/CRC_micromets_ST/main/Meta_data/visium_meta_after_qc.rds",
+      "bytes": 3872155,
+      "sha256": "7c6d6d3fe32daf0136176fec53aef180e147b4c4372bd3dd5847adb83181c609"
+    },
+    "GSE294385_raw": {
+      "filename": "visium_meta_raw.rds",
+      "url": "https://raw.githubusercontent.com/yliuup/CRC_micromets_ST/main/Meta_data/visium_meta_raw.rds",
+      "bytes": 3874054,
+      "sha256": "d5a69dd7c8664bb3df8dc449b63ac35b0631cbddce7591f1507fb25cb3eed359"
+    }
+  }
+}

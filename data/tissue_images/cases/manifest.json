@@ -1,0 +1,74 @@
+{
+  "sections": [
+    {
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A416371_Rep1",
+      "patient_id": "A416371",
+      "display_image": "tissue_hires_image.png",
+      "image_scale": 0.9302326,
+      "assets": {
+        "hires": {
+          "source_member": "SN048_A416371_Rep1/spatial/tissue_hires_image.png",
+          "filename": "tissue_hires_image.png",
+          "sha256": "941e06d8e9e29540b55aef516314438ae2b72bbd8bbbf67b8357da70548e5370"
+        }
+      }
+    },
+    {
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A416371_Rep2",
+      "patient_id": "A416371",
+      "display_image": "tissue_hires_image.png",
+      "image_scale": 0.88105726,
+      "assets": {
+        "hires": {
+          "source_member": "SN048_A416371_Rep2/spatial/tissue_hires_image.png",
+          "filename": "tissue_hires_image.png",
+          "sha256": "271593d719ecd274a59225bc51ad446639ad3c48fb176b3ae711c25e74dddd57"
+        }
+      }
+    },
+    {
+      "resource": "GSE294385",
+      "sample_id": "M-ST-15",
+      "patient_id": "Patient6",
+      "display_image": "tissue_hires_image.png",
+      "image_scale": 0.029294586,
+      "assets": {
+        "hires": {
+          "source_member": "M-ST-15/spatial/tissue_hires_image.png",
+          "filename": "tissue_hires_image.png",
+          "sha256": "bdcf4caf885ddbc92a0bb7f9bd9dd3c22a92b8b9ceb8f830c07333b65588c952"
+        }
+      }
+    },
+    {
+      "resource": "GSE294385",
+      "sample_id": "M-ST-31",
+      "patient_id": "Patient9",
+      "display_image": "tissue_hires_image.png",
+      "image_scale": 0.038341355,
+      "assets": {
+        "hires": {
+          "source_member": "M-ST-31/spatial/tissue_hires_image.png",
+          "filename": "tissue_hires_image.png",
+          "sha256": "37294c7a050a3e0246a9f6b1d97d86d05a8a7e2ea8b90ad52a1cce49ccedf0b6"
+        }
+      }
+    },
+    {
+      "resource": "GSE294385",
+      "sample_id": "M-ST-32",
+      "patient_id": "Patient9",
+      "display_image": "tissue_hires_image.png",
+      "image_scale": 0.04094166,
+      "assets": {
+        "hires": {
+          "source_member": "M-ST-32/spatial/tissue_hires_image.png",
+          "filename": "tissue_hires_image.png",
+          "sha256": "37b90d5460544cfa2491f8d5a6e8e69c71abe89193b7d75826161ca0daf27d31"
+        }
+      }
+    }
+  ]
+}

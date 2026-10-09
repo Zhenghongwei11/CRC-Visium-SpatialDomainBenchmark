@@ -1,0 +1,121 @@
+estimator	map_name	metric	margin_mad	numerator	denominator	rate
+stromal_retention	alternative_shift	additional_loss	0	172	732	0.23497268
+stromal_retention	alternative_shift	additional_loss	0.25	172	731	0.23529412
+stromal_retention	alternative_shift	additional_loss	0.5	159	674	0.23590504
+stromal_retention	alternative_shift	additional_loss	0.75	117	461	0.2537961
+stromal_retention	alternative_shift	false_loss	0	578	1305	0.44291188
+stromal_retention	alternative_shift	false_loss	0.25	577	1301	0.443505
+stromal_retention	alternative_shift	false_loss	0.5	363	880	0.4125
+stromal_retention	alternative_shift	false_loss	0.75	134	324	0.41358025
+stromal_retention	alternative_shift	loss	0	613	1373	0.44646759
+stromal_retention	alternative_shift	loss	0.25	612	1371	0.4463895
+stromal_retention	alternative_shift	loss	0.5	569	1274	0.4466248
+stromal_retention	alternative_shift	loss	0.75	439	953	0.46065058
+stromal_retention	alternative_shift	paired_flag	0	163	5200	0.031346154
+stromal_retention	alternative_shift	paired_flag	0.1	163	5200	0.031346154
+stromal_retention	alternative_shift	paired_flag	0.25	152	5200	0.029230769
+stromal_retention	alternative_shift	paired_flag	0.5	92	5200	0.017692308
+stromal_retention	alternative_shift	reversal	0	0	1373	0
+stromal_retention	alternative_shift	reversal	0.25	0	1371	0
+stromal_retention	alternative_shift	reversal	0.5	0	1274	0
+stromal_retention	alternative_shift	reversal	0.75	0	953	0
+stromal_retention	identity_control	additional_loss	0	0	0	
+stromal_retention	identity_control	additional_loss	0.25	0	0	
+stromal_retention	identity_control	additional_loss	0.5	0	0	
+stromal_retention	identity_control	additional_loss	0.75	0	0	
+stromal_retention	identity_control	false_loss	0	0	1305	0
+stromal_retention	identity_control	false_loss	0.25	0	1304	0
+stromal_retention	identity_control	false_loss	0.5	0	995	0
+stromal_retention	identity_control	false_loss	0.75	0	505	0
+stromal_retention	identity_control	loss	0	0	1373	0
+stromal_retention	identity_control	loss	0.25	0	1371	0
+stromal_retention	identity_control	loss	0.5	0	1274	0
+stromal_retention	identity_control	loss	0.75	0	953	0
+stromal_retention	identity_control	paired_flag	0	449	5200	0.086346154
+stromal_retention	identity_control	paired_flag	0.1	447	5200	0.085961538
+stromal_retention	identity_control	paired_flag	0.25	379	5200	0.072884615
+stromal_retention	identity_control	paired_flag	0.5	135	5200	0.025961538
+stromal_retention	identity_control	reversal	0	0	1373	0
+stromal_retention	identity_control	reversal	0.25	0	1371	0
+stromal_retention	identity_control	reversal	0.5	0	1274	0
+stromal_retention	identity_control	reversal	0.75	0	953	0
+stromal_retention	reference_shift	additional_loss	0	0	0	
+stromal_retention	reference_shift	additional_loss	0.25	0	0	
+stromal_retention	reference_shift	additional_loss	0.5	0	0	
+stromal_retention	reference_shift	additional_loss	0.75	0	0	
+stromal_retention	reference_shift	false_loss	0	609	1305	0.46666667
+stromal_retention	reference_shift	false_loss	0.25	561	1222	0.45908347
+stromal_retention	reference_shift	false_loss	0.5	307	705	0.43546099
+stromal_retention	reference_shift	false_loss	0.75	81	195	0.41538462
+stromal_retention	reference_shift	loss	0	641	1373	0.46686089
+stromal_retention	reference_shift	loss	0.25	640	1371	0.46681255
+stromal_retention	reference_shift	loss	0.5	600	1274	0.47095761
+stromal_retention	reference_shift	loss	0.75	492	953	0.51626443
+stromal_retention	reference_shift	paired_flag	0	0	0	
+stromal_retention	reference_shift	paired_flag	0.1	0	0	
+stromal_retention	reference_shift	paired_flag	0.25	0	0	
+stromal_retention	reference_shift	paired_flag	0.5	0	0	
+stromal_retention	reference_shift	reversal	0	0	1373	0
+stromal_retention	reference_shift	reversal	0.25	0	1371	0
+stromal_retention	reference_shift	reversal	0.5	0	1274	0
+stromal_retention	reference_shift	reversal	0.75	0	953	0
+stricter_adjacency	alternative_shift	additional_loss	0	92	445	0.20674157
+stricter_adjacency	alternative_shift	additional_loss	0.25	93	444	0.20945946
+stricter_adjacency	alternative_shift	additional_loss	0.5	77	396	0.19444444
+stricter_adjacency	alternative_shift	additional_loss	0.75	45	236	0.19067797
+stricter_adjacency	alternative_shift	false_loss	0	316	784	0.40306122
+stricter_adjacency	alternative_shift	false_loss	0.25	317	782	0.40537084
+stricter_adjacency	alternative_shift	false_loss	0.5	204	556	0.36690647
+stricter_adjacency	alternative_shift	false_loss	0.75	72	214	0.3364486
+stricter_adjacency	alternative_shift	loss	0	337	820	0.41097561
+stricter_adjacency	alternative_shift	loss	0.25	338	819	0.41269841
+stricter_adjacency	alternative_shift	loss	0.5	308	755	0.40794702
+stricter_adjacency	alternative_shift	loss	0.75	213	519	0.41040462
+stricter_adjacency	alternative_shift	paired_flag	0	100	2800	0.035714286
+stricter_adjacency	alternative_shift	paired_flag	0.1	100	2800	0.035714286
+stricter_adjacency	alternative_shift	paired_flag	0.25	93	2800	0.033214286
+stricter_adjacency	alternative_shift	paired_flag	0.5	46	2800	0.016428571
+stricter_adjacency	alternative_shift	reversal	0	0	820	0
+stricter_adjacency	alternative_shift	reversal	0.25	0	819	0
+stricter_adjacency	alternative_shift	reversal	0.5	0	755	0
+stricter_adjacency	alternative_shift	reversal	0.75	0	519	0
+stricter_adjacency	identity_control	additional_loss	0	0	0	
+stricter_adjacency	identity_control	additional_loss	0.25	0	0	
+stricter_adjacency	identity_control	additional_loss	0.5	0	0	
+stricter_adjacency	identity_control	additional_loss	0.75	0	0	
+stricter_adjacency	identity_control	false_loss	0	0	1305	0
+stricter_adjacency	identity_control	false_loss	0.25	0	1304	0
+stricter_adjacency	identity_control	false_loss	0.5	0	995	0
+stricter_adjacency	identity_control	false_loss	0.75	0	505	0
+stricter_adjacency	identity_control	loss	0	0	1373	0
+stricter_adjacency	identity_control	loss	0.25	0	1371	0
+stricter_adjacency	identity_control	loss	0.5	0	1274	0
+stricter_adjacency	identity_control	loss	0.75	0	953	0
+stricter_adjacency	identity_control	paired_flag	0	433	5200	0.083269231
+stricter_adjacency	identity_control	paired_flag	0.1	431	5200	0.082884615
+stricter_adjacency	identity_control	paired_flag	0.25	366	5200	0.070384615
+stricter_adjacency	identity_control	paired_flag	0.5	133	5200	0.025576923
+stricter_adjacency	identity_control	reversal	0	0	1373	0
+stricter_adjacency	identity_control	reversal	0.25	0	1371	0
+stricter_adjacency	identity_control	reversal	0.5	0	1274	0
+stricter_adjacency	identity_control	reversal	0.75	0	953	0
+stricter_adjacency	reference_shift	additional_loss	0	0	0	
+stricter_adjacency	reference_shift	additional_loss	0.25	0	0	
+stricter_adjacency	reference_shift	additional_loss	0.5	0	0	
+stricter_adjacency	reference_shift	additional_loss	0.75	0	0	
+stricter_adjacency	reference_shift	false_loss	0	609	1305	0.46666667
+stricter_adjacency	reference_shift	false_loss	0.25	561	1222	0.45908347
+stricter_adjacency	reference_shift	false_loss	0.5	307	705	0.43546099
+stricter_adjacency	reference_shift	false_loss	0.75	81	195	0.41538462
+stricter_adjacency	reference_shift	loss	0	641	1373	0.46686089
+stricter_adjacency	reference_shift	loss	0.25	640	1371	0.46681255
+stricter_adjacency	reference_shift	loss	0.5	600	1274	0.47095761
+stricter_adjacency	reference_shift	loss	0.75	492	953	0.51626443
+stricter_adjacency	reference_shift	paired_flag	0	0	0	
+stricter_adjacency	reference_shift	paired_flag	0.1	0	0	
+stricter_adjacency	reference_shift	paired_flag	0.25	0	0	
+stricter_adjacency	reference_shift	paired_flag	0.5	0	0	
+stricter_adjacency	reference_shift	reversal	0	0	1373	0
+stricter_adjacency	reference_shift	reversal	0.25	0	1371	0
+stricter_adjacency	reference_shift	reversal	0.5	0	1274	0
+stricter_adjacency	reference_shift	reversal	0.75	0	953	0

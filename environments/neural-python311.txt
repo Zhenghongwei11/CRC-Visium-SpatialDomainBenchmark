@@ -1,0 +1,6 @@
+-r source-python311.txt
+torch==2.5.1
+torch-geometric==2.6.1
+opencv-python-headless==4.10.0.84
+SpaGCN==1.2.7
+git+https://github.com/QIFEIDKN/STAGATE_pyG.git@ae1158ca8cf1eb6bb8ee198298552d44c9ac21db

@@ -1,9 +1,0 @@
-resource	estimator_id	map_arm	n_maps	n_sections	n_supported	n_point_toward_zero	n_point_opposite_anchor	median_map_minus_anchor_over_mad	median_near_retention	median_far_retention	support_fraction
-GSE294385	anchor_retention	alternative	65	3	26	58	5	0.38425081	0.45104232	0.79716981	0.4
-GSE294385	anchor_retention	reference	34	3	15	30	3	0.44465466	0.41143281	0.66768293	0.44117647
-GSE294385	strict_computational_interface	alternative	40	3	16	34	5	0.45947386	0.22362603	0.81333333	0.4
-GSE294385	strict_computational_interface	reference	24	3	11	19	3	0.42432784	0.19778662	0.79158997	0.45833333
-Valdeolivas	anchor_retention	alternative	11	1	0	11	2	0.60545039	0.25966851	0.5508982	0
-Valdeolivas	anchor_retention	reference	7	1	0	7	0	0.58565179	0.26519337	0.46107784	0
-Valdeolivas	strict_computational_interface	alternative	4	1	0	4	0	0.55141231	0.16298343	0.5508982	0
-Valdeolivas	strict_computational_interface	reference	4	1	0	4	0	0.51383577	0.16574586	0.50598802	0

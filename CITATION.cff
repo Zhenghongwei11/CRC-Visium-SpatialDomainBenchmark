@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If you use this software or its dataset-derived tables, please cite this version of the repository."
-title: "Tissue-anchored regional expression contrasts in colorectal cancer Visium data"
+message: "Please cite the manuscript and the archived software version used."
+title: "Spatial domain selection changes regional stromal expression contrasts in colorectal cancer Visium data"
 type: software
-version: 1.0.20
-date-released: 2026-09-30
+version: 1.1.0
+repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
 authors:
   - family-names: Zheng
     given-names: Hongwei
@@ -11,15 +11,8 @@ authors:
   - family-names: Bu
     given-names: Wanping
     affiliation: "Quanzhou Medical College, Quanzhou, Fujian 362000, China"
-repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
-contact:
-  - family-names: Zheng
-    given-names: Hongwei
-    email: "lgmoon@qzmc.edu.cn"
 keywords:
   - spatial transcriptomics
   - colorectal cancer
-  - Visium
-  - regional expression
-  - tissue annotation
-  - known-boundary simulation
+  - stromal expression
+  - tissue sampling

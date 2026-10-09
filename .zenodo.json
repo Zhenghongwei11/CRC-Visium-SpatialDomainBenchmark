@@ -1,7 +1,7 @@
 {
-  "title": "Tissue-anchored regional expression contrasts in colorectal cancer Visium data",
+  "title": "Spatial domain selection changes regional stromal expression contrasts in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "Analysis code and derived results for a morphology-defined near-versus-far stromal expression comparison in two public colorectal cancer Visium resources. This version includes the revised manuscript's figures, Table 1 and supporting tables with their generating scripts and derived inputs. Reference and alternative maps in the separate simulation are constructed displacements of a known boundary, not clustering outputs. Real-resource map results are repeated selections within patients and do not demonstrate local histological-boundary movement or a supported primary direction reversal. Full raw-expression replay requires additional source-compatible registered inputs described in the manifest.",
+  "description": "Analysis code for regional stromal expression comparisons in 22 colorectal cancer Visium sections from 12 patients. Includes original-data acquisition and domain-fitting scripts, saved publication maps, regional statistics, spatial sensitivity analyses, known-boundary simulations, muscle-marker summaries and readout-gene withholding. The scientific workflow generates Figures 1\u20133 and S1\u2013S8, Table 1 and Tables S1\u2013S16. A Colab notebook supports new fits from original counts; saved maps retain the specific fits examined in the study.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
@@ -27,5 +27,7 @@
       "relation": "isSupplementTo",
       "resource_type": "software"
     }
-  ]
+  ],
+  "version": "1.1.0",
+  "license": "cc-by-4.0"
 }

@@ -1,12 +1,15 @@
-*.DS_Store
-.venv/
-data/raw/
 __pycache__/
-docs/submissions/
-*.docx
-
-# reference-builder cache (rebuilt on demand)
-docs/references/cache/
-
-# generated reproducibility-bundle artifacts
-docs/reproducibility_bundle/
+*.py[cod]
+.venv*/
+.cache/
+source_cache/
+raw_cache/
+original_inputs/
+source_fits/
+baseline_example/
+results*/
+logs/
+.env
+.env.*
+/token
+.DS_Store

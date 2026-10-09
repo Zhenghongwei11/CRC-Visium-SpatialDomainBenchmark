@@ -1,0 +1,6 @@
+{
+  "bootstrap_and_control_replicates": 1000,
+  "near_band_sensitivity_um": 175,
+  "master_seed": "jbcb-reader-revision-20261006-methods-v1",
+  "interpretation": "Exploratory spatial sensitivity with fixed saved domain maps"
+}

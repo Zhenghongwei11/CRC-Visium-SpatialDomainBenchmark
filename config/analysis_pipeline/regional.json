@@ -1,0 +1,902 @@
+{
+  "bootstrap_replicates": 1000,
+  "bound_code_sha256": {
+    "new_statistics_runner_sha256": "f53b4c939ab7c50d61a7f59aeff6022e099444d98cb2c2e799278a7067e06af8"
+  },
+  "bound_files": {
+    "data/reference_inputs/components/GSE294385/M-ST-13/spot_components.tsv.gz": {
+      "bytes": 282286,
+      "sha256": "ed5f801f030e20fc118876f92d9a92dc5fcaee845540d563e7f7280172304319"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-15/spot_components.tsv.gz": {
+      "bytes": 341309,
+      "sha256": "23b011e33fc6ef31d61aad56c7e3174579dd965cd3fa45e38f2db8b3572401a2"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-29/spot_components.tsv.gz": {
+      "bytes": 459999,
+      "sha256": "f180cc399b80c2ee668ec328f00e51bad072d666a2be5854ce7f75203bd8f3d1"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-30/spot_components.tsv.gz": {
+      "bytes": 290578,
+      "sha256": "1e7cb1703c3b779f72456bf6cbd0baf6fc298c4f72be5d6043ec3b897a8c2e24"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-31/spot_components.tsv.gz": {
+      "bytes": 182793,
+      "sha256": "3c9c6430fad3d6da918ddd435453cc891d950e97e66f09745146625f6803ad08"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-32/spot_components.tsv.gz": {
+      "bytes": 226853,
+      "sha256": "8ab4bb27309f8a40d4c4b91ff603cde9e6be9649a5b10d5abfff25f27a7f2c66"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-33/spot_components.tsv.gz": {
+      "bytes": 459751,
+      "sha256": "c88a09b2eb1dfb0acea1807b0fda36ba9bc13fbae0236c6d6922ff0e0240871c"
+    },
+    "data/reference_inputs/components/GSE294385/M-ST-34/spot_components.tsv.gz": {
+      "bytes": 331979,
+      "sha256": "16b9c3225c9c1e0adf54854eb59535a934ec8b2916887f6b366806dd0d310b81"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN048_A121573_Rep1/spot_components.tsv.gz": {
+      "bytes": 62350,
+      "sha256": "10e15811843efdc97d68ee3b1737e0eabcb589741ab1af514bb8256fc24c2d32"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN048_A121573_Rep2/spot_components.tsv.gz": {
+      "bytes": 64491,
+      "sha256": "2b66caf07ee637f5b3c26466ad06972b41814600c47e64efc3f05d739ff7b10f"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN048_A416371_Rep1/spot_components.tsv.gz": {
+      "bytes": 64405,
+      "sha256": "203694068560ea075f01e6db99d2a116ba791a589015b14ec6e959510d3dd1e3"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN048_A416371_Rep2/spot_components.tsv.gz": {
+      "bytes": 57357,
+      "sha256": "7ab4097922b2be7078886dce0b56130980986d623dfc04d5c55c3196e69aa381"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN123_A551763_Rep1/spot_components.tsv.gz": {
+      "bytes": 24587,
+      "sha256": "ede67cdeb3e36d245ae78c4031de6168dec30fed982921ebb8da0d26dfec6ad4"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN123_A595688_Rep1/spot_components.tsv.gz": {
+      "bytes": 44446,
+      "sha256": "fcfc2063827ea90cf3a6cf570eedb51a0c6c06d134601e8471528e4c9a6dde3b"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN123_A798015_Rep1/spot_components.tsv.gz": {
+      "bytes": 73258,
+      "sha256": "0a54d47de161c0ef3af422e4e77d4a326f9aacaf4815d4be85d24894f0e61fff"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN123_A938797_Rep1_X/spot_components.tsv.gz": {
+      "bytes": 80327,
+      "sha256": "a6dc5497b3a3f78267336d0956b20d880c97207f98c8f36f41d8e5c1dda7f537"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN124_A551763_Rep2/spot_components.tsv.gz": {
+      "bytes": 22754,
+      "sha256": "a6813b1635a157ff1d93f481902ea39ca404953a91c0d1b25eb7db41cd3ea673"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN124_A595688_Rep2/spot_components.tsv.gz": {
+      "bytes": 14514,
+      "sha256": "0faab8adf18326977b03c81686ef09c6df0e1d97c72ad90443624978c5ff00af"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN124_A798015_Rep2/spot_components.tsv.gz": {
+      "bytes": 72786,
+      "sha256": "54b1200f25c875eff1fca161ccf8394a6d3ea0f520a30063862d7674051fc2bb"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN124_A938797_Rep2/spot_components.tsv.gz": {
+      "bytes": 74373,
+      "sha256": "a5c0f1bbc89ae38345581df97a274d753cfd2ca5bf76ddaea7246658a345d036"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN84_A120838_Rep1/spot_components.tsv.gz": {
+      "bytes": 13262,
+      "sha256": "12549dd807d14f25ea6c5a97d290aed8772b2b8d9f96ec5573bac22769fadd8a"
+    },
+    "data/reference_inputs/components/Valdeolivas/SN84_A120838_Rep2/spot_components.tsv.gz": {
+      "bytes": 35078,
+      "sha256": "ae6c4ce2efb749597f08843bb4cd13a77ba00a6d82fec0836cf278bfd0d70d88"
+    },
+    "data/reference_inputs/map_grid.tsv": {
+      "bytes": 685436,
+      "sha256": "32baeb149b5c1716da6c4582a3af80f9cf17c94a8a42ed653b25e31b19b70afc"
+    },
+    "data/reference_inputs/nominal_geometry/nominal_pool_all_registered.tsv.gz": {
+      "bytes": 3924867,
+      "sha256": "090dc035fea2b97e4452357bc83e8d4cbe5908185793a562e65041d9a8e97aed"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-13/input_maps.tsv.gz": {
+      "bytes": 4601086,
+      "sha256": "1d48ff2615a8ff6e278e2ad4e7bbf28103f5c0ee923bfbed051751866ecaf53d"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-13/spot_inputs.tsv.gz": {
+      "bytes": 150373,
+      "sha256": "43b3595eb3cc9fb309461b1442fd0c2e753b61fbda6243c331ea021313b8e64e"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-13/spot_membership.tsv.gz": {
+      "bytes": 9818810,
+      "sha256": "3c68e3450771ce725aef494615e94c97f74857967242c387e76d45b4a209e399"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-13/spot_scores.tsv.gz": {
+      "bytes": 593310,
+      "sha256": "edf6c25f1b1f4f6adca569da509fcbe9fca4992c05be8e7c45dbd1574d912b6d"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-15/input_maps.tsv.gz": {
+      "bytes": 5475244,
+      "sha256": "e1a85048fcaa588ca9d8a842738f22cb4e170f41443d13f876fb2ce208e35e32"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-15/spot_inputs.tsv.gz": {
+      "bytes": 187003,
+      "sha256": "36d6c2438fe63188684201f8a58e44530f2d1d4452ac23ac9192367e2ed994a9"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-15/spot_membership.tsv.gz": {
+      "bytes": 12268495,
+      "sha256": "a183d4c66afc0144eff65f3e79bb65c050f1762d5c92a58eaea1031258780029"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-15/spot_scores.tsv.gz": {
+      "bytes": 725414,
+      "sha256": "f0b028bdb876c6cdd26df2eaf2958ee09780ac6099d7e58ea981d12cfb25f6bb"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-29/input_maps.tsv.gz": {
+      "bytes": 5955334,
+      "sha256": "f0e315f7275822330f1a628338fe49193ec5558a5f9e7a720ca9b5a958713be9"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-29/spot_inputs.tsv.gz": {
+      "bytes": 216201,
+      "sha256": "525c6b22f36ec1842d056d0574fd3a65548044d7931e35dab4bd8f4c2c516cb7"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-29/spot_membership.tsv.gz": {
+      "bytes": 12334596,
+      "sha256": "a790c42e7fc70596470fa28ef771c3d45be543f9e6a155cd133f8d30d83ba726"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-29/spot_scores.tsv.gz": {
+      "bytes": 913424,
+      "sha256": "849e8016bcbc69474397c2ed92dbbc28e4dafd372cb26dc9f0d52795a0106590"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-30/input_maps.tsv.gz": {
+      "bytes": 3663610,
+      "sha256": "933a0afc3bc6a668a445e2f4118836f65c00b11bd8dafaeef8eaa5c9ee204134"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-30/spot_inputs.tsv.gz": {
+      "bytes": 119071,
+      "sha256": "47e9ef04a9a913a5ee1b1f021b2d099d16e1ba83cced7b9aeb76cdc896512955"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-30/spot_membership.tsv.gz": {
+      "bytes": 9566353,
+      "sha256": "223900250f59760a41055071b4c60340c2bb8d4b04edfa3cf22a757e6090aedf"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-30/spot_scores.tsv.gz": {
+      "bytes": 517094,
+      "sha256": "bb4f671a3e5975d37617e4d1f94168e7518c26c1425937015bfe5a0b062303b5"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-31/input_maps.tsv.gz": {
+      "bytes": 2401539,
+      "sha256": "8251d24b9432d0fff8a1eac79cc22a43cd6c721bd681f56ddf930f97b158c080"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-31/spot_inputs.tsv.gz": {
+      "bytes": 85444,
+      "sha256": "401b7fae2a3a564738c9fe25321f7404e88297975937902727233def795ca6cb"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-31/spot_membership.tsv.gz": {
+      "bytes": 5164920,
+      "sha256": "ab531aa4d406c74539538c51b556914ffc395914e3ec161bbbde8b7408cc008f"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-31/spot_scores.tsv.gz": {
+      "bytes": 355022,
+      "sha256": "c4db25928959cde4e3c3cfc1676a51f6610828977a338ff65beec27ac8522fe0"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-32/input_maps.tsv.gz": {
+      "bytes": 4272061,
+      "sha256": "46eafd2413066b7de19441b32bf2f8ceed8cb1da80e68dc9f7dfcbc10fef5e60"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-32/spot_inputs.tsv.gz": {
+      "bytes": 143032,
+      "sha256": "06d27181d7dbde868587eb73d0c27f9b370a48d69e298502bbf902a634420c1f"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-32/spot_membership.tsv.gz": {
+      "bytes": 7915848,
+      "sha256": "6e6215d109cc51802535b4ceacb12717e6e086f527b3b280819f2e33fe531e68"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-32/spot_scores.tsv.gz": {
+      "bytes": 531824,
+      "sha256": "8cfb13425aa6393908d223768bebba784e8e4207fa581b06a5c67fae4091e885"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-33/input_maps.tsv.gz": {
+      "bytes": 6374838,
+      "sha256": "c6180bb608d0ec4c75a1f53e372e0ef34140cfa6da1f928d39f7057968445cf0"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-33/spot_inputs.tsv.gz": {
+      "bytes": 209871,
+      "sha256": "8ea6e81c4557337499c3ff774127afb54c7fb1c8736f8c1c8aa6d5d7292d450b"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-33/spot_membership.tsv.gz": {
+      "bytes": 14694227,
+      "sha256": "bbf3ba09ad95dc2176458f94edf2579847fc542a308e917d94b00a851947032e"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-33/spot_scores.tsv.gz": {
+      "bytes": 879683,
+      "sha256": "a6b815376ba2821cfa2572645ad428166585a67df9cbccb39f57dec8c9bc4ee6"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-34/input_maps.tsv.gz": {
+      "bytes": 4368790,
+      "sha256": "2e32560816625fa8c7f45d6539ea1b1df95d2baf0fd0c0120ad5e76fc1e9af69"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-34/spot_inputs.tsv.gz": {
+      "bytes": 145257,
+      "sha256": "fbd0acfbfc1c5cb61a9fa4985b6028b124bdb98841657c111723480cf5d847ce"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-34/spot_membership.tsv.gz": {
+      "bytes": 8584933,
+      "sha256": "c563bd9ec9940c33370027fcaf82ca95d475769886070f7ba94ee8380a225c10"
+    },
+    "data/reference_inputs/sections/GSE294385/M-ST-34/spot_scores.tsv.gz": {
+      "bytes": 612243,
+      "sha256": "cd3f985f4a8b83de975622f515c6442c58b2ee78ae1975b6632fdb1f04bfb9ee"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1/input_maps.tsv.gz": {
+      "bytes": 968847,
+      "sha256": "bbf4cf53ebfbb605c573bb7f837456f4ce3d478005d0f915810262b7c3cbc7f7"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 35893,
+      "sha256": "8b7e6f6b52dae7eb2a0f2488a0ec11f6364dd4e0706cdb9ca0c855b54eb1c9b8"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1/spot_membership.tsv.gz": {
+      "bytes": 2480709,
+      "sha256": "ffa077bd213571c00a5d26d6820b9f11eb3975f717b7137c286c4a7cceb4a9f5"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1/spot_scores.tsv.gz": {
+      "bytes": 172749,
+      "sha256": "fe55c1ee8ec2192c4c338de55f2e31fa44ebb7abae75662d5082526e2886fe1d"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2/input_maps.tsv.gz": {
+      "bytes": 1033043,
+      "sha256": "4fcdbc7e0196d57bf424dda4da5bfc27f6d839ecbb909375f14cb702acf7e257"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 38537,
+      "sha256": "091a75866da949566b058c4b0a0f0b6ba7d6f25786b5376bd55227559a5a76c2"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2/spot_membership.tsv.gz": {
+      "bytes": 2518440,
+      "sha256": "4e7aa5f968f595cf7c2c9096615cc5b6fb883451734640a3903cb5f8e60dc080"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2/spot_scores.tsv.gz": {
+      "bytes": 183433,
+      "sha256": "9509eb0eb2b8a0860a1654a9614cb1c0e33b7062cbdcd2cfed51e34a1888a534"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1/input_maps.tsv.gz": {
+      "bytes": 1001983,
+      "sha256": "98c79e8ffc3cd6666f126ca2c574d284463e1340c286db97c9d616dab71114d1"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 37214,
+      "sha256": "98e38df33030b5bf24830d5dfa7789969071a8159cb3e9a6f564b81a9ec503cf"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1/spot_membership.tsv.gz": {
+      "bytes": 1960791,
+      "sha256": "7b1462b32c638c8b574d71f4dfe3955f0e779281eb029cdb3c52745daafab7bb"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1/spot_scores.tsv.gz": {
+      "bytes": 189479,
+      "sha256": "ca09068ce9d03c0cf2a9f0923624162b7b20aa78446dd82f2fa23cf67c1879c7"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2/input_maps.tsv.gz": {
+      "bytes": 777607,
+      "sha256": "4fe13f9f1248c85f0c7d32db3664487f32dac47340f4fc19146e9b3b7c4c1378"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 28754,
+      "sha256": "348c39318d9de37eba6cbc7ba1eb3720a37c3f1c822e589e8b28aca36db01765"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2/spot_membership.tsv.gz": {
+      "bytes": 1469724,
+      "sha256": "d446689d00f6ec492008cf8164a5ad91a136924fdb13a35d91663f016a7d5d5f"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2/spot_scores.tsv.gz": {
+      "bytes": 150715,
+      "sha256": "df5bfe4b37f453f2dfdf8d8f23e25e326f3fd154a51389a67d34651e8d406a62"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1/input_maps.tsv.gz": {
+      "bytes": 301155,
+      "sha256": "32426d85b785ca288f2e98aec8810e2fafed0fb6287e5b2e397a4a564eceaf3a"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 11323,
+      "sha256": "74e7916dbdb4e61f05e5a543d3a53a8708ce34efab45e87de5bf09c8db1ab56a"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1/spot_membership.tsv.gz": {
+      "bytes": 47,
+      "sha256": "27b0004f688d8cb85f4f548efa33d2eff12d79bc17c2c177a0e8f4a159dc0013"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1/spot_scores.tsv.gz": {
+      "bytes": 57658,
+      "sha256": "b713d9addbbd948849e0b4b9fbb1613ba52ea3579172a5a3b83f3ae119d0ceac"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1/input_maps.tsv.gz": {
+      "bytes": 510970,
+      "sha256": "2df4ed42df083f92ef981309de56ce9c0cc69a50200476f756295e0bc08dd7ad"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 19695,
+      "sha256": "628e8dd1ba772b96c7c327a7ecff24b9ec28713bd0bf490cb21baa386ab7a89d"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1/spot_membership.tsv.gz": {
+      "bytes": 1314449,
+      "sha256": "7c3d0cd5c5e19467cde0545c2c1ab07c08f5a8c12e96f0c32cc339901101f4c3"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1/spot_scores.tsv.gz": {
+      "bytes": 96500,
+      "sha256": "f65017bbe11203a70c0c2fe09a544618266248154038523d39dac7d9bbeb829f"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1/input_maps.tsv.gz": {
+      "bytes": 714978,
+      "sha256": "de11dbc234101fc40c5f9ba7faf60f65629debf44de3baaa802c6a3dc744c70d"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 28320,
+      "sha256": "7e39ba3081766a56d2c01163ef1a901ba481dd43ba8abbc11aac5a31c1e1c757"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1/spot_membership.tsv.gz": {
+      "bytes": 47,
+      "sha256": "7ac038cbbf50f99c3f917c035cf801f22c355eeee5c14d346c62cc7f09668d68"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1/spot_scores.tsv.gz": {
+      "bytes": 136334,
+      "sha256": "0f0e471121a1b29e3b71895edbc7df0f76c2b91b4c4f952213a3b336cd174dee"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X/input_maps.tsv.gz": {
+      "bytes": 928567,
+      "sha256": "a8dd2cbcec820e78f303bcd27c0f8bb75696e9f0e44632d073ff02c8caacb500"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X/spot_inputs.tsv.gz": {
+      "bytes": 34900,
+      "sha256": "c078b2c8d01d1a36efb8788915d8f65f380217e90010fcfa72dad792e4811304"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X/spot_membership.tsv.gz": {
+      "bytes": 2531247,
+      "sha256": "af9a5744f5347ec4a886f3fee962f5daf959f49225912188d85591b1933f8f66"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X/spot_scores.tsv.gz": {
+      "bytes": 176432,
+      "sha256": "a693e4abaad56e0a0a06e0a3c97d439bad2b826b9557e97d04e1942e244acdee"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2/input_maps.tsv.gz": {
+      "bytes": 524563,
+      "sha256": "252970b75772bea832c1bcee70465d572f679baa2f93b7a78395fd2dc6cabe85"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 19009,
+      "sha256": "b1cf782783ced7df110e77fd691eb995e120c40344afb9bdc7636526ec48f60f"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2/spot_membership.tsv.gz": {
+      "bytes": 47,
+      "sha256": "88e0c2c5330c539e64523183100ac6c74fc2f1906fe9618dfe39c3ccb35daed4"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2/spot_scores.tsv.gz": {
+      "bytes": 87801,
+      "sha256": "0f0e1e8085ed2e5f365a271a376533328a368a47f46c9e6636cd2f34dead9f27"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2/input_maps.tsv.gz": {
+      "bytes": 170579,
+      "sha256": "7b6d03a4915ae46edc080e8df90068c7e6ce8203ec253772e9138fb4d52a6543"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 6719,
+      "sha256": "702d3f620e9a308b12541a70a235da4ab6f367d2bb33ee46e548225e1a559b25"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2/spot_membership.tsv.gz": {
+      "bytes": 384251,
+      "sha256": "9cbc5bedd71d2360ffe3a8f164947650e2b2f56bcf8beb801043d9652ed4994d"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2/spot_scores.tsv.gz": {
+      "bytes": 31806,
+      "sha256": "4cc774cea6e5beb34211f843cb46e6c9796fcbc8505d113ef2a2465f13e1b70c"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2/input_maps.tsv.gz": {
+      "bytes": 734782,
+      "sha256": "4610699d3c08cca24f450abf4ff857a756cb017f498cefa2dcf71d3093121079"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 27634,
+      "sha256": "d4e388265eaa4f2a1e217abacd4791243e2faa48c3e07cb05b90ce32dbb66af1"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2/spot_membership.tsv.gz": {
+      "bytes": 47,
+      "sha256": "6683b488d8a6b56c30415d653f03dce2b7333427251db851815e8c2312e47449"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2/spot_scores.tsv.gz": {
+      "bytes": 135236,
+      "sha256": "41f0f7492f6f3d147cb1ce4fde062e809f0d713dbb43d9c62aa4aea69841433c"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2/input_maps.tsv.gz": {
+      "bytes": 743054,
+      "sha256": "2553906d6d500784d5ff11d72ed3f1f6ccbc6d3e85247be75eefc3ebd7656364"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 27866,
+      "sha256": "522976a0c29f1f0bee2fdedddaa310660a6e4b001b850a8698c981d6c731410d"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2/spot_membership.tsv.gz": {
+      "bytes": 1772115,
+      "sha256": "2096eb3536de68430e311c3d5f45f93af604397d084382fdb711d425d18b804c"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2/spot_scores.tsv.gz": {
+      "bytes": 144590,
+      "sha256": "d5bc9b31038d0ffb08edbd762ebede5d2d0c987fd5339bd4f4ede44fa97158d1"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1/input_maps.tsv.gz": {
+      "bytes": 145047,
+      "sha256": "d733e1d82aa17b9e10d6037fe2706a7804866410b04dbf7095873a02c4cd6ee3"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1/spot_inputs.tsv.gz": {
+      "bytes": 5895,
+      "sha256": "92b557b4fc30dd5448c03a3e78a49b30846ecbc3ca43b8f98dc9ec23a6cfeef7"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1/spot_membership.tsv.gz": {
+      "bytes": 47,
+      "sha256": "dd31f8d860f68053185dbb89f60c6b3b2239f5eea9519089d7e12768218c0b74"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1/spot_scores.tsv.gz": {
+      "bytes": 26865,
+      "sha256": "be98f1d383e15a6b8d6f399608b4bd5d39fc6494e9982dfafa5438aa71ec9e10"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2/input_maps.tsv.gz": {
+      "bytes": 463600,
+      "sha256": "2656f38465d949f0d3b04672f414c972374c5235448e26d66eb8fd814824fdc8"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2/spot_inputs.tsv.gz": {
+      "bytes": 17759,
+      "sha256": "08eb46a7cb3663a27935116a73cab1a9be16ade46bf51756c264c345cbd06896"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2/spot_membership.tsv.gz": {
+      "bytes": 971007,
+      "sha256": "7c7ddc06f5ed514440ee77044baab70167d0d87b71be8600fd1a0243ae584b8f"
+    },
+    "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2/spot_scores.tsv.gz": {
+      "bytes": 81541,
+      "sha256": "48b3ec8e20575b1fb80b5052e9124ab815cbf3bb5e3b44ee171c889f1c550f85"
+    }
+  },
+  "case_patients": [
+    "Patient6",
+    "Patient9",
+    "A416371"
+  ],
+  "component_execution_lineage": {
+    "section_artifacts": {
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-13": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 282286,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-13/spot_components.tsv.gz",
+            "sha256": "ed5f801f030e20fc118876f92d9a92dc5fcaee845540d563e7f7280172304319"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-15": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 341309,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-15/spot_components.tsv.gz",
+            "sha256": "23b011e33fc6ef31d61aad56c7e3174579dd965cd3fa45e38f2db8b3572401a2"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-29": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 459999,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-29/spot_components.tsv.gz",
+            "sha256": "f180cc399b80c2ee668ec328f00e51bad072d666a2be5854ce7f75203bd8f3d1"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-30": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 290578,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-30/spot_components.tsv.gz",
+            "sha256": "1e7cb1703c3b779f72456bf6cbd0baf6fc298c4f72be5d6043ec3b897a8c2e24"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-31": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 182793,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-31/spot_components.tsv.gz",
+            "sha256": "3c9c6430fad3d6da918ddd435453cc891d950e97e66f09745146625f6803ad08"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-32": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 226853,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-32/spot_components.tsv.gz",
+            "sha256": "8ab4bb27309f8a40d4c4b91ff603cde9e6be9649a5b10d5abfff25f27a7f2c66"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-33": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 459751,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-33/spot_components.tsv.gz",
+            "sha256": "c88a09b2eb1dfb0acea1807b0fda36ba9bc13fbae0236c6d6922ff0e0240871c"
+          }
+        }
+      },
+      "GSE294385_CRC_METASTASIS_PATHOLOGY::M-ST-34": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 331979,
+            "path": "data/reference_inputs/components/GSE294385/M-ST-34/spot_components.tsv.gz",
+            "sha256": "16b9c3225c9c1e0adf54854eb59535a934ec8b2916887f6b366806dd0d310b81"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN048_A121573_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 62350,
+            "path": "data/reference_inputs/components/Valdeolivas/SN048_A121573_Rep1/spot_components.tsv.gz",
+            "sha256": "10e15811843efdc97d68ee3b1737e0eabcb589741ab1af514bb8256fc24c2d32"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN048_A121573_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 64491,
+            "path": "data/reference_inputs/components/Valdeolivas/SN048_A121573_Rep2/spot_components.tsv.gz",
+            "sha256": "2b66caf07ee637f5b3c26466ad06972b41814600c47e64efc3f05d739ff7b10f"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN048_A416371_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 64405,
+            "path": "data/reference_inputs/components/Valdeolivas/SN048_A416371_Rep1/spot_components.tsv.gz",
+            "sha256": "203694068560ea075f01e6db99d2a116ba791a589015b14ec6e959510d3dd1e3"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN048_A416371_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 57357,
+            "path": "data/reference_inputs/components/Valdeolivas/SN048_A416371_Rep2/spot_components.tsv.gz",
+            "sha256": "7ab4097922b2be7078886dce0b56130980986d623dfc04d5c55c3196e69aa381"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN123_A551763_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 24587,
+            "path": "data/reference_inputs/components/Valdeolivas/SN123_A551763_Rep1/spot_components.tsv.gz",
+            "sha256": "ede67cdeb3e36d245ae78c4031de6168dec30fed982921ebb8da0d26dfec6ad4"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN123_A595688_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 44446,
+            "path": "data/reference_inputs/components/Valdeolivas/SN123_A595688_Rep1/spot_components.tsv.gz",
+            "sha256": "fcfc2063827ea90cf3a6cf570eedb51a0c6c06d134601e8471528e4c9a6dde3b"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN123_A798015_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 73258,
+            "path": "data/reference_inputs/components/Valdeolivas/SN123_A798015_Rep1/spot_components.tsv.gz",
+            "sha256": "0a54d47de161c0ef3af422e4e77d4a326f9aacaf4815d4be85d24894f0e61fff"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN123_A938797_Rep1_X": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 80327,
+            "path": "data/reference_inputs/components/Valdeolivas/SN123_A938797_Rep1_X/spot_components.tsv.gz",
+            "sha256": "a6dc5497b3a3f78267336d0956b20d880c97207f98c8f36f41d8e5c1dda7f537"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN124_A551763_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 22754,
+            "path": "data/reference_inputs/components/Valdeolivas/SN124_A551763_Rep2/spot_components.tsv.gz",
+            "sha256": "a6813b1635a157ff1d93f481902ea39ca404953a91c0d1b25eb7db41cd3ea673"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN124_A595688_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 14514,
+            "path": "data/reference_inputs/components/Valdeolivas/SN124_A595688_Rep2/spot_components.tsv.gz",
+            "sha256": "0faab8adf18326977b03c81686ef09c6df0e1d97c72ad90443624978c5ff00af"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN124_A798015_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 72786,
+            "path": "data/reference_inputs/components/Valdeolivas/SN124_A798015_Rep2/spot_components.tsv.gz",
+            "sha256": "54b1200f25c875eff1fca161ccf8394a6d3ea0f520a30063862d7674051fc2bb"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN124_A938797_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 74373,
+            "path": "data/reference_inputs/components/Valdeolivas/SN124_A938797_Rep2/spot_components.tsv.gz",
+            "sha256": "a5c0f1bbc89ae38345581df97a274d753cfd2ca5bf76ddaea7246658a345d036"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN84_A120838_Rep1": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 13262,
+            "path": "data/reference_inputs/components/Valdeolivas/SN84_A120838_Rep1/spot_components.tsv.gz",
+            "sha256": "12549dd807d14f25ea6c5a97d290aed8772b2b8d9f96ec5573bac22769fadd8a"
+          }
+        }
+      },
+      "VALDEOLIVAS::SN84_A120838_Rep2": {
+        "artifacts": {
+          "spot_components.tsv.gz": {
+            "bytes": 35078,
+            "path": "data/reference_inputs/components/Valdeolivas/SN84_A120838_Rep2/spot_components.tsv.gz",
+            "sha256": "ae6c4ce2efb749597f08843bb4cd13a77ba00a6d82fec0836cf278bfd0d70d88"
+          }
+        }
+      }
+    }
+  },
+  "control_kinds": [
+    "count_only",
+    "block_matched"
+  ],
+  "control_replicates": 1000,
+  "eligibility_frames": [
+    "historical_restricted",
+    "independent_eligible"
+  ],
+  "estimators": [
+    "anchor_retention",
+    "strict_computational_interface"
+  ],
+  "geometry_output_dir": "data/reference_inputs/nominal_geometry",
+  "graph_ids": [
+    "historical_raw_6nn",
+    "nominal_honeycomb_exact"
+  ],
+  "grid_path": "data/reference_inputs/map_grid.tsv",
+  "master_seed": "jbcb-corrected-nominal-statistics-20261003-v1",
+  "min_blocks": 3,
+  "min_group_spots": 20,
+  "output_dir": "analysis/regional",
+  "schema_version": "regional_analysis_v1",
+  "source_sections": [
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A121573",
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A121573_Rep1",
+      "section_id": "S5_Rec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A121573",
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A121573_Rep2",
+      "section_id": "S5_Rec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A416371",
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A416371_Rep1",
+      "section_id": "S3_Col_R",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A416371",
+      "resource": "Valdeolivas",
+      "sample_id": "SN048_A416371_Rep2",
+      "section_id": "S3_Col_R",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A551763",
+      "resource": "Valdeolivas",
+      "sample_id": "SN123_A551763_Rep1",
+      "section_id": "S1_Cec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A595688",
+      "resource": "Valdeolivas",
+      "sample_id": "SN123_A595688_Rep1",
+      "section_id": "S2_Col_R",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A798015",
+      "resource": "Valdeolivas",
+      "sample_id": "SN123_A798015_Rep1",
+      "section_id": "S7_Rec/Sig",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A938797",
+      "resource": "Valdeolivas",
+      "sample_id": "SN123_A938797_Rep1_X",
+      "section_id": "S6_Rec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A551763",
+      "resource": "Valdeolivas",
+      "sample_id": "SN124_A551763_Rep2",
+      "section_id": "S1_Cec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A595688",
+      "resource": "Valdeolivas",
+      "sample_id": "SN124_A595688_Rep2",
+      "section_id": "S2_Col_R",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A798015",
+      "resource": "Valdeolivas",
+      "sample_id": "SN124_A798015_Rep2",
+      "section_id": "S7_Rec/Sig",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A938797",
+      "resource": "Valdeolivas",
+      "sample_id": "SN124_A938797_Rep2",
+      "section_id": "S6_Rec",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A120838",
+      "resource": "Valdeolivas",
+      "sample_id": "SN84_A120838_Rep1",
+      "section_id": "S4_Col_Sig",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1"
+    },
+    {
+      "dataset_id": "VALDEOLIVAS",
+      "patient_id": "A120838",
+      "resource": "Valdeolivas",
+      "sample_id": "SN84_A120838_Rep2",
+      "section_id": "S4_Col_Sig",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient1",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-13",
+      "section_id": "Primary Colon M-ST-13",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-13"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient6",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-15",
+      "section_id": "Primary Colon M-ST-15",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-15"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient11",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-29",
+      "section_id": "Primary Colon M-ST-29",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-29"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient11",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-30",
+      "section_id": "Primary Colon M-ST-30",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-30"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient9",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-31",
+      "section_id": "Primary Colon M-ST-31",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-31"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient9",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-32",
+      "section_id": "Primary Colon M-ST-32",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-32"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient10",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-33",
+      "section_id": "Primary Colon M-ST-33",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-33"
+    },
+    {
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "patient_id": "Patient10",
+      "resource": "GSE294385",
+      "sample_id": "M-ST-34",
+      "section_id": "Primary Colon M-ST-34",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-34"
+    }
+  ],
+  "spatial_settings": [
+    {
+      "far_dnum_max": 64,
+      "far_dnum_min": 16,
+      "grid": 6,
+      "id": "baseline",
+      "near_dnum_max": 4
+    },
+    {
+      "far_dnum_max": 64,
+      "far_dnum_min": 16,
+      "grid": 4,
+      "id": "grid4",
+      "near_dnum_max": 4
+    },
+    {
+      "far_dnum_max": 64,
+      "far_dnum_min": 16,
+      "grid": 8,
+      "id": "grid8",
+      "near_dnum_max": 4
+    },
+    {
+      "far_dnum_max": 64,
+      "far_dnum_min": 16,
+      "grid": 6,
+      "id": "near150",
+      "near_dnum_max": 9
+    },
+    {
+      "far_dnum_max": 100,
+      "far_dnum_min": 16,
+      "grid": 6,
+      "id": "far500",
+      "near_dnum_max": 4
+    }
+  ]
+}

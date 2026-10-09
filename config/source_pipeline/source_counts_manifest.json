@@ -1,0 +1,964 @@
+{
+  "schema_version": "source_counts_manifest_v1",
+  "provenance_checks": {
+    "zenodo_record_api": "https://zenodo.org/api/records/7760264",
+    "geo_gse_record": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294385&targ=self&form=text&view=full",
+    "geo_sample_record_template": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc={GSM}&targ=self&form=text&view=full",
+    "verified_section_count": 22,
+    "zenodo_archive_sizes_and_md5": "Read from Zenodo record API; values match the original runner's expected MD5 constants.",
+    "geo_archive_sizes": "Read from public GEO directory listings and checked with HEAD Content-Length; GEO listing did not expose MD5."
+  },
+  "score_replay_contract": {
+    "loader": "scripts/source_pipeline/fixed_scores.py",
+    "normalization": "Raw per-spot counts divided by the sum across the exact full source feature universe, scaled to 10000, natural log1p.",
+    "primary_score": "Arithmetic mean of log1p-normalized TGFB1, CXCL12, ACTA2, and TAGLN for each spot.",
+    "feature_universe": {
+      "Valdeolivas": "The historical fixed-score H5 reader takes all entries in matrix/features name (falling back to id) and makes duplicate names unique. It does not filter matrix/features by feature_types. The saved feature_count is 36601 per section; preserve the exact recorded H5 contents and denominator.",
+      "GSE294385": "The historical fixed-score Mtx reader takes every row in features.tsv.gz and uses column 2 as the feature name, making duplicate names unique. It does not filter by feature type. The saved feature_count is 18085 per section; preserve the exact recorded Matrix Market feature universe and denominator."
+    },
+    "barcode_alignment": "Historical source packages had matrix barcode counts equal to registered in-tissue counts for all sections. Align the replayed score vector to the registered barcode order before numeric comparison.",
+    "score_hash_interpretation": "historical_spot_scores_gzip_sha256 records the original compressed artifact for provenance. Gzip timestamps/headers can differ on replay; compare barcode-aligned float64 score vectors within the project's stated tolerance rather than requiring gzip byte identity."
+  },
+  "sections": [
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN048_A121573_Rep1",
+      "patient_id": "A121573",
+      "section_id": "S5_Rec",
+      "n_spots": 2203,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep1.zip/content",
+        "archive_filename": "SN048_A121573_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 149798389,
+        "zenodo_md5": "608a39f21da059024121407967a76b8a",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "dc9dc9840d4d0a22230790350a615491f5c58aab26970c98d69a5047e0873d77",
+      "source_files": [
+        {
+          "name": "SN048_A121573_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 12915075,
+          "sha256": "542982ccbfa4a9b3fe107101a3883953c6863d3b137dd520ae0de93e3b00dc99"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 2203,
+      "registered_in_tissue_barcode_count": 2203,
+      "expected_registered_barcode_file_sha256": "9d314d6c88827db5b1334b4c7430dd9dc9904f297ad4e66375ebf9640d1d499b",
+      "historical_spot_scores_gzip_sha256": "6d0d96ac868e7b7cab1576720941f9b3c6c10ab8460548e51723030b2911d161",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep1.zip/content",
+      "size_bytes": 149798389,
+      "md5": "608a39f21da059024121407967a76b8a",
+      "source_package_sha256": "dc9dc9840d4d0a22230790350a615491f5c58aab26970c98d69a5047e0873d77"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN048_A121573_Rep2",
+      "patient_id": "A121573",
+      "section_id": "S5_Rec",
+      "n_spots": 2385,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep2.zip/content",
+        "archive_filename": "SN048_A121573_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 153572136,
+        "zenodo_md5": "a9f516ca415ad68be283ef0b431c35ce",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "227b1a5bbf9d8e6148da64b21acdeddcdeea2a1e0c082b9a0b0a617b8effac34",
+      "source_files": [
+        {
+          "name": "SN048_A121573_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 12850789,
+          "sha256": "e0cf699ce465a7262cbff37e7468307186d17486fa49917543b0eb6c3df8d4c0"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 2385,
+      "registered_in_tissue_barcode_count": 2385,
+      "expected_registered_barcode_file_sha256": "f7e94e2f54c308becf949fc8242b7548d6e4d52b74725d8fd48438d4b4579655",
+      "historical_spot_scores_gzip_sha256": "ac7755207fa3508524c35a1a955fb0090a894ae52a33f70ec6449c6af1bcbc01",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A121573_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A121573_Rep2.zip/content",
+      "size_bytes": 153572136,
+      "md5": "a9f516ca415ad68be283ef0b431c35ce",
+      "source_package_sha256": "227b1a5bbf9d8e6148da64b21acdeddcdeea2a1e0c082b9a0b0a617b8effac34"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN048_A416371_Rep1",
+      "patient_id": "A416371",
+      "section_id": "S3_Col_R",
+      "n_spots": 2317,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep1.zip/content",
+        "archive_filename": "SN048_A416371_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 155662933,
+        "zenodo_md5": "8aec27998074f672fcdaba6faa609da0",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "6fd8b1888b63b9abc3e17fc8c6493080f5815bb18425645131c579e77a325c18",
+      "source_files": [
+        {
+          "name": "SN048_A416371_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 12986387,
+          "sha256": "ef0d9f318516a58af355198357976d44c292abc3b0c38c7a8ad15eb74ea5c39b"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 2317,
+      "registered_in_tissue_barcode_count": 2317,
+      "expected_registered_barcode_file_sha256": "6a1a297bb95a90753a74ebc410839b42071e1a9776d70487ff8b53ecb02cf452",
+      "historical_spot_scores_gzip_sha256": "8618f277397a9b5aacfe7cc0f17732cd8a6cb0294808e786274702bbba371508",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep1.zip/content",
+      "size_bytes": 155662933,
+      "md5": "8aec27998074f672fcdaba6faa609da0",
+      "source_package_sha256": "6fd8b1888b63b9abc3e17fc8c6493080f5815bb18425645131c579e77a325c18"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN048_A416371_Rep2",
+      "patient_id": "A416371",
+      "section_id": "S3_Col_R",
+      "n_spots": 1803,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep2.zip/content",
+        "archive_filename": "SN048_A416371_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 133062616,
+        "zenodo_md5": "9a49067a4a6d89521601b562011dc02e",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "91368a8bffd3bb5c7a94795ffbb9b69e0bbe073a62ae00df7dcc3f117824ebf3",
+      "source_files": [
+        {
+          "name": "SN048_A416371_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 11193676,
+          "sha256": "d7f596786fff576baa10405c5afb27af11b991c21d721e5f18b86c694d49b804"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1803,
+      "registered_in_tissue_barcode_count": 1803,
+      "expected_registered_barcode_file_sha256": "903eef7f3b033c4bc4235511cab893628da728438a34d1351ce3710daf1ad56f",
+      "historical_spot_scores_gzip_sha256": "ef97f64706eda24aa428e572d409ee253873ec4501321baeaf1f24055f1eb6e8",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN048_A416371_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN048_A416371_Rep2.zip/content",
+      "size_bytes": 133062616,
+      "md5": "9a49067a4a6d89521601b562011dc02e",
+      "source_package_sha256": "91368a8bffd3bb5c7a94795ffbb9b69e0bbe073a62ae00df7dcc3f117824ebf3"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN123_A551763_Rep1",
+      "patient_id": "A551763",
+      "section_id": "S1_Cec",
+      "n_spots": 691,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN123_A551763_Rep1.zip/content",
+        "archive_filename": "SN123_A551763_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 77094190,
+        "zenodo_md5": "b26940f8bf3b3e9855b0a116825e638c",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "77b5fb988aec1803ed5b2376e0d1975b284dcd970cf770176dbef35e235d51c6",
+      "source_files": [
+        {
+          "name": "SN123_A551763_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 4518289,
+          "sha256": "02460a3a7456d924a2348651539594f771eeb28abbc6520d0013f6cefd36e307"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 691,
+      "registered_in_tissue_barcode_count": 691,
+      "expected_registered_barcode_file_sha256": "6f5910496dc7e8fb60fefdb4747ab0b8e07cf276f69c5062705a82a5fd7e523d",
+      "historical_spot_scores_gzip_sha256": "da78bf820c93ffa39e3c44f31a511b43591eb2f5aaf1b693845be6bc23bbc4d7",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A551763_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A551763_Rep1.zip/content",
+      "size_bytes": 77094190,
+      "md5": "b26940f8bf3b3e9855b0a116825e638c",
+      "source_package_sha256": "77b5fb988aec1803ed5b2376e0d1975b284dcd970cf770176dbef35e235d51c6"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN123_A595688_Rep1",
+      "patient_id": "A595688",
+      "section_id": "S2_Col_R",
+      "n_spots": 1192,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN123_A595688_Rep1.zip/content",
+        "archive_filename": "SN123_A595688_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 99165165,
+        "zenodo_md5": "b5aa2ee18977b0be67a72ff2b966ab26",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "d02a3ae47abc6926352cb0fa5f66a897acb4f253291fa7eb1d3a4365768ce4d7",
+      "source_files": [
+        {
+          "name": "SN123_A595688_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 7523246,
+          "sha256": "3a782431544ba760665b1e5d7081fb508c9fbd4faade9decaa1c5f6cdd0fa5b9"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1192,
+      "registered_in_tissue_barcode_count": 1192,
+      "expected_registered_barcode_file_sha256": "da1cba4783b488d20c00bcde5bee44fdf5e0b611de6a119c27bc7fd45f3dedd1",
+      "historical_spot_scores_gzip_sha256": "20bb8761f28e88ec5e92911627c92c7d4f4d6c0c417042dd8420aadc70419f51",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A595688_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A595688_Rep1.zip/content",
+      "size_bytes": 99165165,
+      "md5": "b5aa2ee18977b0be67a72ff2b966ab26",
+      "source_package_sha256": "d02a3ae47abc6926352cb0fa5f66a897acb4f253291fa7eb1d3a4365768ce4d7"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN123_A798015_Rep1",
+      "patient_id": "A798015",
+      "section_id": "S7_Rec/Sig",
+      "n_spots": 1685,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN123_A798015_Rep1.zip/content",
+        "archive_filename": "SN123_A798015_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 81914465,
+        "zenodo_md5": "0e589a2c96546fff5ca21cb18d597791",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "d6bd4168891d9c2a94b5f3fe7cb35e7a3e1c49fe6ac7df16af29aeea346aa282",
+      "source_files": [
+        {
+          "name": "SN123_A798015_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 6624692,
+          "sha256": "6192f944e335916eedf2a07262b36dae9f496df7dfed23f104b30150504d0572"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1685,
+      "registered_in_tissue_barcode_count": 1685,
+      "expected_registered_barcode_file_sha256": "77944760a657499256a09342615cb4cc29c14ce1dee0061be1786567093f8c53",
+      "historical_spot_scores_gzip_sha256": "0df33599499802252f8a14ce30b88e8a5fa55378ca84939daf8a2ac58128bd15",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A798015_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A798015_Rep1.zip/content",
+      "size_bytes": 81914465,
+      "md5": "0e589a2c96546fff5ca21cb18d597791",
+      "source_package_sha256": "d6bd4168891d9c2a94b5f3fe7cb35e7a3e1c49fe6ac7df16af29aeea346aa282"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN123_A938797_Rep1_X",
+      "patient_id": "A938797",
+      "section_id": "S6_Rec",
+      "n_spots": 2128,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN123_A938797_Rep1_X.zip/content",
+        "archive_filename": "SN123_A938797_Rep1_X.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 108570769,
+        "zenodo_md5": "08e3c7fe308db62b658cacc6b4be4e1c",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "4f05a50826e0f3898a5101274fb21293304d0c265e8831b70507112e35547366",
+      "source_files": [
+        {
+          "name": "SN123_A938797_Rep1_X_filtered_feature_bc_matrix.h5",
+          "size_bytes": 9651260,
+          "sha256": "9e77e8e951aa6f07627d942f9e0953dc2858633bbf66bc4672ce25b5b2a2af56"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 2128,
+      "registered_in_tissue_barcode_count": 2128,
+      "expected_registered_barcode_file_sha256": "f1d1935259e62d9112fbbc94c5f2f26190717663030463f294e3d774b41ee013",
+      "historical_spot_scores_gzip_sha256": "305e5f048ce2ea21329da2857cd768078614da6e1c9cbf24a633ce68b1b0a80d",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN123_A938797_Rep1_X",
+      "url": "https://zenodo.org/api/records/7760264/files/SN123_A938797_Rep1_X.zip/content",
+      "size_bytes": 108570769,
+      "md5": "08e3c7fe308db62b658cacc6b4be4e1c",
+      "source_package_sha256": "4f05a50826e0f3898a5101274fb21293304d0c265e8831b70507112e35547366"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN124_A551763_Rep2",
+      "patient_id": "A551763",
+      "section_id": "S1_Cec",
+      "n_spots": 1219,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN124_A551763_Rep2.zip/content",
+        "archive_filename": "SN124_A551763_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 61982650,
+        "zenodo_md5": "adf0ea575a09f473fa4ceb465a6ec66e",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "b884bc451ee05645e7777a1239c1a64d5416ae79dbc7010b58b843a8c4186e5e",
+      "source_files": [
+        {
+          "name": "SN124_A551763_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 2687195,
+          "sha256": "70d1c0c2bed6381876c1023c7e84dce9cfa5a3338d5cdcb061b225fd8b475b5f"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1219,
+      "registered_in_tissue_barcode_count": 1219,
+      "expected_registered_barcode_file_sha256": "16fa1dd18f2bb13390b3dd98064b0abb86dfc9f290eac850d79e175c849fe256",
+      "historical_spot_scores_gzip_sha256": "d0468b58b184f2d5ff6a3c1cbc915a3ec6149cf5213744e0a9740d47df632174",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A551763_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A551763_Rep2.zip/content",
+      "size_bytes": 61982650,
+      "md5": "adf0ea575a09f473fa4ceb465a6ec66e",
+      "source_package_sha256": "b884bc451ee05645e7777a1239c1a64d5416ae79dbc7010b58b843a8c4186e5e"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN124_A595688_Rep2",
+      "patient_id": "A595688",
+      "section_id": "S2_Col_R",
+      "n_spots": 387,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN124_A595688_Rep2.zip/content",
+        "archive_filename": "SN124_A595688_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 56124799,
+        "zenodo_md5": "808ed49a24eea7d41c575d8c238caa76",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "2510c1e854126ca227dc1dee8ab8a5763658867deb0f0f1abb9354f78aefd552",
+      "source_files": [
+        {
+          "name": "SN124_A595688_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 2463506,
+          "sha256": "d29f64b282aeb4443ea670abe759c9d743ed770a42090df071dad1bb4e627d54"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 387,
+      "registered_in_tissue_barcode_count": 387,
+      "expected_registered_barcode_file_sha256": "3bbe8b2e3b9f907081ec9296cada058f4219908c863e0a0af141eb4daf8d5fa6",
+      "historical_spot_scores_gzip_sha256": "7ae3463ebc816fb9f2d9331b1e89f8fd6b3e60bb5df029ee9948a0182ed7c4aa",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A595688_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A595688_Rep2.zip/content",
+      "size_bytes": 56124799,
+      "md5": "808ed49a24eea7d41c575d8c238caa76",
+      "source_package_sha256": "2510c1e854126ca227dc1dee8ab8a5763658867deb0f0f1abb9354f78aefd552"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN124_A798015_Rep2",
+      "patient_id": "A798015",
+      "section_id": "S7_Rec/Sig",
+      "n_spots": 1656,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN124_A798015_Rep2.zip/content",
+        "archive_filename": "SN124_A798015_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 93813784,
+        "zenodo_md5": "db421ccd3e1be463573be562c3266aef",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "e75f9b4a39e9daac4682c7c090ce92490c7b40b88b9825e1b38eaa3ae525c083",
+      "source_files": [
+        {
+          "name": "SN124_A798015_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 7249090,
+          "sha256": "d9ca2ce008f3d9016bdbe7b8628bda32fa3844798acbc8c5f405d8ed63a7a40e"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1656,
+      "registered_in_tissue_barcode_count": 1656,
+      "expected_registered_barcode_file_sha256": "ee582bbdf37b402e477b8d1d250385b7dfad86e952af9048693fd7ac34f23527",
+      "historical_spot_scores_gzip_sha256": "1cd132d5b6767fd6d8a3a22be664c22605d5a0fa66dce80628aa2deba7791454",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A798015_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A798015_Rep2.zip/content",
+      "size_bytes": 93813784,
+      "md5": "db421ccd3e1be463573be562c3266aef",
+      "source_package_sha256": "e75f9b4a39e9daac4682c7c090ce92490c7b40b88b9825e1b38eaa3ae525c083"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN124_A938797_Rep2",
+      "patient_id": "A938797",
+      "section_id": "S6_Rec",
+      "n_spots": 1691,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN124_A938797_Rep2.zip/content",
+        "archive_filename": "SN124_A938797_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 141363392,
+        "zenodo_md5": "ee145e0f97146586baa8ef95edae05b0",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "56591bb9a91568df9647c14165b57987d366e71d536fba88b658c11eb45f0b1b",
+      "source_files": [
+        {
+          "name": "SN124_A938797_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 11886230,
+          "sha256": "748d8351a005b648b387a2de6c6318efcbf7d15c3d7caeb087e09b1e7277a160"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1691,
+      "registered_in_tissue_barcode_count": 1691,
+      "expected_registered_barcode_file_sha256": "fb46865e4c9cf5e4c57130e70bfda4379f22673d725b565b06f5776d6663e5f2",
+      "historical_spot_scores_gzip_sha256": "7884b77490cf81c94162aee3be7f06e1588938aeff20c47d44215d2566cd4fab",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN124_A938797_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN124_A938797_Rep2.zip/content",
+      "size_bytes": 141363392,
+      "md5": "ee145e0f97146586baa8ef95edae05b0",
+      "source_package_sha256": "56591bb9a91568df9647c14165b57987d366e71d536fba88b658c11eb45f0b1b"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN84_A120838_Rep1",
+      "patient_id": "A120838",
+      "section_id": "S4_Col_Sig",
+      "n_spots": 328,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep1.zip/content",
+        "archive_filename": "SN84_A120838_Rep1.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 53827477,
+        "zenodo_md5": "4a185c5e1bf88995ee0c03dbb4e8b63c",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "d982693f971b6eda7fa8c4c3b49afe487a8cd009cfcf5d0900db8c4d93770b10",
+      "source_files": [
+        {
+          "name": "SN84_A120838_Rep1_filtered_feature_bc_matrix.h5",
+          "size_bytes": 2097463,
+          "sha256": "c493336aa3e7004f48609394bda7cac189e97e126b17e81de9266ac5e5334635"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 328,
+      "registered_in_tissue_barcode_count": 328,
+      "expected_registered_barcode_file_sha256": "67a85fa6a50f5220380e0119bb9c9f48d58c17697224a29cde8f2b7b5c08fe68",
+      "historical_spot_scores_gzip_sha256": "b5fee63d57c51d1f738a1ea0dba9229a07a26261f4d1dd635de566bafd8d53b9",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep1",
+      "url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep1.zip/content",
+      "size_bytes": 53827477,
+      "md5": "4a185c5e1bf88995ee0c03dbb4e8b63c",
+      "source_package_sha256": "d982693f971b6eda7fa8c4c3b49afe487a8cd009cfcf5d0900db8c4d93770b10"
+    },
+    {
+      "resource": "Valdeolivas",
+      "dataset_id": "VALDEOLIVAS",
+      "sample_id": "SN84_A120838_Rep2",
+      "patient_id": "A120838",
+      "section_id": "S4_Col_Sig",
+      "n_spots": 1048,
+      "source": {
+        "resource": "Zenodo",
+        "record": "10.5281/zenodo.7760264",
+        "source_root": "https://zenodo.org/api/records/7760264/files/",
+        "download_url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep2.zip/content",
+        "archive_filename": "SN84_A120838_Rep2.zip",
+        "archive_format": "zip",
+        "archive_size_bytes": 83617743,
+        "zenodo_md5": "d59ffee02162ba7b900199786e536a30",
+        "size_verified_by": "Fresh Zenodo record API files[].size/checksum"
+      },
+      "expected_package_sha256": "a36c4832698aac572c501b36c3cc5cd422d87ebc543b4c858b0d1adb291429ae",
+      "source_files": [
+        {
+          "name": "SN84_A120838_Rep2_filtered_feature_bc_matrix.h5",
+          "size_bytes": 5121982,
+          "sha256": "4e36ce84bd30cde781737c4fb6cc45315ab6ea4279410b4af9849a11ac143ca3"
+        }
+      ],
+      "feature_count": 36601,
+      "matrix_barcode_count": 1048,
+      "registered_in_tissue_barcode_count": 1048,
+      "expected_registered_barcode_file_sha256": "4adc3245e0a96d1561e0209470699fd1406b0598f7ce84afa3686d56c239566a",
+      "historical_spot_scores_gzip_sha256": "ab4507f3cb02c05e8553259b1e70dfe33456d47a3761b5c27299702ca8046183",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/Valdeolivas/SN84_A120838_Rep2",
+      "url": "https://zenodo.org/api/records/7760264/files/SN84_A120838_Rep2.zip/content",
+      "size_bytes": 83617743,
+      "md5": "d59ffee02162ba7b900199786e536a30",
+      "source_package_sha256": "a36c4832698aac572c501b36c3cc5cd422d87ebc543b4c858b0d1adb291429ae"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-13",
+      "gsm": "GSM8903668",
+      "patient_id": "Patient1",
+      "section_id": "Primary Colon M-ST-13",
+      "n_spots": 7746,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903668",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903668",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903668/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903668/suppl/GSM8903668_M-ST-13.tar.gz",
+        "archive_filename": "GSM8903668_M-ST-13.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 162904031,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "0da1f98fae9141bae4049af394063dd251c3e79ab12919e8a832d6677333e079",
+      "source_files": [
+        {
+          "name": "M-ST-13_matrix.mtx.gz",
+          "size_bytes": 125152756,
+          "sha256": "d2c66c8ce8902a0523a9c4147548b52e78e573255ecba0839cd1282b4eff2cab"
+        },
+        {
+          "name": "M-ST-13_barcodes.tsv.gz",
+          "size_bytes": 41547,
+          "sha256": "1b21287256d119dd7bf59e22733fc0d6e90a2974d1992c21fa34e641dc05caef"
+        },
+        {
+          "name": "M-ST-13_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "c0879a233bb6ed156370413b2a7d437de437acd1dc7c9e79d0ce97e0837f7034"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 7746,
+      "registered_in_tissue_barcode_count": 7746,
+      "expected_registered_barcode_file_sha256": "b10c910f424e813e79193cf05c75219baf76f1d667930bab26c9e8b0b57c6847",
+      "historical_spot_scores_gzip_sha256": "579036c727ec430f47311a1a9c790704ffae2cbfb9dfa3a475521bd251c2da78",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-13",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903668/suppl/GSM8903668_M-ST-13.tar.gz",
+      "size_bytes": 162904031,
+      "md5": null,
+      "source_package_sha256": "0da1f98fae9141bae4049af394063dd251c3e79ab12919e8a832d6677333e079"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-15",
+      "gsm": "GSM8903670",
+      "patient_id": "Patient6",
+      "section_id": "Primary Colon M-ST-15",
+      "n_spots": 9530,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903670",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903670",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903670/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903670/suppl/GSM8903670_M-ST-15.tar.gz",
+        "archive_filename": "GSM8903670_M-ST-15.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 171494310,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "01fc382f4a2f17aebd4daa4e047d4d59cfec1dfc097df56fa08efb9eb68fa1af",
+      "source_files": [
+        {
+          "name": "M-ST-15_matrix.mtx.gz",
+          "size_bytes": 131110896,
+          "sha256": "63c79d3a1fa712d04b9eb2cf6a39693a6c7ad5d4d6a0005be618bd2144911d6a"
+        },
+        {
+          "name": "M-ST-15_barcodes.tsv.gz",
+          "size_bytes": 50668,
+          "sha256": "32669fbe2bed57012103a30abb1ddac01e27154978077908169d2b5c9ad0eaff"
+        },
+        {
+          "name": "M-ST-15_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "eb1e6652dfb3f7294dcd9cabdd8ce875c86eba8491822e0c725c3106cd86d489"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 9530,
+      "registered_in_tissue_barcode_count": 9530,
+      "expected_registered_barcode_file_sha256": "e272277875033d55d2d26176f821a1297ff1f4e626b607d62506f6c441d0489a",
+      "historical_spot_scores_gzip_sha256": "4cfa47eacf0bb9e72bdaeef94800224634f3d3a0ec9959e8199c01fe3db42730",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-15",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903670/suppl/GSM8903670_M-ST-15.tar.gz",
+      "size_bytes": 171494310,
+      "md5": null,
+      "source_package_sha256": "01fc382f4a2f17aebd4daa4e047d4d59cfec1dfc097df56fa08efb9eb68fa1af"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-29",
+      "gsm": "GSM8903684",
+      "patient_id": "Patient11",
+      "section_id": "Primary Colon M-ST-29",
+      "n_spots": 10876,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903684",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903684",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903684/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903684/suppl/GSM8903684_M-ST-29.tar.gz",
+        "archive_filename": "GSM8903684_M-ST-29.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 312268838,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "86edf8e3f87e4d2a1965a81f61b2ad1f1168419b7f949ec9598cbc05709bd760",
+      "source_files": [
+        {
+          "name": "M-ST-29_matrix.mtx.gz",
+          "size_bytes": 269909998,
+          "sha256": "80d0b80bd235f887b1433206437cd3731827916674438aa02fcc325a14a7f8a7"
+        },
+        {
+          "name": "M-ST-29_barcodes.tsv.gz",
+          "size_bytes": 57611,
+          "sha256": "52f4c9771272bc92edcdd9af709ced51ceca13ee1c6d3bcd82a16f91bcab5ba5"
+        },
+        {
+          "name": "M-ST-29_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "c9431e774dc5b56da25d07ebf9fcbf649b7ee4f2a17eb1d2bf485d5ece0d992e"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 10876,
+      "registered_in_tissue_barcode_count": 10876,
+      "expected_registered_barcode_file_sha256": "ada7aa0495251629180265b781711aec369bdbc1984d53ba464cfafa828949c0",
+      "historical_spot_scores_gzip_sha256": "ef11b482cd77a08a617d9be8e8df8c130d4bb03f1e73dde3f7bfe59725c0b731",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-29",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903684/suppl/GSM8903684_M-ST-29.tar.gz",
+      "size_bytes": 312268838,
+      "md5": null,
+      "source_package_sha256": "86edf8e3f87e4d2a1965a81f61b2ad1f1168419b7f949ec9598cbc05709bd760"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-30",
+      "gsm": "GSM8903685",
+      "patient_id": "Patient11",
+      "section_id": "Primary Colon M-ST-30",
+      "n_spots": 6240,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903685",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903685",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903685/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903685/suppl/GSM8903685_M-ST-30.tar.gz",
+        "archive_filename": "GSM8903685_M-ST-30.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 189212232,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "be631663c895e2191873a537bbcddbc18ca09d17e34f1f7b76c61b1c0ff5f74b",
+      "source_files": [
+        {
+          "name": "M-ST-30_matrix.mtx.gz",
+          "size_bytes": 149850441,
+          "sha256": "20fe36356d15ba3d4b47d281dc77acd5963556d64c4e0704ce23887e935cabaa"
+        },
+        {
+          "name": "M-ST-30_barcodes.tsv.gz",
+          "size_bytes": 33777,
+          "sha256": "828dccb2c063ed0ee42add01d26e4727de145922b1a4be91d60141e9f0fb4f55"
+        },
+        {
+          "name": "M-ST-30_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "49786fc4d3174f06a3690b798218871754da15747b53c3a198a721ddb0f6fd6e"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 6240,
+      "registered_in_tissue_barcode_count": 6240,
+      "expected_registered_barcode_file_sha256": "d0d2f9ec7298565d2fb7073417b1604ba0b851a827587f451cd69ae11f14ebd7",
+      "historical_spot_scores_gzip_sha256": "a7149893a7f9a06a29f0feb6351b7e5744dba1a4fe4e8ecd9f368f50f6eae076",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-30",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903685/suppl/GSM8903685_M-ST-30.tar.gz",
+      "size_bytes": 189212232,
+      "md5": null,
+      "source_package_sha256": "be631663c895e2191873a537bbcddbc18ca09d17e34f1f7b76c61b1c0ff5f74b"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-31",
+      "gsm": "GSM8903686",
+      "patient_id": "Patient9",
+      "section_id": "Primary Colon M-ST-31",
+      "n_spots": 4330,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903686",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903686",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903686/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903686/suppl/GSM8903686_M-ST-31.tar.gz",
+        "archive_filename": "GSM8903686_M-ST-31.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 130266896,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "ce520c241588786a58c0bd9b6dc398c09e1e9646acfa9014605e6f705fa1288d",
+      "source_files": [
+        {
+          "name": "M-ST-31_matrix.mtx.gz",
+          "size_bytes": 94338358,
+          "sha256": "4165ce8baaddec3429fc8c03ff101e06057ce21ec595757cc179cc32fa54b548"
+        },
+        {
+          "name": "M-ST-31_barcodes.tsv.gz",
+          "size_bytes": 23780,
+          "sha256": "99e4a33194642d2cd28066f705a6a6b8a5a3260fd3fee5f3d45baf364c7305c9"
+        },
+        {
+          "name": "M-ST-31_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "a86271a6defca4429243c32fe1a502d9a5aca47fae891f0c1bb406b342fa09bc"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 4330,
+      "registered_in_tissue_barcode_count": 4330,
+      "expected_registered_barcode_file_sha256": "1687ac1cfb256958c249cefe77dd6c2af060dff2ef4fbb56f4e3a526a4113979",
+      "historical_spot_scores_gzip_sha256": "aec672888dd4b8842d941dbda725f6f702658c8b0d50a692acd525c7ebecdc72",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-31",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903686/suppl/GSM8903686_M-ST-31.tar.gz",
+      "size_bytes": 130266896,
+      "md5": null,
+      "source_package_sha256": "ce520c241588786a58c0bd9b6dc398c09e1e9646acfa9014605e6f705fa1288d"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-32",
+      "gsm": "GSM8903687",
+      "patient_id": "Patient9",
+      "section_id": "Primary Colon M-ST-32",
+      "n_spots": 7238,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903687",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903687",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903687/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903687/suppl/GSM8903687_M-ST-32.tar.gz",
+        "archive_filename": "GSM8903687_M-ST-32.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 156279360,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "eb826c63a383ae0f193a3e60fafde3b7e4dbe29664b7237442e319f61d34c099",
+      "source_files": [
+        {
+          "name": "M-ST-32_matrix.mtx.gz",
+          "size_bytes": 116634039,
+          "sha256": "1a396afd7617a450a09837741c9ebc692557ad31f968a114ef85e297dac1ac78"
+        },
+        {
+          "name": "M-ST-32_barcodes.tsv.gz",
+          "size_bytes": 38971,
+          "sha256": "37c55627602780a374187a8c6f3e05089cdf4c5642443ebb6fa7d99ef0174b46"
+        },
+        {
+          "name": "M-ST-32_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "0a1637efd1ce8ef46c954709ae7a8ae1449d33b5c885054a6642334e0c19fc1b"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 7238,
+      "registered_in_tissue_barcode_count": 7238,
+      "expected_registered_barcode_file_sha256": "2f0e4b6746905db005f57492b719eeac000fc25c347cf4ee3dbf07d357c35afc",
+      "historical_spot_scores_gzip_sha256": "4bb6d6563bb2a5800086b17601f9a419efef01a1aebc590b5cdc537db453c98e",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-32",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903687/suppl/GSM8903687_M-ST-32.tar.gz",
+      "size_bytes": 156279360,
+      "md5": null,
+      "source_package_sha256": "eb826c63a383ae0f193a3e60fafde3b7e4dbe29664b7237442e319f61d34c099"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-33",
+      "gsm": "GSM8903688",
+      "patient_id": "Patient10",
+      "section_id": "Primary Colon M-ST-33",
+      "n_spots": 10801,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903688",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903688",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903688/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903688/suppl/GSM8903688_M-ST-33.tar.gz",
+        "archive_filename": "GSM8903688_M-ST-33.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 278967080,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "9d7b45ef12bf63251ceec6a52e9db581d56c7e5aef7d8f33e332d75cc83da08c",
+      "source_files": [
+        {
+          "name": "M-ST-33_matrix.mtx.gz",
+          "size_bytes": 239163023,
+          "sha256": "ec135dd353376263b49d9f5997e913b5a8bf391f5c1275e8337bda429693fed0"
+        },
+        {
+          "name": "M-ST-33_barcodes.tsv.gz",
+          "size_bytes": 57187,
+          "sha256": "e1af3a49ec0c882ef53bbade2ff8c8eed00a7dc7bd6249ab6c0069aeb2b64cdd"
+        },
+        {
+          "name": "M-ST-33_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "e5f2470d668f8ac2d7672a66caa97f174164d7b6bab4e8a4f1fffcff8bcfa268"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 10801,
+      "registered_in_tissue_barcode_count": 10801,
+      "expected_registered_barcode_file_sha256": "ae5fd20cc8fa7e453318aa473b1032af776b4de58d213881136aee629e08cd94",
+      "historical_spot_scores_gzip_sha256": "1faf8c85d4ad20722677dcb7aeffb47e1ba7f59b67272b4ad4221906887b2850",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-33",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903688/suppl/GSM8903688_M-ST-33.tar.gz",
+      "size_bytes": 278967080,
+      "md5": null,
+      "source_package_sha256": "9d7b45ef12bf63251ceec6a52e9db581d56c7e5aef7d8f33e332d75cc83da08c"
+    },
+    {
+      "resource": "GSE294385",
+      "dataset_id": "GSE294385_CRC_METASTASIS_PATHOLOGY",
+      "sample_id": "M-ST-34",
+      "gsm": "GSM8903689",
+      "patient_id": "Patient10",
+      "section_id": "Primary Colon M-ST-34",
+      "n_spots": 7392,
+      "source": {
+        "resource": "NCBI GEO",
+        "series": "GSE294385",
+        "sample_accession": "GSM8903689",
+        "sample_record_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM8903689",
+        "source_root": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903689/suppl/",
+        "download_url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903689/suppl/GSM8903689_M-ST-34.tar.gz",
+        "archive_filename": "GSM8903689_M-ST-34.tar.gz",
+        "archive_format": "tar.gz",
+        "archive_size_bytes": 192681799,
+        "zenodo_md5": null,
+        "size_verified_by": "Fresh NCBI GEO FTP directory listing and HTTP HEAD Content-Length"
+      },
+      "expected_package_sha256": "c5dc766b0b3c628632baf085ca8c0e0b902ca9260f2cfa3979cc83de7f6bd6db",
+      "source_files": [
+        {
+          "name": "M-ST-34_matrix.mtx.gz",
+          "size_bytes": 156013707,
+          "sha256": "9630e171119dd0d33dcf96c68617e7fca2a392a8d72f01d99d17f231167eb818"
+        },
+        {
+          "name": "M-ST-34_barcodes.tsv.gz",
+          "size_bytes": 39746,
+          "sha256": "f3d8e1d46f98aa5d9c8fa8e87903106551247f406563176b50234eaea83c4395"
+        },
+        {
+          "name": "M-ST-34_features.tsv.gz",
+          "size_bytes": 156435,
+          "sha256": "3c2574685401b3cf226c248d0ba4be179dc00f02649c135a860a367ae47a6e3b"
+        }
+      ],
+      "feature_count": 18085,
+      "matrix_barcode_count": 7392,
+      "registered_in_tissue_barcode_count": 7392,
+      "expected_registered_barcode_file_sha256": "bc428a8568e4758ca3fdeba9f592dccc1acf792045f024fbf8ff2e90dc4f8cf9",
+      "historical_spot_scores_gzip_sha256": "e05c667085dc7d740d67f5b5efbf0b5b0746b31a91da3a9ca0919605481c1212",
+      "normalization": "normalize_total(target_sum=1e4);log1p;arithmetic_mean",
+      "source_root": "data/reference_inputs/sections/GSE294385/M-ST-34",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8903nnn/GSM8903689/suppl/GSM8903689_M-ST-34.tar.gz",
+      "size_bytes": 192681799,
+      "md5": null,
+      "source_package_sha256": "c5dc766b0b3c628632baf085ca8c0e0b902ca9260f2cfa3979cc83de7f6bd6db"
+    }
+  ]
+}

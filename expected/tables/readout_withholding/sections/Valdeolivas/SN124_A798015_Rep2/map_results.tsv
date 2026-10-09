@@ -1,0 +1,49 @@
+resource	patient_id	sample_id	arm	method_id	K	partition_id	fit_status	fit_reason	status	reason	n_registered	n_readout_PCA_features	n_full_band_near	n_full_band_far	full_band_delta_score	stroma_mad	n_selected_near	n_selected_far	n_near_blocks	n_far_blocks	tumor_domain	stroma_domain	same_PCA_features	selected_delta_score	abs_deviation_score	abs_deviation_mad	near_retention	far_retention	selected_stroma_fraction	count_only_excess_mad	block_matched_excess_mad	fit_warnings	fit_observed_K	leiden_resolution
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	4	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	4	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	4	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	6	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	6	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M0_expr_kmeans	6	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	4	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	4	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	4	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	6	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	6	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M1_spatial_concat_kmeans	6	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	4	neighbors_4	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	4	neighbors_6	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	4	neighbors_8	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	6	neighbors_4	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	6	neighbors_6	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M2_spatial_ward	6	neighbors_8	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	4	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	4	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	4	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	6	seed_11	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	0.16817928305074292
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	6	seed_23	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	0.2
+Valdeolivas	A798015	SN124_A798015_Rep2	allowed	M3_spatial_leiden	6	seed_37	success		not_evaluable	annotation_class_absent	1656	4	0	0		0.32781558919511866	0	0	0	0			False										6	0.2
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	4	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	4	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	4	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	6	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	6	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M0_expr_kmeans	6	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	4	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	4	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	4	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	6	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	6	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M1_spatial_concat_kmeans	6	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	4	neighbors_4	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	4	neighbors_6	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	4	neighbors_8	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	6	neighbors_4	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	6	neighbors_6	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M2_spatial_ward	6	neighbors_8	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	4	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	4	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	4	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										4	0.1
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	6	seed_11	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	0.2
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	6	seed_23	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	0.18340080864093425
+Valdeolivas	A798015	SN124_A798015_Rep2	withheld	M3_spatial_leiden	6	seed_37	success		not_evaluable	annotation_class_absent	1656	0	0	0		0.32781558919511866	0	0	0	0			False										6	0.14142135623730953

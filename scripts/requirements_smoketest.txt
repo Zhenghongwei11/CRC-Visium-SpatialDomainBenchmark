@@ -1,8 +1,0 @@
-numpy
-pandas
-scipy
-scikit-learn
-psutil
-h5py
-python-igraph
-leidenalg

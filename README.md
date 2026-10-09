@@ -1,61 +1,75 @@
-# Tissue-anchored regional expression contrasts in colorectal cancer Visium data
+# Regional measurements in colorectal cancer spatial transcriptomics
 
-This repository contains analysis code and derived evidence for a near-versus-far stromal expression comparison in colorectal cancer Visium sections. The current release supplies the paper's two figures, Table 1 and nine supporting tables with scripts and their retained inputs. The earlier cross-method boundary analysis remains available in its original directories and prior tagged releases.
+This repository contains the analyses of how computational domain selection changes a regional expression comparison. The comparison uses pathologist-annotated stroma near and farther from tumor in 22 Visium sections from 12 patients. The exploratory readout is the mean log-normalized expression of TGFB1, CXCL12, ACTA2 and TAGLN.
 
-## Main result
+The main command recalculates the regional statistics, spatial sensitivity analyses, simulations, additional muscle-marker summaries and readout-gene withholding experiment. It generates Figures 1–3 and S1–S8, Table 1 and the files underlying Tables S1–S16.
 
-Four of 17 eligible sections supported a morphology-defined four-gene contrast under the historical 0.50-MAD rule. Of 117 evaluable stromal-retention maps in those sections, 41 retained support: 15/41 references and 26/76 alternatives. The maps select subsets of fixed morphology-defined bands; these repeated map comparisons are not independent patients. No eligible primary comparison showed an interval-supported reversal. The simulation applies deterministic displacements to a known segmentation and describes conditional support-rule behavior; it does not test clustering algorithms or a colorectal cancer pathology mechanism.
+## Run the analyses
 
-## Current release contents
-
-- `docs/interface_validation/reframed_protocol.md`: tissue anchor, fixed score, eligibility and interpretation rules.
-- `docs/interface_validation/boundary_simulation_manifest.json` and `boundary_simulation_freeze_v1.json`: frozen 52-condition simulation and source fingerprints.
-- `scripts/tissue_anchor_simulation.py`: known-boundary generator, estimation and summary export.
-- `scripts/tissue_anchor_real_application.py`: application to registered spot inputs and saved maps.
-- `scripts/make_tissue_anchor_figures.py`: regeneration of the four-panel figure from released derived tables.
-- `results/interface_validation/reframed/simulation_full_v1/`: aggregate cell metrics, calibration summaries, threshold sensitivity and run status.
-- `results/interface_validation/reframed/real_application_v1/`: section, patient and cohort results, per-map effects and component-score eligibility.
-- `results/interface_validation/reframed/figures/`: figure PNG and PDF.
-- `results/interface_validation/reframed/submission_v1/`: manuscript Figure 1, Figure 2, Table 1 and nine submission-facing supporting tables.
-- `data/figure2_source/`: registered H&E image, spot coordinates and one section's saved membership used for Figure 2. The image and original spot annotation derive from Valdeolivas et al.'s CRC Visium release (Zenodo record 7760264, CC BY 4.0); the membership was computed in this analysis.
-- `scripts/build_jbcb_reframed_evidence.py` and `scripts/build_jbcb_tissue_figure.py`: regenerate the current figures and derived tables.
-
-The release does not redistribute raw expression matrices, all per-section replay inputs or 5,200 simulation checkpoint pairs. The aggregate simulation tables and derived real-resource effects are included. Replaying the full real-resource stage requires source-compatible registered spot inputs and saved maps at the paths described in `docs/interface_validation/real_resource_application_v1.json`. Those inputs were derived from the public Valdeolivas release and GSE294385; source accessions and acquisition information are in `docs/DATA_MANIFEST.tsv`. The current manuscript's figures and tables can be regenerated from the released derived effects, simulation tables, and Figure 2 image and membership. This is a derived-data reproduction, not a raw-matrix-to-result replay.
-
-## Reproduce the figures and simulation
-
-Use Python 3.13 and install the core packages in `requirements.txt` (the simulation run recorded Python 3.13.7 and the exact numerical-library versions in `RUN.json`). The legacy workflows also use `psutil` and `h5py`, for which the requirements file specifies compatible major-version ranges. Then run:
+Use Python 3.13.7 and R with `Rscript` available on the command line. The main analysis does not require a GPU.
 
 ```bash
-python3 scripts/build_jbcb_reframed_evidence.py \
-  --output-dir results/interface_validation/reframed/submission_v1
-python3 scripts/build_jbcb_tissue_figure.py \
-  --output-dir results/interface_validation/reframed/submission_v1/FIGURES
+python3.13 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/reproduce.py --output results --workers 2
 ```
 
-The first command regenerates Figure 1, Table 1 and nine submission-facing tables from the released full real-resource and simulation tables. The second regenerates Figure 2 from `data/figure2_source/`. The earlier four-panel figure can still be regenerated with `python3 scripts/make_tissue_anchor_figures.py`.
+The command downloads the public count packages into `raw_cache/`, verifies them against the recorded source identities, and writes all generated files to the chosen output directory. Downloads can be slow; retain the cache. Use `--resume` to continue an interrupted run. When the original count members are already available, supply `--counts /path/to/counts`, organized as `RESOURCE/SAMPLE/members/`. Each count member is checked before use.
 
-For a full simulation replay, use the frozen manifest and source files in this version:
+The Python versions used for the regional analyses and withholding experiment are listed in [environments/analysis-python313.txt](environments/analysis-python313.txt). Runtime depends strongly on processor availability and download speed. The full calculation includes 5,200 independent simulated tissues and repeated spatial resampling; allow several hours.
+
+## Inputs and outputs
+
+The main run uses the saved publication domain maps in `data/reference_inputs/`. All regional contrasts, resampling draws, patient summaries and simulation results are calculated again. This preserves the specific fitted maps examined in the paper. `expected/` contains the submitted tables and figures for comparison and is never used as a calculation input.
+
+The regional calculations have been recomputed for all 22 sections. The generated scientific tables agree with the current submission, and all eleven generated PNG figures match its figure pixels. Original-count recovery, muscle-marker measurements and the paired readout-gene withholding analysis were also run across all sections.
+
+Generated tables are in `results/tables/`; figures are in `results/figures/` as PNG, PDF and TIFF. Per-section results remain in `results/workspace/analysis/`. Figure source data are written beside the tables. The principal reporting files are:
+
+| Analysis | Files |
+|---|---|
+| Availability and patient comparisons | `current_table1.tsv`, `primary_patient_summary.tsv` |
+| Regional selection and matched references | `regional_map_sensitivity.tsv`, `method_selection_comparison.tsv` |
+| Known-boundary simulation | `simulation_cell_metrics.tsv`, `simulation_summary.tsv`, `simulation_threshold_sensitivity.tsv` |
+| Original expression and annotations | `component_source_recovery.tsv`, `source_label_coverage.tsv` |
+| Spatial choices and common-block intervals | `regional_patient_sensitivity.tsv`, `common_block_intervals.tsv`, `near_band_common_map_summary.tsv` |
+| Additional muscle markers | `contractile_marker_section_summary.tsv`, `contractile_marker_block_summary.tsv` |
+| Reference precision and withheld genes | `control_reference_precision/`, `readout_withholding/` |
+
+After completing the analyses, tables and figures can be generated separately:
 
 ```bash
-python3 scripts/tissue_anchor_simulation.py full \
-  --manifest docs/interface_validation/boundary_simulation_manifest.json \
-  --freeze docs/interface_validation/boundary_simulation_freeze_v1.json \
-  --output-dir results/interface_validation/reframed/simulation_replay
+python scripts/reproduce.py --output results --stage tables
+python scripts/reproduce.py --output results --stage figures
 ```
 
-The full simulation comprises 5,200 realizations and may require multiple bounded invocations to finish. The original aggregate output hashes are recorded in `results/interface_validation/reframed/simulation_full_v1/STATUS.json`.
+The complete Table 1 and Tables S1–S16 file index is in [TABLES.md](TABLES.md). `TABLE_FIELD_DICTIONARY.tsv` defines the measurements. `TABLE_FIELD_NAME_MAP.tsv` links the names in the published tables to the internal numerical variable names.
 
-The prior 13-section benchmark can still be run with `bash scripts/reproduce_one_click.sh`; its intermediate maps and raw GEO data are downloaded or generated by its stage scripts. It is distinct from the tissue-anchored revision analysis. Full real-resource replay requires the source-compatible registered inputs and historical saved maps described above; the archive provides the derived patient, section and map tables needed to inspect the reported results.
+## Refit domains from original counts
 
-## Data and interpretation
+The original-count fitting scripts are supplied separately so that new fits can be examined alongside the saved publication fits. SpaGCN, STAGATE and BayesSpace need their additional scientific environments. Python 3.11 dependency specifications are provided in `environments/source-python311.txt` and `environments/neural-python311.txt`; see [environments/README.md](environments/README.md) for setup and the extent of local validation.
 
-The original computational screen used GSE267401, GSE311294 and GSE285505. The tissue-anchored application used the public Valdeolivas CRC Visium release and eight GSE294385 Primary Colon sections. The fixed real-resource score is the mean log-normalized expression of `TGFB1`, `CXCL12`, `ACTA2` and `TAGLN`. It is a regional composite, not a fibroblast-specific or functional assay. Compatible component-gene inputs for the prespecified score sensitivity were unavailable in the retained replay inputs, so that analysis is recorded as non-evaluable.
+The original model fits were run in Colab. [notebooks/fit_domains_colab.ipynb](notebooks/fit_domains_colab.ipynb) provides a Colab entrypoint for the current source scripts, with persistent inputs and per-section fits in Google Drive. It also connects completed fits to the regional analysis. The notebook's full neural/BayesSpace execution remains untested; it is separate from the locally verified statistical recalculation using the publication maps.
 
-Repeated methods, maps, seeds and serial sections are nested within patients. The released map counts are not patient prevalence estimates. The real-resource intervals are descriptive because the fixed-map simulation does not calibrate maps learned from the same expression matrix.
+```bash
+python scripts/source_pipeline/source_inputs.py --cache raw_cache --output original_inputs
+python scripts/source_pipeline/fit_source_maps.py --inputs original_inputs --output source_fits --methods all
+python scripts/reproduce.py --source-fits source_fits --counts original_inputs/counts --output results_refitted
+```
 
-## Citation and license
+Use `--resume` with `fit_source_maps.py` to continue the same fitting run. Completed sections are checked against their input, software and file identities.
 
-Cite the version DOI for the exact archived release. The family concept DOI is [10.5281/zenodo.19682586](https://doi.org/10.5281/zenodo.19682586). Version and authorship metadata are in `CITATION.cff`.
+The final command requires all 22 sections and all seven requested map families. It preserves the paper's configuration grid, including unavailable fits: six families for Valdeolivas and seven for GSE294385. BayesSpace is included only in the latter comparison. It checks the original barcode and coordinate registration before using the same downstream analysis. New numerical results may differ when fitting software changes. The original Colab fitting environment was not completely version locked; the saved maps therefore define the exact publication comparison.
 
-Code is released under the MIT License. Source data remain under their original repository terms.
+For a smaller original-count example in the main Python environment:
+
+```bash
+python scripts/source_pipeline/fit_source_maps.py --inputs original_inputs --output baseline_example --methods baseline --loader native --samples M-ST-13
+```
+
+## Data and citation
+
+The original resources are the [Valdeolivas colorectal cancer Visium dataset](https://zenodo.org/records/7760264), [GEO GSE294385](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE294385), and its [deposited annotation metadata](https://github.com/yliuup/CRC_micromets_ST/tree/main/Meta_data). `config/source_pipeline/sources.json` records the exact downloaded files and their identities. Tissue images and annotation classes retain their original meanings; annotations are not replaced by a new pathology assessment.
+
+Please cite the study using `CITATION.cff` and cite the original datasets and domain methods when using them. The repository license covers our code and derived materials; third-party data and software retain their original terms.

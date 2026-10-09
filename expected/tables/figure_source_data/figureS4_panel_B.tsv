@@ -1,0 +1,21 @@
+resource	eligibility_frame	setting_id	n_attempted_patients	n_evaluable_patients	n_evaluable_mad_patients	n_attempted_sections	n_evaluable_sections	n_declared_maps	n_evaluable_maps	n_standardized_maps	attempted_patient_ids	evaluable_map_patient_ids	evaluable_mad_patient_ids	resource_median_block_matched_excess_abs_deviation_mad	setting_order	setting_display_label	display_x	display_y	display_label
+GSE294385	historical_restricted	baseline	5	5	5	8	8	336	240	240	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1837165811978228	0	"Baseline
+6 x 6"	-0.16	240	240
+GSE294385	independent_eligible	baseline	5	5	5	8	8	336	261	261	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1862831116786016	0	"Baseline
+6 x 6"	0.16	261	261
+GSE294385	historical_restricted	grid4	5	5	5	8	8	336	234	234	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1608530145964389	1	"Grid
+4 x 4"	0.84	234	234
+GSE294385	independent_eligible	grid4	5	5	5	8	8	336	253	253	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.2175910406695155	1	"Grid
+4 x 4"	1.16	253	253
+GSE294385	historical_restricted	grid8	5	5	5	8	8	336	240	240	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1704747202209161	2	"Grid
+8 x 8"	1.84	240	240
+GSE294385	independent_eligible	grid8	5	5	5	8	8	336	266	266	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1791830378725193	2	"Grid
+8 x 8"	2.16	266	266
+GSE294385	historical_restricted	near150	5	5	5	8	8	336	240	240	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1861032643176674	3	"Near
+150 um"	2.84	240	240
+GSE294385	independent_eligible	near150	5	5	5	8	8	336	261	261	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1859172659319229	3	"Near
+150 um"	3.16	261	261
+GSE294385	historical_restricted	far500	5	5	5	8	8	336	240	240	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.192543874488032	4	"Far
+500 um"	3.84	240	240
+GSE294385	independent_eligible	far500	5	5	5	8	8	336	261	261	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	Patient1;Patient6;Patient9;Patient10;Patient11	0.1856287037518552	4	"Far
+500 um"	4.16	261	261

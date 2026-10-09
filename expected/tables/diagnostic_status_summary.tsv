@@ -1,0 +1,9 @@
+resource	estimator_id	status	status_reason	n_maps
+GSE294385	stromal_retention	not_evaluable	historical_eligibility_restriction	96
+GSE294385	stromal_retention	success	NA	240
+GSE294385	stricter_adjacency	not_evaluable	historical_eligibility_restriction	163
+GSE294385	stricter_adjacency	success	NA	173
+Valdeolivas	stromal_retention	not_evaluable	historical_eligibility_restriction	388
+Valdeolivas	stromal_retention	success	NA	116
+Valdeolivas	stricter_adjacency	not_evaluable	historical_eligibility_restriction	451
+Valdeolivas	stricter_adjacency	success	NA	53

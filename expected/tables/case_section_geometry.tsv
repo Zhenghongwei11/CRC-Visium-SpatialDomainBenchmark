@@ -1,0 +1,11 @@
+resource	patient_id	sample_id	section_id	graph_id	n_stroma	n_near	n_far	n_near_blocks	n_far_blocks	n_near_components	n_far_components
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	historical_raw_6nn	728	155	298	28	27	24	8
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	nominal_honeycomb_exact	728	155	299	28	27	24	10
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	historical_raw_6nn	524	111	222	29	21	29	5
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	nominal_honeycomb_exact	524	111	221	29	21	28	6
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	historical_raw_6nn	482	291	84	21	10	76	10
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	nominal_honeycomb_exact	482	291	84	21	11	74	11
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	historical_raw_6nn	1268	694	251	15	13	67	8
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	nominal_honeycomb_exact	1268	694	246	15	13	71	9
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	historical_raw_6nn	1565	910	291	23	14	108	7
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	nominal_honeycomb_exact	1565	910	291	23	14	105	9
