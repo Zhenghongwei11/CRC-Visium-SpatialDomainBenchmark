@@ -72,8 +72,7 @@ def save(rows, path, columns=None):
     return frame
 
 
-def rng_seed(*parts):
-    return int.from_bytes(hashlib.sha256('|'.join(map(str, parts)).encode()).digest()[:8], 'little')
+from scientific_seeds import conditional_seeds
 
 
 def load_plan():
@@ -313,9 +312,7 @@ def prepare_section(section, originals, abundance, keys, group_names, plan, outp
                 thin = max(100, 2*len(actual))
                 chain_states = []; chain_moments = []
                 for chain in range(design['chains']):
-                    # Preserve the original seed domain as bytes for numerical reproducibility.
-                    seed_domain = bytes.fromhex('726576696577355f636f6e646974696f6e616c5f636861696e').decode('ascii')
-                    sv = rng_seed(design['seed_master'], seed_domain, section['sample_id'], row.case_id, control, band, chain)
+                    sv = conditional_seeds()[(section['sample_id'], row.case_id, control, band, chain)]
                     state, moment, sd, diag = run_chain(features, actual, blockcode[pool], control == 'LC_MC',
                                                        sv, design['burnin_proposals_each_chain_band'], thin,
                                                        design['stored_states_each_chain_band'])

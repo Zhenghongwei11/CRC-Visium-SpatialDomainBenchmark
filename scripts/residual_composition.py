@@ -9,7 +9,8 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import linprog,OptimizeWarning
 from scipy.sparse import csr_matrix,hstack,vstack,eye
-from regional_profiles import counts_for,sha,seed
+from regional_profiles import counts_for,sha
+from scientific_seeds import residual_seed_vectors
 ROOT=Path(__file__).resolve().parents[1]
 DOC=ROOT/'config'
 OUT=ROOT/'results/residual_composition'
@@ -113,9 +114,7 @@ def main():
     for band,pool,sel,features,target,weights in banddata:
      matrix=np.full((200,len(sel)),-1,int)
      for rep in range(200):
-      # Preserve the original seed domain as bytes for numerical reproducibility.
-      seed_domain=bytes.fromhex('726576696577355f7374616765325f726573696475616c').decode('ascii')
-      rng=np.random.default_rng(seed(seed_domain,sid,key,control,band,rep));chosen=draw_band(rng,control,blocks[pool],sel,None if control in ['S','L'] else weights[control])
+      rng=np.random.default_rng(residual_seed_vectors()[(sid,key,control,band)][rep]);chosen=draw_band(rng,control,blocks[pool],sel,None if control in ['S','L'] else weights[control])
       ok=chosen is not None;err=float(np.max(abs(features[chosen].mean(axis=0)-target))) if ok else np.inf
       if control in ['C','LC']:ok=ok and err<=.10+1e-12
       if chosen is not None:

@@ -27,6 +27,8 @@ The command uses the archived publication maps, recomputes the measurements and 
 
 The individual analysis stages and figure generation were run and compared with the reported results. The complete combined command has not yet been tested as one uninterrupted run. The archived domain maps are required for reproducing the reported comparisons; a complete refit of the original maps has not been verified.
 
+The conditional-reference analyses use the numerical random seeds in `data/reference_inputs/random_seeds/`. These fixed seeds reproduce the reported sample, setting, control and replicate combinations. Analyses of additional combinations require a separately specified seed plan.
+
 In the simulation tables, `freeze_sha256` identifies the original study-design freeze associated with the published simulation, not a freeze of a new execution or of the current implementation. The historical identifier is retained from the archived table inputs; the simulation's own `started_inputs.json` separately records the manifest and model code hashes used for a new run.
 
 The 14 generated PNGs can be compared with the archived reference renders using `python scripts/figures/check_png_exports.py --figures results/figures`. PNG byte differences can arise from rendering software or platform changes.

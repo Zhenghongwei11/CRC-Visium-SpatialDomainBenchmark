@@ -82,5 +82,5 @@
   "interpretation": "external marker lists inform same-RNA expression context; no novel composite activity score, no singlecellcoexpression/lineage diagnosis, no independent or heldout validation claim for53coregenes included in RCTDfit",
   "retained_known_genes": "the7previousreadoutgenesare separately documented asknownoutcome and excludedfromnewRCTDfit; not mixed into53core-panel selection",
   "source_candidate_file": "data/reference_inputs/marker_candidates.tsv",
-  "source_sha256": "c5eefdc1b79f48cdee108aee74275cfb97b021095794adb056de111c732cbf95"
+  "source_sha256": "ddeeadad77ea1653371351117b9260d63e4008c27fd561e0cabb35bc1c2fc8ee"
 }
