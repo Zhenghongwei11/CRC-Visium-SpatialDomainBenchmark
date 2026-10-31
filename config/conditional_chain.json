@@ -1,0 +1,36 @@
+{
+  "scientific_question": "Do same-size/source-band subsets with the same continuous-composition tolerance retain alternative support when sampling does not depend on a sparse exact-calibration LP vertex?",
+  "inputs": "sameVal14source,originalfixedraw6nn bands/blocks and source8abundance groups; no genotype/profile outcome forselection",
+  "controls": [
+    "C_MC",
+    "LC_MC"
+  ],
+  "composition_rule": "same per-band max standardized8-group abundance mean error<=0.10, standardization full-band populationSD floor1e-6; original samplecount; LC_MC exact sameblockcounts",
+  "conditional_kernel": "4independent seededchains per band, each initialized at actual selected subset (admissible). At every proposal choose one selected index uniformly. C_MC choose one unselected pool index uniformly; LC_MC choose one unselected index within the sameblock uniformly. If block has none, selftransition. Accept iff the replacement remains within exactsame0.10tolerance. Otherwise selftransition. Symmetric replacement proposals imply uniform stationary distribution within the reachable admissible component, not guaranteed global mixing.",
+  "draw_design": {
+    "chains": 4,
+    "burnin_proposals_each_chain_band": 5000,
+    "stored_states_each_chain_band": 50,
+    "proposals_between_stored_states": "max(100,2*n_selected_band)",
+    "total_stored_joint_states_each_case": 200,
+    "seed_master": 20261026
+  },
+  "quality_gates_before_readout": {
+    "atleast_joint_unique_states": 50,
+    "minimum_distinct_states_each_band": 30,
+    "minimum_accepted_proposals_per_chain_after_burnin": 100,
+    "max_composition_moment_Rhat_when_variance_positive": 1.2,
+    "constant_moment_handling": "constant moments withidenticalchainmean passasconstant;differentmeanswithzerowithinvariance fail",
+    "minimum_original_support": "originalregional20spots3blocks and completeauthorfullbandmodel asbefore"
+  },
+  "diagnostics": [
+    "chain accepted proposals andselftransitions",
+    "unique subsetsperband/joint",
+    "actual-domain recurrence",
+    "mean-distance/Hammingdistancefromactual",
+    "8compositionmomentsRhat",
+    "all membership/count/block/composition constraints",
+    "lagdiagnostics forcomposition/membership; storedstates are correlated notindependentreplicates"
+  ],
+  "interpretation": "diagnoses conditional-reference support. No inferenceofcausalexplainedfraction,globaluniformsamplingequilibriumorindependentspot/cellvalidation. Poor-mixing/lowuniquechains are unavailable, notzeroeffect."
+}

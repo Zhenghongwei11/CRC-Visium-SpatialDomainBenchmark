@@ -1,0 +1,11 @@
+R 4.4.3
+spacexr 2.2.1, source commit 9f5dc33c8060f946c6072a138b70e189636e1435
+Matrix 1.7-3
+jsonlite 2.0.0
+foreach 1.5.2
+doParallel 1.0.17
+iterators 1.0.14
+
+The RCTD run requires the official spacexr package and its extdata/Qmat files.
+The listed versions describe the environment used for the reported calculations;
+they do not constitute a complete lock of every system library or dependency.

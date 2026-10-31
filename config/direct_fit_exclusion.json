@@ -1,0 +1,19 @@
+{
+  "analysis_class": "outcome_informed_gene_universe_sensitivity_not_independent_validation",
+  "question": "Do regional-profile directions in frozen common-reference weighted populations extend beyond the genes used directly in native bulk/platform and pixel regression fitting?",
+  "panel_rule": "Within each resource, retain v1 broad gene-ID rows whose gene_symbol is absent from the union of every full-section native bulk and regression gene list in that resource. Exclude all gene-ID rows sharing a direct-fit symbol. Use all14Val and8GSE lists, including sections not paired, without gene outcome selection.",
+  "measurement": "Same v1 fixed gene scales and full-original-feature log1pCPM denominator as the primary profiles. Subset genes only after full-library normalization; never renormalize over retained genes. No re-selection by variance or regional effect.",
+  "controls": [
+    "frozen_mean_calibrated_weights",
+    "unweighted_full_regions"
+  ],
+  "support": "Same21patient-by-tier attempts,7actual sourcepairs,mean and stricterKS flags from original frozen calibration. Empty panels/failed support/nonfinite profile metric remain unavailable; no minimum gene count is selected after outcomes. No other spot or UMI controls recomputed under this panel.",
+  "unweighted_control": "Original v1 full-band section_profiles NPZ, checked against original run hashes and gene-ID order, same exacthex compartment/bands and patients.",
+  "outcomes": "Near/far and far-minus-near Spearman, fixed-scale mean absolute difference, unscaled mean absolute difference. Resource/tier medians use identical finite patients for both controls; strict-distribution subsets separately; actual gene/patientN and all failures retained.",
+  "limits": [
+    "Not all common-input genes directly enter likelihood fitting; report direct union separately from common input.",
+    "Genes still share full-feature nUMI offsets, source feature availability and biological covariance with fitted genes; retained panel is not independent cell validation or complete information isolation.",
+    "No cell-state, causality, clinical adjustment or extra spatial patientN claim.",
+    "Keep primary original-broad results unchanged and present this as gene-universe sensitivity rather than choose favorable panels."
+  ]
+}

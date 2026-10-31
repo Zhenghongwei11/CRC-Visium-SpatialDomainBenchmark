@@ -1,0 +1,86 @@
+{
+  "groups": {
+    "fibroblast_like": [
+      "PDGFRA",
+      "COL1A1",
+      "COL1A2",
+      "COL3A1",
+      "LUM",
+      "DCN",
+      "FBLN1",
+      "TNXB"
+    ],
+    "smooth_muscle_like": [
+      "ACTG2",
+      "MYLK",
+      "LMOD1",
+      "MYOCD",
+      "MYL9",
+      "TPM1"
+    ],
+    "pericyte_like": [
+      "PDGFRB",
+      "RGS5",
+      "NDUFA4L2",
+      "CSPG4",
+      "MCAM",
+      "ABCC9"
+    ],
+    "endothelial": [
+      "PECAM1",
+      "VWF",
+      "PLVAP",
+      "ACKR1",
+      "CD36",
+      "ESAM",
+      "MMRN2",
+      "CDH5"
+    ],
+    "immune": [
+      "CD3D",
+      "CD3E",
+      "CD3G",
+      "CD79A",
+      "MS4A1",
+      "CD79B",
+      "MZB1",
+      "JCHAIN",
+      "ITGAM",
+      "CD14",
+      "CSF1R",
+      "TYROBP",
+      "TPSAB1",
+      "TPSB2",
+      "CPA3"
+    ],
+    "epithelial": [
+      "EPCAM",
+      "CDH1",
+      "KRT19",
+      "KRT8"
+    ],
+    "enteric_glial": [
+      "SOX10",
+      "PLP1",
+      "S100B",
+      "NRXN1",
+      "SLC35F1",
+      "L1CAM"
+    ]
+  },
+  "selected_rows": "all53core_candidate rows; no favorable gene/program selection",
+  "method": "individual-gene detection, median and25/75quantiles of log1p(CP10K) with complete-sourcefeature denominator; sum actual count columns sharing a gene symbol; absent reference gene is NA, not zero",
+  "populations": [
+    "anatomicalwholeannotatedstroma",
+    "exacthex stromanear",
+    "exacthex stromafar",
+    "whole pureselecteddomain forbothrules",
+    "selecteddomain annotated-stroma intersection",
+    "selecteddomain stromanear/far intersections"
+  ],
+  "eligibility": "preserve all264settings x2rules and empty selections withzero support/NA; existingregion masks fixed before genevalues",
+  "interpretation": "external marker lists inform same-RNA expression context; no novel composite activity score, no singlecellcoexpression/lineage diagnosis, no independent or heldout validation claim for53coregenes included in RCTDfit",
+  "retained_known_genes": "the7previousreadoutgenesare separately documented asknownoutcome and excludedfromnewRCTDfit; not mixed into53core-panel selection",
+  "source_candidate_file": "data/reference_inputs/marker_candidates.tsv",
+  "source_sha256": "c5eefdc1b79f48cdee108aee74275cfb97b021095794adb056de111c732cbf95"
+}

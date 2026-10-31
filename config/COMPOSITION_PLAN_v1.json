@@ -1,0 +1,62 @@
+{
+  "source": "Valdeolivas Zenodo7760264 Korean-reference cell2location outputs for the same14sections",
+  "primary_table": "W_cell_density.csv if successfully retrieved and author-inferred abundance semantics documented; otherwise q05 retained as lower-bound output only and no primary abundance composition inferred",
+  "secondary_table": "W_cell_density_q05.csv; each subtype is a marginal lower posterior abundance summary, its normalized ratios are only sensitivity scores, not posterior composition credible bounds",
+  "groups": {
+    "fibroblast_like": [
+      "Myofibroblasts",
+      "Stromal 1",
+      "Stromal 2",
+      "Stromal 3"
+    ],
+    "smooth_muscle_like": [
+      "Smooth muscle cells"
+    ],
+    "pericyte_like": [
+      "Pericytes"
+    ],
+    "endothelial": [
+      "Lymphatic ECs",
+      "Proliferative ECs",
+      "Stalk-like ECs",
+      "Tip-like ECs"
+    ],
+    "immune": [
+      "CD19+CD20+ B",
+      "CD4+ T cells",
+      "CD8+ T cells",
+      "IgA+ Plasma",
+      "IgG+ Plasma",
+      "Mast cells",
+      "NK cells",
+      "Pro-inflammatory",
+      "Regulatory T cells",
+      "SPP1+",
+      "T follicular helper cells",
+      "T helper 17 cells",
+      "cDC",
+      "gamma delta T cells"
+    ],
+    "epithelial_or_proliferating": [
+      "CMS1",
+      "CMS2",
+      "CMS3",
+      "CMS4",
+      "Goblet cells",
+      "Intermediate",
+      "Mature Enterocytes type 1",
+      "Mature Enterocytes type 2",
+      "Proliferating",
+      "Stem-like/TA"
+    ],
+    "other_or_unknown": [
+      "Enteric glial cells",
+      "Unknown"
+    ]
+  },
+  "group_interpretation": "Broad operational groupings of author-assigned reference labels; no new cell identity diagnosis, not uniform functional states. Confirm source taxonomy, particularly ambiguous proliferating and inflammatory labels; preserve individual subtype outputs.",
+  "regional_summary": "For exacthex eligible near/far bands, report mean inferred subtype/group abundance per matched spot and relative group share=sum group abundance over matched spots divided sum all36 subtype abundances over those spots. Denominator excludes unmatched spots, with explicit numerator/denominator/missing coverage tables.",
+  "association": "Report within-patient section pairs separately: L1 distance between regional group-share vectors and their far-minus-near differences; pair with broad-gene profile difference for the same patient and region. Any correlation among patients is descriptive, with actual independent N and no causal explained-fraction claim. Patient-level summaries precede resource summaries. Keep all subtype and patient outcomes.",
+  "sensitivity": "q05-derived normalized group weights only as lower-summary sensitivity, not composition CI. Report primary-table missingness and compare common regional spot coverage; do not impute missing composition or extrapolate to GSE294385.",
+  "inference_limit": "Same-RNA reference-based inference adds composition context; not new independent patients, matched protein validation, true cell counts or proof of a single coherent CAF state. No claim to resolve GSEPatient6 tissue identity from Val-only outputs."
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": "regional-profiles-v1",
+  "analysis_class": "exploratory_followup_with_new_rules_fixed_before_new_regional_profile_results",
+  "source_manifest": "config/source_pipeline/source_counts_manifest.json",
+  "count_root": "original_inputs/counts",
+  "outputs": "results/regional_profiles",
+  "scientific_question": "How do regional expression-profile agreement and patient variation differ between tumor-adjacent and distant tissue, and what do domain purity, spatial coverage and tissue composition imply for choosing a region appropriate to a scientific target?",
+  "targets": {
+    "anatomical_band": "All eligible annotation-defined spots in a specified band; a regional tissue mixture, not biological ground truth.",
+    "molecular_domain": "Expression-derived subset intersecting anatomical bands; a sampling population, not an established single cell state.",
+    "reproducibility": "Observed regional-profile agreement between available sections of the same patient and variation among independent patients; consistency is not synonymous with biological importance or technical test-retest."
+  },
+  "geometry": {
+    "coordinate_um": "x=array_col*50; y=array_row*sqrt(3)*50",
+    "distance": "nearest opposite-compartment annotated spot center",
+    "stroma_side": "coarse_label stroma, reference coarse_label tumor",
+    "tumor_side": "coarse_label tumor, reference coarse_label stroma",
+    "near_max_um": 100,
+    "far_min_um": 200,
+    "far_max_um": 400,
+    "distance_exact_lattice_q": "near q<=4; far16<=q<=64, q=delta_col^2+3delta_row^2",
+    "connectivity": "exact hex offsets (0,+-2),(+-1,+-1) on measured compartment; retain far components containing near spots",
+    "blocks": "six equal-width array_row and array_col bins over all registered spots, internal-edge upper-bin convention",
+    "minimum_spots_each_band": 20,
+    "minimum_blocks_each_band": 3,
+    "compare_compartments": "same jointly eligible sections/patients, independently enumerate each resource/compartment first",
+    "legacy_sensitivity": "The prior saved historical_raw_6nn stromal masks remain a separate geometry sensitivity, not silently pooled with exact hex."
+  },
+  "profiles": {
+    "representation": "Sum raw counts over selected registered spots to form one gene-count pseudobulk per section/compartment/band; retain full-source-feature total library denominator.",
+    "transform": "natural log1p(1e6*gene_count/total_count_all_features)",
+    "identifier": "source feature ID without Ensembl version suffix, aggregate duplicate IDs by sum; retain ID-to-symbol map and check resource consistency",
+    "gene_eligibility": "Within each resource, detect nonzero counts in at least 10 percent of all registered spots in at least half the source sections, rounded upward. This selection uses no near/far labels. Exclude symbols matching ^MT-|^RPL|^RPS (case-insensitive). Analyze the resulting broad panel, not only four historical genes.",
+    "primary_panel": "broad eligible genes per resource; use same panel for both compartments",
+    "secondary_panels": [
+      "same panel excluding TGFB1,CXCL12,ACTA2,TAGLN",
+      "top 2000 eligible genes by across-section whole-registered pseudobulk variance, selected without regional labels"
+    ],
+    "gene_scale": "For each resource, 1.4826*median absolute deviation of whole-registered section log1pCPM profiles, with lower bound0.25; fixed before regional comparisons",
+    "within_pair_metrics": [
+      "Spearman correlation across eligible genes",
+      "mean absolute difference of transformed regional profiles divided gene-wise by the fixed resource scale"
+    ],
+    "unscaled_sensitivity": "mean absolute difference in log1pCPM without gene-specific scaling",
+    "section_pair": "All distinct eligible sections from same patient; if more than two, summarize pairs within patient before resource summary. Check source definition and do not label technical repeats without evidence.",
+    "within_patient_summary": "Per patient far-minus-near metric; report each patient and median across patients separately per resource and pooled only as descriptive values.",
+    "between_patient_summary": "Average section transformed profiles within patient/band, then calculate all distinct-patient pair metrics, median as descriptive resource variation; pair count is not independent N. Report patient leave-one-out medians.",
+    "uncertainty": "2000 patient-bootstrap draws for within-patient median far-minus-near differences. No confirmatory P values or claim-upgrade gates; between-patient pair medians and leave-one-patient-out summaries remain descriptive.",
+    "sampling_sensitivity": "50 deterministic repeats; within each patient pair/compartment sample the same number of spots in all four section-by-band sets, equal to their minimum, without replacement. Recompute counts/profile metrics. Separately thin summed integer pseudobulk counts to the smallest total among four profiles by multivariate hypergeometric sampling, preserving common spot number; summarize repeated metrics within patient before patients.",
+    "qc": "Report spot number, total UMIs, median spot UMIs, detected genes per spot, mitochondrial fraction and original annotation composition for every region. No unavailable sequencing batch or clinical variable is fabricated.",
+    "coarse_composition": "Report raw-label fractions by resource and sensitivity excluding GSE raw tissue labels containing muscularis/muscle if both bands remain eligible. Record this as coarse label restriction, not confirmed cell removal.",
+    "author_cell2location": "If retrieved and barcode-matched, report normalized inferred broad cell-category shares and composition-associated differences. Use resource-wide group definitions fixed from actual headers before looking at near/far associations. Same-count inference is not independent validation."
+  },
+  "domain_pilot": {
+    "scope": "All22 current sections, fitting each section independently, finite CPU-friendly methods. Evaluate geometry coverage before interpreting new expression contrasts.",
+    "methods": [
+      "expression_kmeans",
+      "exacthex_spatial_ward"
+    ],
+    "K": [
+      12,
+      20,
+      30
+    ],
+    "kmeans": {
+      "seed": 11,
+      "n_init": 10
+    },
+    "fit_features": "Normalize per-spot counts to1e4 excluding four historical readout genes from the fitting denominator, log1p, top2000 variance features excluding those four, PCA up to20 dimensions with seed11. PCA features chosen over all registered spots without regional labels.",
+    "ward": "Fit within each connected component of the exact-hex graph. Allocate K proportionally to component size with at least one cluster per component; record actual K when components exceed requested K. Never let sklearn silently bridge disconnected components.",
+    "initial_regions": "Split each fitted label into exact-hex connected components before purity or merging.",
+    "purity_definition": "annotated stroma spots divided by all spots in the entire connected region; unknown/other annotations remain in denominator",
+    "purity_min": 0.9,
+    "merge_distance_thresholds": [
+      "25th percentile",
+      "50th percentile"
+    ],
+    "merge_distance_definition": "Euclidean distance between PCA centroids of spatially adjacent initial connected regions; compute each threshold once for each section/method/K from all adjacent initial region pairs.",
+    "merge_rule": "Among spatially adjacent regions whose union purity>=0.90 and centroid distance<=fixed threshold, merge the pair with smallest Ward sum-of-squares increase; deterministic ties by region IDs. Recompute region centroids, adjacency and candidate costs; retain threshold fixed; stop when no admissible pair. No regional expression contrast is used.",
+    "primary_region_selection": "Among final regions with purity>=0.90, choose greatest total stroma count, ties by total size then minimum initial region ID; selection does not require near/far eligibility. Separately report whether any pure region has eligible near/far coverage as an availability upper bound.",
+    "coverage": "Each selected near/far intersection requires20 annotated stroma spots and3 blocks, same as anatomical eligibility; retain all failures, counts and patient IDs.",
+    "summaries": "Every strategy setting independently: attempted/eligible sections, patients, maps, whole-domain purity, near/far retained counts, connectivity and region counts. Original low-K results remain separate.",
+    "regional_readout": "Only after coverage output is frozen, examine original four-gene and component contrasts in original units as exploratory comparison, without choosing the preferred strategy from their values."
+  },
+  "execution": {
+    "seed_master": 20261025,
+    "threads": 2,
+    "section_workers": 1,
+    "retain_raw_matrices": true,
+    "duplicate_full_matrices": false
+  }
+}

@@ -1,0 +1,7 @@
+resource	panel	n_genes
+Valdeolivas	broad	10198
+Valdeolivas	broad_without_four	10194
+Valdeolivas	variable2000	2000
+GSE294385	broad	12838
+GSE294385	broad_without_four	12834
+GSE294385	variable2000	2000

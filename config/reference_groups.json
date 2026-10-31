@@ -1,0 +1,109 @@
+{
+  "author_model_summary_groups": {
+    "fibroblast_like": [
+      "Myofibroblasts",
+      "Stromal 1",
+      "Stromal 2",
+      "Stromal 3"
+    ],
+    "smooth_muscle_like": [
+      "Smooth muscle cells"
+    ],
+    "pericyte_like": [
+      "Pericytes"
+    ],
+    "endothelial": [
+      "Lymphatic ECs",
+      "Proliferative ECs",
+      "Stalk-like ECs",
+      "Tip-like ECs"
+    ],
+    "immune": [
+      "CD19+CD20+ B",
+      "CD4+ T cells",
+      "CD8+ T cells",
+      "IgA+ Plasma",
+      "IgG+ Plasma",
+      "Mast cells",
+      "NK cells",
+      "Pro-inflammatory",
+      "Regulatory T cells",
+      "SPP1+",
+      "T follicular helper cells",
+      "T helper 17 cells",
+      "cDC",
+      "gamma delta T cells",
+      "Proliferating"
+    ],
+    "epithelial": [
+      "CMS1",
+      "CMS2",
+      "CMS3",
+      "CMS4",
+      "Goblet cells",
+      "Intermediate",
+      "Mature Enterocytes type 1",
+      "Mature Enterocytes type 2",
+      "Stem-like/TA"
+    ],
+    "enteric_glial": [
+      "Enteric glial cells"
+    ],
+    "unresolved_reference": [
+      "Unknown"
+    ]
+  },
+  "common_reference_groups": {
+    "fibroblast_like": [
+      "Myofibroblasts",
+      "Stromal 1",
+      "Stromal 2",
+      "Stromal 3"
+    ],
+    "smooth_muscle_like": [
+      "Smooth muscle cells"
+    ],
+    "pericyte_like": [
+      "Pericytes"
+    ],
+    "endothelial": [
+      "Lymphatic ECs",
+      "Proliferative ECs",
+      "Stalk-like ECs",
+      "Tip-like ECs"
+    ],
+    "immune": [
+      "CD19+CD20+ B",
+      "CD4+ T cells",
+      "CD8+ T cells",
+      "IgA+ Plasma",
+      "IgG+ Plasma",
+      "Mast cells",
+      "NK cells",
+      "Pro-inflammatory",
+      "Regulatory T cells",
+      "SPP1+",
+      "T follicular helper cells",
+      "T helper 17 cells",
+      "cDC",
+      "gamma delta T cells",
+      "Proliferating"
+    ],
+    "epithelial": [
+      "CMS1",
+      "CMS2",
+      "CMS3",
+      "CMS4",
+      "Goblet cells",
+      "Intermediate",
+      "Mature Enterocytes type 1",
+      "Mature Enterocytes type 2",
+      "Stem-like/TA"
+    ],
+    "enteric_glial": [
+      "Enteric glial cells"
+    ]
+  },
+  "common_reference_exclusion": "Original Cell_subtype Unknown cells excluded from biologically named RCTD reference; actual source cells retained in source/full subtype summaries, counts and exclusion ledger.",
+  "reference_scope": "seven broad known reference groups, not36 subtype resolution; reference incompleteness/fit error still requires diagnostics"
+}

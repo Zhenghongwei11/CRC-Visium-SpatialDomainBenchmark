@@ -1,0 +1,1401 @@
+Index	Patient	Class	Sample	Cell_type	Cell_subtype	stage2_author_group	stage2_reference_group	selection_order
+SMC01-N_GGCGACTGTGCTAGCC	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	1
+SMC02-N_CCTACCACAAGGACTG	SMC02	Normal	SMC02-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	2
+SMC03-T_TCTGAGAAGACAAGCC	SMC03	Tumor	SMC03-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	3
+SMC04-N_ATGTGTGGTATAAACG	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	4
+SMC05-N_TTGTAGGCAGATGGCA	SMC05	Normal	SMC05-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	5
+SMC06-T_GTTACAGAGAAAGTGG	SMC06	Tumor	SMC06-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	6
+SMC07-N_CCACTACTCTTCGAGA	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	7
+SMC08-N_GTGCTTCCAAATACAG	SMC08	Normal	SMC08-N	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	8
+SMC09-N_AACTTTCAGGTAGCCA	SMC09	Normal	SMC09-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	9
+SMC10-N_CTCGAGGTCGGCCGAT	SMC10	Normal	SMC10-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	10
+SMC11-T_AGGCCGTCAAACTGTC	SMC11	Tumor	SMC11-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	11
+SMC14-T_AAACGGGTCACCACCT	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	12
+SMC15-T_TAGTTGGTCGTAGATC	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	13
+SMC16-T_CATCCACAGAGTTGGC	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	14
+SMC17-T_ACAGCTAGTGGCCCTA	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	15
+SMC18-T_CTTGGCTCAGTGACAG	SMC18	Tumor	SMC18-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	16
+SMC19-T_CATCAGACAAGTAATG	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	17
+SMC20-T_GTTCGGGCACATTCGA	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	18
+SMC21-T_ACACTGAAGCCTATGT	SMC21	Tumor	SMC21-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	19
+SMC22-T_ATTACTCTCTGTTTGT	SMC22	Tumor	SMC22-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	20
+SMC23-T_GGTGTTAAGCGTGTCC	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	21
+SMC24-T_GCACTCTGTCTCCACT	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	22
+SMC25-T_CAAGGCCAGACTGGGT	SMC25	Tumor	SMC25-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	23
+SMC01-N_GCAAACTTCTGCCAGG	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	24
+SMC02-T_GTCTCGTCAATGGAGC	SMC02	Tumor	SMC02-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	25
+SMC03-T_CCAGCGAAGAGCTGCA	SMC03	Tumor	SMC03-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	26
+SMC04-N_CGTTCTGCACGTTGGC	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	27
+SMC05-N_CATTATCGTATAAACG	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	28
+SMC06-T_GATCGATGTCCGTTAA	SMC06	Tumor	SMC06-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	29
+SMC07-N_GCGAGAATCCCTCTTT	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	30
+SMC08-N_AGATTGCAGGCCCGTT	SMC08	Normal	SMC08-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	31
+SMC09-N_ACGGGCTGTAGAGTGC	SMC09	Normal	SMC09-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	32
+SMC10-T_ACTGAGTCATGCAACT	SMC10	Tumor	SMC10-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	33
+SMC11-T_GATTCAGGTCTTCTCG	SMC11	Tumor	SMC11-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	34
+SMC14-T_CGCTGGAGTTAAGTAG	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	35
+SMC15-T_CAACCTCCACTGTCGG	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	36
+SMC16-T_GCATGCGGTGACTACT	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	37
+SMC17-T_GAACCTAAGCTGCCCA	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	38
+SMC18-T_TACTTGTGTGTTCTTT	SMC18	Tumor	SMC18-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	39
+SMC19-T_CGTAGCGCACATTAGC	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	40
+SMC20-T_GGTATTGTCCCATTAT	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	41
+SMC21-T_CTTAGGATCCACTCCA	SMC21	Tumor	SMC21-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	42
+SMC22-T_CAGGTGCCAGGACCCT	SMC22	Tumor	SMC22-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	43
+SMC23-T_ATTTCTGTCCGAACGC	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	44
+SMC24-T_GTGCGGTGTCTGCGGT	SMC24	Tumor	SMC24-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	45
+SMC25-T_TACCTATCACGGCTAC	SMC25	Tumor	SMC25-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	46
+SMC01-T_TGACTTTCACGGTAGA	SMC01	Tumor	SMC01-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	47
+SMC02-N_ACACTGACAGACGCCT	SMC02	Normal	SMC02-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	48
+SMC03-T_TGCACCTCATCCCACT	SMC03	Tumor	SMC03-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	49
+SMC04-N_GACTAACGTAAATGTG	SMC04	Normal	SMC04-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	50
+SMC05-N_GACGGCTAGCCACGCT	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	51
+SMC06-N_TCATTACTCGTAGGTT	SMC06	Normal	SMC06-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	52
+SMC07-N_ACGCCAGTCGTCGTTC	SMC07	Normal	SMC07-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	53
+SMC08-N_GATGAAAAGGCGTACA	SMC08	Normal	SMC08-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	54
+SMC09-N_CGATCGGGTAAACGCG	SMC09	Normal	SMC09-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	55
+SMC10-T_CATCAAGAGACTACAA	SMC10	Tumor	SMC10-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	56
+SMC11-T_GTTTCTAGTATTCTCT	SMC11	Tumor	SMC11-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	57
+SMC14-T_GTTACAGAGTAATCCC	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	58
+SMC15-T_AGACGTTTCTCAAACG	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	59
+SMC16-T_TATCAGGTCCCTTGTG	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	60
+SMC17-T_GGAACTTCAGATGGGT	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	61
+SMC19-T_ATCATGGCATAACCTG	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	62
+SMC20-T_TAAGTGCCAACTGCGC	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	63
+SMC21-T_CAGCCGAGTCGGGTCT	SMC21	Tumor	SMC21-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	64
+SMC22-T_CACACCTCATTATCTC	SMC22	Tumor	SMC22-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	65
+SMC23-T_CTGAAGTCAGCTCCGA	SMC23	Tumor	SMC23-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	66
+SMC24-T_CGGACACTCGCGGATC	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	67
+SMC25-T_GATCGATGTATCAGTC	SMC25	Tumor	SMC25-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	68
+SMC01-N_ATCATGGAGATAGGAG	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	69
+SMC02-N_TACTCGCTCTTCGGTC	SMC02	Normal	SMC02-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	70
+SMC03-T_TACTTGTAGGAACTGC	SMC03	Tumor	SMC03-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	71
+SMC04-N_AAAGATGCAGATGAGC	SMC04	Normal	SMC04-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	72
+SMC05-N_GATTCAGTCAATCACG	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	73
+SMC06-N_GATCAGTTCCTCGCAT	SMC06	Normal	SMC06-N	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	74
+SMC07-N_TGAGAGGCACGACTCG	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	75
+SMC08-N_CGGAGTCGTGGGTATG	SMC08	Normal	SMC08-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	76
+SMC09-N_GGAAAGCAGGCTAGGT	SMC09	Normal	SMC09-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	77
+SMC10-N_GAGTCCGTCGGTTAAC	SMC10	Normal	SMC10-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	78
+SMC11-T_GACTAACTCTAACGGT	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	79
+SMC14-T_ACGGGCTAGCAGCGTA	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	80
+SMC15-T_GGATGTTTCGTCTGCT	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	81
+SMC16-T_GCAAACTAGTATCGAA	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	82
+SMC17-T_GTGAAGGAGTTGAGAT	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	83
+SMC19-T_AACCATGTCTCAAACG	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	84
+SMC20-T_TATTACCTCAGCGATT	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	85
+SMC21-T_TCAATCTAGGCACATG	SMC21	Tumor	SMC21-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	86
+SMC22-T_CCATGTCAGTACGTTC	SMC22	Tumor	SMC22-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	87
+SMC23-T_CTAGAGTTCGCGTAGC	SMC23	Tumor	SMC23-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	88
+SMC24-T_TATTACCGTCGGATCC	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	89
+SMC25-T_GTACGTAAGTTACCCA	SMC25	Tumor	SMC25-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	90
+SMC01-N_TCAACGATCATCATTC	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	91
+SMC02-N_GGGTCTGAGCCCTAAT	SMC02	Normal	SMC02-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	92
+SMC03-T_TTTGCGCAGAGGGATA	SMC03	Tumor	SMC03-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	93
+SMC04-N_AGGGTGAAGAGCTGGT	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	94
+SMC05-N_CATCGGGAGGCTACGA	SMC05	Normal	SMC05-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	95
+SMC06-T_GGCGTGTAGTGAAGTT	SMC06	Tumor	SMC06-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	96
+SMC07-N_GATCGATAGTCAATAG	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	97
+SMC08-N_GGGCACTGTAGATTAG	SMC08	Normal	SMC08-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	98
+SMC09-N_GGCTGGTAGAGCCTAG	SMC09	Normal	SMC09-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	99
+SMC10-N_CAAGATCAGCCTCGTG	SMC10	Normal	SMC10-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	100
+SMC11-T_TACGGTATCTACCTGC	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	101
+SMC14-T_TACGGTAGTCAGAGGT	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	102
+SMC15-T_CCACTACAGATAGGAG	SMC15	Tumor	SMC15-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	103
+SMC16-T_GACCAATCAGATAATG	SMC16	Tumor	SMC16-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	104
+SMC17-T_TGCCCATAGGGATGGG	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	105
+SMC19-T_GCTCCTATCGAGAGCA	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	106
+SMC20-T_GATGAAAGTCGTTGTA	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	107
+SMC23-T_AGATTGCTCGTTGACA	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	108
+SMC24-T_GACCTGGCAGTAAGAT	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	109
+SMC01-N_GGTGAAGAGTACGCGA	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	110
+SMC02-T_CCAATCCTCTCCCTGA	SMC02	Tumor	SMC02-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	111
+SMC03-T_TCTTTCCGTGCCTGGT	SMC03	Tumor	SMC03-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	112
+SMC04-N_TGTCCCATCAGTTCGA	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	113
+SMC05-N_CAGCCGAGTGTAATGA	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	114
+SMC06-T_GTCACAACACTTCGAA	SMC06	Tumor	SMC06-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	115
+SMC07-N_GTGCGGTAGCAGGCTA	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	116
+SMC08-T_GTGTGCGCATAGAAAC	SMC08	Tumor	SMC08-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	117
+SMC09-N_GACCAATCACCTATCC	SMC09	Normal	SMC09-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	118
+SMC10-N_GAAGCAGTCCTTAATC	SMC10	Normal	SMC10-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	119
+SMC11-T_ACAGCCGGTTAAGTAG	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	120
+SMC14-T_GCTCCTACATCTGGTA	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	121
+SMC15-T_CATTATCGTCTCCATC	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	122
+SMC16-T_GGAGCAATCTATCGCC	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	123
+SMC17-T_TCAACGAAGTACGTAA	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	124
+SMC19-T_TAGCCGGAGTCGAGTG	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	125
+SMC20-T_GGAAAGCGTCATGCAT	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	126
+SMC23-T_CTCGGGATCCCTTGCA	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	127
+SMC24-T_ACGAGGATCCGCTGTT	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	128
+SMC01-N_GTCCTCACACATTCGA	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	129
+SMC02-N_AGATCTGAGAGTCGGT	SMC02	Normal	SMC02-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	130
+SMC03-T_CGAACATCACGCATCG	SMC03	Tumor	SMC03-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	131
+SMC04-N_CACATTTAGGAGTACC	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	132
+SMC05-N_TGAAAGATCATGCTCC	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	133
+SMC06-N_TTTCCTCGTACTTGAC	SMC06	Normal	SMC06-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	134
+SMC07-N_CTCGTCAGTAGGCATG	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	135
+SMC08-N_ATGTGTGTCCCTCTTT	SMC08	Normal	SMC08-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	136
+SMC09-N_GGCGACTAGCAGATCG	SMC09	Normal	SMC09-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	137
+SMC10-N_TTAGTTCAGGTTACCT	SMC10	Normal	SMC10-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	138
+SMC11-T_ACTGATGAGATGTTAG	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	139
+SMC14-T_CGACTTCCAGGATCGA	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	140
+SMC15-T_AGACGTTGTGGCAAAC	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	141
+SMC16-T_ATCATCTTCATGTAGC	SMC16	Tumor	SMC16-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	142
+SMC17-T_GTAACTGTCCTTTCGG	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	143
+SMC19-T_GTTCGGGCAAGTTGTC	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	144
+SMC20-T_CTACGTCGTACAGACG	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	145
+SMC23-T_CCTACACCAAGACACG	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	146
+SMC24-T_GGACGTCAGGAGCGTT	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	147
+SMC01-N_CGTTGGGCAGTATCTG	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	148
+SMC02-N_GAAACTCTCAGCACAT	SMC02	Normal	SMC02-N	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	149
+SMC03-T_ACGCCAGGTTCCACGG	SMC03	Tumor	SMC03-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	150
+SMC04-N_CGGGTCATCATAACCG	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	151
+SMC05-N_ACAGCCGGTTTAAGCC	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	152
+SMC06-N_GGGCACTTCTGAGGGA	SMC06	Normal	SMC06-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	153
+SMC07-N_GAGTCCGAGACTGGGT	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	154
+SMC08-T_CGACTTCCATCGATTG	SMC08	Tumor	SMC08-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	155
+SMC09-T_CGCTTCACATGAGCGA	SMC09	Tumor	SMC09-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	156
+SMC10-N_ACTTACTTCATGTCCC	SMC10	Normal	SMC10-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	157
+SMC11-T_AATCCAGCAGACGCTC	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	158
+SMC14-T_GTGGGTCAGGGCTCTC	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	159
+SMC15-T_CGAGCACTCGGCTTGG	SMC15	Tumor	SMC15-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	160
+SMC16-T_CTTGGCTTCCGCGTTT	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	161
+SMC17-T_CGGTTAACAAACTGTC	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	162
+SMC19-T_GACGCGTTCCAAAGTC	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	163
+SMC20-T_CACAAACCATACAGCT	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	164
+SMC23-T_GTCATTTCAGATCCAT	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	165
+SMC24-T_CGCTTCATCACGATGT	SMC24	Tumor	SMC24-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	166
+SMC01-N_TTCTTAGTCTGCCCTA	SMC01	Normal	SMC01-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	167
+SMC02-N_CTCCTAGCAATGGACG	SMC02	Normal	SMC02-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	168
+SMC03-T_TATGCCCCATTTCAGG	SMC03	Tumor	SMC03-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	169
+SMC04-N_GCTCCTAGTGTGCGTC	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	170
+SMC05-N_TACTTACTCCGCGCAA	SMC05	Normal	SMC05-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	171
+SMC06-N_ATGAGGGGTCTAAACC	SMC06	Normal	SMC06-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	172
+SMC07-N_CAGCGACCACTCTGTC	SMC07	Normal	SMC07-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	173
+SMC08-N_GTCGGGTCATCCAACA	SMC08	Normal	SMC08-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	174
+SMC09-N_GTCACAATCCACGTGG	SMC09	Normal	SMC09-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	175
+SMC10-N_CATCGAATCAGAGCTT	SMC10	Normal	SMC10-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	176
+SMC11-T_CACAGTATCCTTAATC	SMC11	Tumor	SMC11-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	177
+SMC14-T_GAATAAGCAGGGTTAG	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	178
+SMC15-T_TACTTACCATTCGACA	SMC15	Tumor	SMC15-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	179
+SMC16-T_CGGACACTCAGAGGTG	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	180
+SMC17-T_ACGAGGAAGTCATGCT	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	181
+SMC19-T_TTAACTCAGCAGCGTA	SMC19	Tumor	SMC19-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	182
+SMC20-T_CAGAATCCAGCCTGTG	SMC20	Tumor	SMC20-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	183
+SMC23-T_TACCTATCACAGACAG	SMC23	Tumor	SMC23-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	184
+SMC24-T_CTGAAGTAGTTCGATC	SMC24	Tumor	SMC24-T	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	185
+SMC01-N_AAGGCAGGTTAGAACA	SMC01	Normal	SMC01-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	186
+SMC02-N_GTAGGCCAGTCCAGGA	SMC02	Normal	SMC02-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	187
+SMC03-T_CTGATCCAGCTATGCT	SMC03	Tumor	SMC03-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	188
+SMC04-N_GTAACGTAGAGGGCTT	SMC04	Normal	SMC04-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	189
+SMC05-N_CATTCGCCACGGCCAT	SMC05	Normal	SMC05-N	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	190
+SMC06-N_GCTGCGATCTCGTATT	SMC06	Normal	SMC06-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	191
+SMC07-T_CACTCCATCAGGCCCA	SMC07	Tumor	SMC07-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	192
+SMC08-T_GAATAAGTCCATTCTA	SMC08	Tumor	SMC08-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	193
+SMC09-N_TCAGATGAGATGCGAC	SMC09	Normal	SMC09-N	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	194
+SMC10-N_AGTGGGAAGCCCAATT	SMC10	Normal	SMC10-N	Stromal cells	Stromal 1	fibroblast_like	fibroblast_like	195
+SMC11-T_AGAGTGGGTATTCGTG	SMC11	Tumor	SMC11-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	196
+SMC14-T_CCGGTAGGTACATCCA	SMC14	Tumor	SMC14-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	197
+SMC15-T_CTTACCGGTCCTCTTG	SMC15	Tumor	SMC15-T	Stromal cells	Stromal 3	fibroblast_like	fibroblast_like	198
+SMC16-T_CGACCTTGTCAGAGGT	SMC16	Tumor	SMC16-T	Stromal cells	Stromal 2	fibroblast_like	fibroblast_like	199
+SMC17-T_CTCGAGGAGTTACCCA	SMC17	Tumor	SMC17-T	Stromal cells	Myofibroblasts	fibroblast_like	fibroblast_like	200
+SMC01-N_AGCTCCTAGCCTTGAT	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	201
+SMC02-N_TGTTCCGGTACGACCC	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	202
+SMC03-N_TGAAAGAAGCGATTCT	SMC03	Normal	SMC03-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	203
+SMC04-T_CAGAGAGAGAACAACT	SMC04	Tumor	SMC04-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	204
+SMC05-N_GGGTTGCCACAGGAGT	SMC05	Normal	SMC05-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	205
+SMC06-T_TCAGGTAAGTACGTTC	SMC06	Tumor	SMC06-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	206
+SMC07-N_GCAGTTAGTCAGTGGA	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	207
+SMC08-N_CAGGTGCGTAGCGTAG	SMC08	Normal	SMC08-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	208
+SMC09-N_ACTGCTCTCATGTGGT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	209
+SMC10-T_GCATGATAGAGTACCG	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	210
+SMC14-T_CATATGGCACGGTAGA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	211
+SMC15-T_CAACCTCTCACTATTC	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	212
+SMC16-T_AAGGAGCGTCACCTAA	SMC16	Tumor	SMC16-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	213
+SMC17-T_ATCACGAAGGGAACGG	SMC17	Tumor	SMC17-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	214
+SMC19-T_GGCTGGTGTAGCAAAT	SMC19	Tumor	SMC19-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	215
+SMC20-T_CGTCAGGGTGGACGAT	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	216
+SMC23-T_ACACTGATCACAGGCC	SMC23	Tumor	SMC23-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	217
+SMC01-N_CCACGGATCAGCGACC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	218
+SMC02-T_TGGCTGGAGTATGACA	SMC02	Tumor	SMC02-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	219
+SMC03-N_AACTCAGGTAAACGCG	SMC03	Normal	SMC03-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	220
+SMC04-T_CAGGTGCCACCAACCG	SMC04	Tumor	SMC04-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	221
+SMC05-T_ACGGCCACATTGGCGC	SMC05	Tumor	SMC05-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	222
+SMC07-N_TGTCCCAAGATCTGCT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	223
+SMC08-N_CGTCACTGTACAGTTC	SMC08	Normal	SMC08-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	224
+SMC09-N_CTGCCTATCCCTAATT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	225
+SMC10-N_GGAACTTCAAGCGCTC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	226
+SMC14-T_GAAGCAGAGGGTGTTG	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	227
+SMC15-T_GAGTCCGAGTTCCACA	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	228
+SMC16-T_ATGTGTGTCAGGTAAA	SMC16	Tumor	SMC16-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	229
+SMC17-T_AACTCTTTCTCTTGAT	SMC17	Tumor	SMC17-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	230
+SMC19-T_CAGCAGCGTCGGCATC	SMC19	Tumor	SMC19-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	231
+SMC20-T_AAGACCTTCTCGTATT	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	232
+SMC01-N_CATATGGTCCTCTAGC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	233
+SMC02-N_AACTCCCAGATCACGG	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	234
+SMC03-N_GTTCATTAGCATCATC	SMC03	Normal	SMC03-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	235
+SMC04-N_TGAGCCGTCTTGAGGT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	236
+SMC05-N_CCTATTAGTTATCACG	SMC05	Normal	SMC05-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	237
+SMC07-N_ACACCCTGTACAGACG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	238
+SMC08-N_TCTTCGGTCCGTCAAA	SMC08	Normal	SMC08-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	239
+SMC09-N_GGGATGATCCAGGGCT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	240
+SMC10-N_TTATGCTCATTCTTAC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	241
+SMC14-T_CCTCTGACACCTGGTG	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	242
+SMC15-T_GTACTCCAGAGATGAG	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	243
+SMC17-T_CCTACCAGTCCGAATT	SMC17	Tumor	SMC17-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	244
+SMC19-T_AGTCTTTTCAGGTAAA	SMC19	Tumor	SMC19-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	245
+SMC20-T_GCATGATGTAAGTGTA	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	246
+SMC01-N_ATCCGAACAGTCAGCC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	247
+SMC02-N_CAAGATCCATCACGAT	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	248
+SMC03-N_GTATTCTAGGGTGTGT	SMC03	Normal	SMC03-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	249
+SMC04-N_AGCGTATAGAGATGAG	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	250
+SMC07-N_CAGCCGATCTAACTTC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	251
+SMC08-T_CGGTTAAAGTGGAGAA	SMC08	Tumor	SMC08-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	252
+SMC09-N_GGGACCTAGATCGGGT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	253
+SMC10-N_ATGAGGGGTCATATGC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	254
+SMC14-T_CTGCCTATCCAGATCA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	255
+SMC15-T_CATGGCGTCCACGCAG	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	256
+SMC17-T_TGTCCCACAAAGAATC	SMC17	Tumor	SMC17-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	257
+SMC19-T_TGCTACCCATCGTCGG	SMC19	Tumor	SMC19-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	258
+SMC20-T_ATAACGCGTTGACGTT	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	259
+SMC01-N_AAGGTTCCAGACTCGC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	260
+SMC02-N_TAGCCGGCACCAGCAC	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	261
+SMC03-N_TACCTATAGAGTACAT	SMC03	Normal	SMC03-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	262
+SMC04-N_AGGGTGATCTGACCTC	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	263
+SMC07-N_TTGGCAATCCTCAATT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	264
+SMC08-N_CCTTCGACACAGCGTC	SMC08	Normal	SMC08-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	265
+SMC09-N_ACGGCCAAGGGTCGAT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	266
+SMC10-N_GGGAATGAGACCGGAT	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	267
+SMC14-T_TACACGAGTAGCGCAA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	268
+SMC15-T_GACGTGCGTAACGCGA	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	269
+SMC20-T_CTAGCCTGTATGAATG	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	270
+SMC01-N_GTAACTGCATAGAAAC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	271
+SMC02-N_CAAGATCAGTCGATAA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	272
+SMC04-N_ACCCACTTCTCTTATG	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	273
+SMC07-T_GCTCCTACAGTCAGCC	SMC07	Tumor	SMC07-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	274
+SMC08-N_TCTTTCCTCCATGCTC	SMC08	Normal	SMC08-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	275
+SMC09-N_AGCGTCGAGAGGGATA	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	276
+SMC10-T_GCGCAGTTCGGTCTAA	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	277
+SMC14-T_TTTCCTCGTGGCCCTA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	278
+SMC15-T_CTAACTTGTTCAGTAC	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	279
+SMC20-T_CGACTTCAGGCATGTG	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	280
+SMC01-N_TTGACTTAGAAGGCCT	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	281
+SMC02-N_TTGCGTCTCGCAAACT	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	282
+SMC04-N_TCGCGTTAGTACACCT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	283
+SMC07-N_GCATGATCAGACGCCT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	284
+SMC09-N_CAGATCATCGGCGCAT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	285
+SMC10-T_ACACTGAGTCTCATCC	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	286
+SMC14-T_CAGCTAAAGTACATGA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	287
+SMC15-T_ATCTACTTCAAGCCTA	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	288
+SMC20-T_CTCGTCAGTCGCTTCT	SMC20	Tumor	SMC20-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	289
+SMC01-N_CGTGAGCGTCTCTCGT	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	290
+SMC02-N_TCAGCAAAGAAACGCC	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	291
+SMC04-N_CTGTGCTCATTAGGCT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	292
+SMC07-N_CTTAGGATCACTGGGC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	293
+SMC09-T_TGGTTCCCAGGGTTAG	SMC09	Tumor	SMC09-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	294
+SMC10-N_GCGAGAAAGAAACGCC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	295
+SMC14-T_AATCGGTTCGCGGATC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	296
+SMC15-T_GTGTTAGCAGCAGTTT	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	297
+SMC01-N_CACAGGCAGAAGCCCA	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	298
+SMC02-N_ACGAGGAAGATGTGTA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	299
+SMC04-N_GCGCGATGTATCGCAT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	300
+SMC07-N_TGTGTTTTCTGATTCT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	301
+SMC09-N_GGTATTGCACAGCCCA	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	302
+SMC10-N_ACACTGAAGCACAGGT	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	303
+SMC14-T_GTCAAGTGTCTCTCGT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	304
+SMC15-T_AGCAGCCTCTGAGTGT	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	305
+SMC01-N_ATAAGAGCAGACACTT	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	306
+SMC02-N_ATAAGAGTCACCTTAT	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	307
+SMC04-N_AGCGGTCTCAGTTTGG	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	308
+SMC07-N_GTCTCGTTCATCGATG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	309
+SMC09-T_GGCTCGATCACCCTCA	SMC09	Tumor	SMC09-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	310
+SMC10-N_CGTAGGCCATCAGTAC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	311
+SMC14-T_AGTAGTCTCACAACGT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	312
+SMC15-T_CGTCTACAGATGGCGT	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	313
+SMC01-N_TCTCATATCATGTAGC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	314
+SMC02-N_GATCGTAAGAATTGTG	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	315
+SMC04-N_ACACCGGTCCGTACAA	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	316
+SMC07-N_GACGTTATCCGAATGT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	317
+SMC09-N_CTCGAGGCAAGTCTGT	SMC09	Normal	SMC09-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	318
+SMC10-N_CCAGCGATCCGCATAA	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	319
+SMC14-T_GTTCTCGGTCACTGGC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	320
+SMC15-T_CAACCAAGTAGATTAG	SMC15	Tumor	SMC15-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	321
+SMC01-N_CTCACACCATCGACGC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	322
+SMC02-N_CGAATGTAGAGCTATA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	323
+SMC04-N_ACTATCTAGCTATGCT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	324
+SMC07-N_AAGGAGCCAAGTTCTG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	325
+SMC10-T_CTCGGAGGTGAGCGAT	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	326
+SMC14-T_CGGAGTCCATGCCTTC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	327
+SMC01-N_GGCAATTAGGGAAACA	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	328
+SMC02-N_AAACCTGCATATGGTC	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	329
+SMC04-N_TGCCCATCAATGGTCT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	330
+SMC07-T_GTACTCCAGCTCTCGG	SMC07	Tumor	SMC07-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	331
+SMC10-T_CATCAAGTCCGCGTTT	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	332
+SMC14-T_GGAACTTGTTATCACG	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	333
+SMC01-N_CTTCTCTTCGGGAGTA	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	334
+SMC02-N_AACCGCGAGCCAGAAC	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	335
+SMC04-T_ACATGGTAGAGTCTGG	SMC04	Tumor	SMC04-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	336
+SMC07-N_GTCGGGTGTTAGTGGG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	337
+SMC10-N_CCATTCGCAAGCTGGA	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	338
+SMC14-T_CGAGAAGGTTCGCGAC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	339
+SMC01-N_CGAACATCATCGGAAG	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	340
+SMC02-N_CCTACACAGGGCACTA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	341
+SMC04-N_TGCTACCAGATGTGGC	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	342
+SMC07-N_AGAGTGGAGTGTCCAT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	343
+SMC10-T_CGTTAGAGTCGAAAGC	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	344
+SMC14-T_CCTCAGTTCAGTCCCT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	345
+SMC01-N_ACCAGTAAGCCAGAAC	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	346
+SMC02-N_ACGAGGAAGCAGCGTA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	347
+SMC04-T_TGGCGCATCGGCTTGG	SMC04	Tumor	SMC04-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	348
+SMC07-N_CGCTTCAAGTCGATAA	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	349
+SMC10-N_CTAACTTAGCGTCAAG	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	350
+SMC14-T_TACTTACTCTAACGGT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	351
+SMC01-N_TACGGATGTGGTCTCG	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	352
+SMC02-N_TCATTTGGTCCAACTA	SMC02	Normal	SMC02-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	353
+SMC04-N_GTACGTACAGCTGTAT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	354
+SMC07-N_TCAGCTCAGTATTGGA	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	355
+SMC10-N_ATCATCTGTCCTCTTG	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	356
+SMC14-T_CTTAGGACACGAAAGC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	357
+SMC01-N_ACTGTCCCACAGACAG	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	358
+SMC04-N_CTTCTCTCAGGTTTCA	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	359
+SMC07-N_AAAGTAGTCGGCTTGG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	360
+SMC10-N_TGACTAGGTCCATCCT	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	361
+SMC14-T_CCTAAAGGTAGCTTGT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	362
+SMC01-N_ACGTCAAAGGGCACTA	SMC01	Normal	SMC01-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	363
+SMC04-T_CCGGGATCACCGATAT	SMC04	Tumor	SMC04-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	364
+SMC07-N_TAGACCAAGTCATGCT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	365
+SMC10-N_GCTGCAGCAACGATCT	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	366
+SMC14-T_ACCCACTGTTCCGTCT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	367
+SMC04-N_AACTTTCCAGAGCCAA	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	368
+SMC07-T_CGTCCATTCTTACCGC	SMC07	Tumor	SMC07-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	369
+SMC10-N_GTTCGGGCACTGTCGG	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	370
+SMC14-T_CGAGAAGGTAGGCTGA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	371
+SMC04-N_CGCCAAGAGAGCTTCT	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	372
+SMC07-N_GGGACCTAGCCAGAAC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	373
+SMC10-N_CAAGTTGTCAGAGACG	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	374
+SMC14-T_ACGTCAAGTTGGTGGA	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	375
+SMC04-N_ACGCCGAGTCCGAACC	SMC04	Normal	SMC04-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	376
+SMC07-N_CCAGCGAGTATTAGCC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	377
+SMC10-N_GGGACCTAGACAAGCC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	378
+SMC14-T_CCGTTCATCTCCGGTT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	379
+SMC07-N_CATGACAGTTGACGTT	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	380
+SMC10-T_AAAGATGAGCAGACTG	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	381
+SMC14-T_TCGGGACAGAGACTAT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	382
+SMC07-T_CTCTGGTAGGATCGCA	SMC07	Tumor	SMC07-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	383
+SMC10-N_TGCCCTACATGTAGTC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	384
+SMC14-T_CCCATACGTAAGTGGC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	385
+SMC07-N_GCTGCGATCCACGACG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	386
+SMC10-N_CGGCTAGGTCGACTAT	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	387
+SMC14-T_CTCGAAACATGGATGG	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	388
+SMC07-N_GTGCGGTTCGTCGTTC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	389
+SMC10-N_TTGCGTCAGATGTTAG	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	390
+SMC14-T_GCCAAATTCAGCATGT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	391
+SMC07-N_TCGTAGATCAGGCGAA	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	392
+SMC10-T_ACACCCTGTCAACATC	SMC10	Tumor	SMC10-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	393
+SMC14-T_CAGCTGGTCCGAAGAG	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	394
+SMC07-N_GAGGTGAGTATTAGCC	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	395
+SMC10-N_AACACGTCAAGTTGTC	SMC10	Normal	SMC10-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	396
+SMC14-T_ATTATCCGTGCGAAAC	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	397
+SMC07-N_ACACTGAGTTCCACGG	SMC07	Normal	SMC07-N	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	398
+SMC14-T_AGCGGTCAGGAGCGTT	SMC14	Tumor	SMC14-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	399
+SMC07-T_GCATGTAAGCTGGAAC	SMC07	Tumor	SMC07-T	Stromal cells	Smooth muscle cells	smooth_muscle_like	smooth_muscle_like	400
+SMC01-T_AGCATACCATGAAGTA	SMC01	Tumor	SMC01-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	401
+SMC02-N_CTAATGGTCTACTTAC	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	402
+SMC03-T_CGCCAAGTCTTAACCT	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	403
+SMC04-N_TACAGTGAGACAAGCC	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	404
+SMC05-T_TTCTACATCACCACCT	SMC05	Tumor	SMC05-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	405
+SMC06-T_ACACCAACACACCGAC	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	406
+SMC07-T_ACATCAGTCTAGAGTC	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	407
+SMC08-N_CCTTCCCCACGGTAGA	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	408
+SMC09-T_GACCTGGGTTAGTGGG	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	409
+SMC10-N_CTAAGACAGGCTCTTA	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	410
+SMC11-T_CAGCTAACAGACGCAA	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	411
+SMC14-T_CCTTCGAGTCCAGTTA	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	412
+SMC15-T_CACAGTATCTGTCAAG	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	413
+SMC16-T_GGATGTTCAGTATAAG	SMC16	Tumor	SMC16-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	414
+SMC17-T_GCTCCTATCTTGAGGT	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	415
+SMC19-T_GCGACCAAGCTAGCCC	SMC19	Tumor	SMC19-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	416
+SMC20-T_GTCACAAAGTTAGCGG	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	417
+SMC22-T_AACTGGTAGTAGGCCA	SMC22	Tumor	SMC22-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	418
+SMC23-T_CTCAGAAGTGCAGACA	SMC23	Tumor	SMC23-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	419
+SMC24-T_CACCTTGAGTCACGCC	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	420
+SMC25-T_GGCTGGTAGAATTGTG	SMC25	Tumor	SMC25-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	421
+SMC01-N_TAGGCATCACGGACAA	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	422
+SMC02-N_AGCATACCAGTAGAGC	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	423
+SMC03-T_CAGTCCTGTACCAGTT	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	424
+SMC04-T_CGTTAGAGTTCACCTC	SMC04	Tumor	SMC04-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	425
+SMC05-N_ATCACGAAGACACGAC	SMC05	Normal	SMC05-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	426
+SMC06-T_GAAACTCAGCGACGTA	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	427
+SMC07-T_TCCCGATCATCGATGT	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	428
+SMC08-N_ACGGGTCAGGAGTACC	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	429
+SMC09-T_AATCGGTCAGTGACAG	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	430
+SMC10-T_AGGGAGTAGAAACGAG	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	431
+SMC11-T_GAACATCAGACCCACC	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	432
+SMC14-T_AACCATGTCGCCAAAT	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	433
+SMC15-T_CATCCACAGCCACGTC	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	434
+SMC16-T_CAGATCACATCCGCGA	SMC16	Tumor	SMC16-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	435
+SMC17-T_ACACTGAGTCTGATTG	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	436
+SMC19-T_TTCTCCTCATCGGACC	SMC19	Tumor	SMC19-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	437
+SMC20-T_CGGTTAACACTTGGAT	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	438
+SMC22-T_CACACTCAGGGTCTCC	SMC22	Tumor	SMC22-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	439
+SMC23-T_CGTGAGCGTCGCCATG	SMC23	Tumor	SMC23-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	440
+SMC24-T_ATCACGAGTCGACTAT	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	441
+SMC25-T_CATATGGGTACCGAGA	SMC25	Tumor	SMC25-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	442
+SMC01-N_GTGAAGGTCAGAGACG	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	443
+SMC02-T_CAGCCGAGTGTTGAGG	SMC02	Tumor	SMC02-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	444
+SMC03-T_TTAGGCATCGAATGGG	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	445
+SMC04-T_AAAGCAATCAGCCTAA	SMC04	Tumor	SMC04-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	446
+SMC05-T_GTCAAGTAGTCCAGGA	SMC05	Tumor	SMC05-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	447
+SMC06-N_CTAACTTCACCATCCT	SMC06	Normal	SMC06-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	448
+SMC07-T_CGCGTTTAGGCTAGCA	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	449
+SMC08-T_TAGTTGGGTCAGCTAT	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	450
+SMC09-T_CTCCTAGGTTCTCATT	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	451
+SMC10-N_GGTGTTAGTAGTACCT	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	452
+SMC11-T_CCTCTGACAAAGTCAA	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	453
+SMC14-T_GGCAATTCACGGACAA	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	454
+SMC15-T_ATTATCCAGAAGGACA	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	455
+SMC17-T_TCTCATATCAGTTAGC	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	456
+SMC19-T_GGGCACTAGACTCGGA	SMC19	Tumor	SMC19-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	457
+SMC20-T_GTAGGCCTCCTATTCA	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	458
+SMC23-T_ACTATCTAGATGCCTT	SMC23	Tumor	SMC23-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	459
+SMC24-T_AAAGATGCACGAAGCA	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	460
+SMC01-N_GTCGTAATCCTCGCAT	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	461
+SMC02-N_AACGTTGGTGCTTCTC	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	462
+SMC03-N_AGCGGTCGTTGTCGCG	SMC03	Normal	SMC03-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	463
+SMC04-N_TGCCCTACAGATCCAT	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	464
+SMC05-N_CAACTAGCAGACGTAG	SMC05	Normal	SMC05-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	465
+SMC06-T_GATTCAGTCTGACCTC	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	466
+SMC07-T_TGGCCAGGTAATCACC	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	467
+SMC08-N_TCGGGACGTTCGGCAC	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	468
+SMC09-N_GTCTTCGGTCCCTACT	SMC09	Normal	SMC09-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	469
+SMC10-N_CAGCAGCTCCCATTTA	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	470
+SMC11-T_TACGGATGTTTGTTGG	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	471
+SMC14-T_TGAAAGATCGTAGATC	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	472
+SMC15-T_TTAGGACAGGGAACGG	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	473
+SMC17-T_CGATCGGCATTTCACT	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	474
+SMC20-T_CTGTGCTAGCGAGAAA	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	475
+SMC23-T_TGCGTGGGTAGCCTAT	SMC23	Tumor	SMC23-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	476
+SMC24-T_CACACTCCACGAAGCA	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	477
+SMC01-T_CGATGGCAGCGGATCA	SMC01	Tumor	SMC01-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	478
+SMC02-N_ATCCACCAGATGGCGT	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	479
+SMC03-T_CCTTTCTTCGTAGGTT	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	480
+SMC04-T_ATCCACCAGCGTCAAG	SMC04	Tumor	SMC04-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	481
+SMC05-T_CTCACACTCACTCCTG	SMC05	Tumor	SMC05-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	482
+SMC06-N_GTGTGCGTCCATTCTA	SMC06	Normal	SMC06-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	483
+SMC07-T_CGAGCCATCTCCCTGA	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	484
+SMC08-N_TGGCCAGTCCAACCAA	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	485
+SMC09-T_AACGTTGGTTAAGACA	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	486
+SMC10-N_CAGTCCTAGCCGGTAA	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	487
+SMC11-T_CAGTCCTTCTTGAGAC	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	488
+SMC14-T_TATCTCATCGGAAACG	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	489
+SMC15-T_TCAGGTAAGCGATGAC	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	490
+SMC17-T_GTACTTTAGTGACATA	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	491
+SMC20-T_TGCCCTATCAAACCGT	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	492
+SMC23-T_CTACCCACAATCCGAT	SMC23	Tumor	SMC23-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	493
+SMC24-T_CTACCCATCCATGAAC	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	494
+SMC01-N_ACTGAGTGTCCGAGTC	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	495
+SMC02-T_ACGATACTCCGCGTTT	SMC02	Tumor	SMC02-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	496
+SMC03-T_GGGCATCTCGCTTAGA	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	497
+SMC04-N_ACTGATGTCGTGGTCG	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	498
+SMC05-T_CATTATCAGCTAAGAT	SMC05	Tumor	SMC05-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	499
+SMC06-T_AGAGTGGGTTCTCATT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	500
+SMC07-T_GTTCATTGTCCAAGTT	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	501
+SMC08-T_GTGCGGTCACGAAATA	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	502
+SMC09-T_TGGTTCCTCACAGTAC	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	503
+SMC10-N_GTTCGGGTCCCAAGAT	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	504
+SMC11-T_TACGGGCGTGTGCGTC	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	505
+SMC14-T_CTTGGCTCAAGAAAGG	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	506
+SMC15-T_CCTTCGAAGGTGCTTT	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	507
+SMC17-T_GATCGCGAGGTTACCT	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	508
+SMC20-T_CAAGTTGTCGCCTGAG	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	509
+SMC24-T_TGACTTTTCCAACCAA	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	510
+SMC01-T_CATCAGACAGTAAGCG	SMC01	Tumor	SMC01-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	511
+SMC02-N_CAAGAAAAGCGATTCT	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	512
+SMC03-N_CAGCTGGCAGGTCCAC	SMC03	Normal	SMC03-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	513
+SMC04-N_CTGTGCTCATGCCTAA	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	514
+SMC05-N_GGATGTTAGGAGTAGA	SMC05	Normal	SMC05-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	515
+SMC06-N_GAACATCAGCACCGTC	SMC06	Normal	SMC06-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	516
+SMC07-T_GACGCGTCAGGATCGA	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	517
+SMC08-N_CGCGGTAGTCCATGAT	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	518
+SMC09-T_ACGCAGCAGGGCTTCC	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	519
+SMC10-N_ATTACTCCATACAGCT	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	520
+SMC11-T_TACAGTGTCAACTCTT	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	521
+SMC14-T_AGATCTGCACACATGT	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	522
+SMC15-T_CAAGATCAGTATCTCG	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	523
+SMC17-T_ACGCCAGGTACCATCA	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	524
+SMC20-T_CTGCCTAAGCCCGAAA	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	525
+SMC24-T_TAAGTGCGTCTGCGGT	SMC24	Tumor	SMC24-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	526
+SMC01-T_TCAGATGAGTCGTTTG	SMC01	Tumor	SMC01-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	527
+SMC02-N_GCAGTTAAGAATGTTG	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	528
+SMC03-T_AGGCCGTGTGGTGTAG	SMC03	Tumor	SMC03-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	529
+SMC04-N_CAGGTGCAGGATGCGT	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	530
+SMC05-N_AGTAGTCGTTAAGTAG	SMC05	Normal	SMC05-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	531
+SMC06-T_CCGTGGAAGGGCATGT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	532
+SMC07-T_GAAGCAGTCAAGGCTT	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	533
+SMC08-T_TCCACACTCTGGAGCC	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	534
+SMC09-T_GCTGCAGGTAGGCATG	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	535
+SMC10-N_CCCAGTTCAGGTGCCT	SMC10	Normal	SMC10-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	536
+SMC11-T_GGTATTGCAGATTGCT	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	537
+SMC14-T_GGGCACTGTCATCGGC	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	538
+SMC15-T_GTGCTTCGTATGCTTG	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	539
+SMC17-T_CTCGAGGTCTTTACAC	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	540
+SMC20-T_CTCGGGATCTGCCAGG	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	541
+SMC01-N_CGAGCCACATACAGCT	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	542
+SMC02-T_GAACCTAAGGACAGAA	SMC02	Tumor	SMC02-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	543
+SMC04-N_CTGCGGAGTTGTGGCC	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	544
+SMC06-T_CATGGCGAGAGCTTCT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	545
+SMC07-T_CAACCTCGTGCACTTA	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	546
+SMC08-T_AGGTCCGAGAATCTCC	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	547
+SMC09-T_CGCTTCACATATGAGA	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	548
+SMC10-T_AACTTTCTCAACACCA	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	549
+SMC11-T_GTGTTAGAGGGAACGG	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	550
+SMC14-T_GAATGAATCTCGATGA	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	551
+SMC15-T_GAACCTACAGCCTTTC	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	552
+SMC17-T_TAAGTGCTCAGCCTAA	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	553
+SMC20-T_GGGTCTGTCTCCAGGG	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	554
+SMC01-T_GAGGTGATCTAACTCT	SMC01	Tumor	SMC01-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	555
+SMC02-T_GGATGTTGTTAAGAAC	SMC02	Tumor	SMC02-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	556
+SMC04-T_CGTCAGGAGTGAAGAG	SMC04	Tumor	SMC04-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	557
+SMC06-T_CGTCCATGTAGCCTAT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	558
+SMC07-T_CCTTCGATCGTATCAG	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	559
+SMC08-N_AACTCCCAGGATATAC	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	560
+SMC09-T_ATGAGGGCACTTCTGC	SMC09	Tumor	SMC09-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	561
+SMC10-T_CCATTCGTCTCTGAGA	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	562
+SMC11-T_GCATGCGGTCAGAATA	SMC11	Tumor	SMC11-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	563
+SMC14-T_GAAGCAGCACTGAAGG	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	564
+SMC15-T_CATCGAACACCGTTGG	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	565
+SMC17-T_CGTCCATTCGCTTGTC	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	566
+SMC20-T_TTGTAGGCACCTGGTG	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	567
+SMC01-N_GCTGCGAAGAGCTTCT	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	568
+SMC02-N_GTGTGCGGTCGACTAT	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	569
+SMC04-N_ACGATGTAGGAGTCTG	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	570
+SMC06-N_CTCTGGTAGAGACTAT	SMC06	Normal	SMC06-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	571
+SMC07-T_AACTGGTGTAGAAGGA	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	572
+SMC08-T_TCTGAGAAGCCTTGAT	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	573
+SMC10-T_TCGCGAGGTAGAGCTG	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	574
+SMC14-T_AACACGTGTACAGTGG	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	575
+SMC15-T_GACGCGTTCACAGTAC	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	576
+SMC17-T_TTGGCAACATAGAAAC	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	577
+SMC20-T_CTGTGCTGTCTCGTTC	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	578
+SMC01-N_GACAGAGAGGAATTAC	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	579
+SMC02-N_ATAAGAGGTCACACGC	SMC02	Normal	SMC02-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	580
+SMC04-N_TTCTACAGTAGCCTAT	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	581
+SMC06-T_GGTATTGTCACCACCT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	582
+SMC07-T_TATCTCAGTCTAGTGT	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	583
+SMC08-N_ATGAGGGGTCGCTTTC	SMC08	Normal	SMC08-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	584
+SMC10-T_GCGGGTTAGACGCACA	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	585
+SMC14-T_TCCACACGTGCTAGCC	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	586
+SMC15-T_GGACATTGTTATCGGT	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	587
+SMC17-T_CAGCTAACAGCTATTG	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	588
+SMC20-T_CATCGGGAGATACACA	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	589
+SMC01-N_GCCAAATAGAGCAATT	SMC01	Normal	SMC01-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	590
+SMC02-T_ACTGAGTCAGTGAGTG	SMC02	Tumor	SMC02-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	591
+SMC04-N_CCTCTGACAGTCAGAG	SMC04	Normal	SMC04-N	Stromal cells	Pericytes	pericyte_like	pericyte_like	592
+SMC06-T_ACGAGCCTCCACGAAT	SMC06	Tumor	SMC06-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	593
+SMC07-T_TTTCCTCGTTACCAGT	SMC07	Tumor	SMC07-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	594
+SMC08-T_GCACATAAGCACAGGT	SMC08	Tumor	SMC08-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	595
+SMC10-T_TGGTTAGTCCATGAGT	SMC10	Tumor	SMC10-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	596
+SMC14-T_TCTGGAAGTTCAGGCC	SMC14	Tumor	SMC14-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	597
+SMC15-T_ATGAGGGGTAAGGATT	SMC15	Tumor	SMC15-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	598
+SMC17-T_GTGTGCGGTCAGAGGT	SMC17	Tumor	SMC17-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	599
+SMC20-T_ACCAGTAAGCGGCTTC	SMC20	Tumor	SMC20-T	Stromal cells	Pericytes	pericyte_like	pericyte_like	600
+SMC01-N_ACGATACGTACGCACC	SMC01	Normal	SMC01-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	601
+SMC02-T_GTACTTTGTGCCTGGT	SMC02	Tumor	SMC02-T	Stromal cells	Lymphatic ECs	endothelial	endothelial	602
+SMC03-T_TACTCGCCACTTAAGC	SMC03	Tumor	SMC03-T	Stromal cells	Tip-like ECs	endothelial	endothelial	603
+SMC04-N_CTCGGAGTCTTGCATT	SMC04	Normal	SMC04-N	Stromal cells	Tip-like ECs	endothelial	endothelial	604
+SMC05-N_GGATGTTCAATAGCGG	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	605
+SMC06-N_AAAGCAAGTTAGAACA	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	606
+SMC07-T_GACTACAAGCTCCTTC	SMC07	Tumor	SMC07-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	607
+SMC08-T_AGCGGTCTCTGGGCCA	SMC08	Tumor	SMC08-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	608
+SMC09-T_GCCAAATAGCTAGTGG	SMC09	Tumor	SMC09-T	Stromal cells	Tip-like ECs	endothelial	endothelial	609
+SMC10-T_CACCTTGAGGTCGGAT	SMC10	Tumor	SMC10-T	Stromal cells	Tip-like ECs	endothelial	endothelial	610
+SMC11-T_ACTTACTTCATGCATG	SMC11	Tumor	SMC11-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	611
+SMC14-T_AAGGTTCAGAGTCTGG	SMC14	Tumor	SMC14-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	612
+SMC15-T_GATCGATAGAGTAATC	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	613
+SMC16-T_AAGGAGCTCAAGGCTT	SMC16	Tumor	SMC16-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	614
+SMC17-T_ATAACGCGTTTGTTTC	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	615
+SMC18-T_CTCGGGATCAGGCCCA	SMC18	Tumor	SMC18-T	Stromal cells	Tip-like ECs	endothelial	endothelial	616
+SMC19-T_CACCTTGAGAAGCCCA	SMC19	Tumor	SMC19-T	Stromal cells	Tip-like ECs	endothelial	endothelial	617
+SMC20-T_GCGCAGTAGTACGATA	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	618
+SMC22-T_GTGTTAGCACCATGTA	SMC22	Tumor	SMC22-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	619
+SMC23-T_CCACCTAAGACAGACC	SMC23	Tumor	SMC23-T	Stromal cells	Tip-like ECs	endothelial	endothelial	620
+SMC24-T_GTCTTCGCATCACCCT	SMC24	Tumor	SMC24-T	Stromal cells	Tip-like ECs	endothelial	endothelial	621
+SMC25-T_CTGCCTAAGTTGTAGA	SMC25	Tumor	SMC25-T	Stromal cells	Tip-like ECs	endothelial	endothelial	622
+SMC01-N_AACTCTTCAATGGTCT	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	623
+SMC02-N_ACTGCTCAGACTAGGC	SMC02	Normal	SMC02-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	624
+SMC03-N_CTCACACCATCTATGG	SMC03	Normal	SMC03-N	Stromal cells	Tip-like ECs	endothelial	endothelial	625
+SMC04-N_TGACTAGCATGCAACT	SMC04	Normal	SMC04-N	Stromal cells	Tip-like ECs	endothelial	endothelial	626
+SMC05-N_GCATACAGTGACGGTA	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	627
+SMC06-N_GACTAACAGAGTCTGG	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	628
+SMC07-T_CTGCTGTGTCAGATAA	SMC07	Tumor	SMC07-T	Stromal cells	Tip-like ECs	endothelial	endothelial	629
+SMC08-N_TCGCGAGCAGCTGTAT	SMC08	Normal	SMC08-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	630
+SMC09-N_CGTGTAACATCCGTGG	SMC09	Normal	SMC09-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	631
+SMC10-N_GTATCTTAGTTGCAGG	SMC10	Normal	SMC10-N	Stromal cells	Tip-like ECs	endothelial	endothelial	632
+SMC11-T_GGTGCGTAGTGTTTGC	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	633
+SMC14-T_CGCTGGATCACGGTTA	SMC14	Tumor	SMC14-T	Stromal cells	Tip-like ECs	endothelial	endothelial	634
+SMC15-T_TATCTCACAGGGAGAG	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	635
+SMC16-T_TACTTGTTCCAGAGGA	SMC16	Tumor	SMC16-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	636
+SMC17-T_TTTATGCTCGCGTTTC	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	637
+SMC18-T_CACCACTAGGATTCGG	SMC18	Tumor	SMC18-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	638
+SMC19-T_TGACAACAGTCGAGTG	SMC19	Tumor	SMC19-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	639
+SMC20-T_GCACATATCCTATGTT	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	640
+SMC22-T_AGCGTATAGAGACTAT	SMC22	Tumor	SMC22-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	641
+SMC23-T_TTGCCGTTCTGAGGGA	SMC23	Tumor	SMC23-T	Stromal cells	Tip-like ECs	endothelial	endothelial	642
+SMC24-T_TGTTCCGCATCGGTTA	SMC24	Tumor	SMC24-T	Stromal cells	Proliferative ECs	endothelial	endothelial	643
+SMC25-T_CGAATGTTCTCTAGGA	SMC25	Tumor	SMC25-T	Stromal cells	Proliferative ECs	endothelial	endothelial	644
+SMC01-N_TACTCGCTCCTGTACC	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	645
+SMC02-N_AGAATAGAGGAGTCTG	SMC02	Normal	SMC02-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	646
+SMC03-T_CCCAGTTTCCATGCTC	SMC03	Tumor	SMC03-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	647
+SMC04-T_GCGAGAATCAGGCAAG	SMC04	Tumor	SMC04-T	Stromal cells	Proliferative ECs	endothelial	endothelial	648
+SMC05-N_TACTCATAGACCTTTG	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	649
+SMC06-N_TGAAAGATCCCTCAGT	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	650
+SMC07-T_TGTGGTATCGGTGTTA	SMC07	Tumor	SMC07-T	Stromal cells	Tip-like ECs	endothelial	endothelial	651
+SMC08-N_CTCTGGTGTAAGGGCT	SMC08	Normal	SMC08-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	652
+SMC09-T_TCACGAAGTGGAAAGA	SMC09	Tumor	SMC09-T	Stromal cells	Tip-like ECs	endothelial	endothelial	653
+SMC10-N_AGCTCTCTCAGTTTGG	SMC10	Normal	SMC10-N	Stromal cells	Tip-like ECs	endothelial	endothelial	654
+SMC11-T_CGCTTCAAGCCACGCT	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	655
+SMC14-T_CACACCTGTTTGGGCC	SMC14	Tumor	SMC14-T	Stromal cells	Tip-like ECs	endothelial	endothelial	656
+SMC15-T_CAAGGCCGTTACCAGT	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	657
+SMC16-T_CTCACACTCCTACAGA	SMC16	Tumor	SMC16-T	Stromal cells	Tip-like ECs	endothelial	endothelial	658
+SMC17-T_CGTTCTGTCAATCACG	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	659
+SMC18-T_CATTATCGTACAGCAG	SMC18	Tumor	SMC18-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	660
+SMC19-T_TTCTTAGGTATTAGCC	SMC19	Tumor	SMC19-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	661
+SMC20-T_CGAGCCACAATGAAAC	SMC20	Tumor	SMC20-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	662
+SMC22-T_GTCTTCGCATGGTCTA	SMC22	Tumor	SMC22-T	Stromal cells	Tip-like ECs	endothelial	endothelial	663
+SMC23-T_AGCGTATGTGTGCGTC	SMC23	Tumor	SMC23-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	664
+SMC24-T_ATTGGTGAGGGTGTGT	SMC24	Tumor	SMC24-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	665
+SMC25-T_CTAGAGTAGATCCGAG	SMC25	Tumor	SMC25-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	666
+SMC01-N_TTTATGCAGCCGATTT	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	667
+SMC02-N_GGACATTCAGGCTCAC	SMC02	Normal	SMC02-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	668
+SMC03-N_GCGCGATCACGAGGTA	SMC03	Normal	SMC03-N	Stromal cells	Tip-like ECs	endothelial	endothelial	669
+SMC04-N_GCGGGTTAGAAGAAGC	SMC04	Normal	SMC04-N	Stromal cells	Tip-like ECs	endothelial	endothelial	670
+SMC05-N_GGGCATCTCAAACCGT	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	671
+SMC06-T_GTGAAGGAGCATCATC	SMC06	Tumor	SMC06-T	Stromal cells	Lymphatic ECs	endothelial	endothelial	672
+SMC07-N_TGTCCCAAGTCATGCT	SMC07	Normal	SMC07-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	673
+SMC08-N_CCTAGCTAGACGCAAC	SMC08	Normal	SMC08-N	Stromal cells	Tip-like ECs	endothelial	endothelial	674
+SMC09-N_ATCTGCCGTGTAAGTA	SMC09	Normal	SMC09-N	Stromal cells	Tip-like ECs	endothelial	endothelial	675
+SMC10-N_GCTGGGTTCCAGTATG	SMC10	Normal	SMC10-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	676
+SMC11-T_AACTCCCTCACAGTAC	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	677
+SMC14-T_CACCACTCAGCTATTG	SMC14	Tumor	SMC14-T	Stromal cells	Tip-like ECs	endothelial	endothelial	678
+SMC15-T_ACGGGTCGTTCAGGCC	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	679
+SMC16-T_TCTGAGAGTTTGTGTG	SMC16	Tumor	SMC16-T	Stromal cells	Tip-like ECs	endothelial	endothelial	680
+SMC17-T_CCTACCATCATTTGGG	SMC17	Tumor	SMC17-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	681
+SMC18-T_CGTCCATAGGGTTTCT	SMC18	Tumor	SMC18-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	682
+SMC19-T_CGCTGGAAGAGCAATT	SMC19	Tumor	SMC19-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	683
+SMC20-T_CCTATTAAGTTAACGA	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	684
+SMC22-T_GTCATTTAGCGATATA	SMC22	Tumor	SMC22-T	Stromal cells	Tip-like ECs	endothelial	endothelial	685
+SMC23-T_ATTACTCAGTGTTTGC	SMC23	Tumor	SMC23-T	Stromal cells	Tip-like ECs	endothelial	endothelial	686
+SMC24-T_TCGCGAGAGCTAGTCT	SMC24	Tumor	SMC24-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	687
+SMC25-T_CCCAATCTCTAACGGT	SMC25	Tumor	SMC25-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	688
+SMC01-N_GCGACCAAGGTACTCT	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	689
+SMC02-N_ATCGAGTCATCAGTCA	SMC02	Normal	SMC02-N	Stromal cells	Tip-like ECs	endothelial	endothelial	690
+SMC03-N_TCAACGATCCTGCCAT	SMC03	Normal	SMC03-N	Stromal cells	Tip-like ECs	endothelial	endothelial	691
+SMC04-N_CGTAGGCAGGCCGAAT	SMC04	Normal	SMC04-N	Stromal cells	Tip-like ECs	endothelial	endothelial	692
+SMC05-N_ACGCCGAAGTACATGA	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	693
+SMC06-N_CGCCAAGCAGGCTGAA	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	694
+SMC07-N_CATCAAGAGACCGGAT	SMC07	Normal	SMC07-N	Stromal cells	Tip-like ECs	endothelial	endothelial	695
+SMC08-N_GAAACTCGTTCCACAA	SMC08	Normal	SMC08-N	Stromal cells	Tip-like ECs	endothelial	endothelial	696
+SMC09-N_CGACCTTTCAACTCTT	SMC09	Normal	SMC09-N	Stromal cells	Tip-like ECs	endothelial	endothelial	697
+SMC10-T_GACGCGTTCGTAGATC	SMC10	Tumor	SMC10-T	Stromal cells	Tip-like ECs	endothelial	endothelial	698
+SMC11-T_GGGCACTTCGCGTAGC	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	699
+SMC14-T_GTACTCCAGTCTTGCA	SMC14	Tumor	SMC14-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	700
+SMC15-T_TTATGCTGTGAGGCTA	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	701
+SMC16-T_CTACATTAGAGCTGGT	SMC16	Tumor	SMC16-T	Stromal cells	Lymphatic ECs	endothelial	endothelial	702
+SMC17-T_GTCATTTCATACTCTT	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	703
+SMC18-T_CCGGTAGGTTAAGTAG	SMC18	Tumor	SMC18-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	704
+SMC19-T_GTAACGTTCTCCAGGG	SMC19	Tumor	SMC19-T	Stromal cells	Tip-like ECs	endothelial	endothelial	705
+SMC20-T_TTCTTAGTCTTCGAGA	SMC20	Tumor	SMC20-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	706
+SMC22-T_ATCATGGGTTCAGCGC	SMC22	Tumor	SMC22-T	Stromal cells	Tip-like ECs	endothelial	endothelial	707
+SMC23-T_GTTTCTAGTGGCAAAC	SMC23	Tumor	SMC23-T	Stromal cells	Tip-like ECs	endothelial	endothelial	708
+SMC24-T_CGATTGAGTCTCTCTG	SMC24	Tumor	SMC24-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	709
+SMC25-T_ATAAGAGAGTCGCCGT	SMC25	Tumor	SMC25-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	710
+SMC01-N_CGAGAAGGTCTGGTCG	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	711
+SMC02-N_GGGTCTGCAAGCGATG	SMC02	Normal	SMC02-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	712
+SMC03-T_CCGGGATTCTCCTATA	SMC03	Tumor	SMC03-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	713
+SMC04-T_GTCCTCAAGCGGATCA	SMC04	Tumor	SMC04-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	714
+SMC05-N_ACACCCTTCTGGTGTA	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	715
+SMC06-N_CGTCACTCATTACGAC	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	716
+SMC07-T_ACTATCTCACCACCAG	SMC07	Tumor	SMC07-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	717
+SMC08-T_AGCCTAAGTCACTTCC	SMC08	Tumor	SMC08-T	Stromal cells	Tip-like ECs	endothelial	endothelial	718
+SMC09-N_GACCTGGGTGCAGACA	SMC09	Normal	SMC09-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	719
+SMC10-N_CATCCACCATCCGGGT	SMC10	Normal	SMC10-N	Stromal cells	Tip-like ECs	endothelial	endothelial	720
+SMC11-T_ATGCGATCACTAAGTC	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	721
+SMC14-T_TGGTTAGGTTGCGTTA	SMC14	Tumor	SMC14-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	722
+SMC15-T_ACGCCAGGTGCGGTAA	SMC15	Tumor	SMC15-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	723
+SMC16-T_CCGTGGAAGCGTTCCG	SMC16	Tumor	SMC16-T	Stromal cells	Tip-like ECs	endothelial	endothelial	724
+SMC17-T_CGGCTAGCAGCCAGAA	SMC17	Tumor	SMC17-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	725
+SMC19-T_GCTTCCAAGGCGACAT	SMC19	Tumor	SMC19-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	726
+SMC20-T_TTAGGACTCGGCCGAT	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	727
+SMC22-T_CGCTATCCACCGAAAG	SMC22	Tumor	SMC22-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	728
+SMC23-T_AGGGTGATCAATACCG	SMC23	Tumor	SMC23-T	Stromal cells	Tip-like ECs	endothelial	endothelial	729
+SMC24-T_CGTTAGAAGGCCCGTT	SMC24	Tumor	SMC24-T	Stromal cells	Tip-like ECs	endothelial	endothelial	730
+SMC25-T_CTCGTACAGTCCATAC	SMC25	Tumor	SMC25-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	731
+SMC01-N_ACACCCTAGGGTGTGT	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	732
+SMC02-N_CACTCCAAGCTAACAA	SMC02	Normal	SMC02-N	Stromal cells	Tip-like ECs	endothelial	endothelial	733
+SMC03-T_CCTACCAAGAATTGTG	SMC03	Tumor	SMC03-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	734
+SMC04-N_TCGTAGAAGTTGAGAT	SMC04	Normal	SMC04-N	Stromal cells	Tip-like ECs	endothelial	endothelial	735
+SMC05-N_GGGCACTTCGGCTACG	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	736
+SMC06-N_ACGCAGCGTTCTGGTA	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	737
+SMC07-T_TGATTTCAGAGAGCTC	SMC07	Tumor	SMC07-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	738
+SMC08-N_TCAGCAAGTGTGGCTC	SMC08	Normal	SMC08-N	Stromal cells	Tip-like ECs	endothelial	endothelial	739
+SMC09-N_TCAGCAAGTCAATGTC	SMC09	Normal	SMC09-N	Stromal cells	Tip-like ECs	endothelial	endothelial	740
+SMC10-T_ACTTACTCATGTCTCC	SMC10	Tumor	SMC10-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	741
+SMC11-T_CTCCTAGGTTAGAACA	SMC11	Tumor	SMC11-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	742
+SMC14-T_GGATGTTTCACCATAG	SMC14	Tumor	SMC14-T	Stromal cells	Tip-like ECs	endothelial	endothelial	743
+SMC15-T_ATCCACCAGGCGCTCT	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	744
+SMC16-T_TGCTGCTGTCAGGACA	SMC16	Tumor	SMC16-T	Stromal cells	Lymphatic ECs	endothelial	endothelial	745
+SMC17-T_TGAGCCGCATGGTCTA	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	746
+SMC20-T_GCGAGAAGTCTCTCGT	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	747
+SMC22-T_CTAGTGAAGGCTATCT	SMC22	Tumor	SMC22-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	748
+SMC23-T_TATGCCCTCACCTTAT	SMC23	Tumor	SMC23-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	749
+SMC24-T_GTCTTCGTCTCTGAGA	SMC24	Tumor	SMC24-T	Stromal cells	Tip-like ECs	endothelial	endothelial	750
+SMC25-T_CCGGGATAGGCATGTG	SMC25	Tumor	SMC25-T	Stromal cells	Tip-like ECs	endothelial	endothelial	751
+SMC01-N_ACCTTTACAGGTTTCA	SMC01	Normal	SMC01-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	752
+SMC02-T_GTATCTTCATAGACTC	SMC02	Tumor	SMC02-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	753
+SMC03-N_GCGCAACCATTTGCCC	SMC03	Normal	SMC03-N	Stromal cells	Tip-like ECs	endothelial	endothelial	754
+SMC04-T_GTGCATATCCAAATGC	SMC04	Tumor	SMC04-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	755
+SMC05-N_CGCCAAGGTGTGAAAT	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	756
+SMC06-T_TGGTTCCTCATGTGGT	SMC06	Tumor	SMC06-T	Stromal cells	Tip-like ECs	endothelial	endothelial	757
+SMC07-N_TTCGGTCGTTTAAGCC	SMC07	Normal	SMC07-N	Stromal cells	Tip-like ECs	endothelial	endothelial	758
+SMC08-N_CAACTAGGTGTGAAAT	SMC08	Normal	SMC08-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	759
+SMC09-T_TGAGGGAAGTTCGCAT	SMC09	Tumor	SMC09-T	Stromal cells	Lymphatic ECs	endothelial	endothelial	760
+SMC10-T_ACTATCTGTCTGGTCG	SMC10	Tumor	SMC10-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	761
+SMC11-T_GCCTCTAAGCCTTGAT	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	762
+SMC14-T_GACAGAGTCAGTTAGC	SMC14	Tumor	SMC14-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	763
+SMC15-T_CACCACTCAAGAGGCT	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	764
+SMC16-T_CCACCTATCATCACCC	SMC16	Tumor	SMC16-T	Stromal cells	Tip-like ECs	endothelial	endothelial	765
+SMC17-T_AAGGCAGCAATCTACG	SMC17	Tumor	SMC17-T	Stromal cells	Tip-like ECs	endothelial	endothelial	766
+SMC20-T_CTCTAATTCCGTTGCT	SMC20	Tumor	SMC20-T	Stromal cells	Tip-like ECs	endothelial	endothelial	767
+SMC22-T_GGAACTTGTATGGTTC	SMC22	Tumor	SMC22-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	768
+SMC23-T_CCAATCCAGACCACGA	SMC23	Tumor	SMC23-T	Stromal cells	Proliferative ECs	endothelial	endothelial	769
+SMC24-T_CTCATTATCAAAGTAG	SMC24	Tumor	SMC24-T	Stromal cells	Tip-like ECs	endothelial	endothelial	770
+SMC25-T_TTTGTCAAGTTCGATC	SMC25	Tumor	SMC25-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	771
+SMC01-N_TAGAGCTTCTACCTGC	SMC01	Normal	SMC01-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	772
+SMC02-N_GATTCAGGTCAGATAA	SMC02	Normal	SMC02-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	773
+SMC03-T_CGCTATCTCCTATGTT	SMC03	Tumor	SMC03-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	774
+SMC04-N_GCTGGGTTCCTTTCGG	SMC04	Normal	SMC04-N	Stromal cells	Stalk-like ECs	endothelial	endothelial	775
+SMC05-N_CAACCTCTCAAGGTAA	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	776
+SMC06-N_CGATTGAAGTGTTGAA	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	777
+SMC07-N_CACATTTAGAAGCCCA	SMC07	Normal	SMC07-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	778
+SMC08-T_TGCTACCTCAGTGTTG	SMC08	Tumor	SMC08-T	Stromal cells	Tip-like ECs	endothelial	endothelial	779
+SMC09-N_GTGTGCGTCAGCAACT	SMC09	Normal	SMC09-N	Stromal cells	Lymphatic ECs	endothelial	endothelial	780
+SMC10-T_TACACGAAGACTTGAA	SMC10	Tumor	SMC10-T	Stromal cells	Tip-like ECs	endothelial	endothelial	781
+SMC11-T_CTTCTCTGTCTAGCCG	SMC11	Tumor	SMC11-T	Stromal cells	Tip-like ECs	endothelial	endothelial	782
+SMC14-T_GACGTGCGTCTTCTCG	SMC14	Tumor	SMC14-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	783
+SMC15-T_GGGACCTAGGTAGCCA	SMC15	Tumor	SMC15-T	Stromal cells	Tip-like ECs	endothelial	endothelial	784
+SMC16-T_GAAACTCCATGCAACT	SMC16	Tumor	SMC16-T	Stromal cells	Tip-like ECs	endothelial	endothelial	785
+SMC17-T_GGTATTGAGATGTAAC	SMC17	Tumor	SMC17-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	786
+SMC20-T_TATGCCCTCATGCTCC	SMC20	Tumor	SMC20-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	787
+SMC22-T_GTGCATACACACCGAC	SMC22	Tumor	SMC22-T	Stromal cells	Tip-like ECs	endothelial	endothelial	788
+SMC23-T_AGTAGTCAGTCGTACT	SMC23	Tumor	SMC23-T	Stromal cells	Proliferative ECs	endothelial	endothelial	789
+SMC24-T_AATCGGTCACAAGACG	SMC24	Tumor	SMC24-T	Stromal cells	Tip-like ECs	endothelial	endothelial	790
+SMC25-T_TTCGGTCTCTCTGTCG	SMC25	Tumor	SMC25-T	Stromal cells	Tip-like ECs	endothelial	endothelial	791
+SMC01-N_CAGCAGCAGGCAAAGA	SMC01	Normal	SMC01-N	Stromal cells	Tip-like ECs	endothelial	endothelial	792
+SMC02-N_CTAATGGGTACAAGTA	SMC02	Normal	SMC02-N	Stromal cells	Tip-like ECs	endothelial	endothelial	793
+SMC03-T_CCTTCCCGTGAAAGAG	SMC03	Tumor	SMC03-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	794
+SMC04-T_TCGGTAAGTATAGTAG	SMC04	Tumor	SMC04-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	795
+SMC05-N_GACGTTAGTTCGCTAA	SMC05	Normal	SMC05-N	Stromal cells	Tip-like ECs	endothelial	endothelial	796
+SMC06-N_CGAGAAGCAATTCCTT	SMC06	Normal	SMC06-N	Stromal cells	Tip-like ECs	endothelial	endothelial	797
+SMC07-N_ATCATGGAGATGTAAC	SMC07	Normal	SMC07-N	Stromal cells	Tip-like ECs	endothelial	endothelial	798
+SMC08-T_GACCAATCATCGGGTC	SMC08	Tumor	SMC08-T	Stromal cells	Tip-like ECs	endothelial	endothelial	799
+SMC09-T_CATATTCCAGAAGCAC	SMC09	Tumor	SMC09-T	Stromal cells	Stalk-like ECs	endothelial	endothelial	800
+SMC01-N_TCTGGAACATGCTAGT	SMC01	Normal	SMC01-N	T cells	CD4+ T cells	immune	immune	801
+SMC02-N_GGCGTGTGTTGATTCG	SMC02	Normal	SMC02-N	B cells	IgA+ Plasma	immune	immune	802
+SMC03-T_GTAGGCCGTCGACTAT	SMC03	Tumor	SMC03-T	Myeloids	SPP1+	immune	immune	803
+SMC04-N_AGGTCCGAGGTGCAAC	SMC04	Normal	SMC04-N	Mast cells	Mast cells	immune	immune	804
+SMC05-N_CGTTCTGTCGCCAGCA	SMC05	Normal	SMC05-N	B cells	IgA+ Plasma	immune	immune	805
+SMC06-N_CGTGTCTGTCGGCATC	SMC06	Normal	SMC06-N	B cells	CD19+CD20+ B	immune	immune	806
+SMC07-T_TGGTTAGAGGCCCTCA	SMC07	Tumor	SMC07-T	T cells	CD4+ T cells	immune	immune	807
+SMC08-T_GCCAAATAGCCACTAT	SMC08	Tumor	SMC08-T	Myeloids	SPP1+	immune	immune	808
+SMC09-N_TCCCGATAGGCACATG	SMC09	Normal	SMC09-N	T cells	CD4+ T cells	immune	immune	809
+SMC10-T_TGCCCTACACTGCCAG	SMC10	Tumor	SMC10-T	T cells	CD8+ T cells	immune	immune	810
+SMC11-T_CGAGCACAGTGGAGTC	SMC11	Tumor	SMC11-T	T cells	NK cells	immune	immune	811
+SMC14-T_GGGAGATTCACTTACT	SMC14	Tumor	SMC14-T	B cells	IgG+ Plasma	immune	immune	812
+SMC15-T_AGTCTTTAGACTAGGC	SMC15	Tumor	SMC15-T	T cells	Regulatory T cells	immune	immune	813
+SMC16-T_GATGCTACAGATCGGA	SMC16	Tumor	SMC16-T	T cells	T helper 17 cells	immune	immune	814
+SMC17-T_GCAGTTATCAAGGTAA	SMC17	Tumor	SMC17-T	T cells	CD8+ T cells	immune	immune	815
+SMC18-T_AACTCTTAGTGAAGAG	SMC18	Tumor	SMC18-T	T cells	Regulatory T cells	immune	immune	816
+SMC19-T_CTCTGGTTCTTTACGT	SMC19	Tumor	SMC19-T	T cells	CD4+ T cells	immune	immune	817
+SMC20-T_GGTGAAGTCTCGTTTA	SMC20	Tumor	SMC20-T	Myeloids	Pro-inflammatory	immune	immune	818
+SMC21-T_GATCTAGGTTTGTGTG	SMC21	Tumor	SMC21-T	T cells	Regulatory T cells	immune	immune	819
+SMC22-T_TTTACTGTCCGCGCAA	SMC22	Tumor	SMC22-T	T cells	CD8+ T cells	immune	immune	820
+SMC23-T_CAACCTCGTCTGCCAG	SMC23	Tumor	SMC23-T	T cells	CD8+ T cells	immune	immune	821
+SMC24-T_GTAGGCCGTTCGAATC	SMC24	Tumor	SMC24-T	T cells	Regulatory T cells	immune	immune	822
+SMC25-T_TTAACTCTCCCAAGAT	SMC25	Tumor	SMC25-T	T cells	NK cells	immune	immune	823
+SMC01-N_CCCAGTTGTCCGTGAC	SMC01	Normal	SMC01-N	T cells	CD4+ T cells	immune	immune	824
+SMC02-N_CTGATAGAGACATAAC	SMC02	Normal	SMC02-N	T cells	CD4+ T cells	immune	immune	825
+SMC03-T_GGAAAGCGTTCTCATT	SMC03	Tumor	SMC03-T	Myeloids	Pro-inflammatory	immune	immune	826
+SMC04-N_CGTTGGGGTCGACTAT	SMC04	Normal	SMC04-N	T cells	CD8+ T cells	immune	immune	827
+SMC05-T_CTGTTTATCTGCGACG	SMC05	Tumor	SMC05-T	T cells	CD8+ T cells	immune	immune	828
+SMC06-T_TCAATCTAGTGGTAGC	SMC06	Tumor	SMC06-T	T cells	Regulatory T cells	immune	immune	829
+SMC07-T_TTCTCAAAGTATTGGA	SMC07	Tumor	SMC07-T	T cells	CD8+ T cells	immune	immune	830
+SMC08-N_GCATGTATCTCCAGGG	SMC08	Normal	SMC08-N	B cells	CD19+CD20+ B	immune	immune	831
+SMC09-T_TCTATTGCAACTGCTA	SMC09	Tumor	SMC09-T	T cells	CD8+ T cells	immune	immune	832
+SMC10-N_TCTTCGGGTGCAGACA	SMC10	Normal	SMC10-N	B cells	CD19+CD20+ B	immune	immune	833
+SMC11-T_CGAGCACCACATGGGA	SMC11	Tumor	SMC11-T	B cells	IgG+ Plasma	immune	immune	834
+SMC14-T_GCTGGGTTCGACCAGC	SMC14	Tumor	SMC14-T	T cells	CD4+ T cells	immune	immune	835
+SMC15-T_CATGCCTAGCAATCTC	SMC15	Tumor	SMC15-T	T cells	CD8+ T cells	immune	immune	836
+SMC16-T_TCGCGTTAGTCCTCCT	SMC16	Tumor	SMC16-T	T cells	NK cells	immune	immune	837
+SMC17-T_ACATACGTCCTTGGTC	SMC17	Tumor	SMC17-T	Myeloids	Pro-inflammatory	immune	immune	838
+SMC18-T_TGAGCATGTTAGGGTG	SMC18	Tumor	SMC18-T	T cells	CD8+ T cells	immune	immune	839
+SMC19-T_TGGGCGTGTCGCCATG	SMC19	Tumor	SMC19-T	T cells	CD4+ T cells	immune	immune	840
+SMC20-T_GGCAATTGTTACGACT	SMC20	Tumor	SMC20-T	Myeloids	Pro-inflammatory	immune	immune	841
+SMC21-T_GCTCCTACAAGTTCTG	SMC21	Tumor	SMC21-T	T cells	NK cells	immune	immune	842
+SMC22-T_ACGGGCTTCTTGTCAT	SMC22	Tumor	SMC22-T	Myeloids	SPP1+	immune	immune	843
+SMC23-T_TGTGGTATCATTATCC	SMC23	Tumor	SMC23-T	T cells	NK cells	immune	immune	844
+SMC24-T_CTGATCCTCCGTACAA	SMC24	Tumor	SMC24-T	B cells	CD19+CD20+ B	immune	immune	845
+SMC25-T_CCGTTCATCGTACCGG	SMC25	Tumor	SMC25-T	B cells	CD19+CD20+ B	immune	immune	846
+SMC01-N_CCTACCAGTCGAGATG	SMC01	Normal	SMC01-N	B cells	IgA+ Plasma	immune	immune	847
+SMC02-T_GTAACTGGTTCCCTTG	SMC02	Tumor	SMC02-T	Myeloids	Pro-inflammatory	immune	immune	848
+SMC03-N_TGCCCATGTCGATTGT	SMC03	Normal	SMC03-N	B cells	IgA+ Plasma	immune	immune	849
+SMC04-N_GAACATCTCACTTCAT	SMC04	Normal	SMC04-N	B cells	IgA+ Plasma	immune	immune	850
+SMC05-T_ACATCAGTCAACGGGA	SMC05	Tumor	SMC05-T	B cells	CD19+CD20+ B	immune	immune	851
+SMC06-N_TCACGAAAGTAACCCT	SMC06	Normal	SMC06-N	T cells	CD4+ T cells	immune	immune	852
+SMC07-T_CACCACTCAGGAACGT	SMC07	Tumor	SMC07-T	T cells	CD8+ T cells	immune	immune	853
+SMC08-T_AACTCCCCAGTTCCCT	SMC08	Tumor	SMC08-T	T cells	CD8+ T cells	immune	immune	854
+SMC09-N_CGATTGAGTGTTGAGG	SMC09	Normal	SMC09-N	B cells	IgA+ Plasma	immune	immune	855
+SMC10-N_CCGGTAGTCTATCCTA	SMC10	Normal	SMC10-N	T cells	CD4+ T cells	immune	immune	856
+SMC11-T_TATCTCATCGGAATCT	SMC11	Tumor	SMC11-T	T cells	T follicular helper cells	immune	immune	857
+SMC14-T_TTGGCAAAGGGATGGG	SMC14	Tumor	SMC14-T	T cells	CD4+ T cells	immune	immune	858
+SMC15-T_GCCTCTAAGCGATGAC	SMC15	Tumor	SMC15-T	B cells	IgG+ Plasma	immune	immune	859
+SMC16-T_CACATAGTCAACACCA	SMC16	Tumor	SMC16-T	T cells	CD4+ T cells	immune	immune	860
+SMC17-T_TAAGAGATCCGATATG	SMC17	Tumor	SMC17-T	T cells	CD4+ T cells	immune	immune	861
+SMC18-T_GGTGTTACAGACAGGT	SMC18	Tumor	SMC18-T	T cells	CD4+ T cells	immune	immune	862
+SMC19-T_GAACATCCAGACGCCT	SMC19	Tumor	SMC19-T	B cells	CD19+CD20+ B	immune	immune	863
+SMC20-T_ATCATGGTCTTATCTG	SMC20	Tumor	SMC20-T	Myeloids	SPP1+	immune	immune	864
+SMC21-T_TTCTCCTCACATAACC	SMC21	Tumor	SMC21-T	T cells	CD8+ T cells	immune	immune	865
+SMC22-T_CGACTTCTCCGCTGTT	SMC22	Tumor	SMC22-T	Myeloids	SPP1+	immune	immune	866
+SMC23-T_GTCACAACAGGATCGA	SMC23	Tumor	SMC23-T	B cells	IgG+ Plasma	immune	immune	867
+SMC24-T_AGGTCATAGTCCGGTC	SMC24	Tumor	SMC24-T	Myeloids	Pro-inflammatory	immune	immune	868
+SMC25-T_CGTGAGCTCCGCAAGC	SMC25	Tumor	SMC25-T	B cells	CD19+CD20+ B	immune	immune	869
+SMC01-T_GCATACACAATGAAAC	SMC01	Tumor	SMC01-T	T cells	Regulatory T cells	immune	immune	870
+SMC02-T_CGGGTCACAAGGTTTC	SMC02	Tumor	SMC02-T	Myeloids	SPP1+	immune	immune	871
+SMC03-T_GTGCTTCCATGGTTGT	SMC03	Tumor	SMC03-T	B cells	IgG+ Plasma	immune	immune	872
+SMC04-T_ACGCCAGGTACAGACG	SMC04	Tumor	SMC04-T	Myeloids	Pro-inflammatory	immune	immune	873
+SMC05-T_TACTCGCAGGTGCTTT	SMC05	Tumor	SMC05-T	T cells	CD8+ T cells	immune	immune	874
+SMC06-N_CTAACTTCACAACTGT	SMC06	Normal	SMC06-N	T cells	CD8+ T cells	immune	immune	875
+SMC07-T_AGTAGTCCAGTCGTGC	SMC07	Tumor	SMC07-T	T cells	Regulatory T cells	immune	immune	876
+SMC08-T_TAGGCATGTCTGATTG	SMC08	Tumor	SMC08-T	Myeloids	SPP1+	immune	immune	877
+SMC09-T_GCTCCTATCACCTTAT	SMC09	Tumor	SMC09-T	T cells	CD8+ T cells	immune	immune	878
+SMC10-T_AGCTCTCGTCTCTTTA	SMC10	Tumor	SMC10-T	Myeloids	Proliferating	immune	immune	879
+SMC11-T_CAGCTGGTCTTTCCTC	SMC11	Tumor	SMC11-T	T cells	T helper 17 cells	immune	immune	880
+SMC14-T_AACCATGGTATTACCG	SMC14	Tumor	SMC14-T	T cells	NK cells	immune	immune	881
+SMC15-T_CCTTTCTTCGAACTGT	SMC15	Tumor	SMC15-T	B cells	CD19+CD20+ B	immune	immune	882
+SMC16-T_GACGTTAAGGCTAGCA	SMC16	Tumor	SMC16-T	B cells	IgA+ Plasma	immune	immune	883
+SMC17-T_GTCACAAAGGGTCGAT	SMC17	Tumor	SMC17-T	T cells	CD8+ T cells	immune	immune	884
+SMC18-T_CGTGTCTGTGATAAAC	SMC18	Tumor	SMC18-T	T cells	T helper 17 cells	immune	immune	885
+SMC19-T_TAAACCGTCCTTGCCA	SMC19	Tumor	SMC19-T	T cells	CD4+ T cells	immune	immune	886
+SMC20-T_GCGGGTTTCCCTAATT	SMC20	Tumor	SMC20-T	T cells	CD4+ T cells	immune	immune	887
+SMC21-T_TGACGGCTCCTCAATT	SMC21	Tumor	SMC21-T	Myeloids	SPP1+	immune	immune	888
+SMC22-T_CGCTGGACAAGCGTAG	SMC22	Tumor	SMC22-T	T cells	CD8+ T cells	immune	immune	889
+SMC23-T_ATTTCTGCAGCTCGCA	SMC23	Tumor	SMC23-T	T cells	CD4+ T cells	immune	immune	890
+SMC24-T_GACTGCGTCAACCAAC	SMC24	Tumor	SMC24-T	T cells	CD4+ T cells	immune	immune	891
+SMC25-T_ACTTTCAGTCCGAACC	SMC25	Tumor	SMC25-T	T cells	T helper 17 cells	immune	immune	892
+SMC01-N_CTAGTGAGTAGCAAAT	SMC01	Normal	SMC01-N	T cells	CD8+ T cells	immune	immune	893
+SMC02-N_GAATAAGTCGCCAGCA	SMC02	Normal	SMC02-N	B cells	IgA+ Plasma	immune	immune	894
+SMC03-T_CACTCCACATGGAATA	SMC03	Tumor	SMC03-T	B cells	CD19+CD20+ B	immune	immune	895
+SMC04-N_CAAGATCTCATGTCTT	SMC04	Normal	SMC04-N	B cells	IgA+ Plasma	immune	immune	896
+SMC05-N_GGCCGATTCGTGGGAA	SMC05	Normal	SMC05-N	T cells	CD8+ T cells	immune	immune	897
+SMC06-T_TCACAAGGTCAGAGGT	SMC06	Tumor	SMC06-T	T cells	Regulatory T cells	immune	immune	898
+SMC07-T_GTGCTTCCATACGCTA	SMC07	Tumor	SMC07-T	T cells	CD4+ T cells	immune	immune	899
+SMC08-N_TGAGGGACATTGAGCT	SMC08	Normal	SMC08-N	T cells	CD4+ T cells	immune	immune	900
+SMC09-N_CAACCAAGTCCCTTGT	SMC09	Normal	SMC09-N	B cells	IgA+ Plasma	immune	immune	901
+SMC10-T_CATGCCTCAGTCAGCC	SMC10	Tumor	SMC10-T	T cells	CD4+ T cells	immune	immune	902
+SMC11-T_ACATCAGTCGGATGTT	SMC11	Tumor	SMC11-T	T cells	T helper 17 cells	immune	immune	903
+SMC14-T_ACGGGCTTCATTGCGA	SMC14	Tumor	SMC14-T	Myeloids	Pro-inflammatory	immune	immune	904
+SMC15-T_TCGTACCGTGTGACCC	SMC15	Tumor	SMC15-T	T cells	CD4+ T cells	immune	immune	905
+SMC16-T_CTCTGGTAGTGGTCCC	SMC16	Tumor	SMC16-T	T cells	CD4+ T cells	immune	immune	906
+SMC17-T_CGTCCATCATCCAACA	SMC17	Tumor	SMC17-T	Myeloids	SPP1+	immune	immune	907
+SMC18-T_CCATGTCTCTGTGCAA	SMC18	Tumor	SMC18-T	T cells	CD4+ T cells	immune	immune	908
+SMC19-T_ACGTCAATCACCTTAT	SMC19	Tumor	SMC19-T	T cells	CD4+ T cells	immune	immune	909
+SMC20-T_AGACGTTGTCTAGAGG	SMC20	Tumor	SMC20-T	T cells	CD4+ T cells	immune	immune	910
+SMC21-T_CAGATCAAGGGAACGG	SMC21	Tumor	SMC21-T	Myeloids	SPP1+	immune	immune	911
+SMC22-T_TGAGCATCACGGCTAC	SMC22	Tumor	SMC22-T	T cells	T helper 17 cells	immune	immune	912
+SMC23-T_CGCTTCAAGGGCTCTC	SMC23	Tumor	SMC23-T	T cells	CD4+ T cells	immune	immune	913
+SMC24-T_TCCCGATAGCTAAACA	SMC24	Tumor	SMC24-T	T cells	NK cells	immune	immune	914
+SMC25-T_ATCTACTAGAGATGAG	SMC25	Tumor	SMC25-T	T cells	CD4+ T cells	immune	immune	915
+SMC01-T_TTTCCTCCACAACTGT	SMC01	Tumor	SMC01-T	T cells	CD8+ T cells	immune	immune	916
+SMC02-T_GGGCATCCACCTCGTT	SMC02	Tumor	SMC02-T	T cells	CD4+ T cells	immune	immune	917
+SMC03-T_CTCACACCACACTGCG	SMC03	Tumor	SMC03-T	Myeloids	SPP1+	immune	immune	918
+SMC04-T_CGTGTCTCAATTGCTG	SMC04	Tumor	SMC04-T	Myeloids	SPP1+	immune	immune	919
+SMC05-N_TCTCATAGTCTTGCGG	SMC05	Normal	SMC05-N	B cells	IgA+ Plasma	immune	immune	920
+SMC06-N_CTCGTACCATTCACTT	SMC06	Normal	SMC06-N	T cells	CD8+ T cells	immune	immune	921
+SMC07-T_ACGCCGAAGTTAGGTA	SMC07	Tumor	SMC07-T	Myeloids	SPP1+	immune	immune	922
+SMC08-N_TCAGGTATCACGCGGT	SMC08	Normal	SMC08-N	T cells	CD8+ T cells	immune	immune	923
+SMC09-N_CTACACCGTGTCAATC	SMC09	Normal	SMC09-N	B cells	IgA+ Plasma	immune	immune	924
+SMC10-N_GTCATTTGTATAAACG	SMC10	Normal	SMC10-N	B cells	IgA+ Plasma	immune	immune	925
+SMC11-T_ATTGGACTCGTGGGAA	SMC11	Tumor	SMC11-T	B cells	IgG+ Plasma	immune	immune	926
+SMC14-T_CAACCAAAGCCCAGCT	SMC14	Tumor	SMC14-T	Myeloids	SPP1+	immune	immune	927
+SMC15-T_AACTCAGCAGGGTTAG	SMC15	Tumor	SMC15-T	T cells	Regulatory T cells	immune	immune	928
+SMC16-T_GTCGTAAGTAAACCTC	SMC16	Tumor	SMC16-T	T cells	T helper 17 cells	immune	immune	929
+SMC17-T_TCGGTAACAGTCCTTC	SMC17	Tumor	SMC17-T	Myeloids	Pro-inflammatory	immune	immune	930
+SMC18-T_TACTCATGTCACAAGG	SMC18	Tumor	SMC18-T	T cells	Regulatory T cells	immune	immune	931
+SMC19-T_CCGTACTGTAGCGATG	SMC19	Tumor	SMC19-T	T cells	CD4+ T cells	immune	immune	932
+SMC20-T_ACGGGTCTCACAGTAC	SMC20	Tumor	SMC20-T	T cells	CD8+ T cells	immune	immune	933
+SMC21-T_ATGAGGGAGAACTGTA	SMC21	Tumor	SMC21-T	T cells	CD8+ T cells	immune	immune	934
+SMC22-T_GCCAAATAGAGGTTGC	SMC22	Tumor	SMC22-T	T cells	CD4+ T cells	immune	immune	935
+SMC23-T_CGTCACTCATGTTGAC	SMC23	Tumor	SMC23-T	T cells	Regulatory T cells	immune	immune	936
+SMC24-T_AGAGCGAAGCGTTGCC	SMC24	Tumor	SMC24-T	T cells	CD4+ T cells	immune	immune	937
+SMC25-T_CTACCCAAGACAGACC	SMC25	Tumor	SMC25-T	B cells	CD19+CD20+ B	immune	immune	938
+SMC01-N_CTCGAGGAGACATAAC	SMC01	Normal	SMC01-N	T cells	CD4+ T cells	immune	immune	939
+SMC02-N_ACGATGTCATCCCATC	SMC02	Normal	SMC02-N	T cells	CD4+ T cells	immune	immune	940
+SMC03-T_CGCTGGAAGAAGGTTT	SMC03	Tumor	SMC03-T	B cells	IgG+ Plasma	immune	immune	941
+SMC04-T_CGTGAGCAGGCTATCT	SMC04	Tumor	SMC04-T	Myeloids	cDC	immune	immune	942
+SMC05-N_ACAGCTAGTGTGCCTG	SMC05	Normal	SMC05-N	B cells	IgA+ Plasma	immune	immune	943
+SMC06-N_GTTTCTACATTTGCCC	SMC06	Normal	SMC06-N	T cells	T helper 17 cells	immune	immune	944
+SMC07-T_GTTAAGCTCCTGCTTG	SMC07	Tumor	SMC07-T	T cells	CD4+ T cells	immune	immune	945
+SMC08-N_CGAGCCAGTCTGATTG	SMC08	Normal	SMC08-N	T cells	CD4+ T cells	immune	immune	946
+SMC09-N_TAGTGGTCATGTAGTC	SMC09	Normal	SMC09-N	T cells	CD8+ T cells	immune	immune	947
+SMC10-N_CGAATGTTCAGCCTAA	SMC10	Normal	SMC10-N	B cells	IgA+ Plasma	immune	immune	948
+SMC11-T_GTCTCGTCAGACGCAA	SMC11	Tumor	SMC11-T	T cells	Regulatory T cells	immune	immune	949
+SMC14-T_GTGAAGGAGCTGAAAT	SMC14	Tumor	SMC14-T	T cells	CD8+ T cells	immune	immune	950
+SMC15-T_CTAGTGATCGACGGAA	SMC15	Tumor	SMC15-T	T cells	T follicular helper cells	immune	immune	951
+SMC16-T_GTTACAGGTTCTGAAC	SMC16	Tumor	SMC16-T	Myeloids	SPP1+	immune	immune	952
+SMC17-T_ACACTGAAGTCGAGTG	SMC17	Tumor	SMC17-T	Myeloids	SPP1+	immune	immune	953
+SMC18-T_CTCTGGTAGTACGTTC	SMC18	Tumor	SMC18-T	T cells	T helper 17 cells	immune	immune	954
+SMC19-T_GTCCTCAAGTCCCACG	SMC19	Tumor	SMC19-T	T cells	T helper 17 cells	immune	immune	955
+SMC20-T_GTGCATAAGTGGTAGC	SMC20	Tumor	SMC20-T	Myeloids	SPP1+	immune	immune	956
+SMC21-T_TCAGATGAGTGTCTCA	SMC21	Tumor	SMC21-T	T cells	T helper 17 cells	immune	immune	957
+SMC22-T_CTACGTCGTAGATTAG	SMC22	Tumor	SMC22-T	T cells	T helper 17 cells	immune	immune	958
+SMC23-T_TACTCATGTTGGGACA	SMC23	Tumor	SMC23-T	T cells	CD8+ T cells	immune	immune	959
+SMC24-T_TTGCGTCTCCGAATGT	SMC24	Tumor	SMC24-T	Myeloids	Pro-inflammatory	immune	immune	960
+SMC25-T_GGTGTTAGTTCGCGAC	SMC25	Tumor	SMC25-T	T cells	T helper 17 cells	immune	immune	961
+SMC01-T_AGCTCCTGTCTAAACC	SMC01	Tumor	SMC01-T	Myeloids	Pro-inflammatory	immune	immune	962
+SMC02-N_TAGTGGTTCATAGCAC	SMC02	Normal	SMC02-N	B cells	IgA+ Plasma	immune	immune	963
+SMC03-N_CCTACACTCCCTTGTG	SMC03	Normal	SMC03-N	B cells	IgA+ Plasma	immune	immune	964
+SMC04-T_GGTATTGCAGCTGCAC	SMC04	Tumor	SMC04-T	Myeloids	SPP1+	immune	immune	965
+SMC05-N_TGTGGTAGTCCTGCTT	SMC05	Normal	SMC05-N	B cells	IgA+ Plasma	immune	immune	966
+SMC06-N_AATCCAGAGAGAACAG	SMC06	Normal	SMC06-N	T cells	CD4+ T cells	immune	immune	967
+SMC07-N_CGTCTACAGTGAAGTT	SMC07	Normal	SMC07-N	T cells	CD4+ T cells	immune	immune	968
+SMC08-N_CGATTGAGTAGCCTAT	SMC08	Normal	SMC08-N	B cells	CD19+CD20+ B	immune	immune	969
+SMC09-N_GTCGGGTGTACGCACC	SMC09	Normal	SMC09-N	B cells	IgA+ Plasma	immune	immune	970
+SMC10-N_AGCGTATTCCATGCTC	SMC10	Normal	SMC10-N	B cells	IgA+ Plasma	immune	immune	971
+SMC11-T_TTGACTTCACAGCGTC	SMC11	Tumor	SMC11-T	T cells	CD8+ T cells	immune	immune	972
+SMC14-T_CAGCGACTCCCAAGTA	SMC14	Tumor	SMC14-T	T cells	Regulatory T cells	immune	immune	973
+SMC15-T_TTCTACACAGACGCAA	SMC15	Tumor	SMC15-T	T cells	Regulatory T cells	immune	immune	974
+SMC16-T_GTATTCTTCCAGTAGT	SMC16	Tumor	SMC16-T	T cells	T helper 17 cells	immune	immune	975
+SMC17-T_GGAGCAACATATGGTC	SMC17	Tumor	SMC17-T	Myeloids	Pro-inflammatory	immune	immune	976
+SMC18-T_ACGATGTCAAGACACG	SMC18	Tumor	SMC18-T	Myeloids	Proliferating	immune	immune	977
+SMC19-T_CAACCAAGTCCGCTGA	SMC19	Tumor	SMC19-T	B cells	CD19+CD20+ B	immune	immune	978
+SMC20-T_GCACATAGTTACGTCA	SMC20	Tumor	SMC20-T	Myeloids	SPP1+	immune	immune	979
+SMC21-T_CGGACGTGTGTCAATC	SMC21	Tumor	SMC21-T	T cells	CD8+ T cells	immune	immune	980
+SMC22-T_CGGAGCTGTATAATGG	SMC22	Tumor	SMC22-T	Myeloids	cDC	immune	immune	981
+SMC23-T_CGACTTCTCGGATGGA	SMC23	Tumor	SMC23-T	T cells	Regulatory T cells	immune	immune	982
+SMC24-T_CACCAGGTCTGAGGGA	SMC24	Tumor	SMC24-T	B cells	CD19+CD20+ B	immune	immune	983
+SMC25-T_GCTCCTACATTAGGCT	SMC25	Tumor	SMC25-T	B cells	IgG+ Plasma	immune	immune	984
+SMC01-N_CGCGGTAAGACGCACA	SMC01	Normal	SMC01-N	B cells	IgG+ Plasma	immune	immune	985
+SMC02-T_AATCCAGCAAATCCGT	SMC02	Tumor	SMC02-T	Myeloids	Pro-inflammatory	immune	immune	986
+SMC03-N_CCCAGTTAGCGATTCT	SMC03	Normal	SMC03-N	T cells	CD4+ T cells	immune	immune	987
+SMC04-N_CCGTACTTCCGCTGTT	SMC04	Normal	SMC04-N	T cells	CD4+ T cells	immune	immune	988
+SMC05-T_TGCGCAGCACAGCGTC	SMC05	Tumor	SMC05-T	T cells	CD8+ T cells	immune	immune	989
+SMC06-T_AGTTGGTTCCTTAATC	SMC06	Tumor	SMC06-T	T cells	Regulatory T cells	immune	immune	990
+SMC07-T_TTCGGTCAGTTCGATC	SMC07	Tumor	SMC07-T	T cells	CD8+ T cells	immune	immune	991
+SMC08-N_AGCAGCCCACAACTGT	SMC08	Normal	SMC08-N	B cells	IgA+ Plasma	immune	immune	992
+SMC09-T_GTGTGCGGTTCCATGA	SMC09	Tumor	SMC09-T	Myeloids	Pro-inflammatory	immune	immune	993
+SMC10-N_GCTGCTTTCATTTGGG	SMC10	Normal	SMC10-N	B cells	IgA+ Plasma	immune	immune	994
+SMC11-T_GTGGGTCCATATGAGA	SMC11	Tumor	SMC11-T	T cells	Regulatory T cells	immune	immune	995
+SMC14-T_GGTGAAGCAACTTGAC	SMC14	Tumor	SMC14-T	T cells	Regulatory T cells	immune	immune	996
+SMC15-T_AACGTTGCAGGTTTCA	SMC15	Tumor	SMC15-T	B cells	CD19+CD20+ B	immune	immune	997
+SMC16-T_CAAGAAATCAAAGTAG	SMC16	Tumor	SMC16-T	T cells	CD8+ T cells	immune	immune	998
+SMC17-T_GGTGCGTTCAACACTG	SMC17	Tumor	SMC17-T	Myeloids	Pro-inflammatory	immune	immune	999
+SMC18-T_TGCACCTCACAACTGT	SMC18	Tumor	SMC18-T	Myeloids	SPP1+	immune	immune	1000
+SMC01-T_AGCAGCCTCAAAGTAG	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1001
+SMC02-T_GGAGCAAGTGGACGAT	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1002
+SMC03-T_CCTATTACAGGCTGAA	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1003
+SMC04-N_GAATGAAGTTCTGTTT	SMC04	Normal	SMC04-N	Epithelial cells	Mature Enterocytes type 1	epithelial	epithelial	1004
+SMC05-N_AAGGTTCGTAACGTTC	SMC05	Normal	SMC05-N	Epithelial cells	Intermediate	epithelial	epithelial	1005
+SMC06-T_AACTCTTGTGAGCGAT	SMC06	Tumor	SMC06-T	Epithelial cells	CMS3	epithelial	epithelial	1006
+SMC07-T_GTGTTAGTCGGCCGAT	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1007
+SMC08-T_AGAGCGAGTGCAGTAG	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1008
+SMC09-T_CGTCAGGAGGCATGTG	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1009
+SMC10-T_ACACTGACACAGGTTT	SMC10	Tumor	SMC10-T	Epithelial cells	CMS3	epithelial	epithelial	1010
+SMC11-T_GTGCTTCTCCCAAGTA	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1011
+SMC14-T_GCTCTGTTCATCTGCC	SMC14	Tumor	SMC14-T	Epithelial cells	CMS3	epithelial	epithelial	1012
+SMC15-T_TGGTTCCGTCCGAGTC	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1013
+SMC16-T_CGCTATCAGGGCTCTC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1014
+SMC17-T_TCCCGATTCAACACCA	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1015
+SMC18-T_CGAGCACAGTGTACTC	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1016
+SMC19-T_GTCCTCAGTGACTCAT	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1017
+SMC20-T_GCGCGATCAAGCGTAG	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1018
+SMC21-T_ACGCCGACACCGAATT	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1019
+SMC22-T_AGGTCCGTCGCAAACT	SMC22	Tumor	SMC22-T	Epithelial cells	CMS2	epithelial	epithelial	1020
+SMC23-T_CGAATGTGTCGAATCT	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1021
+SMC24-T_TCAACGAGTACCGTAT	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1022
+SMC25-T_GCAGTTACAGACAAGC	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1023
+SMC01-T_CAGCGACAGGCCCGTT	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1024
+SMC02-T_CTCGTCATCCAGGGCT	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1025
+SMC03-T_GGGCATCGTGGTACAG	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1026
+SMC04-T_TCGCGAGAGCGCCTTG	SMC04	Tumor	SMC04-T	Epithelial cells	CMS2	epithelial	epithelial	1027
+SMC05-T_CTTAACTAGAGGTACC	SMC05	Tumor	SMC05-T	Epithelial cells	CMS3	epithelial	epithelial	1028
+SMC06-T_TTGCCGTGTTAGATGA	SMC06	Tumor	SMC06-T	Epithelial cells	CMS2	epithelial	epithelial	1029
+SMC07-T_CGGTTAATCAAACCGT	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1030
+SMC08-T_GGACATTAGGACACCA	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1031
+SMC09-T_AGAATAGTCGAGAGCA	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1032
+SMC10-T_ACTGAGTTCATTGCCC	SMC10	Tumor	SMC10-T	Epithelial cells	CMS1	epithelial	epithelial	1033
+SMC11-T_CTCGAAAAGTGATCGG	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1034
+SMC14-T_TACGGTAAGCTAGCCC	SMC14	Tumor	SMC14-T	Epithelial cells	CMS1	epithelial	epithelial	1035
+SMC15-T_GGGTTGCGTGTAACGG	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1036
+SMC16-T_AAACGGGTCGCATGGC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1037
+SMC17-T_GAGGTGAAGCCCAACC	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1038
+SMC18-T_GTACTCCGTGGTAACG	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1039
+SMC19-T_TAAGCGTCATATGGTC	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1040
+SMC20-T_CTCGGGAGTGATGTGG	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1041
+SMC21-T_ACCAGTATCGAATGCT	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1042
+SMC22-T_ATTATCCGTTTGACAC	SMC22	Tumor	SMC22-T	Epithelial cells	CMS3	epithelial	epithelial	1043
+SMC23-T_TCAGCTCAGCTGCCCA	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1044
+SMC24-T_ACATCAGAGGCTATCT	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1045
+SMC25-T_GTATCTTGTGCAACTT	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1046
+SMC01-T_AGGCCGTTCATTTGGG	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1047
+SMC02-T_CCTATTAGTCAGGACA	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1048
+SMC03-T_CAGCAGCTCGGCCGAT	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1049
+SMC04-N_ATCGAGTCATAAAGGT	SMC04	Normal	SMC04-N	Epithelial cells	Mature Enterocytes type 1	epithelial	epithelial	1050
+SMC05-N_GCAAACTTCGACCAGC	SMC05	Normal	SMC05-N	Epithelial cells	Mature Enterocytes type 2	epithelial	epithelial	1051
+SMC06-T_AACACGTAGCTAACTC	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1052
+SMC07-T_CTTTGCGTCTTACCTA	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1053
+SMC08-T_TTTACTGGTTAGATGA	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1054
+SMC09-T_TCTGGAAAGCTAGTTC	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1055
+SMC10-T_TCGCGTTTCGGTTCGG	SMC10	Tumor	SMC10-T	Epithelial cells	CMS3	epithelial	epithelial	1056
+SMC11-T_CTGCGGAAGCTCAACT	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1057
+SMC14-T_CAGATCACACATGACT	SMC14	Tumor	SMC14-T	Epithelial cells	CMS3	epithelial	epithelial	1058
+SMC15-T_GTATCTTAGCTAGTGG	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1059
+SMC16-T_TCAGGATGTATCAGTC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1060
+SMC17-T_ACCGTAATCTCTTATG	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1061
+SMC18-T_ACTATCTGTCACCCAG	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1062
+SMC19-T_AACTCAGGTAGCGCAA	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1063
+SMC20-T_CAGTCCTCAGTCGTGC	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1064
+SMC21-T_ATGCGATTCCAAAGTC	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1065
+SMC22-T_ACATACGAGGCAGGTT	SMC22	Tumor	SMC22-T	Epithelial cells	CMS3	epithelial	epithelial	1066
+SMC23-T_GAACGGAGTCCATCCT	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1067
+SMC24-T_CGAGCCAGTTCCCTTG	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1068
+SMC25-T_CTCCTAGCAAGCTGAG	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1069
+SMC01-N_TCGGGACTCATGGTCA	SMC01	Normal	SMC01-N	Epithelial cells	Intermediate	epithelial	epithelial	1070
+SMC02-N_GACTGCGAGCTACCGC	SMC02	Normal	SMC02-N	Epithelial cells	Stem-like/TA	epithelial	epithelial	1071
+SMC03-T_CGAGAAGCACATGACT	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1072
+SMC04-N_CCTATTAAGAGTACCG	SMC04	Normal	SMC04-N	Epithelial cells	Mature Enterocytes type 1	epithelial	epithelial	1073
+SMC05-N_GGGTTGCAGTGTTAGA	SMC05	Normal	SMC05-N	Epithelial cells	Intermediate	epithelial	epithelial	1074
+SMC06-T_CACACCTAGATCCGAG	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1075
+SMC07-T_TCAGGTAAGCACAGGT	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1076
+SMC08-T_CGTCTACGTTGTCTTT	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1077
+SMC09-T_ACTTTCAGTAGCGCTC	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1078
+SMC10-T_GTCACGGAGCTAACAA	SMC10	Tumor	SMC10-T	Epithelial cells	CMS1	epithelial	epithelial	1079
+SMC11-T_ATCTGCCAGACCGGAT	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1080
+SMC14-T_GGATGTTTCCGTCATC	SMC14	Tumor	SMC14-T	Epithelial cells	CMS1	epithelial	epithelial	1081
+SMC15-T_CTGCTGTAGCGTGTCC	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1082
+SMC16-T_AAAGATGCAAGGCTCC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1083
+SMC17-T_CGGACACTCAAGGTAA	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1084
+SMC18-T_TACGGTAAGCTCCTTC	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1085
+SMC19-T_TGCGGGTAGCACCGTC	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1086
+SMC20-T_AAGACCTCATGTTGAC	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1087
+SMC21-T_TACGGGCAGTGTACGG	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1088
+SMC22-T_GAACCTATCCTTGGTC	SMC22	Tumor	SMC22-T	Epithelial cells	CMS2	epithelial	epithelial	1089
+SMC23-T_GTGCGGTAGAGATGAG	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1090
+SMC24-T_TTTGTCAGTTCCCTTG	SMC24	Tumor	SMC24-T	Epithelial cells	CMS3	epithelial	epithelial	1091
+SMC25-T_AATCCAGGTGTAATGA	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1092
+SMC01-T_CCGGGATTCCGTAGTA	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1093
+SMC02-T_TCTTCGGCATTAGGCT	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1094
+SMC03-T_AACTTTCAGAGTACCG	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1095
+SMC04-T_AGACGTTAGATCACGG	SMC04	Tumor	SMC04-T	Epithelial cells	CMS2	epithelial	epithelial	1096
+SMC05-T_CGATCGGTCCAACCAA	SMC05	Tumor	SMC05-T	Epithelial cells	CMS1	epithelial	epithelial	1097
+SMC06-T_GGCGACTAGAGCCCAA	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1098
+SMC07-T_GTTCGGGCAAAGGCGT	SMC07	Tumor	SMC07-T	Epithelial cells	CMS3	epithelial	epithelial	1099
+SMC08-T_AAGTCTGAGCGATGAC	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1100
+SMC09-T_TCGCGTTTCCGTAGGC	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1101
+SMC10-T_TTCTACAAGCCAGGAT	SMC10	Tumor	SMC10-T	Epithelial cells	CMS3	epithelial	epithelial	1102
+SMC11-T_GCTGCAGCATGCAACT	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1103
+SMC14-T_CGTGAGCAGCTAACAA	SMC14	Tumor	SMC14-T	Epithelial cells	CMS2	epithelial	epithelial	1104
+SMC15-T_GCTCTGTGTATAGGGC	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1105
+SMC16-T_TTGCGTCGTAGCGATG	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1106
+SMC17-T_CGCGGTACAAGCCGTC	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1107
+SMC18-T_GGACAGATCGCAAGCC	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1108
+SMC19-T_CTCCTAGTCGTAGGTT	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1109
+SMC20-T_GGAATAACATGTTGAC	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1110
+SMC21-T_AAACCTGAGCTGCCCA	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1111
+SMC22-T_ATGGGAGTCATGCTCC	SMC22	Tumor	SMC22-T	Epithelial cells	CMS2	epithelial	epithelial	1112
+SMC23-T_GCTCTGTGTTAGGGTG	SMC23	Tumor	SMC23-T	Epithelial cells	CMS1	epithelial	epithelial	1113
+SMC24-T_ACGCAGCGTTCGTGAT	SMC24	Tumor	SMC24-T	Epithelial cells	CMS3	epithelial	epithelial	1114
+SMC25-T_GAAATGAGTTTGGCGC	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1115
+SMC01-T_CCGGGATAGGTAGCTG	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1116
+SMC02-T_CCCATACCAGGTCGTC	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1117
+SMC03-N_TACCTATTCCAGGGCT	SMC03	Normal	SMC03-N	Epithelial cells	Mature Enterocytes type 2	epithelial	epithelial	1118
+SMC04-N_TGGTTCCCAGAGTGTG	SMC04	Normal	SMC04-N	Epithelial cells	Mature Enterocytes type 1	epithelial	epithelial	1119
+SMC05-T_TCGTAGAGTGTGAAAT	SMC05	Tumor	SMC05-T	Epithelial cells	CMS3	epithelial	epithelial	1120
+SMC06-T_GACAGAGGTGTGGTTT	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1121
+SMC07-T_TAAGAGAAGGTAGCCA	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1122
+SMC08-T_GTTTCTAAGACCTTTG	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1123
+SMC09-T_GACGCGTCACCCATGG	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1124
+SMC10-T_AAGTCTGGTCAAACTC	SMC10	Tumor	SMC10-T	Epithelial cells	CMS2	epithelial	epithelial	1125
+SMC11-T_CAGCGACTCCTATTCA	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1126
+SMC14-T_AGAATAGTCTTTACAC	SMC14	Tumor	SMC14-T	Epithelial cells	CMS2	epithelial	epithelial	1127
+SMC15-T_CCTATTAGTCTAACGT	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1128
+SMC16-T_GTACTTTAGTGAATTG	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1129
+SMC17-T_CTAGCCTGTGTCGCTG	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1130
+SMC18-T_GATTCAGTCTTGTACT	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1131
+SMC19-T_GTCATTTTCGAGAGCA	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1132
+SMC20-T_GTACGTACAATGGTCT	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1133
+SMC21-T_CACTCCAGTTCGCGAC	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1134
+SMC22-T_AACTCAGTCTTTACGT	SMC22	Tumor	SMC22-T	Epithelial cells	CMS2	epithelial	epithelial	1135
+SMC23-T_ACTTACTGTCCAAGTT	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1136
+SMC24-T_GGATTACCATTCGACA	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1137
+SMC25-T_AATCGGTCAGTACACT	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1138
+SMC01-T_GGTGTTAAGTCTTGCA	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1139
+SMC02-T_AGTCTTTGTCACACGC	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1140
+SMC03-T_AGTAGTCGTCCGTTAA	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1141
+SMC04-T_CTGAAACCAGCCTTGG	SMC04	Tumor	SMC04-T	Epithelial cells	CMS2	epithelial	epithelial	1142
+SMC05-N_ACGAGGAGTGTCCTCT	SMC05	Normal	SMC05-N	Epithelial cells	Intermediate	epithelial	epithelial	1143
+SMC06-T_CACCTTGCAAGCCTAT	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1144
+SMC07-T_CACAGGCGTTCGAATC	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1145
+SMC08-T_TCTTTCCTCTTCGAGA	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1146
+SMC09-T_GTTACAGAGGGAACGG	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1147
+SMC10-T_AAGTCTGTCACGCATA	SMC10	Tumor	SMC10-T	Epithelial cells	CMS3	epithelial	epithelial	1148
+SMC11-T_CGTAGCGGTTACTGAC	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1149
+SMC14-T_AGGGTGATCTAACGGT	SMC14	Tumor	SMC14-T	Epithelial cells	CMS2	epithelial	epithelial	1150
+SMC15-T_GAAACTCAGCCCGAAA	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1151
+SMC16-T_GATTCAGGTGCTAGCC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1152
+SMC17-T_AGTCTTTCAAGAGTCG	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1153
+SMC18-T_GCGGGTTCATTGTGCA	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1154
+SMC19-T_AAAGTAGAGTCGAGTG	SMC19	Tumor	SMC19-T	Epithelial cells	CMS2	epithelial	epithelial	1155
+SMC20-T_TGGCCAGAGGATATAC	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1156
+SMC21-T_GTTCGGGAGGTCATCT	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1157
+SMC22-T_CGAGCCAAGCTAACTC	SMC22	Tumor	SMC22-T	Epithelial cells	CMS3	epithelial	epithelial	1158
+SMC23-T_GTACTCCTCAACACTG	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1159
+SMC24-T_TAGCCGGGTCTCCCTA	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1160
+SMC25-T_GATCAGTCATGGTCAT	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1161
+SMC01-T_CAACCTCGTCAGAATA	SMC01	Tumor	SMC01-T	Epithelial cells	CMS2	epithelial	epithelial	1162
+SMC02-T_TGCTACCCATACGCTA	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1163
+SMC03-T_CCCATACCATCCTTGC	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1164
+SMC04-N_CCTAAAGTCACTGGGC	SMC04	Normal	SMC04-N	Epithelial cells	Mature Enterocytes type 1	epithelial	epithelial	1165
+SMC05-N_TGCCCTATCTAACTCT	SMC05	Normal	SMC05-N	Epithelial cells	Intermediate	epithelial	epithelial	1166
+SMC06-T_GACACGCTCTTTCCTC	SMC06	Tumor	SMC06-T	Epithelial cells	CMS2	epithelial	epithelial	1167
+SMC07-T_CGTCTACTCACATAGC	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1168
+SMC08-T_TGCGCAGGTCGGATCC	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1169
+SMC09-T_GACGGCTGTCCAGTTA	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1170
+SMC10-T_GTCACAAAGTGCGATG	SMC10	Tumor	SMC10-T	Epithelial cells	CMS3	epithelial	epithelial	1171
+SMC11-T_GGACAGAGTGGCGAAT	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1172
+SMC14-T_ACGGGCTCAGGATTGG	SMC14	Tumor	SMC14-T	Epithelial cells	CMS2	epithelial	epithelial	1173
+SMC15-T_CAGATCACATGCATGT	SMC15	Tumor	SMC15-T	Epithelial cells	CMS3	epithelial	epithelial	1174
+SMC16-T_AGATCTGGTTATCGGT	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1175
+SMC17-T_AGAGTGGCACCGAATT	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1176
+SMC18-T_ACCTTTACAGGTGGAT	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1177
+SMC19-T_TACGGATCAATGTTGC	SMC19	Tumor	SMC19-T	Epithelial cells	CMS3	epithelial	epithelial	1178
+SMC20-T_CAGCTAAAGGCAGTCA	SMC20	Tumor	SMC20-T	Epithelial cells	CMS3	epithelial	epithelial	1179
+SMC21-T_TGCCCTATCCTATGTT	SMC21	Tumor	SMC21-T	Epithelial cells	CMS2	epithelial	epithelial	1180
+SMC22-T_ATGCGATTCTCGGACG	SMC22	Tumor	SMC22-T	Epithelial cells	CMS2	epithelial	epithelial	1181
+SMC23-T_CGTGTAAAGGCGCTCT	SMC23	Tumor	SMC23-T	Epithelial cells	CMS2	epithelial	epithelial	1182
+SMC24-T_GATGCTAGTGCCTGGT	SMC24	Tumor	SMC24-T	Epithelial cells	CMS1	epithelial	epithelial	1183
+SMC25-T_ACGAGCCGTAATAGCA	SMC25	Tumor	SMC25-T	Epithelial cells	CMS2	epithelial	epithelial	1184
+SMC01-N_TCTTTCCTCTAACTCT	SMC01	Normal	SMC01-N	Epithelial cells	Stem-like/TA	epithelial	epithelial	1185
+SMC02-T_TTTACTGAGACACGAC	SMC02	Tumor	SMC02-T	Epithelial cells	CMS2	epithelial	epithelial	1186
+SMC03-T_TGGTTCCGTGATAAGT	SMC03	Tumor	SMC03-T	Epithelial cells	CMS1	epithelial	epithelial	1187
+SMC04-T_CGCGGTATCAGGTTCA	SMC04	Tumor	SMC04-T	Epithelial cells	CMS2	epithelial	epithelial	1188
+SMC05-N_GTCACGGGTCGGGTCT	SMC05	Normal	SMC05-N	Epithelial cells	Mature Enterocytes type 2	epithelial	epithelial	1189
+SMC06-T_CTGCTGTTCAACCATG	SMC06	Tumor	SMC06-T	Epithelial cells	CMS1	epithelial	epithelial	1190
+SMC07-T_AAGCCGCGTGTTTGGT	SMC07	Tumor	SMC07-T	Epithelial cells	CMS2	epithelial	epithelial	1191
+SMC08-T_CAGCTAAGTAGGAGTC	SMC08	Tumor	SMC08-T	Epithelial cells	CMS2	epithelial	epithelial	1192
+SMC09-T_CTGTGCTAGGAATTAC	SMC09	Tumor	SMC09-T	Epithelial cells	CMS2	epithelial	epithelial	1193
+SMC10-N_AGATCTGGTCCATCCT	SMC10	Normal	SMC10-N	Epithelial cells	Stem-like/TA	epithelial	epithelial	1194
+SMC11-T_TGCGGGTTCGATGAGG	SMC11	Tumor	SMC11-T	Epithelial cells	CMS2	epithelial	epithelial	1195
+SMC14-T_GGGTTGCAGCCCAACC	SMC14	Tumor	SMC14-T	Epithelial cells	CMS3	epithelial	epithelial	1196
+SMC15-T_GTGCATAGTCGCCATG	SMC15	Tumor	SMC15-T	Epithelial cells	CMS2	epithelial	epithelial	1197
+SMC16-T_CTGAAACGTACTCAAC	SMC16	Tumor	SMC16-T	Epithelial cells	CMS3	epithelial	epithelial	1198
+SMC17-T_TCTCATAAGTCCGGTC	SMC17	Tumor	SMC17-T	Epithelial cells	CMS3	epithelial	epithelial	1199
+SMC18-T_AATCGGTGTTGTTTGG	SMC18	Tumor	SMC18-T	Epithelial cells	CMS2	epithelial	epithelial	1200
+SMC01-N_AGATTGCTCAACACCA	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1201
+SMC02-N_TGGCCAGTCCACTCCA	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1202
+SMC03-N_GTGAAGGTCACAACGT	SMC03	Normal	SMC03-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1203
+SMC04-N_GACTAACAGTAGTGCG	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1204
+SMC05-N_GATGCTAAGATATGGT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1205
+SMC06-N_AAAGATGCAGTCAGAG	SMC06	Normal	SMC06-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1206
+SMC07-N_GCAAACTGTTCAGCGC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1207
+SMC08-N_CTCTGGTGTCGTGGCT	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1208
+SMC09-N_ACACTGACACAGTCGC	SMC09	Normal	SMC09-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1209
+SMC10-N_CTCGAAATCATCTGTT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1210
+SMC14-T_TTAGTTCAGCGATGAC	SMC14	Tumor	SMC14-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1211
+SMC15-T_GCTGCGAAGAGAGCTC	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1212
+SMC17-T_AGCAGCCTCTCAAACG	SMC17	Tumor	SMC17-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1213
+SMC24-T_TCACGAATCTCTAAGG	SMC24	Tumor	SMC24-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1214
+SMC01-N_GAAATGACAATGGATA	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1215
+SMC02-N_CGCCAAGGTTACGGAG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1216
+SMC04-N_GCATGATAGATGCGAC	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1217
+SMC05-N_CAGCTAATCCGGGTGT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1218
+SMC06-N_AGCTTGATCTGCGTAA	SMC06	Normal	SMC06-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1219
+SMC07-N_AACTGGTCAGACACTT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1220
+SMC08-N_CCAATCCGTCCGTGAC	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1221
+SMC09-N_CTAAGACAGTAGCGGT	SMC09	Normal	SMC09-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1222
+SMC10-N_ATAAGAGAGTGCTGCC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1223
+SMC14-T_CGTCTACAGAGTACAT	SMC14	Tumor	SMC14-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1224
+SMC15-T_TGCCCATGTCGACTAT	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1225
+SMC01-N_CAAGAAACACTTCTGC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1226
+SMC02-N_AAGTCTGGTGTAATGA	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1227
+SMC04-N_CGGTTAAGTATGAATG	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1228
+SMC05-N_TGACTAGTCGCTAGCG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1229
+SMC06-N_GTTCATTCAATCTGCA	SMC06	Normal	SMC06-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1230
+SMC07-N_AGCGTATAGACTGGGT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1231
+SMC08-N_CTAGTGAGTCCGAATT	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1232
+SMC09-N_CGTTCTGTCACCTTAT	SMC09	Normal	SMC09-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1233
+SMC10-N_CGAGCCAAGGCTCAGA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1234
+SMC14-T_AGGCCACGTCGCATCG	SMC14	Tumor	SMC14-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1235
+SMC15-T_ACCGTAAAGATGTGGC	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1236
+SMC01-N_AACCATGAGGATTCGG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1237
+SMC02-N_ACTGTCCTCTCACATT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1238
+SMC04-T_TCGGTAAGTGCCTTGG	SMC04	Tumor	SMC04-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1239
+SMC05-N_TAGGCATGTCCTAGCG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1240
+SMC06-N_TCTGAGATCGCATGGC	SMC06	Normal	SMC06-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1241
+SMC07-N_TAAGTGCCATCGACGC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1242
+SMC08-N_CAGTCCTAGCTGAACG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1243
+SMC09-N_AACTTTCCAGGATCGA	SMC09	Normal	SMC09-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1244
+SMC10-N_CTTCTCTTCGTGGGAA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1245
+SMC14-T_TGTTCCGGTGGTCTCG	SMC14	Tumor	SMC14-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1246
+SMC15-T_CAGTAACCACACGCTG	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1247
+SMC01-N_CTCACACGTTCGCGAC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1248
+SMC02-N_TACGGTATCCCAAGTA	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1249
+SMC04-N_AGTAGTCCATCCCATC	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1250
+SMC05-N_GTATTCTAGAGGTTAT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1251
+SMC07-N_CAGTCCTTCGGCGCTA	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1252
+SMC08-N_TTCTCCTGTAGCTCCG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1253
+SMC10-N_TGGGCGTGTCTAGTGT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1254
+SMC15-T_TGGGAAGCAAAGTCAA	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1255
+SMC01-N_CCTTCGATCTGTCAAG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1256
+SMC02-N_CCACCTAGTGCTTCTC	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1257
+SMC04-N_TCAGCAAGTCAACATC	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1258
+SMC05-N_CTGCCTACATTGGTAC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1259
+SMC07-N_GAATGAACAAATTGCC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1260
+SMC08-N_ACTGATGGTACCGGCT	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1261
+SMC10-N_ACATGGTTCTTCGGTC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1262
+SMC15-T_GATGCTAAGTACGTTC	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1263
+SMC01-N_CGTGTCTAGACTGGGT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1264
+SMC02-N_CCGTACTTCGTCCAGG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1265
+SMC04-N_ACTGAGTGTAAATACG	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1266
+SMC05-N_TCTGAGACACGTAAGG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1267
+SMC07-N_AACCGCGCAGCCTATA	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1268
+SMC08-N_AAGGCAGCAAAGGAAG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1269
+SMC10-N_GCATGCGAGCTCAACT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1270
+SMC15-T_ATCGAGTTCATCGGAT	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1271
+SMC01-N_ATTCTACTCGGCGCAT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1272
+SMC02-N_AGGTCCGTCCGCTGTT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1273
+SMC04-N_TGCCCTAAGTTGTAGA	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1274
+SMC05-N_CTCACACCACGAAAGC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1275
+SMC07-N_CGTGAGCCAGAAGCAC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1276
+SMC08-N_CTCTAATCAGTCACTA	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1277
+SMC10-N_AAAGATGAGGAGTACC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1278
+SMC15-T_AGACGTTAGGGCTTGA	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1279
+SMC01-N_GGGCATCGTTTGCATG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1280
+SMC02-N_TAGTGGTGTCGCATAT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1281
+SMC04-T_ACACTGAAGTAGTGCG	SMC04	Tumor	SMC04-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1282
+SMC05-N_CGTCACTCAAGCTGGA	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1283
+SMC07-N_GTACTTTAGTTTGCGT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1284
+SMC08-N_CTAGCCTGTCACACGC	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1285
+SMC10-N_CCCAATCAGTTAGCGG	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1286
+SMC15-T_TTAGGCAGTAGCGCTC	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1287
+SMC01-N_AACTCTTAGGTAGCTG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1288
+SMC02-N_AACCGCGTCTGTCTCG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1289
+SMC04-N_TTCTTAGGTATCGCAT	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1290
+SMC05-N_GTCAAGTCAGCCTTTC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1291
+SMC07-N_TCTGGAATCCTCAACC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1292
+SMC08-N_TTTACTGCATGGGACA	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1293
+SMC10-N_CCCAATCAGATCTGCT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1294
+SMC15-T_GTCATTTGTTCCCTTG	SMC15	Tumor	SMC15-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1295
+SMC01-N_TTCGAAGAGTTATCGC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1296
+SMC02-N_GGATTACCAAATCCGT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1297
+SMC04-N_TGGACGCAGTTGTAGA	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1298
+SMC05-N_GCACTCTAGCAGATCG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1299
+SMC07-N_CATGCCTAGCCCAACC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1300
+SMC08-N_CAAGATCTCACATGCA	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1301
+SMC10-N_ACGATACCATCATCCC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1302
+SMC01-N_CACACTCCACATCTTT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1303
+SMC02-N_CTGTTTAGTATGCTTG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1304
+SMC04-N_TCGCGTTCAGTCAGCC	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1305
+SMC05-N_CATCAGAGTTGCGTTA	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1306
+SMC07-N_ATTGGTGGTTGCTCCT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1307
+SMC08-N_CATGCCTAGTGACATA	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1308
+SMC10-N_CGAGAAGGTCCGCTGA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1309
+SMC01-N_AACTCTTAGACTCGGA	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1310
+SMC02-N_CGTCACTTCTGTCCGT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1311
+SMC04-N_TTCTACAGTCCAGTGC	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1312
+SMC05-N_AGGGTGAAGCGTCTAT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1313
+SMC07-N_ACGGGCTTCATAACCG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1314
+SMC08-N_TGGACGCTCTGTTGAG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1315
+SMC10-N_GAAACTCGTCCTGCTT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1316
+SMC01-N_CCATGTCAGTTACGGG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1317
+SMC02-N_GACGCGTTCACATACG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1318
+SMC04-N_CTCTACGTCCGCGTTT	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1319
+SMC05-N_CTCGTACAGCAGGCTA	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1320
+SMC07-N_TACGGTATCCGCGCAA	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1321
+SMC08-N_TAGACCATCCCTAACC	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1322
+SMC10-N_TACAGTGTCAACGGCC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1323
+SMC01-N_AGTGTCAAGCGATGAC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1324
+SMC02-N_CCTCAGTGTAAGAGAG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1325
+SMC04-T_TGCCCTATCGGTGTTA	SMC04	Tumor	SMC04-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1326
+SMC05-N_CAGCTGGTCTATCCCG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1327
+SMC07-N_CCATTCGAGCCTTGAT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1328
+SMC08-N_GCGCGATCAATGGACG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1329
+SMC10-N_TTGTAGGTCTTCTGGC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1330
+SMC01-N_CGCTGGAGTACAGACG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1331
+SMC02-N_TAGACCACAATGGATA	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1332
+SMC04-N_ACGGGCTCAGTAACGG	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1333
+SMC05-N_CAGCATACAAAGCGGT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1334
+SMC07-N_GATGAAACAAACTGTC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1335
+SMC08-N_TCCACACCACGTAAGG	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1336
+SMC10-N_ATCTACTCAGACACTT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1337
+SMC01-N_CAAGAAATCCCAACGG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1338
+SMC02-N_TTATGCTGTTCCACTC	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1339
+SMC04-N_TCGGGACCAGGATCGA	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1340
+SMC05-N_GACCAATGTTAAGGGC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1341
+SMC07-N_CGGAGTCAGCGATCCC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1342
+SMC08-N_TGACTTTCATTACGAC	SMC08	Normal	SMC08-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1343
+SMC10-N_CCGTGGATCCTGCAGG	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1344
+SMC01-N_ATAGACCTCTCCGGTT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1345
+SMC02-N_GGGAATGAGCCTCGTG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1346
+SMC04-N_AGCTCTCCATACAGCT	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1347
+SMC05-N_CAAGATCCAGGCTCAC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1348
+SMC07-N_CTCACACTCTTCTGGC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1349
+SMC10-N_AGCGTCGGTTGTCTTT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1350
+SMC01-N_TCACAAGCATGCCACG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1351
+SMC02-N_GATCGTATCGTAGATC	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1352
+SMC04-N_TGCGCAGCACGAAGCA	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1353
+SMC05-N_ATAGACCTCAACTCTT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1354
+SMC07-N_CGATCGGCATTCCTCG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1355
+SMC10-N_AACTCCCAGCGTAATA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1356
+SMC01-N_CGGACGTGTCTCGTTC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1357
+SMC02-N_CATATGGCACAGGTTT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1358
+SMC04-N_TTGACTTTCTGGTGTA	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1359
+SMC05-N_CGCTGGAGTCGCTTCT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1360
+SMC07-N_GTACTTTCAATAGCGG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1361
+SMC10-N_TCTTTCCGTAGGCATG	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1362
+SMC01-N_ATAACGCAGCGTCTAT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1363
+SMC02-N_CCACTACAGCAGACTG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1364
+SMC04-N_GTGCATAGTGTTCTTT	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1365
+SMC05-N_ACATACGAGAGGTACC	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1366
+SMC07-N_AGGCCACAGCCATCGC	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1367
+SMC10-N_TTGGCAAGTGTCAATC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1368
+SMC01-N_AAGGAGCTCAATCACG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1369
+SMC02-N_CGGGTCACAGGGTTAG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1370
+SMC04-T_CTAAGACGTCGAAAGC	SMC04	Tumor	SMC04-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1371
+SMC05-N_GCGCCAATCCTGCCAT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1372
+SMC07-N_GTGCAGCTCTCTAAGG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1373
+SMC10-N_ATCTACTCAGCTGGCT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1374
+SMC01-N_GACCAATAGATATGCA	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1375
+SMC02-N_GAAATGATCCCTGACT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1376
+SMC04-T_GATCTAGAGCATGGCA	SMC04	Tumor	SMC04-T	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1377
+SMC05-N_ACATCAGTCTCGTTTA	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1378
+SMC07-N_TTAGTTCTCCGAAGAG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1379
+SMC10-N_ATCATCTCACAGAGGT	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1380
+SMC01-N_CACATAGCAATGGAGC	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1381
+SMC02-N_ACCGTAAAGCGACGTA	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1382
+SMC04-N_GTGGGTCAGCCAGTTT	SMC04	Normal	SMC04-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1383
+SMC05-N_GAACCTATCGACGGAA	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1384
+SMC07-N_AGAATAGCAAGAAGAG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1385
+SMC10-N_TTAACTCTCGCGGATC	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1386
+SMC01-N_CTACGTCAGGGTGTTG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1387
+SMC02-N_AAGTCTGAGATGGCGT	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1388
+SMC05-N_CACCACTCAATGTAAG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1389
+SMC07-N_AACGTTGGTGGTCTCG	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1390
+SMC10-N_ATGAGGGTCTTGGGTA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1391
+SMC01-N_ACTATCTTCAACACGT	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1392
+SMC02-N_CAGTAACCAATAGCGG	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1393
+SMC05-N_CGTGAGCTCTGCAAGT	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1394
+SMC07-N_ATTGGACTCCAGATCA	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1395
+SMC10-N_CCACCTAAGCGACGTA	SMC10	Normal	SMC10-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1396
+SMC01-N_ACACTGAAGTCCCACG	SMC01	Normal	SMC01-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1397
+SMC02-N_CGTAGGCTCATTGCCC	SMC02	Normal	SMC02-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1398
+SMC05-N_AACTTTCCATACCATG	SMC05	Normal	SMC05-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1399
+SMC07-N_TGTATTCGTCCATGAT	SMC07	Normal	SMC07-N	Stromal cells	Enteric glial cells	enteric_glial	enteric_glial	1400

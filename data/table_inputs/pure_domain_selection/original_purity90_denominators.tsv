@@ -1,0 +1,3 @@
+resource	n_declared_maps	n_maps_with_purity	n_purity_below90	n_maps_purity_ge90	n_regional_evaluable	n_regional_evaluable_purity_ge90	n_retained_sections	n_retained_patients
+GSE294385	336	329	329	0	261	0	0	0
+Valdeolivas	504	432	354	78	146	8	1	1

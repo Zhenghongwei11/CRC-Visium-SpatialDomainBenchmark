@@ -1,0 +1,6 @@
+{
+  "scope": "same99 fixed populations per22 sections as marker-context helper, source8author group quantities for14Val;GSE marked unavailable",
+  "statistics": "Each population sum modeled posterior mean abundance by8source-qualified groups, divide by all8group total. Dominant share and Shannon entropy using natural log on positive shares only; descriptive mixture summaries, no threshold for biological coherence. Track number selected, number modeled, missing model, coverage fraction;empty/no model/zero total NA.",
+  "missing": "No missing abundance imputation, no forced GSE values",
+  "aggregation": "retain every population/selection/setting. Report valid distinct section/patientN, patient-aware medians, avoid configuration-independent inference. No selection by composition/context outcomes."
+}

@@ -1,0 +1,39 @@
+{
+  "method": "officialspacexr RCTD2.2.1 fullmode",
+  "upstream_commit": "9f5dc33c8060f946c6072a138b70e189636e1435",
+  "reference": "genuine1400knowncells,7broadgroups;allUnknown source excluded and separately documented",
+  "reference_input_sha256": "df694bf60e1452b4f7988bafdadf704e59dee954fb0d247fc025733ab6dc8ab9",
+  "feature_contract": "retaincommon gene symbols, sum duplicate spatial gene symbols without changing totals before sharedfilter; excludeTGFB1,CXCL12,ACTA2,TAGLN,MYH11,CNN1,DES from new fit in both reference and spatial input; fulloriginalfeature nUMI offsets retained and deliberate library/filteredcounts difference recorded",
+  "excluded_genes": [
+    "TGFB1",
+    "CXCL12",
+    "ACTA2",
+    "TAGLN",
+    "MYH11",
+    "CNN1",
+    "DES"
+  ],
+  "pilot_sections": [
+    "SN048_A121573_Rep1",
+    "M-ST-15",
+    "M-ST-33"
+  ],
+  "pilot_spots": "within eachsection, strata exacthexstromanear,exacthexstromafar,otherstroma,tumor,other; selectatmost160spotsperstratum deterministically seed20261026 withsourcebarcodeidentities,allstrataretained. Pilotisfitqualificationnotregionalvalidation.",
+  "settings": {
+    "max_cores": 2,
+    "test_mode": false,
+    "UMI_min": 100,
+    "UMI_max": 20000000,
+    "counts_MIN": 10,
+    "UMI_min_sigma": 300,
+    "CELL_MIN_INSTANCE": 25,
+    "gene_cutoff": 0.000125,
+    "fc_cutoff": 0.5,
+    "gene_cutoff_reg": 0.0002,
+    "fc_cutoff_reg": 0.75,
+    "doublet_mode": "full",
+    "keep_reference": false
+  },
+  "interpretation": "RNA mixture weights inferred by reference model,not measuredphysicalcellfractions;sourceclinical/batch/referenceomissions remain. ModelconcordanceandheldoutRNAarenotindependentvalidation.",
+  "taxonomy_sha256": "d4702faf0b8a824b2fa45ea411b3a283937cd232b198ccff3ff62361901f5382"
+}

@@ -1,7 +1,7 @@
 {
   "title": "Spatial domain selection changes regional stromal expression contrasts in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "Analysis code for regional stromal expression comparisons in 22 colorectal cancer Visium sections from 12 patients. Includes original-data acquisition and domain-fitting scripts, saved publication maps, regional statistics, spatial sensitivity analyses, known-boundary simulations, muscle-marker summaries and readout-gene withholding. The scientific workflow generates Figures 1\u20133 and S1\u2013S8, Table 1 and Tables S1\u2013S16. A Colab notebook supports new fits from original counts; saved maps retain the specific fits examined in the study.",
+  "description": "Scientific analysis code and inputs for regional expression comparisons in 22 colorectal cancer Visium sections from 12 patients. The workflow includes regional expression profiles, connected-domain selection, modeled-composition sensitivity analyses, spatial resampling and simulation. It produces the main figures and tables and supplementary figures S1\u2013S11 and tables S1\u2013S19 from original counts and archived publication maps. The domain-refitting code is provided separately; the original fitting environment was not completely version locked. Third-party data and software retain their own terms. The repository contains materials under distinct terms: project materials use the repository LICENSE, spacexr source excerpts use GPL-3, and third-party datasets retain their source terms. Individual stages and figure generation were run and compared with reported results; a complete uninterrupted execution of the combined entrypoint and a complete refit of the original domain maps have not been validated.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
@@ -28,6 +28,6 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.1.0",
-  "license": "cc-by-4.0"
+  "version": "1.2.0",
+  "license": "other-open"
 }

@@ -1,0 +1,25 @@
+{
+  "population": "All model-available spots in exacthex stromal bands of each source-eligible paired patient, separately by resource. Attempt all original eligible pairs and retain absent/failed models, spot-filter losses and infeasible cases.",
+  "reference": "Common official RCTD pinned7 known groups, same source1400 true cells; pilot qualification and all22 fits precede calibration. Keep author8 abundance sensitivity separately.",
+  "composition_features": "Seven normalized native RCTD weights per spot, each divided by equal-region pooled RMS (floor1e-6). These are RNA mixture shares, not author model absolute abundance or measured cell fractions. Native row sum is preserved diagnostic, not a calibrated physical-cell burden.",
+  "tiers": [
+    "composition_means",
+    "composition_and_qc_means",
+    "composition_second_moments_and_qc"
+  ],
+  "QC": "log1p original full-feature total UMIs, log1p original detected gene IDs, original mitochondrial UMI fraction; never recompute these on shared model genes.",
+  "numeric_gates": {
+    "region_weight_sum": 1,
+    "weight_cap": 0.05,
+    "block_mass_cap": 0.3333333333333333,
+    "min_spots": 20,
+    "min_blocks": 3,
+    "min_spot_ESS": 20,
+    "min_block_ESS": 3,
+    "max_feature_mean_difference": 1e-06,
+    "solver_seconds": 120,
+    "max_marginal_KS_strict_flag": 0.2
+  },
+  "summaries": "Paired sections within actual patient, each resource and each tier separately. Keep near,far,far-minus-near and old full/model-available/spot+UMI matched controls on identical patients. Mean-only and strict-distribution subsets separately, failed strict support NA, never zero.",
+  "interpretation": "Outcome-informed conditional RNA-mixture sensitivity. Broader gene panel mostly participated in model fitting; seven excluded known readouts are not novel independent validation. No cell-specific expression, clinical adjustment, causal attribution, general far-reference superiority or extra spatial patient N."
+}

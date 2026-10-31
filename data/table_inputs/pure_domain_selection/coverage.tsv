@@ -1,0 +1,265 @@
+n_final_regions	n_pure_regions	selected_region_size	selected_stroma_count	whole_domain_stroma_fraction	n_selected_near	n_selected_far	n_selected_near_blocks	n_selected_far_blocks	primary_evaluable	any_pure_region_evaluable	resource	patient_id	sample_id	method	requested_K	actual_fitted_K	merge_quantile	merge_threshold	n_merges	n_initial_connected_regions	anatomical_evaluable	n_full_near	n_full_far	mask_key
+241	32	8	8	1.0	0	5	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	12	12	0.25	6.706839848454368	4	245	True	140	49	expression_kmeans|K12|q25
+241	32	8	8	1.0	0	5	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	12	12	0.5	8.280636112983071	4	245	True	140	49	expression_kmeans|K12|q50
+388	45	22	20	0.9090909090909091	4	11	1	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	20	20	0.25	5.79384559599312	9	397	True	140	49	expression_kmeans|K20|q25
+382	39	26	24	0.9230769230769231	5	12	1	2	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	20	20	0.5	7.1313011174540355	15	397	True	140	49	expression_kmeans|K20|q50
+467	48	8	8	1.0	0	5	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	30	30	0.25	5.728452832867063	7	474	True	140	49	expression_kmeans|K30|q25
+461	42	8	8	1.0	0	5	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	expression_kmeans	30	30	0.5	7.061215694742605	13	474	True	140	49	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	12	12	0.25	7.164604722045451	0	12	True	140	49	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	12	12	0.5	9.127102403130554	0	12	True	140	49	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	20	20	0.25	6.80544588662031	0	20	True	140	49	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	20	20	0.5	8.887412742878174	0	20	True	140	49	exacthex_spatial_ward|K20|q50
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	30	30	0.25	6.773044569205517	0	30	True	140	49	exacthex_spatial_ward|K30|q25
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep1	exacthex_spatial_ward	30	30	0.5	8.847839393487336	0	30	True	140	49	exacthex_spatial_ward|K30|q50
+239	32	13	12	0.9230769230769231	1	10	1	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	12	12	0.25	7.1799676164445785	0	239	True	169	111	expression_kmeans|K12|q25
+238	31	13	12	0.9230769230769231	1	10	1	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	12	12	0.5	8.515789886712803	1	239	True	169	111	expression_kmeans|K12|q50
+336	52	14	13	0.9285714285714286	0	12	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	20	20	0.25	6.770250188299727	3	339	True	169	111	expression_kmeans|K20|q25
+317	37	53	48	0.9056603773584906	15	20	4	3	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	20	20	0.5	8.118279144358848	22	339	True	169	111	expression_kmeans|K20|q50
+513	65	20	18	0.9	0	12	0	1	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	30	30	0.25	6.344064024783789	6	519	True	169	111	expression_kmeans|K30|q25
+491	47	79	72	0.9113924050632911	16	36	4	3	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	expression_kmeans	30	30	0.5	7.886750425819118	28	519	True	169	111	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	12	12	0.25	8.384935393358035	0	12	True	169	111	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	12	12	0.5	11.61843603005403	0	12	True	169	111	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	20	20	0.25	7.5228689034649765	0	20	True	169	111	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	20	20	0.5	9.572282491322058	0	20	True	169	111	exacthex_spatial_ward|K20|q50
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	30	30	0.25	7.202443195221368	0	30	True	169	111	exacthex_spatial_ward|K30|q25
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A121573	SN048_A121573_Rep2	exacthex_spatial_ward	30	30	0.5	9.209434672562422	0	30	True	169	111	exacthex_spatial_ward|K30|q50
+289	48	70	63	0.9	5	47	1	3	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	12	12	0.25	5.6954210540848615	10	299	True	155	299	expression_kmeans|K12|q25
+276	38	70	63	0.9	5	47	1	3	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	12	12	0.5	7.165606948654104	23	299	True	155	299	expression_kmeans|K12|q50
+413	78	48	46	0.9583333333333334	3	16	1	2	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	20	20	0.25	5.60139324410736	8	421	True	155	299	expression_kmeans|K20|q25
+397	67	48	46	0.9583333333333334	3	16	1	2	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	20	20	0.5	7.038009866710762	24	421	True	155	299	expression_kmeans|K20|q50
+534	102	78	71	0.9102564102564102	3	52	3	4	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	30	30	0.25	5.3892810281733095	12	546	True	155	299	expression_kmeans|K30|q25
+523	92	78	71	0.9102564102564102	3	52	3	4	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	expression_kmeans	30	30	0.5	7.037416032837989	23	546	True	155	299	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	12	12	0.25	7.630764925387686	0	12	True	155	299	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	12	12	0.5	10.060403690626169	0	12	True	155	299	exacthex_spatial_ward|K12|q50
+20	1	23	21	0.9130434782608695	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	20	20	0.25	7.243165315031279	0	20	True	155	299	exacthex_spatial_ward|K20|q25
+20	1	23	21	0.9130434782608695	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	20	20	0.5	9.693178427026513	0	20	True	155	299	exacthex_spatial_ward|K20|q50
+30	3	23	21	0.9130434782608695	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	30	30	0.25	6.475426552511756	0	30	True	155	299	exacthex_spatial_ward|K30|q25
+30	3	23	21	0.9130434782608695	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep1	exacthex_spatial_ward	30	30	0.5	9.109986479631795	0	30	True	155	299	exacthex_spatial_ward|K30|q50
+206	27	118	107	0.9067796610169492	9	61	3	6	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	12	12	0.25	6.711350439561582	1	207	True	111	221	expression_kmeans|K12|q25
+204	25	118	107	0.9067796610169492	9	61	3	6	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	12	12	0.5	8.352541471000421	3	207	True	111	221	expression_kmeans|K12|q50
+328	51	61	59	0.9672131147540983	4	32	2	5	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	20	20	0.25	5.790501297609387	8	336	True	111	221	expression_kmeans|K20|q25
+324	48	61	59	0.9672131147540983	4	32	2	5	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	20	20	0.5	7.511601672690049	12	336	True	111	221	expression_kmeans|K20|q50
+415	79	50	46	0.92	3	32	2	3	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	30	30	0.25	5.8325446268742915	6	421	True	111	221	expression_kmeans|K30|q25
+402	69	61	55	0.9016393442622951	4	34	3	3	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	expression_kmeans	30	30	0.5	7.788477331352019	19	421	True	111	221	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	12	12	0.25	7.286205721243848	0	12	True	111	221	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	12	12	0.5	10.675430594200005	0	12	True	111	221	exacthex_spatial_ward|K12|q50
+20	1	1	1	1.0	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	20	20	0.25	7.57985551842999	0	20	True	111	221	exacthex_spatial_ward|K20|q25
+20	1	1	1	1.0	0	0	0	0	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	20	20	0.5	9.970758464794025	0	20	True	111	221	exacthex_spatial_ward|K20|q50
+28	2	137	124	0.9051094890510949	12	69	4	6	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	30	30	0.25	7.172369642406489	2	30	True	111	221	exacthex_spatial_ward|K30|q25
+28	2	137	124	0.9051094890510949	12	69	4	6	False	False	Valdeolivas	A416371	SN048_A416371_Rep2	exacthex_spatial_ward	30	30	0.5	9.73874582061561	2	30	True	111	221	exacthex_spatial_ward|K30|q50
+173	8	2	2	1.0	0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	12	12	0.25	6.1290877045996215	0	173	False	52	2	expression_kmeans|K12|q25
+173	8	2	2	1.0	0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	12	12	0.5	7.73524169098223	0	173	False	52	2	expression_kmeans|K12|q50
+233	21	2	2	1.0	1	0	1	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	20	20	0.25	6.211173529425308	1	234	False	52	2	expression_kmeans|K20|q25
+230	18	4	4	1.0	2	0	2	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	20	20	0.5	7.832690998787077	4	234	False	52	2	expression_kmeans|K20|q50
+288	22	9	9	1.0	2	2	2	2	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	30	30	0.25	6.14827687517164	2	290	False	52	2	expression_kmeans|K30|q25
+287	21	9	9	1.0	2	2	2	2	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	expression_kmeans	30	30	0.5	8.027166061048145	3	290	False	52	2	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	12	12	0.25	8.271038119498893	0	12	False	52	2	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	12	12	0.5	9.593038571889323	0	12	False	52	2	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	20	20	0.25	7.025817427521544	0	20	False	52	2	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	20	20	0.5	9.922933838258169	0	20	False	52	2	exacthex_spatial_ward|K20|q50
+30	1	1	1	1.0	1	0	1	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	30	30	0.25	7.152770718230589	0	30	False	52	2	exacthex_spatial_ward|K30|q25
+30	1	1	1	1.0	1	0	1	0	False	False	Valdeolivas	A551763	SN123_A551763_Rep1	exacthex_spatial_ward	30	30	0.5	9.374312160580129	0	30	False	52	2	exacthex_spatial_ward|K30|q50
+128	11	10	10	1.0	5	1	2	1	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	12	12	0.25	8.229337492972459	0	128	True	67	74	expression_kmeans|K12|q25
+128	11	10	10	1.0	5	1	2	1	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	12	12	0.5	10.055527192372088	0	128	True	67	74	expression_kmeans|K12|q50
+184	17	7	7	1.0	2	2	1	2	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	20	20	0.25	7.820436416413973	1	185	True	67	74	expression_kmeans|K20|q25
+182	15	7	7	1.0	2	2	1	2	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	20	20	0.5	9.880300333134201	3	185	True	67	74	expression_kmeans|K20|q50
+250	29	44	40	0.9090909090909091	10	15	3	3	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	30	30	0.25	7.517971282948908	11	261	True	67	74	expression_kmeans|K30|q25
+239	18	31	28	0.9032258064516129	9	9	2	2	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	expression_kmeans	30	30	0.5	9.71249416953113	22	261	True	67	74	expression_kmeans|K30|q50
+13	0	0	0		0	0	0	0	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	12	13	0.25	9.360804239555536	0	13	True	67	74	exacthex_spatial_ward|K12|q25
+13	0	0	0		0	0	0	0	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	12	13	0.5	13.083722489406977	0	13	True	67	74	exacthex_spatial_ward|K12|q50
+21	0	0	0		0	0	0	0	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	20	21	0.25	9.497563102832256	0	21	True	67	74	exacthex_spatial_ward|K20|q25
+21	0	0	0		0	0	0	0	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	20	21	0.5	12.755649042758511	0	21	True	67	74	exacthex_spatial_ward|K20|q50
+30	1	8	8	1.0	3	1	1	1	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	30	30	0.25	8.459819175108859	0	30	True	67	74	exacthex_spatial_ward|K30|q25
+30	1	8	8	1.0	3	1	1	1	False	False	Valdeolivas	A595688	SN123_A595688_Rep1	exacthex_spatial_ward	30	30	0.5	10.644341852895009	0	30	True	67	74	exacthex_spatial_ward|K30|q50
+144	50	169	154	0.9112426035502958	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	12	12	0.25	8.559767812914831	19	163	False	0	0	expression_kmeans|K12|q25
+130	41	234	211	0.9017094017094017	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	12	12	0.5	10.173197441323275	33	163	False	0	0	expression_kmeans|K12|q50
+196	67	319	295	0.9247648902821317	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	20	20	0.25	7.827743877334493	63	259	False	0	0	expression_kmeans|K20|q25
+174	51	400	360	0.9	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	20	20	0.5	9.748984830252525	85	259	False	0	0	expression_kmeans|K20|q50
+227	68	380	342	0.9	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	30	30	0.25	7.832682099539035	97	324	False	0	0	expression_kmeans|K30|q25
+206	51	390	356	0.9128205128205128	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	expression_kmeans	30	30	0.5	9.372128007575373	118	324	False	0	0	expression_kmeans|K30|q50
+12	1	63	63	1.0	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	12	12	0.25	10.556213980814086	0	12	False	0	0	exacthex_spatial_ward|K12|q25
+12	1	63	63	1.0	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	12	12	0.5	12.909241057567304	0	12	False	0	0	exacthex_spatial_ward|K12|q50
+20	2	227	206	0.9074889867841409	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	20	20	0.25	8.695577568839472	0	20	False	0	0	exacthex_spatial_ward|K20|q25
+19	1	290	269	0.9275862068965517	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	20	20	0.5	12.19395523608627	1	20	False	0	0	exacthex_spatial_ward|K20|q50
+29	4	226	205	0.9070796460176991	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	30	30	0.25	8.967229367277572	1	30	False	0	0	exacthex_spatial_ward|K30|q25
+28	3	289	268	0.9273356401384083	0	0	0	0	False	False	Valdeolivas	A798015	SN123_A798015_Rep1	exacthex_spatial_ward	30	30	0.5	11.64375016196627	2	30	False	0	0	exacthex_spatial_ward|K30|q50
+183	82	277	256	0.924187725631769	12	128	4	9	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	12	12	0.25	9.266606878138685	51	234	True	116	409	expression_kmeans|K12|q25
+120	39	565	509	0.9008849557522124	38	248	8	17	True	True	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	12	12	0.5	11.908692202583294	114	234	True	116	409	expression_kmeans|K12|q50
+276	116	594	535	0.9006734006734006	41	208	8	16	True	True	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	20	20	0.25	8.273115164788834	125	401	True	116	409	expression_kmeans|K20|q25
+203	61	663	597	0.9004524886877828	56	262	11	19	True	True	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	20	20	0.5	10.518757072240962	198	401	True	116	409	expression_kmeans|K20|q50
+347	163	330	297	0.9	44	140	8	13	True	True	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	30	30	0.25	7.7613451599299585	152	499	True	116	409	expression_kmeans|K30|q25
+229	68	541	487	0.9001848428835489	47	228	10	16	True	True	Valdeolivas	A938797	SN123_A938797_Rep1_X	expression_kmeans	30	30	0.5	9.989646986099793	270	499	True	116	409	expression_kmeans|K30|q50
+10	1	421	386	0.9168646080760094	0	19	0	2	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	12	12	0.25	10.028044953764432	2	12	True	116	409	exacthex_spatial_ward|K12|q25
+10	1	421	386	0.9168646080760094	0	19	0	2	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	12	12	0.5	13.097289303132463	2	12	True	116	409	exacthex_spatial_ward|K12|q50
+17	1	421	386	0.9168646080760094	0	19	0	2	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	20	20	0.25	10.185823987026636	3	20	True	116	409	exacthex_spatial_ward|K20|q25
+17	1	421	386	0.9168646080760094	0	19	0	2	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	20	20	0.5	12.663732019111713	3	20	True	116	409	exacthex_spatial_ward|K20|q50
+27	6	311	282	0.9067524115755627	13	128	4	13	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	30	30	0.25	9.82314208459826	3	30	True	116	409	exacthex_spatial_ward|K30|q25
+22	3	505	462	0.9148514851485149	0	27	0	5	False	False	Valdeolivas	A938797	SN123_A938797_Rep1_X	exacthex_spatial_ward	30	30	0.5	12.285376989531777	8	30	True	116	409	exacthex_spatial_ward|K30|q50
+477	12	2	2	1.0	2	0	2	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	12	12	0.25	9.71599430310988	0	477	False	33	1	expression_kmeans|K12|q25
+477	12	2	2	1.0	2	0	2	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	12	12	0.5	11.791871301463434	0	477	False	33	1	expression_kmeans|K12|q50
+635	15	2	2	1.0	2	0	1	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	20	20	0.25	10.288516954073	0	635	False	33	1	expression_kmeans|K20|q25
+635	15	2	2	1.0	2	0	1	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	20	20	0.5	12.190630986847307	0	635	False	33	1	expression_kmeans|K20|q50
+716	22	2	2	1.0	2	0	1	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	30	30	0.25	10.374893690252069	0	716	False	33	1	expression_kmeans|K30|q25
+716	22	2	2	1.0	2	0	1	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	expression_kmeans	30	30	0.5	12.3889427400794	0	716	False	33	1	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	12	12	0.25	6.825370662888391	0	12	False	33	1	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	12	12	0.5	8.042921270971553	0	12	False	33	1	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	20	20	0.25	7.882153811812704	0	20	False	33	1	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	20	20	0.5	9.505393904324322	0	20	False	33	1	exacthex_spatial_ward|K20|q50
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	30	30	0.25	7.23140669415848	0	30	False	33	1	exacthex_spatial_ward|K30|q25
+30	0	0	0		0	0	0	0	False	False	Valdeolivas	A551763	SN124_A551763_Rep2	exacthex_spatial_ward	30	30	0.5	9.173253286646595	0	30	False	33	1	exacthex_spatial_ward|K30|q50
+40	5	20	19	0.95	0	13	0	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	12	12	0.25	9.707909367683136	0	40	True	26	26	expression_kmeans|K12|q25
+40	5	20	19	0.95	0	13	0	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	12	12	0.5	12.91006343446939	0	40	True	26	26	expression_kmeans|K12|q50
+68	8	18	17	0.9444444444444444	8	4	3	3	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	20	20	0.25	8.238500663013406	2	70	True	26	26	expression_kmeans|K20|q25
+68	8	18	17	0.9444444444444444	8	4	3	3	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	20	20	0.5	11.978964828835979	2	70	True	26	26	expression_kmeans|K20|q50
+81	18	9	9	1.0	0	8	0	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	30	30	0.25	8.4112405584226	0	81	True	26	26	expression_kmeans|K30|q25
+77	15	25	24	0.96	6	12	2	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	expression_kmeans	30	30	0.5	14.112413914164275	4	81	True	26	26	expression_kmeans|K30|q50
+12	1	19	18	0.9473684210526315	2	12	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	12	12	0.25	11.145315861983901	0	12	True	26	26	exacthex_spatial_ward|K12|q25
+12	1	19	18	0.9473684210526315	2	12	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	12	12	0.5	12.265023629610855	0	12	True	26	26	exacthex_spatial_ward|K12|q50
+20	5	16	15	0.9375	2	10	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	20	20	0.25	12.835233375854632	0	20	True	26	26	exacthex_spatial_ward|K20|q25
+19	4	18	17	0.9444444444444444	2	12	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	20	20	0.5	23.01234739929233	1	20	True	26	26	exacthex_spatial_ward|K20|q50
+30	8	15	14	0.9333333333333333	2	9	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	30	30	0.25	14.673779090933884	0	30	True	26	26	exacthex_spatial_ward|K30|q25
+26	5	25	23	0.92	2	15	1	2	False	False	Valdeolivas	A595688	SN124_A595688_Rep2	exacthex_spatial_ward	30	30	0.5	25.106221444934363	4	30	True	26	26	exacthex_spatial_ward|K30|q50
+142	44	51	47	0.9215686274509803	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	12	12	0.25	8.21127356336457	16	158	False	0	0	expression_kmeans|K12|q25
+133	37	55	50	0.9090909090909091	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	12	12	0.5	9.950619556347588	25	158	False	0	0	expression_kmeans|K12|q50
+182	45	392	353	0.9005102040816326	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	20	20	0.25	7.914529091883406	79	261	False	0	0	expression_kmeans|K20|q25
+153	21	435	393	0.903448275862069	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	20	20	0.5	9.763138180090682	108	261	False	0	0	expression_kmeans|K20|q50
+255	63	247	224	0.9068825910931174	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	30	30	0.25	8.020352964562992	77	332	False	0	0	expression_kmeans|K30|q25
+210	29	401	361	0.9002493765586035	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	expression_kmeans	30	30	0.5	9.683878679423943	122	332	False	0	0	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	12	12	0.25	10.060023946447224	0	12	False	0	0	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	12	12	0.5	12.425709541870145	0	12	False	0	0	exacthex_spatial_ward|K12|q50
+20	1	155	142	0.9161290322580645	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	20	20	0.25	7.929790670566661	0	20	False	0	0	exacthex_spatial_ward|K20|q25
+20	1	155	142	0.9161290322580645	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	20	20	0.5	11.806279811361714	0	20	False	0	0	exacthex_spatial_ward|K20|q50
+30	1	155	142	0.9161290322580645	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	30	30	0.25	7.635365913153273	0	30	False	0	0	exacthex_spatial_ward|K30|q25
+30	1	155	142	0.9161290322580645	0	0	0	0	False	False	Valdeolivas	A798015	SN124_A798015_Rep2	exacthex_spatial_ward	30	30	0.5	10.59123830272604	0	30	False	0	0	exacthex_spatial_ward|K30|q50
+202	47	314	287	0.9140127388535032	59	146	12	8	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	12	12	0.25	8.4568741888856	45	247	True	181	336	expression_kmeans|K12|q25
+173	27	565	510	0.9026548672566371	84	218	13	14	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	12	12	0.5	11.252449423541231	74	247	True	181	336	expression_kmeans|K12|q50
+254	67	314	288	0.9171974522292994	57	146	12	8	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	20	20	0.25	7.446630899637341	107	361	True	181	336	expression_kmeans|K20|q25
+215	39	549	496	0.9034608378870674	108	232	14	17	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	20	20	0.5	10.052263390689628	146	361	True	181	336	expression_kmeans|K20|q50
+310	76	334	301	0.9011976047904192	61	144	11	11	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	30	30	0.25	7.317358739007032	142	452	True	181	336	expression_kmeans|K30|q25
+253	37	618	557	0.901294498381877	123	258	16	20	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	expression_kmeans	30	30	0.5	9.865756849934836	199	452	True	181	336	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	12	12	0.25	11.46540609836536	0	12	True	181	336	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	12	12	0.5	13.220166188514678	0	12	True	181	336	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	20	20	0.25	11.472358308600619	0	20	True	181	336	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	20	20	0.5	13.079412786808266	0	20	True	181	336	exacthex_spatial_ward|K20|q50
+27	2	297	269	0.9057239057239057	45	123	7	8	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	30	30	0.25	10.483937154162048	3	30	True	181	336	exacthex_spatial_ward|K30|q25
+26	2	332	299	0.9006024096385542	45	123	7	8	True	True	Valdeolivas	A938797	SN124_A938797_Rep2	exacthex_spatial_ward	30	30	0.5	13.296186379810559	4	30	True	181	336	exacthex_spatial_ward|K30|q50
+42	9	67	61	0.9104477611940298	1	43	1	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	12	12	0.25	8.745939911981687	4	46	False	16	85	expression_kmeans|K12|q25
+41	8	67	61	0.9104477611940298	1	43	1	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	12	12	0.5	11.1764490076376	5	46	False	16	85	expression_kmeans|K12|q50
+54	9	62	57	0.9193548387096774	0	40	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	20	20	0.25	8.650275433103932	5	59	False	16	85	expression_kmeans|K20|q25
+48	5	123	111	0.9024390243902439	1	70	1	13	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	20	20	0.5	11.705904174940013	11	59	False	16	85	expression_kmeans|K20|q50
+61	8	92	83	0.9021739130434783	9	44	5	10	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	30	30	0.25	8.603786905910287	23	84	False	16	85	expression_kmeans|K30|q25
+58	7	87	79	0.9080459770114943	8	43	4	10	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	expression_kmeans	30	30	0.5	11.628819717376958	26	84	False	16	85	expression_kmeans|K30|q50
+11	2	67	64	0.9552238805970149	0	44	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	12	12	0.25	9.630805660074826	1	12	False	16	85	exacthex_spatial_ward|K12|q25
+10	2	88	81	0.9204545454545454	4	53	3	10	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	12	12	0.5	12.089086046797618	2	12	False	16	85	exacthex_spatial_ward|K12|q50
+18	5	87	80	0.9195402298850575	3	53	2	10	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	20	20	0.25	11.037854821550646	2	20	False	16	85	exacthex_spatial_ward|K20|q25
+18	5	87	80	0.9195402298850575	3	53	2	10	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	20	20	0.5	14.341101316882364	2	20	False	16	85	exacthex_spatial_ward|K20|q50
+27	8	63	60	0.9523809523809523	2	39	1	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	30	30	0.25	11.19852526350243	3	30	False	16	85	exacthex_spatial_ward|K30|q25
+24	6	124	114	0.9193548387096774	3	72	2	13	False	False	Valdeolivas	A120838	SN84_A120838_Rep1	exacthex_spatial_ward	30	30	0.5	17.22116294394752	6	30	False	16	85	exacthex_spatial_ward|K30|q50
+129	20	55	53	0.9636363636363636	0	29	0	4	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	12	12	0.25	7.686146038805983	5	134	True	89	169	expression_kmeans|K12|q25
+117	12	124	118	0.9516129032258065	5	65	2	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	12	12	0.5	9.75140350132878	17	134	True	89	169	expression_kmeans|K12|q50
+190	33	58	54	0.9310344827586207	2	40	2	5	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	20	20	0.25	7.294900126746732	16	206	True	89	169	expression_kmeans|K20|q25
+162	14	127	120	0.9448818897637795	0	63	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	20	20	0.5	9.299390520296	44	206	True	89	169	expression_kmeans|K20|q50
+218	43	59	55	0.9322033898305084	1	40	1	5	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	30	30	0.25	7.032537165832349	30	248	True	89	169	expression_kmeans|K30|q25
+186	20	110	105	0.9545454545454546	0	60	0	8	False	True	Valdeolivas	A120838	SN84_A120838_Rep2	expression_kmeans	30	30	0.5	9.135556655100713	62	248	True	89	169	expression_kmeans|K30|q50
+12	2	119	113	0.9495798319327731	0	62	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	12	12	0.25	8.831888179788074	0	12	True	89	169	exacthex_spatial_ward|K12|q25
+11	1	152	143	0.9407894736842105	0	70	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	12	12	0.5	11.18667031552117	1	12	True	89	169	exacthex_spatial_ward|K12|q50
+19	4	118	112	0.9491525423728814	0	61	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	20	20	0.25	9.061857582573449	1	20	True	89	169	exacthex_spatial_ward|K20|q25
+17	2	198	185	0.9343434343434344	8	91	3	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	20	20	0.5	11.902227127718739	3	20	True	89	169	exacthex_spatial_ward|K20|q50
+27	3	123	120	0.975609756097561	0	65	0	8	False	False	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	30	30	0.25	8.751922046823257	3	30	True	89	169	exacthex_spatial_ward|K30|q25
+24	2	236	213	0.902542372881356	22	101	6	10	True	True	Valdeolivas	A120838	SN84_A120838_Rep2	exacthex_spatial_ward	30	30	0.5	11.842614444930973	6	30	True	89	169	exacthex_spatial_ward|K30|q50
+490	68	242	231	0.9545454545454546	3	42	1	3	False	True	GSE294385	Patient1	M-ST-13	expression_kmeans	12	12	0.25	11.230369077366243	29	519	True	483	244	expression_kmeans|K12|q25
+436	35	531	483	0.9096045197740112	216	131	6	6	True	True	GSE294385	Patient1	M-ST-13	expression_kmeans	12	12	0.5	14.648103030505762	83	519	True	483	244	expression_kmeans|K12|q50
+753	86	204	200	0.9803921568627451	63	66	3	4	True	True	GSE294385	Patient1	M-ST-13	expression_kmeans	20	20	0.25	9.619342166731412	35	788	True	483	244	expression_kmeans|K20|q25
+720	62	209	205	0.9808612440191388	68	66	3	4	True	True	GSE294385	Patient1	M-ST-13	expression_kmeans	20	20	0.5	12.448291932121304	68	788	True	483	244	expression_kmeans|K20|q50
+1002	110	209	206	0.9856459330143541	66	66	4	4	True	True	GSE294385	Patient1	M-ST-13	expression_kmeans	30	30	0.25	8.523146883646762	52	1054	True	483	244	expression_kmeans|K30|q25
+951	66	493	484	0.9817444219066938	159	162	6	6	True	True	GSE294385	Patient1	M-ST-13	expression_kmeans	30	30	0.5	11.581775018727607	103	1054	True	483	244	expression_kmeans|K30|q50
+51	0	0	0		0	0	0	0	False	False	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	12	51	0.25	15.225730654798411	0	51	True	483	244	exacthex_spatial_ward|K12|q25
+51	0	0	0		0	0	0	0	False	False	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	12	51	0.5	20.59373342847096	0	51	True	483	244	exacthex_spatial_ward|K12|q50
+59	0	0	0		0	0	0	0	False	False	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	20	59	0.25	13.615807992602583	0	59	True	483	244	exacthex_spatial_ward|K20|q25
+59	0	0	0		0	0	0	0	False	False	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	20	59	0.5	18.762004685868835	0	59	True	483	244	exacthex_spatial_ward|K20|q50
+69	2	253	252	0.9960474308300395	11	91	3	3	False	True	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	30	69	0.25	13.615807992602583	0	69	True	483	244	exacthex_spatial_ward|K30|q25
+69	2	253	252	0.9960474308300395	11	91	3	3	False	True	GSE294385	Patient1	M-ST-13	exacthex_spatial_ward	30	69	0.5	17.690418096636524	0	69	True	483	244	exacthex_spatial_ward|K30|q50
+620	23	18	17	0.9444444444444444	12	0	1	0	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	12	12	0.25	11.404930246761662	9	629	True	291	84	expression_kmeans|K12|q25
+620	23	18	17	0.9444444444444444	12	0	1	0	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	12	12	0.5	15.186419377814104	9	629	True	291	84	expression_kmeans|K12|q50
+949	39	6	6	1.0	0	4	0	1	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	20	20	0.25	10.520926051358174	3	952	True	291	84	expression_kmeans|K20|q25
+948	38	6	6	1.0	0	4	0	1	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	20	20	0.5	13.59513951342499	4	952	True	291	84	expression_kmeans|K20|q50
+1224	47	13	12	0.9230769230769231	9	0	1	0	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	30	30	0.25	9.825074085505918	7	1231	True	291	84	expression_kmeans|K30|q25
+1222	46	13	12	0.9230769230769231	9	0	1	0	False	False	GSE294385	Patient6	M-ST-15	expression_kmeans	30	30	0.5	12.616153219088638	9	1231	True	291	84	expression_kmeans|K30|q50
+41	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	12	41	0.25	21.577224761594774	0	41	True	291	84	exacthex_spatial_ward|K12|q25
+41	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	12	41	0.5	25.351503676376772	0	41	True	291	84	exacthex_spatial_ward|K12|q50
+49	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	20	49	0.25	17.00854773380271	0	49	True	291	84	exacthex_spatial_ward|K20|q25
+49	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	20	49	0.5	23.192937828138103	0	49	True	291	84	exacthex_spatial_ward|K20|q50
+59	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	30	59	0.25	16.851056814929116	0	59	True	291	84	exacthex_spatial_ward|K30|q25
+59	1	1	1	1.0	0	0	0	0	False	False	GSE294385	Patient6	M-ST-15	exacthex_spatial_ward	30	59	0.5	22.330436044471135	0	59	True	291	84	exacthex_spatial_ward|K30|q50
+1054	225	382	355	0.9293193717277487	192	64	6	5	True	True	GSE294385	Patient11	M-ST-29	expression_kmeans	12	12	0.25	10.994773562129373	143	1197	True	1466	316	expression_kmeans|K12|q25
+988	178	410	378	0.9219512195121952	224	59	6	4	True	True	GSE294385	Patient11	M-ST-29	expression_kmeans	12	12	0.5	14.295947961254996	209	1197	True	1466	316	expression_kmeans|K12|q50
+1371	260	120	118	0.9833333333333333	34	45	2	2	False	False	GSE294385	Patient11	M-ST-29	expression_kmeans	20	20	0.25	10.099657700239653	138	1509	True	1466	316	expression_kmeans|K20|q25
+1259	183	301	282	0.9368770764119602	158	53	5	3	True	True	GSE294385	Patient11	M-ST-29	expression_kmeans	20	20	0.5	13.22559658362262	250	1509	True	1466	316	expression_kmeans|K20|q50
+1823	328	244	227	0.930327868852459	159	23	7	4	True	True	GSE294385	Patient11	M-ST-29	expression_kmeans	30	30	0.25	9.312343487902394	197	2020	True	1466	316	expression_kmeans|K30|q25
+1668	219	464	419	0.9030172413793104	240	73	6	6	True	True	GSE294385	Patient11	M-ST-29	expression_kmeans	30	30	0.5	12.334692721149722	352	2020	True	1466	316	expression_kmeans|K30|q50
+26	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	12	26	0.25	15.28736865455777	0	26	True	1466	316	exacthex_spatial_ward|K12|q25
+26	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	12	26	0.5	18.589402871561703	0	26	True	1466	316	exacthex_spatial_ward|K12|q50
+34	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	20	34	0.25	13.304206281800742	0	34	True	1466	316	exacthex_spatial_ward|K20|q25
+34	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	20	34	0.5	16.49405607712664	0	34	True	1466	316	exacthex_spatial_ward|K20|q50
+44	1	54	54	1.0	0	12	0	2	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	30	44	0.25	13.92168012198954	0	44	True	1466	316	exacthex_spatial_ward|K30|q25
+44	1	54	54	1.0	0	12	0	2	False	False	GSE294385	Patient11	M-ST-29	exacthex_spatial_ward	30	44	0.5	17.507755483155442	0	44	True	1466	316	exacthex_spatial_ward|K30|q50
+506	22	9	9	1.0	0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	12	12	0.25	10.105142431089183	1	507	True	173	76	expression_kmeans|K12|q25
+504	21	10	9	0.9	0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	12	12	0.5	12.745434643388943	3	507	True	173	76	expression_kmeans|K12|q50
+676	46	11	10	0.9090909090909091	4	4	1	1	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	20	20	0.25	9.602204615668882	8	684	True	173	76	expression_kmeans|K20|q25
+672	43	12	11	0.9166666666666666	5	4	1	1	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	20	20	0.5	12.152489981934547	12	684	True	173	76	expression_kmeans|K20|q50
+892	47	13	12	0.9230769230769231	6	3	1	1	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	30	30	0.25	8.292597009699147	10	902	True	173	76	expression_kmeans|K30|q25
+886	41	16	15	0.9375	6	5	1	1	False	False	GSE294385	Patient11	M-ST-30	expression_kmeans	30	30	0.5	11.068325378872329	16	902	True	173	76	expression_kmeans|K30|q50
+87	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	12	87	0.25	11.702142772253664	0	87	True	173	76	exacthex_spatial_ward|K12|q25
+87	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	12	87	0.5	16.48028747042313	0	87	True	173	76	exacthex_spatial_ward|K12|q50
+95	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	20	95	0.25	12.469170162001742	0	95	True	173	76	exacthex_spatial_ward|K20|q25
+95	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	20	95	0.5	17.489029353369766	0	95	True	173	76	exacthex_spatial_ward|K20|q50
+104	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	30	104	0.25	10.94114424139358	0	104	True	173	76	exacthex_spatial_ward|K30|q25
+104	0	0	0		0	0	0	0	False	False	GSE294385	Patient11	M-ST-30	exacthex_spatial_ward	30	104	0.5	16.90137192350537	0	104	True	173	76	exacthex_spatial_ward|K30|q50
+629	102	66	64	0.9696969696969697	21	21	2	1	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	12	12	0.25	11.377769802520135	46	675	True	694	246	expression_kmeans|K12|q25
+618	93	67	65	0.9701492537313433	21	22	2	1	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	12	12	0.5	14.466836319724884	57	675	True	694	246	expression_kmeans|K12|q50
+813	125	109	99	0.908256880733945	79	6	4	2	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	20	20	0.25	10.353852346153984	68	881	True	694	246	expression_kmeans|K20|q25
+784	104	115	104	0.9043478260869565	54	20	4	2	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	20	20	0.5	13.399794468293988	97	881	True	694	246	expression_kmeans|K20|q50
+1058	172	104	94	0.9038461538461539	57	13	2	2	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	30	30	0.25	9.514573961838527	97	1155	True	694	246	expression_kmeans|K30|q25
+988	115	114	103	0.9035087719298246	65	13	2	2	False	False	GSE294385	Patient9	M-ST-31	expression_kmeans	30	30	0.5	12.534371013749343	167	1155	True	694	246	expression_kmeans|K30|q50
+150	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	12	150	0.25	19.98643668702671	0	150	True	694	246	exacthex_spatial_ward|K12|q25
+150	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	12	150	0.5	22.09063237801149	0	150	True	694	246	exacthex_spatial_ward|K12|q50
+157	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	20	157	0.25	13.443988989299678	0	157	True	694	246	exacthex_spatial_ward|K20|q25
+157	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	20	157	0.5	18.26112419662644	0	157	True	694	246	exacthex_spatial_ward|K20|q50
+166	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	30	166	0.25	13.68469894956294	0	166	True	694	246	exacthex_spatial_ward|K30|q25
+166	5	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-31	exacthex_spatial_ward	30	166	0.5	18.499183956430876	0	166	True	694	246	exacthex_spatial_ward|K30|q50
+799	148	52	52	1.0	8	22	2	2	False	False	GSE294385	Patient9	M-ST-32	expression_kmeans	12	12	0.25	10.294698832814378	65	864	True	910	291	expression_kmeans|K12|q25
+780	136	58	54	0.9310344827586207	10	22	2	2	False	False	GSE294385	Patient9	M-ST-32	expression_kmeans	12	12	0.5	13.42867271926517	84	864	True	910	291	expression_kmeans|K12|q50
+1094	173	135	122	0.9037037037037037	25	45	2	2	False	False	GSE294385	Patient9	M-ST-32	expression_kmeans	20	20	0.25	9.071114707343067	76	1170	True	910	291	expression_kmeans|K20|q25
+1057	145	103	94	0.912621359223301	59	14	2	2	False	False	GSE294385	Patient9	M-ST-32	expression_kmeans	20	20	0.5	11.838405204703436	113	1170	True	910	291	expression_kmeans|K20|q50
+1445	209	225	205	0.9111111111111111	49	79	5	5	True	True	GSE294385	Patient9	M-ST-32	expression_kmeans	30	30	0.25	8.529455765226363	111	1556	True	910	291	expression_kmeans|K30|q25
+1389	171	227	205	0.9030837004405287	49	79	4	5	True	True	GSE294385	Patient9	M-ST-32	expression_kmeans	30	30	0.5	11.03344839022132	167	1556	True	910	291	expression_kmeans|K30|q50
+49	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	12	49	0.25	15.288645409095457	0	49	True	910	291	exacthex_spatial_ward|K12|q25
+49	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	12	49	0.5	17.6584304607887	0	49	True	910	291	exacthex_spatial_ward|K12|q50
+57	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	20	57	0.25	12.022515331753745	0	57	True	910	291	exacthex_spatial_ward|K20|q25
+57	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	20	57	0.5	16.245410812603275	0	57	True	910	291	exacthex_spatial_ward|K20|q50
+67	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	30	67	0.25	12.34900842998549	0	67	True	910	291	exacthex_spatial_ward|K30|q25
+67	2	7	7	1.0	0	0	0	0	False	False	GSE294385	Patient9	M-ST-32	exacthex_spatial_ward	30	67	0.5	16.547974427581316	0	67	True	910	291	exacthex_spatial_ward|K30|q50
+447	37	38	36	0.9473684210526315	10	10	1	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	12	12	0.25	12.169084426822241	16	463	True	478	130	expression_kmeans|K12|q25
+447	37	38	36	0.9473684210526315	10	10	1	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	12	12	0.5	15.010685204224323	16	463	True	478	130	expression_kmeans|K12|q50
+866	85	23	23	1.0	3	11	1	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	20	20	0.25	9.483055227115397	19	885	True	478	130	expression_kmeans|K20|q25
+854	76	44	40	0.9090909090909091	12	13	2	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	20	20	0.5	12.510720400978899	31	885	True	478	130	expression_kmeans|K20|q50
+1142	87	58	55	0.9482758620689655	27	11	2	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	30	30	0.25	8.7570571765153	17	1159	True	478	130	expression_kmeans|K30|q25
+1131	79	62	59	0.9516129032258065	31	11	2	1	False	False	GSE294385	Patient10	M-ST-33	expression_kmeans	30	30	0.5	11.664888946840879	28	1159	True	478	130	expression_kmeans|K30|q50
+12	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	12	12	0.25	21.314831704264805	0	12	True	478	130	exacthex_spatial_ward|K12|q25
+12	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	12	12	0.5	21.39679531690407	0	12	True	478	130	exacthex_spatial_ward|K12|q50
+20	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	20	20	0.25	16.633513781620557	0	20	True	478	130	exacthex_spatial_ward|K20|q25
+20	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	20	20	0.5	21.683786511594224	0	20	True	478	130	exacthex_spatial_ward|K20|q50
+30	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	30	30	0.25	12.83122529258518	0	30	True	478	130	exacthex_spatial_ward|K30|q25
+30	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-33	exacthex_spatial_ward	30	30	0.5	20.518246229561864	0	30	True	478	130	exacthex_spatial_ward|K30|q50
+903	187	283	260	0.9187279151943463	86	111	5	4	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	12	12	0.25	10.564484622976448	109	1012	True	1583	422	expression_kmeans|K12|q25
+840	145	564	517	0.9166666666666666	210	186	8	7	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	12	12	0.5	13.472789353376825	172	1012	True	1583	422	expression_kmeans|K12|q50
+1361	268	241	226	0.9377593360995851	67	102	5	4	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	20	20	0.25	9.458532124368201	159	1520	True	1583	422	expression_kmeans|K20|q25
+1243	184	576	529	0.9184027777777778	238	171	9	7	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	20	20	0.5	12.404093431489748	277	1520	True	1583	422	expression_kmeans|K20|q50
+1736	358	520	481	0.925	91	227	8	7	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	30	30	0.25	8.58179581229189	282	2018	True	1583	422	expression_kmeans|K30|q25
+1527	198	691	626	0.9059334298118669	201	237	8	7	True	True	GSE294385	Patient10	M-ST-34	expression_kmeans	30	30	0.5	11.490805770809686	491	2018	True	1583	422	expression_kmeans|K30|q50
+19	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	12	19	0.25	15.110645378963204	0	19	True	1583	422	exacthex_spatial_ward|K12|q25
+19	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	12	19	0.5	17.15585841172966	0	19	True	1583	422	exacthex_spatial_ward|K12|q50
+27	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	20	27	0.25	13.085156106707323	0	27	True	1583	422	exacthex_spatial_ward|K20|q25
+27	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	20	27	0.5	19.926135067439336	0	27	True	1583	422	exacthex_spatial_ward|K20|q50
+37	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	30	37	0.25	13.85501275844338	0	37	True	1583	422	exacthex_spatial_ward|K30|q25
+37	0	0	0		0	0	0	0	False	False	GSE294385	Patient10	M-ST-34	exacthex_spatial_ward	30	37	0.5	19.220657015394984	0	37	True	1583	422	exacthex_spatial_ward|K30|q50

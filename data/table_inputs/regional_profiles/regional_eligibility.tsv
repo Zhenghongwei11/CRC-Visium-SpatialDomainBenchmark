@@ -1,0 +1,75 @@
+resource	patient_id	sample_id	section_id	geometry	compartment	n_near	n_far	near_blocks	far_blocks	evaluable	unavailable_reasons
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	stroma	140	49	19	9	True	
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	tumor	175	67	17	14	True	
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	legacy6nn	stroma	140	49	19	9	True	
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	stroma	169	111	25	15	True	
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	tumor	166	87	23	12	True	
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	legacy6nn	stroma	169	111	25	15	True	
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	stroma	155	299	28	27	True	
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	tumor	148	246	26	22	True	
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	legacy6nn	stroma	155	298	28	27	True	
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	stroma	111	221	29	21	True	
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	tumor	120	263	28	24	True	
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	legacy6nn	stroma	111	222	29	21	True	
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	stroma	52	2	19	2	False	far_spots_below20;far_blocks_below3
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	tumor	79	164	22	24	True	
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	legacy6nn	stroma	52	2	19	2	False	far_spots_below20;far_blocks_below3
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	stroma	67	74	15	16	True	
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	tumor	56	77	14	13	True	
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	legacy6nn	stroma	67	75	15	16	True	
+Valdeolivas	A798015	SN123_A798015_Rep1	S7_Rec/Sig	exacthex	stroma	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A798015	SN123_A798015_Rep1	S7_Rec/Sig	exacthex	tumor	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A798015	SN123_A798015_Rep1	S7_Rec/Sig	legacy6nn	stroma	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	116	409	14	22	True	
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	tumor	73	18	15	4	False	far_spots_below20
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	116	409	14	22	True	
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	stroma	33	1	11	1	False	far_spots_below20;far_blocks_below3
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	tumor	42	266	12	25	True	
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	legacy6nn	stroma	33	0	11	0	False	far_spots_below20;far_blocks_below3
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	stroma	26	26	8	5	True	
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	tumor	28	57	11	9	True	
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	legacy6nn	stroma	26	26	8	5	True	
+Valdeolivas	A798015	SN124_A798015_Rep2	S7_Rec/Sig	exacthex	stroma	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A798015	SN124_A798015_Rep2	S7_Rec/Sig	exacthex	tumor	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A798015	SN124_A798015_Rep2	S7_Rec/Sig	legacy6nn	stroma	0	0	0	0	False	near_spots_below20;far_spots_below20;near_blocks_below3;far_blocks_below3
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	181	336	21	25	True	
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	tumor	124	17	21	6	False	far_spots_below20
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	181	336	21	25	True	
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	16	85	10	17	False	near_spots_below20
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	tumor	17	8	11	6	False	near_spots_below20;far_spots_below20
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	16	85	10	17	False	near_spots_below20
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	89	169	21	17	True	
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	tumor	75	65	21	11	True	
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	89	169	21	17	True	
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	stroma	483	244	17	10	True	
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	tumor	562	672	17	16	True	
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	legacy6nn	stroma	483	244	17	10	True	
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex_no_muscularis	stroma	483	244	17	10	True	
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	291	84	21	11	True	
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	420	617	20	17	True	
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	291	84	21	10	True	
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	281	82	20	10	True	
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	1466	316	26	19	True	
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	1972	790	26	20	True	
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	1466	316	26	19	True	
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	932	243	26	16	True	
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	stroma	173	76	12	10	True	
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	147	49	11	7	True	
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	legacy6nn	stroma	173	75	12	10	True	
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex_no_muscularis	stroma	97	43	7	6	True	
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	694	246	15	13	True	
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	833	104	15	10	True	
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	694	251	15	13	True	
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex_no_muscularis	stroma	324	224	9	9	True	
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	910	291	23	14	True	
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	1327	1051	23	20	True	
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	910	291	23	14	True	
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	692	208	19	13	True	
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	stroma	478	130	17	14	True	
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	669	685	17	17	True	
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	legacy6nn	stroma	478	132	17	15	True	
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex_no_muscularis	stroma	214	55	9	7	True	
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	1583	422	28	26	True	
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	1664	211	27	23	True	
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	1583	422	28	26	True	
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex_no_muscularis	stroma	1517	395	26	23	True	

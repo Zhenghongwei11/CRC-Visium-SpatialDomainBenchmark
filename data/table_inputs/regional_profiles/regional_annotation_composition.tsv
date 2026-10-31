@@ -1,0 +1,292 @@
+resource	patient_id	sample_id	section_id	geometry	compartment	band	raw_label	n_spots	spot_fraction
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	stroma	near	stroma_fibroblastic_IC high	140	1.0
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	stroma	far	stroma_fibroblastic_IC high	49	1.0
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	tumor	near	tumor	175	1.0
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	exacthex	tumor	far	tumor	67	1.0
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	140	1.0
+Valdeolivas	A121573	SN048_A121573_Rep1	S5_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC high	49	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	stroma	near	stroma_fibroblastic_IC high	169	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	stroma	far	stroma_fibroblastic_IC high	111	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	tumor	near	tumor	166	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	exacthex	tumor	far	tumor	87	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	169	1.0
+Valdeolivas	A121573	SN048_A121573_Rep2	S5_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC high	111	1.0
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC high	78	0.5032258064516129
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC med	77	0.4967741935483871
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC med	190	0.6354515050167224
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC high	109	0.36454849498327757
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	tumor	near	tumor	148	1.0
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	exacthex	tumor	far	tumor	246	1.0
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC high	78	0.5032258064516129
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC med	77	0.4967741935483871
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC med	188	0.6308724832214765
+Valdeolivas	A416371	SN048_A416371_Rep1	S3_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC high	110	0.3691275167785235
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC med	62	0.5585585585585585
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC high	49	0.44144144144144143
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC med	128	0.579185520361991
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC high	93	0.42081447963800905
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	tumor	near	tumor	120	1.0
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	exacthex	tumor	far	tumor	263	1.0
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC med	62	0.5585585585585585
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC high	49	0.44144144144144143
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC med	129	0.581081081081081
+Valdeolivas	A416371	SN048_A416371_Rep2	S3_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC high	93	0.4189189189189189
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	stroma	near	stroma_fibroblastic_IC med	36	0.6923076923076923
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	stroma	near	stroma_fibroblastic_IC high	16	0.3076923076923077
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	stroma	far	stroma_fibroblastic_IC med	2	1.0
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	tumor	near	tumor	79	1.0
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	exacthex	tumor	far	tumor	164	1.0
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	legacy6nn	stroma	near	stroma_fibroblastic_IC med	36	0.6923076923076923
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	16	0.3076923076923077
+Valdeolivas	A551763	SN123_A551763_Rep1	S1_Cec	legacy6nn	stroma	far	stroma_fibroblastic_IC med	2	1.0
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC med	51	0.7611940298507462
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC high	16	0.23880597014925373
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC high	49	0.6621621621621622
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC med	25	0.33783783783783783
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	tumor	near	tumor	56	1.0
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	exacthex	tumor	far	tumor	77	1.0
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC med	51	0.7611940298507462
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC high	16	0.23880597014925373
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC high	49	0.6533333333333333
+Valdeolivas	A595688	SN123_A595688_Rep1	S2_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC med	26	0.3466666666666667
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	near	stroma_fibroblastic_IC high	81	0.6982758620689655
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	near	stroma_fibroblastic_IC med	35	0.3017241379310345
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	far	stroma_fibroblastic_IC high	318	0.7775061124694377
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	far	stroma_fibroblastic_IC med	86	0.21026894865525672
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	stroma	far	stroma_desmoplastic_IC med to high	5	0.012224938875305624
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	tumor	near	tumor	73	1.0
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	exacthex	tumor	far	tumor	18	1.0
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	81	0.6982758620689655
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC med	35	0.3017241379310345
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC high	318	0.7775061124694377
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC med	86	0.21026894865525672
+Valdeolivas	A938797	SN123_A938797_Rep1_X	S6_Rec	legacy6nn	stroma	far	stroma_desmoplastic_IC med to high	5	0.012224938875305624
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	stroma	near	stroma_fibroblastic_IC high	17	0.5151515151515151
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	stroma	near	stroma_fibroblastic_IC med	16	0.48484848484848486
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	stroma	far	stroma_fibroblastic_IC med	1	1.0
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	tumor	near	tumor	42	1.0
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	exacthex	tumor	far	tumor	266	1.0
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	17	0.5151515151515151
+Valdeolivas	A551763	SN124_A551763_Rep2	S1_Cec	legacy6nn	stroma	near	stroma_fibroblastic_IC med	16	0.48484848484848486
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC med	25	0.9615384615384616
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	stroma	near	stroma_fibroblastic_IC high	1	0.038461538461538464
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC med	20	0.7692307692307693
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	stroma	far	stroma_fibroblastic_IC high	6	0.23076923076923078
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	tumor	near	tumor	28	1.0
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	exacthex	tumor	far	tumor	57	1.0
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC med	25	0.9615384615384616
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	legacy6nn	stroma	near	stroma_fibroblastic_IC high	1	0.038461538461538464
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC med	20	0.7692307692307693
+Valdeolivas	A595688	SN124_A595688_Rep2	S2_Col_R	legacy6nn	stroma	far	stroma_fibroblastic_IC high	6	0.23076923076923078
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	near	stroma_fibroblastic_IC high	147	0.8121546961325967
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	near	stroma_fibroblastic_IC med	34	0.1878453038674033
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	far	stroma_fibroblastic_IC high	260	0.7738095238095238
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	far	stroma_fibroblastic_IC med	74	0.22023809523809523
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	stroma	far	stroma desmoplastic_IC med to high	2	0.005952380952380952
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	tumor	near	tumor	124	1.0
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	exacthex	tumor	far	tumor	17	1.0
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC high	147	0.8121546961325967
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	near	stroma_fibroblastic_IC med	34	0.1878453038674033
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC high	260	0.7738095238095238
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	far	stroma_fibroblastic_IC med	74	0.22023809523809523
+Valdeolivas	A938797	SN124_A938797_Rep2	S6_Rec	legacy6nn	stroma	far	stroma desmoplastic_IC med to high	2	0.005952380952380952
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	near	stroma_fibroblastic_IC low	10	0.625
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	near	stroma_fibroblastic_IC high	6	0.375
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC high	61	0.7176470588235294
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC low	12	0.1411764705882353
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC med	12	0.1411764705882353
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	tumor	near	tumor	17	1.0
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	exacthex	tumor	far	tumor	8	1.0
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	near	stroma_fibroblastic_IC low	10	0.625
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	near	stroma_fibroblastic_IC high	6	0.375
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC high	61	0.7176470588235294
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC low	12	0.1411764705882353
+Valdeolivas	A120838	SN84_A120838_Rep1	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC med	12	0.1411764705882353
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	near	stroma_fibroblastic_IC low	30	0.33707865168539325
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	near	stroma_fibroblastic_IC_high	30	0.33707865168539325
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	near	stroma_fibroblastic_IC_med	29	0.3258426966292135
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC_high	107	0.6331360946745562
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC_med	40	0.23668639053254437
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	stroma	far	stroma_fibroblastic_IC low	22	0.1301775147928994
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	tumor	near	tumor	75	1.0
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	exacthex	tumor	far	tumor	65	1.0
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	near	stroma_fibroblastic_IC low	30	0.33707865168539325
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	near	stroma_fibroblastic_IC_high	30	0.33707865168539325
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	near	stroma_fibroblastic_IC_med	29	0.3258426966292135
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC_high	107	0.6331360946745562
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC_med	40	0.23668639053254437
+Valdeolivas	A120838	SN84_A120838_Rep2	S4_Col_Sig	legacy6nn	stroma	far	stroma_fibroblastic_IC low	22	0.1301775147928994
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	stroma	near	Tumor stroma in mucosa and submucosa	389	0.8053830227743272
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	94	0.19461697722567287
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	stroma	far	Tumor stroma in mucosa and submucosa	196	0.8032786885245902
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	48	0.19672131147540983
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	tumor	near	Tumor cells in mucosa and submucosa	470	0.8362989323843416
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	tumor	near	Tumor cells at tumor invasive front/border	92	0.16370106761565836
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	tumor	far	Tumor cells in mucosa and submucosa	669	0.9955357142857143
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex	tumor	far	Tumor cells at tumor invasive front/border	3	0.004464285714285714
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	legacy6nn	stroma	near	Tumor stroma in mucosa and submucosa	389	0.8053830227743272
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	94	0.19461697722567287
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	legacy6nn	stroma	far	Tumor stroma in mucosa and submucosa	196	0.8032786885245902
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	48	0.19672131147540983
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex_no_muscularis	stroma	near	Tumor stroma in mucosa and submucosa	389	0.8053830227743272
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	94	0.19461697722567287
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex_no_muscularis	stroma	far	Tumor stroma in mucosa and submucosa	196	0.8032786885245902
+GSE294385	Patient1	M-ST-13	Primary Colon M-ST-13	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	48	0.19672131147540983
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	near	Tumor stroma in mucosa and submucosa	226	0.7766323024054983
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	49	0.16838487972508592
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	near	Tumor stroma in muscularis propria	10	0.03436426116838488
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	near	Tumor stroma in subserosa	6	0.020618556701030927
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	far	Tumor stroma in subserosa	45	0.5357142857142857
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	far	Tumor stroma in mucosa and submucosa	21	0.25
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	16	0.19047619047619047
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	stroma	far	Tumor stroma in muscularis propria	2	0.023809523809523808
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	near	Tumor cells in mucosa and submucosa	363	0.8642857142857143
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	near	Tumor cells at tumor invasive front/border	30	0.07142857142857142
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	near	Tumor cells in muscularis propria	17	0.04047619047619048
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	near	Tumor cells in subserosa	10	0.023809523809523808
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	far	Tumor cells in mucosa and submucosa	539	0.873581847649919
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	far	Tumor cells at tumor invasive front/border	40	0.06482982171799027
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	far	Tumor cells in muscularis propria	20	0.03241491085899514
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex	tumor	far	Tumor cells in subserosa	18	0.029173419773095625
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	near	Tumor stroma in mucosa and submucosa	226	0.7766323024054983
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	49	0.16838487972508592
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	near	Tumor stroma in muscularis propria	10	0.03436426116838488
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	near	Tumor stroma in subserosa	6	0.020618556701030927
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	far	Tumor stroma in subserosa	45	0.5357142857142857
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	far	Tumor stroma in mucosa and submucosa	20	0.23809523809523808
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	16	0.19047619047619047
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	legacy6nn	stroma	far	Tumor stroma in muscularis propria	3	0.03571428571428571
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	near	Tumor stroma in mucosa and submucosa	226	0.8042704626334519
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	49	0.17437722419928825
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	near	Tumor stroma in subserosa	6	0.021352313167259787
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	far	Tumor stroma in subserosa	45	0.5487804878048781
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	far	Tumor stroma in mucosa and submucosa	21	0.25609756097560976
+GSE294385	Patient6	M-ST-15	Primary Colon M-ST-15	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	16	0.1951219512195122
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	near	Tumor stroma in mucosa and submucosa	620	0.4229195088676671
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	near	Tumor stroma in muscularis propria	534	0.36425648021828105
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	near	Tumor stroma in subserosa	178	0.12141882673942701
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	134	0.09140518417462483
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	far	Tumor stroma in subserosa	125	0.39556962025316456
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	far	Tumor stroma in mucosa and submucosa	78	0.2468354430379747
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	far	Tumor stroma in muscularis propria	73	0.2310126582278481
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	40	0.12658227848101267
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	near	Tumor cells in mucosa and submucosa	972	0.49290060851926976
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	near	Tumor cells in muscularis propria	497	0.25202839756592293
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	near	Tumor cells in subserosa	377	0.19117647058823528
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	near	Tumor cells at tumor invasive front/border	126	0.06389452332657201
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	far	Tumor cells in mucosa and submucosa	615	0.7784810126582279
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	far	Tumor cells in muscularis propria	108	0.13670886075949368
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex	tumor	far	Tumor cells in subserosa	67	0.08481012658227848
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	near	Tumor stroma in mucosa and submucosa	620	0.4229195088676671
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	near	Tumor stroma in muscularis propria	534	0.36425648021828105
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	near	Tumor stroma in subserosa	178	0.12141882673942701
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	134	0.09140518417462483
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	far	Tumor stroma in subserosa	125	0.39556962025316456
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	far	Tumor stroma in mucosa and submucosa	78	0.2468354430379747
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	far	Tumor stroma in muscularis propria	73	0.2310126582278481
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	40	0.12658227848101267
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	near	Tumor stroma in mucosa and submucosa	620	0.6652360515021459
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	near	Tumor stroma in subserosa	178	0.19098712446351931
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	134	0.14377682403433475
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	far	Tumor stroma in subserosa	125	0.51440329218107
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	far	Tumor stroma in mucosa and submucosa	78	0.32098765432098764
+GSE294385	Patient11	M-ST-29	Primary Colon M-ST-29	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	40	0.1646090534979424
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	97	0.5606936416184971
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	stroma	near	Tumor stroma in muscularis propria	76	0.4393063583815029
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	43	0.5657894736842105
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	stroma	far	Tumor stroma in muscularis propria	33	0.4342105263157895
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	near	Tumor cells in muscularis propria	90	0.6122448979591837
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	near	Tumor cells at tumor invasive front/border	56	0.38095238095238093
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	near	Tumor cells in subserosa	1	0.006802721088435374
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	far	Tumor cells in muscularis propria	46	0.9387755102040817
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex	tumor	far	Tumor cells at tumor invasive front/border	3	0.061224489795918366
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	97	0.5606936416184971
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	legacy6nn	stroma	near	Tumor stroma in muscularis propria	76	0.4393063583815029
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	42	0.56
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	legacy6nn	stroma	far	Tumor stroma in muscularis propria	33	0.44
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	97	1.0
+GSE294385	Patient11	M-ST-30	Primary Colon M-ST-30	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	43	1.0
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	near	Tumor stroma in muscularis propria	370	0.5331412103746398
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	near	Tumor stroma in subserosa	205	0.2953890489913545
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	119	0.17146974063400577
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	far	Tumor stroma in subserosa	165	0.6707317073170732
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	59	0.23983739837398374
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	stroma	far	Tumor stroma in muscularis propria	22	0.08943089430894309
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	near	Tumor cells in muscularis propria	539	0.6470588235294118
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	near	Tumor cells in subserosa	195	0.234093637454982
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	near	Tumor cells at tumor invasive front/border	99	0.11884753901560624
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	far	Tumor cells in muscularis propria	81	0.7788461538461539
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	far	Tumor cells in subserosa	22	0.21153846153846154
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex	tumor	far	Tumor cells at tumor invasive front/border	1	0.009615384615384616
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	near	Tumor stroma in muscularis propria	370	0.5331412103746398
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	near	Tumor stroma in subserosa	205	0.2953890489913545
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	119	0.17146974063400577
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	far	Tumor stroma in subserosa	165	0.6573705179282868
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	59	0.2350597609561753
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	legacy6nn	stroma	far	Tumor stroma in muscularis propria	27	0.10756972111553785
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex_no_muscularis	stroma	near	Tumor stroma in subserosa	205	0.6327160493827161
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	119	0.36728395061728397
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex_no_muscularis	stroma	far	Tumor stroma in subserosa	165	0.7366071428571429
+GSE294385	Patient9	M-ST-31	Primary Colon M-ST-31	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	59	0.26339285714285715
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	near	Tumor stroma in mucosa and submucosa	587	0.6450549450549451
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	near	Tumor stroma in muscularis propria	218	0.23956043956043957
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	105	0.11538461538461539
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	far	Tumor stroma in mucosa and submucosa	113	0.38831615120274915
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	86	0.29553264604810997
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	far	Tumor stroma in muscularis propria	83	0.2852233676975945
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	stroma	far	Tumor stroma in subserosa	9	0.030927835051546393
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	near	Tumor cells in mucosa and submucosa	645	0.4860587792012057
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	near	Tumor cells in muscularis propria	584	0.4400904295403165
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	near	Tumor cells at tumor invasive front/border	98	0.07385079125847777
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	far	Tumor cells in muscularis propria	567	0.5394862036156042
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	far	Tumor cells in mucosa and submucosa	480	0.45670789724072314
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex	tumor	far	Tumor cells at tumor invasive front/border	4	0.003805899143672693
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	near	Tumor stroma in mucosa and submucosa	587	0.6450549450549451
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	near	Tumor stroma in muscularis propria	218	0.23956043956043957
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	105	0.11538461538461539
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	far	Tumor stroma in mucosa and submucosa	113	0.38831615120274915
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	86	0.29553264604810997
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	far	Tumor stroma in muscularis propria	83	0.2852233676975945
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	legacy6nn	stroma	far	Tumor stroma in subserosa	9	0.030927835051546393
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	near	Tumor stroma in mucosa and submucosa	587	0.8482658959537572
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	105	0.15173410404624277
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	far	Tumor stroma in mucosa and submucosa	113	0.5432692307692307
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	86	0.41346153846153844
+GSE294385	Patient9	M-ST-32	Primary Colon M-ST-32	exacthex_no_muscularis	stroma	far	Tumor stroma in subserosa	9	0.04326923076923077
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	stroma	near	Tumor stroma in muscularis propria	264	0.5523012552301255
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	stroma	near	Tumor stroma in mucosa and submucosa	214	0.4476987447698745
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	stroma	far	Tumor stroma in muscularis propria	75	0.5769230769230769
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	stroma	far	Tumor stroma in mucosa and submucosa	55	0.4230769230769231
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	near	Tumor cells in mucosa and submucosa	325	0.4857997010463378
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	near	Tumor cells in muscularis propria	318	0.47533632286995514
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	near	Tumor cells in subserosa	26	0.03886397608370702
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	far	Tumor cells in mucosa and submucosa	414	0.6043795620437956
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex	tumor	far	Tumor cells in muscularis propria	271	0.3956204379562044
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	legacy6nn	stroma	near	Tumor stroma in muscularis propria	264	0.5523012552301255
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	legacy6nn	stroma	near	Tumor stroma in mucosa and submucosa	214	0.4476987447698745
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	legacy6nn	stroma	far	Tumor stroma in muscularis propria	75	0.5681818181818182
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	legacy6nn	stroma	far	Tumor stroma in mucosa and submucosa	57	0.4318181818181818
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex_no_muscularis	stroma	near	Tumor stroma in mucosa and submucosa	214	1.0
+GSE294385	Patient10	M-ST-33	Primary Colon M-ST-33	exacthex_no_muscularis	stroma	far	Tumor stroma in mucosa and submucosa	55	1.0
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	near	Tumor stroma in subserosa	1468	0.9273531269740998
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	near	Tumor stroma in muscularis propria	66	0.041692987997473153
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	near	Tumor stroma at tumor invasive front/border	49	0.03095388502842704
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	far	Tumor stroma in subserosa	383	0.9075829383886256
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	far	Tumor stroma in muscularis propria	27	0.06398104265402843
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	stroma	far	Tumor stroma at tumor invasive front/border	12	0.02843601895734597
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	near	Tumor cells in subserosa	1594	0.9579326923076923
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	near	Tumor cells at tumor invasive front/border	43	0.025841346153846152
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	near	Tumor cells in muscularis propria	27	0.01622596153846154
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	far	Tumor cells in subserosa	172	0.8151658767772512
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	far	Tumor cells in muscularis propria	28	0.13270142180094788
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex	tumor	far	Tumor cells at tumor invasive front/border	11	0.052132701421800945
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	near	Tumor stroma in subserosa	1468	0.9273531269740998
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	near	Tumor stroma in muscularis propria	66	0.041692987997473153
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	near	Tumor stroma at tumor invasive front/border	49	0.03095388502842704
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	far	Tumor stroma in subserosa	383	0.9075829383886256
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	far	Tumor stroma in muscularis propria	27	0.06398104265402843
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	legacy6nn	stroma	far	Tumor stroma at tumor invasive front/border	12	0.02843601895734597
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex_no_muscularis	stroma	near	Tumor stroma in subserosa	1468	0.967699406723797
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex_no_muscularis	stroma	near	Tumor stroma at tumor invasive front/border	49	0.032300593276203035
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex_no_muscularis	stroma	far	Tumor stroma in subserosa	383	0.9696202531645569
+GSE294385	Patient10	M-ST-34	Primary Colon M-ST-34	exacthex_no_muscularis	stroma	far	Tumor stroma at tumor invasive front/border	12	0.030379746835443037

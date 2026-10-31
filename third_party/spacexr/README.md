@@ -1,0 +1,1 @@
+Pinned RCTD function definitions are from spacexr version 2.2.1, commit 9f5dc33c8060f946c6072a138b70e189636e1435. They are redistributed under GNU GPL version 3; see LICENSE. Source: https://github.com/dmcable/spacexr

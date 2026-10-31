@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "Please cite the manuscript and the archived software version used."
 title: "Spatial domain selection changes regional stromal expression contrasts in colorectal cancer Visium data"
 type: software
-version: 1.1.0
+version: 1.2.0
 repository-code: "https://github.com/Zhenghongwei11/CRC-Visium-SpatialDomainBenchmark"
 authors:
   - family-names: Zheng

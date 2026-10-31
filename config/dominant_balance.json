@@ -1,0 +1,4 @@
+{
+  "interpretation": "A same-RNA model-derived sensitivity addressing a restricted component of composition. Continuous mixture, within-cell expression, other technical/clinical confounding and validation remain unresolved.",
+  "design": "Outcome-informed; dominant modeled group quotas with matched spot and UMI sampling."
+}
