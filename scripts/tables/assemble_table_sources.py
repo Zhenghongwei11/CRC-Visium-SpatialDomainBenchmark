@@ -49,9 +49,12 @@ def main():
     p.add_argument('--purity',type=Path,required=True,help='Output of summarize_purity.py')
     p.add_argument('--composition',type=Path,required=True)
     p.add_argument('--balance',type=Path,required=True)
+    p.add_argument('--marker-context',type=Path,required=True,
+                   help='Completed marker-context outputs, including native RCTD membership')
     p.add_argument('--output',type=Path,required=True)
     a=p.parse_args();config=json.loads((ROOT/'config/table_workbooks.json').read_text())
     needed={x['source'] for sheets in config.values() for x in sheets if x.get('kind')!='metadata'}
+    needed.add('composition_sensitivity/rctd_mesenchymal_marker_fit_membership.tsv')
     missing=[];pairs=[]
     for name in sorted(needed):
         path=Path(name)
@@ -60,6 +63,7 @@ def main():
         elif path.parts[0]=='pure_domain_selection':src=a.purity if path.name=='original_purity90_denominators.tsv' else a.domains/Path(*path.parts[1:])
         elif path.parts[0]=='inferred_composition' and path.name.startswith('dominant_balance_'):src=a.balance/path.name.removeprefix('dominant_balance_')
         elif path.parts[0]=='inferred_composition':src=a.composition/Path(*path.parts[1:])
+        elif path.parts[0]=='composition_sensitivity':src=a.marker_context/Path(*path.parts[1:])
         else:src=a.baseline/path
         if not src.is_file():missing.append(str(src))
         else:pairs.append((src,a.output/path))

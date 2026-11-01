@@ -17,7 +17,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--pack-dir',type=Path,default=default_package(__file__))
     args=parser.parse_args(); package=args.pack_dir
-    data=read(package/'tables/figure_source_data/figureS7_spots.tsv.gz',sep='\t')
+    data=read(package/'tables/figure_source_data/figureS3_spots.tsv.gz',sep='\t')
     if len(data)!=9530 or data.barcode.duplicated().any(): raise ValueError('Patient6 spot registry differs')
     known=data.public_raw_present.astype(bool).to_numpy()
     if known.sum()!=7858 or not np.array_equal(known,data.public_qc_present.astype(bool)): raise ValueError('Original annotation coverage differs')
@@ -62,7 +62,7 @@ def main():
     figures=package/'figures';figures.mkdir(exist_ok=True)
     for extension in ['png','pdf','tiff']:
         kwargs={'pil_kwargs':{'compression':'tiff_lzw'}} if extension=='tiff' else {}
-        fig.savefig(figures/f'figureS7.{extension}',dpi=600,**kwargs)
+        fig.savefig(figures/f'figureS3.{extension}',dpi=600,**kwargs)
     plt.close(fig)
 
 if __name__=='__main__':main()

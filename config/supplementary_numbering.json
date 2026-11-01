@@ -1,0 +1,37 @@
+{
+  "scope": "supplementary figures and tables in the public reproduction outputs; main figures and tables are unchanged",
+  "supplementary_figures_old_to_new": {
+    "5": 1,
+    "3": 2,
+    "7": 3,
+    "4": 4,
+    "6": 5,
+    "2": 6,
+    "8": 7,
+    "9": 8,
+    "10": 9,
+    "11": 10,
+    "1": 11
+  },
+  "supplementary_tables_old_to_new": {
+    "2": 1,
+    "11": 2,
+    "8": 3,
+    "16": 4,
+    "5": 5,
+    "18": 6,
+    "17": 7,
+    "19": 8,
+    "9": 9,
+    "1": 10,
+    "3": 11,
+    "12": 12,
+    "4": 13,
+    "6": 14,
+    "10": 15,
+    "15": 16,
+    "13": 17,
+    "14": 18,
+    "7": 19
+  }
+}

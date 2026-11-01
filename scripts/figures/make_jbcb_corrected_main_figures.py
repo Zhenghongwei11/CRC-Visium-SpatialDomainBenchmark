@@ -301,7 +301,7 @@ def main() -> None:
     summary = read(simulation_path / "simulation_summary.tsv", sep="\t")
     thresholds = read(simulation_path / "simulation_threshold_sensitivity.tsv", sep="\t")
     for estimator, stem in (("anchor_retention", "figure2"),
-                             ("strict_computational_interface", "figureS2")):
+                             ("strict_computational_interface", "figureS6")):
         diagnostic_figure(patient, purity, estimator, figures, sources, stem)
     simulation_figure(summary, thresholds, review, figures, sources)
     # Scientific captions are maintained with the corrected manuscript.
@@ -315,7 +315,7 @@ def main() -> None:
             "figure2": {"A": "GSE294385 patient stromal-retention paired controls",
                         "B": "Valdeolivas patient stromal-retention paired controls",
                         "C": "Purity-retained map counts", "D": "Purity-specific map-median block excess"},
-            "figureS2": {"A": "GSE294385 stricter adjacency patient paired controls",
+            "figureS6": {"A": "GSE294385 stricter adjacency patient paired controls",
                          "B": "Valdeolivas stricter adjacency patient paired controls",
                          "C": "Purity-retained map counts", "D": "Purity-specific map-median block excess"},
             "figure3": {"A": "Condition-specific coverage and combined statistical criteria",
@@ -327,7 +327,7 @@ def main() -> None:
                    "printed_axis_label_points": 8.6625, "printed_tick_label_points": 7.875,
                    "printed_minimum_annotation_points": 7.0875},
         "inference": "Regional contrasts and matched-subset reference summaries; simulation estimates are condition-specific.",
-        "source_data_sha256": {p.name: digest(p) for stem in ("figure2", "figure3", "figureS2")
+        "source_data_sha256": {p.name: digest(p) for stem in ("figure2", "figure3", "figureS6")
                                for p in sorted(sources.glob(stem + "_panel_*.tsv"))},
     }
     (sources / "figure_source_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")

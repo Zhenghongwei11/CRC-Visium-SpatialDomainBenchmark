@@ -114,7 +114,7 @@ def load_rows(path: Path) -> pd.DataFrame:
     )
     selected = data.loc[keep].copy()
     if selected.empty:
-        raise ValueError("No rows match the frozen Figure S6 selection contract")
+        raise ValueError("No rows match the frozen Figure S5 selection contract")
 
     key = ["resource", "patient_id", "graph_id"]
     if selected.duplicated(key).any():
@@ -266,7 +266,7 @@ def plot_figure(source: pd.DataFrame, figures_dir: Path, input_path: Path) -> di
     fig.suptitle("Patient-level summaries across graph definitions", x=0.12, y=0.975,
                  ha="left", weight="bold", fontsize=11)
     figures_dir.mkdir(parents=True, exist_ok=True)
-    stem = "figureS6"
+    stem = "figureS5"
     fig.savefig(figures_dir / f"{stem}.pdf", metadata={"Creator": "make_jbcb_corrected_graph_figure.py"})
     fig.savefig(figures_dir / f"{stem}.png", dpi=300)
     fig.savefig(figures_dir / f"{stem}.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
@@ -296,7 +296,7 @@ def main() -> None:
     source_dir = args.output_dir / "tables/figure_source_data"
     source_dir.mkdir(parents=True, exist_ok=True)
     manifest = plot_figure(plotted_source, figures_dir, args.input)
-    source_path = source_dir / "figureS6_panel_source.tsv"
+    source_path = source_dir / "figureS5_panel_source.tsv"
     plotted_source.to_csv(source_path, sep="\t", index=False, na_rep="NA")
     manifest["source_tsv"] = source_path.name
     manifest["source_tsv_sha256"] = sha256(source_path)
@@ -313,7 +313,7 @@ def main() -> None:
         "expected_source_rows": EXPECTED_SOURCE_ROWS,
         "missing_policy": "preserve NA; summaries with zero evaluable maps are not plotted; never impute; add an asterisk to a graph tick in a panel when any patient value is missing/unavailable",
     }
-    manifest_path = source_dir / "figureS6_source_manifest.json"
+    manifest_path = source_dir / "figureS5_source_manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Saved preview to {args.output_dir}")
 

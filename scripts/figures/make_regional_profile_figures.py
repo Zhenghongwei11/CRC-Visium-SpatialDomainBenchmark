@@ -102,7 +102,7 @@ def main():
         label(ax,'CD'[col],resource+' regional coverage')
         ax.texts[-1].set_position((-.22,1.09))
     legend_axis.legend(handles=[Line2D([0],[0],color='#0072B2',marker='o',label='k-means'),Line2D([0],[0],color='#D55E00',marker='s',label='Spatial Ward'),Line2D([0],[0],color='#555555',ls='--',label='25th percentile'),Line2D([0],[0],color='#555555',ls='-',label='50th percentile')],loc='center',ncol=4,frameon=False,fontsize=7.5)
-    receipts['figureS9']=save(fig,'figureS9',[dp/'coverage.tsv',dp/'resource_coverage.tsv'])
+    receipts['figureS8']=save(fig,'figureS8',[dp/'coverage.tsv',dp/'resource_coverage.tsv'])
     comp=BASE/'inferred_composition/regional_group_composition.tsv'
     if not comp.exists():raise FileNotFoundError(comp)
     if comp.exists():
@@ -127,7 +127,7 @@ def main():
             ax.annotate(r.patient_id,(r.composition_L1_far_minus_near,r.rna_matched_spots_far_minus_near),xytext=(-5 if right else 5,3),ha='right' if right else 'left',textcoords='offset points',fontsize=8)
         ax.axhline(0,color='#bbbbbb',lw=.8);ax.axvline(0,color='#bbbbbb',lw=.8)
         ax.set_xlabel('Far − near composition-profile difference (L1)');ax.set_ylabel('Far − near RNA-profile difference');label(ax,'B','Paired-section composition and expression')
-        receipts['figureS10']=save(fig,'figureS10',[comp,comp.parent/'within_patient_composition_and_rna.tsv'])
+        receipts['figureS9']=save(fig,'figureS9',[comp,comp.parent/'within_patient_composition_and_rna.tsv'])
     (OUT/'FIGURE_SOURCES.json').write_text(json.dumps(receipts,indent=2)+'\n')
     print(json.dumps({k:list(v['exports']) for k,v in receipts.items()},indent=2))
 

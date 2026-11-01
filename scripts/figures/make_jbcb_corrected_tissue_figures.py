@@ -128,12 +128,12 @@ def main():
                          'nominal_um_per_horizontal_fullres_px': scale, 'image_sha256': sha256(image_path)})
         spots['sample_id'] = sample; spots['resource'] = resource; tables.append(spots)
     axes.flat[-1].axis('off'); axes.flat[-1].legend(handles=handles[1:3], loc='upper left', frameon=False)
-    save(fig, pack, 'figureS5')
-    pd.DataFrame(sections).to_csv(sources / 'figureS5_sections.tsv', sep='\t', index=False)
-    pd.concat(tables).to_csv(sources / 'figureS5_spots.tsv.gz', sep='\t', index=False, compression='gzip')
+    save(fig, pack, 'figureS1')
+    pd.DataFrame(sections).to_csv(sources / 'figureS1_sections.tsv', sep='\t', index=False)
+    pd.concat(tables).to_csv(sources / 'figureS1_spots.tsv.gz', sep='\t', index=False, compression='gzip')
     (sources / 'corrected_tissue_figure_manifest.json').write_text(json.dumps({'generator_sha256': sha256(__file__), 'graph': GRAPH,
         'scale': 'Nominal 100-um array pitch; inverse affine horizontal image scale; not independent microscope calibration.',
-        'outputs': {p.name: sha256(p) for stem in ['figure1', 'figureS5'] for p in (pack / 'figures').glob(stem + '.*')}}, indent=2) + '\n')
+        'outputs': {p.name: sha256(p) for stem in ['figure1', 'figureS1'] for p in (pack / 'figures').glob(stem + '.*')}}, indent=2) + '\n')
     print('Rendered corrected tissue figures 1 and S5')
 
 

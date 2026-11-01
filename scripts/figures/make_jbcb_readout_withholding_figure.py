@@ -32,9 +32,9 @@ def main():
     args = p.parse_args(); result = args.results; pack = args.package
     source = pack / "tables/figure_source_data"
     if args.figures_only:
-        incidence = read(source / "figureS8_A_feature_incidence.tsv", sep="\t")
-        overlaps = read(source / "figureS8_B_patient_overlap.tsv", sep="\t")
-        patients = read(source / "figureS8_C_D_patient_excess.tsv", sep="\t")
+        incidence = read(source / "figureS7_A_feature_incidence.tsv", sep="\t")
+        overlaps = read(source / "figureS7_B_patient_overlap.tsv", sep="\t")
+        patients = read(source / "figureS7_C_D_patient_excess.tsv", sep="\t")
     else:
         if result is None:
             p.error("--results is required unless --figures-only is specified")
@@ -58,9 +58,9 @@ def main():
         counts = overlap.groupby(["resource", "patient_id"]).size().rename("n_paired_maps").reset_index()
         overlaps = overlaps.merge(counts)
         source = pack / "tables/figure_source_data"; source.mkdir(parents=True, exist_ok=True)
-        incidence.to_csv(source / "figureS8_A_feature_incidence.tsv", sep="\t", index=False)
-        overlaps.to_csv(source / "figureS8_B_patient_overlap.tsv", sep="\t", index=False)
-        patients.to_csv(source / "figureS8_C_D_patient_excess.tsv", sep="\t", index=False)
+        incidence.to_csv(source / "figureS7_A_feature_incidence.tsv", sep="\t", index=False)
+        overlaps.to_csv(source / "figureS7_B_patient_overlap.tsv", sep="\t", index=False)
+        patients.to_csv(source / "figureS7_C_D_patient_excess.tsv", sep="\t", index=False)
     plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8, "axes.labelsize": 9,
                          "xtick.labelsize": 8, "ytick.labelsize": 8, "pdf.fonttype": 42,
                          "axes.spines.top": False, "axes.spines.right": False})
@@ -129,18 +129,18 @@ def main():
                bbox_to_anchor=(.55, .035), columnspacing=1.4, handletextpad=.5)
     fig.subplots_adjust(left=.12, right=.985, bottom=.23, top=.94, wspace=.50, hspace=.60)
     figures = pack / "figures"; figures.mkdir(exist_ok=True)
-    fig.savefig(figures / "figureS8.pdf")
-    fig.savefig(figures / "figureS8.png", dpi=600)
-    fig.savefig(figures / "figureS8.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
+    fig.savefig(figures / "figureS7.pdf")
+    fig.savefig(figures / "figureS7.png", dpi=600)
+    fig.savefig(figures / "figureS7.tiff", dpi=600, pil_kwargs={"compression": "tiff_lzw"})
     plt.close(fig)
     if args.figures_only:
-        print("Rendered Figure S8; scientific source tables retained")
+        print("Rendered Figure S7; scientific source tables retained")
         return
     metadata = dict(generator_sha256=sha(__file__), inputs={str(f.relative_to(result)): sha(f) for f in input_files},
-                    plotted_files={f.name: sha(f) for f in sorted(source.glob("figureS8_*.tsv"))},
-                    figures={f.name: sha(f) for f in sorted(figures.glob("figureS8.*"))})
-    (source / "figureS8_source_manifest.json").write_text(json.dumps(metadata, indent=2)+"\n")
-    print("Figure S8 and complete plotted source tables exported")
+                    plotted_files={f.name: sha(f) for f in sorted(source.glob("figureS7_*.tsv"))},
+                    figures={f.name: sha(f) for f in sorted(figures.glob("figureS7.*"))})
+    (source / "figureS7_source_manifest.json").write_text(json.dumps(metadata, indent=2)+"\n")
+    print("Figure S7 and complete plotted source tables exported")
 
 
 if __name__ == "__main__":

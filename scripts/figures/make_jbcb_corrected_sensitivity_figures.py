@@ -160,10 +160,10 @@ def validate_s3_rows(data: pd.DataFrame) -> pd.DataFrame:
     for resource in RESOURCES:
         frame = selected.loc[selected.resource.astype(str).eq(resource)]
         if set(frame.readout_id.astype(str)) != set(READOUTS):
-            raise ValueError(f"Figure S3 readouts are incomplete for {resource}")
+            raise ValueError(f"Figure S2 readouts are incomplete for {resource}")
         patient_sets = frame.groupby("readout_id").patient_id.apply(lambda values: frozenset(values.astype(str)))
         if patient_sets.nunique() != 1:
-            raise ValueError(f"Figure S3 attempted-patient identities differ by readout for {resource}")
+            raise ValueError(f"Figure S2 attempted-patient identities differ by readout for {resource}")
     return selected
 
 
@@ -194,7 +194,7 @@ def s3_figure(data: pd.DataFrame, figures: Path, sources: Path, *, export_source
         for position, readout in enumerate(READOUTS):
             rows = panel.loc[panel.readout_id.astype(str).eq(readout)].copy()
             if rows.empty:
-                raise ValueError(f"Figure S3 has no rows for {resource}/{readout}")
+                raise ValueError(f"Figure S2 has no rows for {resource}/{readout}")
             count_values = pd.to_numeric(rows[RAW_SCORE_COLUMNS["count_only"]], errors="coerce")
             block_values = pd.to_numeric(rows[RAW_SCORE_COLUMNS["block_matched"]], errors="coerce")
             geometry_evaluable = rows.n_evaluable_maps.gt(0)
@@ -260,10 +260,10 @@ def s3_figure(data: pd.DataFrame, figures: Path, sources: Path, *, export_source
                ncol=2, frameon=False, handletextpad=0.5, columnspacing=1.1)
     fig.suptitle("Component expression and regional selection", x=0.12, y=0.985,
                  ha="left", weight="bold", fontsize=12)
-    save_figure(fig, figures, "figureS3")
+    save_figure(fig, figures, "figureS2")
     if export_sources:
         for letter, panel in source_panels.items():
-            export_rows(panel, sources, f"figureS3_panel_{letter}")
+            export_rows(panel, sources, f"figureS2_panel_{letter}")
 
 
 def mad_status(frame: pd.DataFrame) -> pd.Series:
@@ -454,8 +454,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--analysis-dir", type=Path, default=DEFAULT_ANALYSIS)
     parser.add_argument("--pack-dir", type=Path, default=DEFAULT_PACK)
-    parser.add_argument("--only", nargs="+", choices=("figureS3", "figureS4"),
-                        default=("figureS3", "figureS4"))
+    parser.add_argument("--only", nargs="+", choices=("figureS2", "figureS4"),
+                        default=("figureS2", "figureS4"))
     parser.add_argument("--figures-only", action="store_true",
                         help="Render frozen summaries without replacing source tables or manifests")
     args = parser.parse_args()
@@ -466,7 +466,7 @@ def main() -> None:
     figures = args.pack_dir / "figures"
     sources = args.pack_dir / "tables/figure_source_data"
     configure()
-    if "figureS3" in args.only:
+    if "figureS2" in args.only:
         s3_figure(s3_data, figures, sources, export_sources=not args.figures_only)
     if "figureS4" in args.only:
         s4_figure(primary, figures, sources, export_sources=not args.figures_only)
@@ -474,13 +474,13 @@ def main() -> None:
         print("Rendered " + ", ".join(args.only) + "; source tables retained")
         return
 
-    source_names = [f"figureS3_panel_{letter}.tsv" for letter in "AB"]
+    source_names = [f"figureS2_panel_{letter}.tsv" for letter in "AB"]
     source_names.extend(f"figureS4_panel_{letter}.tsv" for letter in "ABCD")
     manifest = {
         "script": "scripts/" + Path(__file__).name,
         "input_sha256": {portable_label(input_path, args.pack_dir): digest(input_path)},
         "primary_estimator": PRIMARY_ESTIMATOR,
-        "figureS3": {
+        "figureS2": {
             "eligibility_frame": "independent_eligible", "setting_id": "baseline",
             "readouts": list(READOUTS),
             "summary_level": "patient medians; raw score-unit count-only and block-matched excess deviations",
@@ -493,7 +493,7 @@ def main() -> None:
         },
         "figures_sha256": {
             f"{stem}.{extension}": digest(args.pack_dir / "figures" / f"{stem}.{extension}")
-            for stem in ("figureS3", "figureS4") for extension in ("pdf", "png", "tiff")
+            for stem in ("figureS2", "figureS4") for extension in ("pdf", "png", "tiff")
         },
         "source_data_sha256": {name: digest(sources / name) for name in source_names},
         "export": {"pdf": "vector, TrueType font embedded", "png_dpi": 300, "tiff_dpi": 600},

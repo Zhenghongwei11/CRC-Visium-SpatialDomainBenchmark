@@ -98,12 +98,12 @@ def main():
     for ext in ['pdf', 'png', 'tiff']:
         options = {'dpi': 600 if ext == 'tiff' else 300}
         if ext == 'tiff': options['pil_kwargs'] = {'compression': 'tiff_lzw'}
-        fig.savefig(args.pack_dir / 'figures' / ('figureS1.' + ext), **options)
+        fig.savefig(args.pack_dir / 'figures' / ('figureS11.' + ext), **options)
     plt.close(fig)
-    anchors.to_csv(source / 'figureS1_panel_A.tsv', sep='\t', index=False)
-    maps.to_csv(source / 'figureS1_panel_B.tsv', sep='\t', index=False)
-    curve.to_csv(source / 'figureS1_panel_C.tsv', sep='\t', index=False)
-    print('Rendered corrected support Figure S1')
+    anchors.to_csv(source / 'figureS11_panel_A.tsv', sep='\t', index=False)
+    maps.to_csv(source / 'figureS11_panel_B.tsv', sep='\t', index=False)
+    curve.to_csv(source / 'figureS11_panel_C.tsv', sep='\t', index=False)
+    print('Rendered corrected support Figure S11')
 
 
 if __name__ == '__main__':

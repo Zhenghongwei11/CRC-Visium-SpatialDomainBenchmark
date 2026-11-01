@@ -35,6 +35,7 @@ RULES = ('largest_pure', 'largest_coverage_qualified_pure')
 ANATOMICAL = ('full_annotated_stroma', 'exacthex_stroma_near', 'exacthex_stroma_far')
 SELECTED = ('selected_whole_domain', 'selected_annotated_stroma',
             'selected_stroma_near', 'selected_stroma_far')
+MESENCHYMAL_PROGRAMS = ('fibroblast_like', 'smooth_muscle_like', 'pericyte_like')
 NATIVE = ROOT / 'results/rctd'
 LIMIT = 'same_RNA_marker_context_not_independent_or_prespecified_heldout_identity_validation'
 
@@ -370,6 +371,50 @@ def rctd_overlap(panel, sections, output):
     return inputs
 
 
+def mesenchymal_marker_fit_membership(panel, sections, output):
+    """Export fixed 20-gene membership in each section's native full-mode RCTD lists."""
+    selected = panel[panel.program.isin(MESENCHYMAL_PROGRAMS)].copy()
+    expected_program_counts = {'fibroblast_like': 8, 'smooth_muscle_like': 6,
+                               'pericyte_like': 6}
+    assert len(selected) == 20
+    assert selected.groupby('program').size().to_dict() == expected_program_counts
+    rows, inputs = [], {}
+    # Keep the public table in its reader-facing resource/sample order.
+    for section in sorted(sections, key=lambda item: (item['resource'], item['sample_id'])):
+        sample_id = section['sample_id']
+        folder = NATIVE / 'all' / sample_id
+        status_path = folder / 'RUN_STATUS.json'
+        if not status_path.is_file():
+            raise FileNotFoundError('Missing full-mode native fit status: ' + str(status_path))
+        status = json.loads(status_path.read_text())
+        if status.get('status') != 'fit_completed' or status.get('section') != sample_id or status.get('mode') != 'all':
+            raise ValueError('Full-mode native RCTD fit is not verified for ' + sample_id)
+        inputs[path_key(status_path)] = sha(status_path)
+        lists = {}
+        for column, filename in (('bulk_fit', 'NATIVE_BULK_GENES.tsv.gz'),
+                                 ('regression_fit', 'NATIVE_REGRESSION_GENES.tsv.gz')):
+            path = folder / filename
+            if not path.is_file():
+                raise FileNotFoundError('Missing native gene list: ' + str(path))
+            listed = read(path)
+            if 'gene' not in listed or listed.gene.duplicated().any():
+                raise ValueError('Native gene list must contain unique gene symbols: ' + str(path))
+            lists[column] = set(listed.gene.astype(str))
+            inputs[path_key(path)] = sha(path)
+        for gene in selected.itertuples(index=False):
+            bulk = gene.gene_symbol in lists['bulk_fit']
+            regression = gene.gene_symbol in lists['regression_fit']
+            rows.append({'sample_id': sample_id, 'program': gene.program,
+                         'gene_symbol': gene.gene_symbol, 'bulk_fit': bulk,
+                         'regression_fit': regression, 'any_fit': bulk or regression})
+    frame = pd.DataFrame(rows, columns=['sample_id', 'program', 'gene_symbol',
+                                        'bulk_fit', 'regression_fit', 'any_fit'])
+    assert len(frame) == len(sections) * 20
+    assert not frame[['sample_id', 'gene_symbol']].duplicated().any()
+    save(frame, output / 'rctd_mesenchymal_marker_fit_membership.tsv')
+    return inputs
+
+
 def actual_patient_numbers(frame):
     rows = []
     groupings = [('all_settings_descriptive_union', ['resource', 'selection_rule', 'population', 'program', 'gene_symbol']),
@@ -409,6 +454,7 @@ def assemble(panel, sections, output, records, identity, started, elapsed):
     save(actual_patient_numbers(frames), output / 'ACTUAL_PATIENT_N.tsv.gz')
     save(panel, output / 'GENE_PANEL.tsv')
     overlap_inputs = rctd_overlap(panel, sections, output)
+    mesenchymal_inputs = mesenchymal_marker_fit_membership(panel, sections, output)
     manifest = {'started_utc': started, 'completed_utc': stamp(), 'elapsed_seconds': elapsed,
                 'identity': identity, 'status': 'completed_single_gene_same_RNA_marker_context',
                 'analysis_class': 'post_outcome_exploratory_fixed_external_marker_list',
@@ -418,6 +464,11 @@ def assemble(panel, sections, output, records, identity, started, elapsed):
                 'no_new_composite_program_score': True, 'no_new_marker_result_selection': True,
                 'same_RNA_context_not_independent_or_heldout_identity_validation': True,
                 'rctd_native_list_snapshot_inputs': overlap_inputs,
+                'mesenchymal_marker_fit_membership': {
+                    'programs': list(MESENCHYMAL_PROGRAMS), 'candidate_gene_N': 20,
+                    'section_N': len(sections), 'row_N': len(sections) * 20,
+                    'inputs': mesenchymal_inputs,
+                    'interpretation': 'fixed candidate marker symbols checked against each section native full-mode bulk and regression lists; input-list membership is not independent cell-identity validation'},
                 'threads_maximum': 2, 'section_workers': 1,
                 'python': platform.python_version(), 'numpy': np.__version__,
                 'pandas': pd.__version__, 'scipy': scipy.__version__, 'h5py': h5py.__version__,

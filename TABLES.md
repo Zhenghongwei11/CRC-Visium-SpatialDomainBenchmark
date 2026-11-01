@@ -2,29 +2,31 @@
 
 The combined analysis writes the main tables and workbooks `Table_S1.xlsx`–`Table_S19.xlsx` in `tables/`. The source files listed below are relative to `table_sources/`. The workbooks include column definitions and retain unavailable attempted comparisons.
 
+Supplementary labels are mapped by `config/supplementary_numbering.json`; the workbook and source order below use the mapped IDs.
+
 | Table | Main files |
 |---|---|
 | 1 — Available sections, patients and maps | `current_table1.tsv` |
 | 2 — Same-patient regional comparisons | `rctd_profiles/same_common_patient_resource_summary.tsv` in the analysis output |
 | 3 — Measurement targets | `Main_Table3.tsv` in `tables/` (qualitative text) |
-| S1 — Annotated regional tissue | `anchor_section_summary.tsv`, `corrected_anchor_all_settings.tsv` |
-| S2 — Patient comparisons and reference precision | `primary_patient_summary.tsv`, `configuration_location_matching_summary.tsv`, `patient_leave_one_out.tsv`, `control_reference_precision/` |
-| S3 — Domain-selected regional measurements | `current_per_map_results.tsv`, `diagnostic_map_diagnostic.tsv` |
-| S4 — Whole-domain stromal fraction | `primary_stromal_fraction_summary.tsv`, `regional_purity_sensitivity.tsv` |
+| S1 — Patient comparisons and reference precision | `primary_patient_summary.tsv`, `configuration_location_matching_summary.tsv`, `patient_leave_one_out.tsv`, `control_reference_precision/` |
+| S2 — Case tissue, annotations and muscle markers | `case_section_geometry.tsv`, `case_block_contributions.tsv`, `source_label_coverage.tsv`, `contractile_marker_*`, `additional_source_data/` |
+| S3 — Original-count expression recovery | `component_source_recovery.tsv` |
+| S4 — Readout-gene withholding | `readout_withholding/` |
 | S5 — Contrasts and interval-based classifications | `corrected_full_effects.tsv`, `real_threshold_sensitivity.tsv`, `geometry_result_reconciliation.tsv` |
-| S6 — Movement of stromal domains | `domain_repartitioning_summary.tsv` |
-| S7 — Known-boundary simulation | `simulation_cell_metrics.tsv`, `simulation_summary.tsv`, `simulation_calibration_by_map.tsv`, `simulation_threshold_sensitivity.tsv` |
-| S8 — Original-count expression recovery | `component_source_recovery.tsv` |
+| S6 — Connected pure-domain selection | `pure_domain_selection/` |
+| S7 — Broad regional profiles | `regional_profiles/` |
+| S8 — Inferred composition and balancing | `inferred_composition/`, `composition_sensitivity/rctd_mesenchymal_marker_fit_membership.tsv` |
 | S9 — Detection and dispersion of readout components | `component_expression_summary.tsv`, `regional_resource_summary.tsv` |
-| S10 — Spatial definitions | `spatial_scale_summary.tsv`, `graph_band_membership_summary.tsv` |
-| S11 — Case tissue, annotations and muscle markers | `case_section_geometry.tsv`, `case_block_contributions.tsv`, `source_label_coverage.tsv`, `contractile_marker_*`, `additional_source_data/` |
+| S10 — Annotated regional tissue | `anchor_section_summary.tsv`, `corrected_anchor_all_settings.tsv` |
+| S11 — Domain-selected regional measurements | `current_per_map_results.tsv`, `diagnostic_map_diagnostic.tsv` |
 | S12 — Components and regional selections | `regional_map_sensitivity.tsv`, `regional_*_method_k_sensitivity.tsv`, `regional_*_section_sensitivity.tsv`, `regional_*_patient_sensitivity.tsv` |
-| S13 — Map families and fitting parameters | `method_selection_comparison.tsv`, `map_producer_parameters.tsv` |
-| S14 — Separate-band and common-block intervals | `common_block_intervals.tsv` |
-| S15 — Wider near-band comparisons | `wider_near_*`, `near_band_map_comparison.tsv`, `near_band_common_map_summary.tsv` |
-| S16 — Readout-gene withholding | `readout_withholding/` |
-| S17 — Broad regional profiles | `regional_profiles/` |
-| S18 — Connected pure-domain selection | `pure_domain_selection/` |
-| S19 — Inferred composition and balancing | `inferred_composition/` |
+| S13 — Whole-domain stromal fraction | `primary_stromal_fraction_summary.tsv`, `regional_purity_sensitivity.tsv` |
+| S14 — Movement of stromal domains | `domain_repartitioning_summary.tsv` |
+| S15 — Spatial definitions | `spatial_scale_summary.tsv`, `graph_band_membership_summary.tsv` |
+| S16 — Wider near-band comparisons | `wider_near_*`, `near_band_map_comparison.tsv`, `near_band_common_map_summary.tsv` |
+| S17 — Map families and fitting parameters | `method_selection_comparison.tsv`, `map_producer_parameters.tsv` |
+| S18 — Separate-band and common-block intervals | `common_block_intervals.tsv` |
+| S19 — Known-boundary simulation | `simulation_cell_metrics.tsv`, `simulation_summary.tsv`, `simulation_calibration_by_map.tsv`, `simulation_threshold_sensitivity.tsv` |
 
 Additional original figure sources are in `baseline/tables/figure_source_data/`; the complete figure index is `figures/FIGURE_INDEX.json`.

@@ -84,7 +84,7 @@ def coverage(workspace,output):
                     spots['public_raw_present']=r;spots['public_qc_present']=q
                     spots['primary_anchor_near']=arrays['historical_raw_6nn|baseline|near'];spots['primary_anchor_far']=arrays['historical_raw_6nn|baseline|far']
                 (output/'figure_source_data').mkdir(exist_ok=True)
-                spots.to_csv(output/'figure_source_data/figureS7_spots.tsv.gz',sep='\t',index=False,compression={'method':'gzip','mtime':0})
+                spots.to_csv(output/'figure_source_data/figureS3_spots.tsv.gz',sep='\t',index=False,compression={'method':'gzip','mtime':0})
                 hierarchy=raw[raw.sample_id.eq(sample)].set_index('Barcode').reindex(spots.loc[r,'barcode'])
                 hierarchy.index.name='barcode'
                 hierarchy[['Layer1','Layer2','Layer3']].reset_index().to_csv(output/'additional_source_data/patient6_original_annotation_hierarchy.tsv.gz',sep='\t',index=False,compression={'method':'gzip','mtime':0})

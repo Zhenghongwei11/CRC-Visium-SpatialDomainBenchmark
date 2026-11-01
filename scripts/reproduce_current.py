@@ -64,15 +64,15 @@ def main():
     purity=out/'original_purity90_denominators.tsv'
     run('tables/summarize_purity.py','--input',maps,'--output',purity)
     sources=out/'table_sources'
-    run('tables/assemble_table_sources.py','--baseline',base/'tables','--regional',regional,'--domains',domains,'--purity',purity,'--composition',composition,'--balance',balance,'--output',sources)
+    run('tables/assemble_table_sources.py','--baseline',base/'tables','--regional',regional,'--domains',domains,'--purity',purity,'--composition',composition,'--balance',balance,'--marker-context',out/'marker_context','--output',sources)
     tables=out/'tables';tables.mkdir()
     run('tables/build_supplementary_workbooks.py','--input',sources,'--output',tables)
     shutil.copy2(sources/'current_table1.tsv',tables/'Main_Table1.tsv')
     run('tables/build_main_table2.py','--input',weighted/'same_common_patient_resource_summary.tsv','--output',tables/'Main_Table2.tsv')
     shutil.copy2(ROOT/'data/table_inputs/main_table3.tsv',tables/'Main_Table3.tsv')
     figures=out/'figures';figures.mkdir()
-    for name in ['figure1','figure2',*[f'figureS{i}' for i in range(1,9)],'figure3']:
-        dest='figureS11' if name=='figure3' else name
+    for name in ['figure1','figure2',*[f'figureS{i}' for i in range(1,8)],'figureS11','figure3']:
+        dest='figureS10' if name=='figure3' else name
         for ext in ('png','pdf','tiff'):
             source=base/'figures'/(name+'.'+ext)
             if not source.is_file():raise FileNotFoundError(source)
