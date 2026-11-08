@@ -83,6 +83,10 @@ def extract(package, section, output):
         with zipfile.ZipFile(package) as archive:
             for member in archive.infolist():
                 if not member.is_dir():
+                    # Raw and filtered 10x matrices have identical basenames;
+                    # registered tissue spots come from the filtered matrix.
+                    if 'raw_feature_bc_matrix' in Path(member.filename).parts:
+                        continue
                     write_member(output, sample, member.filename, archive.read(member))
     else:
         with tarfile.open(package, 'r:*') as archive:

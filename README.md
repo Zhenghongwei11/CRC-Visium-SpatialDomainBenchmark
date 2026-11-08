@@ -2,7 +2,7 @@
 
 This repository contains code and scientific inputs for examining how spatial domain selection affects regional expression comparisons in colorectal cancer Visium data. The analyses use 22 tissue sections from 12 patients and compare annotated stromal tissue near and farther from tumor. The exploratory four-gene readout comprises TGFB1, CXCL12, ACTA2 and TAGLN.
 
-The reported comparison uses archived publication domain maps and the corresponding tissue annotations. The original count matrices are obtained from the public resources below. The repository also supplies separate domain-refitting code; the original fitting environment was not completely version locked, so a new fit need not reproduce the archived maps exactly.
+The primary comparisons use archived publication domain maps and the corresponding tissue annotations. The original count matrices are obtained from the public resources below. The repository also supplies separate domain-refitting code; the original fitting environment was not completely version locked, so a new fit need not reproduce the archived maps exactly.
 
 ## Environment and input data
 
@@ -39,7 +39,7 @@ The fitting and analysis configurations, gene panels, tissue masks, source ident
 
 ## Refit the spatial domains
 
-`scripts/source_pipeline/fit_source_maps.py` provides an independent original-count refit of the configured domain methods. The neural methods and BayesSpace require additional environments described in `environments/README.md`; their complete all-section execution has not been validated in the environment used for the reported statistical replay. Domain refits are scientifically distinct runs and are not assumed to be identical to the archived publication maps.
+`scripts/source_pipeline/fit_source_maps.py` refits the configured domain methods from original counts. The neural methods and BayesSpace require additional environments described in `environments/README.md`. Saved refits from 22 sections, comparisons with archived maps and commands for the matched-reference sensitivity are supplied in [the domain-refit sensitivity guide](scripts/refit_sensitivity/README.md). Six requested Leiden configurations were unavailable in both sets, and one was available only in the refit. Refits are scientifically distinct runs and are not assumed to be identical to the archived publication maps. The full combined command from source inputs through all outputs has not been validated as a single uninterrupted run.
 
 ## Data and software sources
 

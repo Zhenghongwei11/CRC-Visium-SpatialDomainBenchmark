@@ -1,7 +1,7 @@
 {
   "title": "Spatial domain selection and regional expression consistency in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "Scientific analysis code and inputs for regional expression comparisons in 22 colorectal cancer Visium sections from 12 patients. The workflow includes regional expression profiles, connected-domain selection, modeled-composition sensitivity analyses, spatial resampling and simulation. It produces the main figures and tables and supplementary figures S1\u2013S11 and tables S1\u2013S19 from original counts and archived publication maps. The domain-refitting code is provided separately; the original fitting environment was not completely version locked. Third-party data and software retain their own terms. The repository contains materials under distinct terms: project materials use the repository LICENSE, spacexr source excerpts use GPL-3, and third-party datasets retain their source terms. Individual stages and figure generation were run and compared with reported results; a complete uninterrupted execution of the combined entrypoint and a complete refit of the original domain maps have not been validated.",
+  "description": "Scientific code and inputs for regional expression comparisons in 22 colorectal cancer Visium sections. This release corrects filtered-matrix extraction and includes refitted domain maps and sensitivity comparisons with archived primary maps. It provides separate saved-map and original-count fitting workflows. The historical fitting environment was not completely version locked; domain refits can differ. Complete 840-configuration partition comparisons and patient-level aggregation from saved map results were checked; sampling-reference scripts were exercised on one section from each resource. A complete uninterrupted original-input execution through all figures and tables has not been verified. Third-party data and software retain their source terms.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
@@ -28,6 +28,6 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.2.4",
+  "version": "1.2.5",
   "license": "other-open"
 }

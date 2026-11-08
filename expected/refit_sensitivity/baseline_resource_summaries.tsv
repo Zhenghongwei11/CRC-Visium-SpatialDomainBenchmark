@@ -1,0 +1,9 @@
+resource	estimator	origin	n_patients	size_only_mad	location_matched_mad	patients_decreased
+GSE294385	anchor_retention	new	5	0.259217759861243	0.18264566648204103	5
+GSE294385	anchor_retention	old	5	0.24696890125780727	0.186283111678601	5
+GSE294385	strict_computational_interface	new	5	0.251096566553899	0.23481063590981402	5
+GSE294385	strict_computational_interface	old	5	0.251096566553899	0.23481063590981402	5
+Valdeolivas	anchor_retention	new	5	0.269855172578361	0.11067666643096327	5
+Valdeolivas	anchor_retention	old	5	0.24464670191820953	0.09557093887849927	5
+Valdeolivas	strict_computational_interface	new	4	0.2168890981847809	0.17657138601800026	3
+Valdeolivas	strict_computational_interface	old	4	0.2155997596740108	0.173098201601422	3
