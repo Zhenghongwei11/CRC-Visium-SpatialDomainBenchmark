@@ -236,7 +236,7 @@ def plot_figure(source: pd.DataFrame, figures_dir: Path, input_path: Path) -> di
                     ax.scatter([xvals[i]], [yvals[i]], s=28, marker=marker,
                                c=[color], edgecolors="white", linewidths=0.35, zorder=2)
 
-        control_label = CONTROLS[control].capitalize()
+        control_label = CONTROLS[control].replace(" reference", "").capitalize()
         ax.set_title(f"{letter}  {resource} · {control_label}", loc="left", weight="bold", pad=8)
         ax.set_xticks([0, 1], graph_tick_labels(panel))
         ax.set_xlim(-0.35, 1.35)
