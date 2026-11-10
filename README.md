@@ -41,6 +41,10 @@ The fitting and analysis configurations, gene panels, tissue masks, source ident
 
 `scripts/source_pipeline/fit_source_maps.py` refits the configured domain methods from original counts. The neural methods and BayesSpace require additional environments described in `environments/README.md`. Saved refits from 22 sections, comparisons with archived maps and commands for the matched-reference sensitivity are supplied in [the domain-refit sensitivity guide](scripts/refit_sensitivity/README.md). Six requested Leiden configurations were unavailable in both sets, and one was available only in the refit. Refits are scientifically distinct runs and are not assumed to be identical to the archived publication maps. The full combined command from source inputs through all outputs has not been validated as a single uninterrupted run.
 
+## Supplementary source data
+
+The [supplementary source-data archive](supplementary_data/SUPPLEMENTARY_SOURCE_DATA.zip) contains the regional and patient-level tables, plotted-source extracts, composition analyses and domain-refit sensitivity data accompanying the study. These materials describe the reported analyses; the archive does not replace the original public datasets or the reproducibility workflows above. Individual supplementary table workbooks are supplied separately with the study. Third-party data and software retain their original terms and attribution as listed below.
+
 ## Data and software sources
 
 - Valdeolivas colorectal cancer spatial transcriptomics data and deconvolution outputs: [Zenodo record 7760264](https://zenodo.org/records/7760264), CC BY 4.0.

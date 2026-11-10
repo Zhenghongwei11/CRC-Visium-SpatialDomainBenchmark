@@ -1,7 +1,7 @@
 {
   "title": "Spatial domain selection and regional expression consistency in colorectal cancer Visium data",
   "upload_type": "software",
-  "description": "This release improves the graph-comparison figure layout and supplements field definitions. Scientific code and inputs for regional expression comparisons in 22 colorectal cancer Visium sections. This release corrects filtered-matrix extraction and includes refitted domain maps and sensitivity comparisons with archived primary maps. It provides separate saved-map and original-count fitting workflows. The historical fitting environment was not completely version locked; domain refits can differ. Complete 840-configuration partition comparisons and patient-level aggregation from saved map results were checked; sampling-reference scripts were exercised on one section from each resource. A complete uninterrupted original-input execution through all figures and tables has not been verified. Third-party data and software retain their source terms.",
+  "description": "This release adds the study supplementary source-data archive to the existing scientific analysis code and inputs. It covers regional expression comparisons in 22 colorectal cancer Visium sections and includes refitted domain maps and sensitivity comparisons with archived primary maps. The historical fitting environment was not completely version locked; domain refits can differ. The complete original-input workflow through all figures and tables has not been validated as one uninterrupted run. Third-party data and software retain their source terms.",
   "creators": [
     {
       "name": "Zheng, Hongwei",
@@ -28,6 +28,6 @@
       "resource_type": "software"
     }
   ],
-  "version": "1.2.7",
+  "version": "1.2.8",
   "license": "other-open"
 }
