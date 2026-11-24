@@ -33,6 +33,14 @@ The conditional-reference analyses use the numerical random seeds in `data/refer
 
 In the simulation tables, `freeze_sha256` identifies the original study-design freeze associated with the published simulation, not a freeze of a new execution or of the current implementation. The historical identifier is retained from the archived table inputs; the simulation's own `started_inputs.json` separately records the manifest and model code hashes used for a new run.
 
+Regenerate the current main Figures 1 and 2 directly from the release source archive:
+
+```bash
+python scripts/figures/make_coverage_first_figures.py --output results/main_figures
+```
+
+Figure 1 shows coverage under fine clustering and the baseline stromal label screens. Figure 2 combines the registered SN124 example and patient-level location-matching summaries. The script writes PNG, vector PDF with the registered image embedded where applicable, TIFF and a source checksum record. The full workflow also invokes this generator with recomputed source tables.
+
 The 14 generated PNGs can be compared with the archived reference renders using `python scripts/figures/check_png_exports.py --figures results/figures`. PNG byte differences can arise from rendering software or platform changes.
 
 The fitting and analysis configurations, gene panels, tissue masks, source identities and scientific tables are in `config/` and `data/`. Intermediate results and diagnostics are written under the selected output directory. The output directory must be empty at the start of the combined run.

@@ -32,8 +32,8 @@ def main():
         8: 'make_jbcb_readout_withholding_figure.py',
     }
     producers = {
-        'figure1': 'make_jbcb_corrected_tissue_figures.py',
-        'figure2': 'make_jbcb_corrected_main_figures.py',
+        'figure1': 'make_coverage_first_figures.py',
+        'figure2': 'make_coverage_first_figures.py',
         'figure3': 'make_jbcb_corrected_main_figures.py',
         **{figure_name(f'figureS{old}'): producer
            for old, producer in old_producers.items()},
@@ -42,13 +42,26 @@ def main():
         figure_name('figureS11'): 'make_jbcb_corrected_main_figures.py',
     }
     regional = json.loads((figures / 'FIGURE_SOURCES.json').read_text())
+    main_figures = json.loads((figures / 'MAIN_FIGURE_SOURCES.json').read_text())
     names = ['figure1', 'figure2', 'figure3',
              *[f'figureS{i}' for i in range(1, len(FIGURE_OLD_TO_NEW) + 1)]]
     records = {}
     for name in names:
         exports = {f'{name}.{ext}': sha(figures / f'{name}.{ext}')
                    for ext in ('png', 'pdf', 'tiff')}
-        if name in regional:
+        if name in main_figures:
+            receipt = main_figures[name]
+            if exports != receipt['exports']:
+                raise ValueError('Figure exports differ from their source receipt: ' + name)
+            source_data = {}
+            for item in receipt['sources'].values():
+                source = Path(item['path']).resolve()
+                if sha(source) != item['sha256']:
+                    raise ValueError('Figure source changed: ' + str(source))
+                identifier = str(source.relative_to(root)) if source.is_relative_to(root) else str(source.relative_to(Path(__file__).resolve().parents[2]))
+                source_data[identifier] = item['sha256']
+            producer = producers[name]
+        elif name in regional:
             if exports != regional[name]['exports']:
                 raise ValueError('Figure exports differ from their source receipt: ' + name)
             source_data = {f'table_sources/{path}': digest

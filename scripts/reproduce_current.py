@@ -71,13 +71,14 @@ def main():
     run('tables/build_main_table2.py','--input',weighted/'same_common_patient_resource_summary.tsv','--output',tables/'Main_Table2.tsv')
     shutil.copy2(ROOT/'data/table_inputs/main_table3.tsv',tables/'Main_Table3.tsv')
     figures=out/'figures';figures.mkdir()
-    for name in ['figure1','figure2',*[f'figureS{i}' for i in range(1,8)],'figureS11','figure3']:
+    for name in [*[f'figureS{i}' for i in range(1,8)],'figureS11','figure3']:
         dest='figureS10' if name=='figure3' else name
         for ext in ('png','pdf','tiff'):
             source=base/'figures'/(name+'.'+ext)
             if not source.is_file():raise FileNotFoundError(source)
             shutil.copy2(source,figures/(dest+'.'+ext))
     run('figures/make_regional_profile_figures.py','--input',sources,'--output',figures)
+    run('figures/make_coverage_first_figures.py','--reproduction',out,'--output',figures)
     run('figures/write_figure_index.py','--output',out)
     print('Completed analysis outputs in',out,flush=True)
 
